@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   ChevronDown,
-  Menu,
+  // Menu,
   X,
   Send,
   Search,
@@ -17,7 +17,7 @@ import {
   Users,
   Newspaper,
   Home,
-  Megaphone,
+  // Megaphone,
   FileText,
   Briefcase,
   Info,
@@ -128,9 +128,9 @@ function Navbar() {
               ))}
             </div>
           </div>
-          <Link to="/traditional-marketing" onClick={closeMobile}>
+          {/* <Link to="/traditional-marketing" onClick={closeMobile}>
             <Megaphone size={16} /> Traditional Marketing
-          </Link>
+          </Link> */}
           <div className="menu-item-has-children">
             <Link to="#blogs" onClick={closeMobile}>
               <FileText size={16} /> Blogs <ChevronDown size={12} />
