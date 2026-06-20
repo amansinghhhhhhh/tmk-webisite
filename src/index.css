@@ -32,7 +32,8 @@ html {
 body {
   font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
   /* background: var(--bg); */
-  background-image: linear-gradient(315deg, #88c23f 0%, #0970b3 90%);
+background: #0E150B;
+background: linear-gradient(160deg, rgba(14, 21, 11, 1) 0%, rgba(15, 26, 9, 1) 19%, rgba(13, 22, 10, 1) 55%, rgba(0, 0, 0, 1) 100%);
   color: #cfcfcf;
   overflow-x: hidden;
   line-height: 1.7
