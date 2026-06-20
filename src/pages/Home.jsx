@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -11,10 +12,11 @@ import {
   ChartLine,
   Globe,
 } from "lucide-react";
-import Swiper from "swiper";
+// import Swiper from "swiper";
+import Swiper from "swiper/bundle";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { fetchPosts, mapPost } from "../api/wordpress";
-Swiper.use([Autoplay, Navigation, Pagination]);
+
 
 const expertise = [
   {
@@ -150,6 +152,7 @@ export default function Home() {
   useEffect(() => {
     try {
       new Swiper(".industries-scroll", {
+          modules: [Autoplay, Navigation, Pagination],
         slidesPerView: 1.2,
         spaceBetween: 16,
         loop: true,
@@ -164,7 +167,7 @@ export default function Home() {
           968: { slidesPerView: 4, spaceBetween: 24 },
         },
       });
-    } catch (e) {}
+    } catch (e) { /* empty */ }
     try {
       new Swiper(".services-swiper", {
         slidesPerView: 1.2,
@@ -177,7 +180,8 @@ export default function Home() {
           1024: { slidesPerView: 4, spaceBetween: 24 },
         },
       });
-    } catch (e) {}
+    // eslint-disable-next-line no-unused-vars
+    } catch (e) { /* empty */ }
     try {
       new Swiper(".live-ads-swiper", {
         slidesPerView: 2,
@@ -199,7 +203,7 @@ export default function Home() {
         },
         breakpoints: { 0: { slidesPerView: 1 }, 768: { slidesPerView: 2 } },
       });
-    } catch (e) {}
+    } catch (e) { /* empty */ }
     try {
       new Swiper(".mediaSwiper", {
         slidesPerView: 6,
@@ -223,7 +227,7 @@ export default function Home() {
           1024: { slidesPerView: 6 },
         },
       });
-    } catch (e) {}
+    } catch (e) { /* empty */ }
 
     if (!document.querySelector(".expertise-scroll.swiper-initialized")) {
       try {
@@ -258,7 +262,7 @@ export default function Home() {
             },
           });
         }
-      } catch (e) {}
+      } catch (e) { /* empty */ }
     }
 
     const pageObserver = new IntersectionObserver(
@@ -354,16 +358,16 @@ export default function Home() {
             className="trust-strip"
             style={{
               marginTop: "-50px",
-              padding: "24px 32px",
-              borderRadius: "20px",
-              background: "rgba(15,15,30,.3)",
-              backdropFilter: "blur(8px)",
-              WebkitBackdropFilter: "blur(8px)",
-              border: "1px solid rgba(255,255,255,.03)",
-              width: "100vw",
-              marginLeft: "calc(-50vw + 50%)",
-              position: "relative",
-              left: 0,
+              // padding: "24px 32px",
+              // borderRadius: "20px",
+              // background: "rgba(15,15,30,.3)",
+              // backdropFilter: "blur(8px)",
+              // WebkitBackdropFilter: "blur(8px)",
+              // border: "1px solid rgba(255,255,255,.03)",
+              // width: "100vw",
+              // marginLeft: "calc(-50vw + 50%)",
+              // position: "relative",
+              // left: 0,
             }}
           >
             <span

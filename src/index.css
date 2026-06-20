@@ -569,15 +569,15 @@ section {
   transform: translateY(-3px)
 }
 
-.trust-strip {
+/* .trust-strip {
   background: linear-gradient(180deg, rgba(15, 15, 30, .3), rgba(15, 15, 30, .6));
   border-top: 1px solid rgba(255, 255, 255, .04);
   border-bottom: 1px solid rgba(255, 255, 255, .04);
   padding: 52px 0;
   position: relative
-}
+} */
 
-.trust-strip::before {
+/* .trust-strip::before {
   content: '';
   position: absolute;
   top: -1px;
@@ -585,7 +585,7 @@ section {
   right: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(136, 194, 64, .2), transparent)
-}
+} */
 
 .trust-strip .container {
   display: flex;
@@ -596,7 +596,7 @@ section {
 
 .trust-label {
   font-size: 1.25rem;
-  letter-spacing: 6px;
+  letter-spacing: 3px;
   text-transform: lowercase;
   color: var(--primary);
   font-weight: 700
