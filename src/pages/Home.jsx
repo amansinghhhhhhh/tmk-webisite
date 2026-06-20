@@ -394,7 +394,7 @@ export default function Home() {
                 justifyContent: "center",
               }}
             >
-              <Link
+              {/* <Link
                 to="/countries/malta"
                 className="trust-flag"
                 style={{
@@ -573,7 +573,153 @@ export default function Home() {
                   }}
                 />{" "}
                 United States
-              </Link>
+              </Link> */}
+              {/* United States */}
+<Link to="/countries/us" className="trust-flag" style={{
+  display: "flex",
+  alignItems: "center",
+  gap: "10px",
+  padding: "12px 24px",
+  borderRadius: "50px",
+  fontSize: "1.1rem",
+  fontWeight: 600,
+  color: "var(--text)",
+  background: "rgba(255,255,255,.03)",
+  border: "1px solid rgba(255,255,255,.06)",
+  transition: ".3s",
+  whiteSpace: "nowrap",
+}}>
+  <img
+    src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@main/flags/4x3/us.svg"
+    alt="United States"
+    style={{ width: 28, height: 21, borderRadius: 4, objectFit: "cover" }}
+  />
+  United States
+</Link>
+
+{/* United Kingdom */}
+<Link to="/countries/uk" className="trust-flag" style={{
+  display: "flex",
+  alignItems: "center",
+  gap: "10px",
+  padding: "12px 24px",
+  borderRadius: "50px",
+  fontSize: "1.1rem",
+  fontWeight: 600,
+  color: "var(--text)",
+  background: "rgba(255,255,255,.03)",
+  border: "1px solid rgba(255,255,255,.06)",
+  transition: ".3s",
+  whiteSpace: "nowrap",
+}}>
+  <img
+    src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@main/flags/4x3/gb.svg"
+    alt="United Kingdom"
+    style={{ width: 28, height: 21, borderRadius: 4, objectFit: "cover" }}
+  />
+  United Kingdom
+</Link>
+
+{/* Latam */}
+<Link
+  to="/countries/latam"
+  className="trust-flag"
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+    padding: "12px 24px",
+    borderRadius: "50px",
+    fontSize: "1.1rem",
+    fontWeight: 600,
+    color: "var(--text)",
+    background: "rgba(255,255,255,.03)",
+    border: "1px solid rgba(255,255,255,.06)",
+    transition: ".3s",
+    whiteSpace: "nowrap",
+  }}
+>
+  <img
+    src="/flag/latam.webp"
+    alt="LATAM"
+    style={{
+      width: 28,
+      height: 21,
+      borderRadius: 4,
+      objectFit: "cover",
+    }}
+  />
+  Latam
+</Link>
+
+{/* India */}
+<Link to="/countries/india" className="trust-flag" style={{
+  display: "flex",
+  alignItems: "center",
+  gap: "10px",
+  padding: "12px 24px",
+  borderRadius: "50px",
+  fontSize: "1.1rem",
+  fontWeight: 600,
+  color: "var(--text)",
+  background: "rgba(255,255,255,.03)",
+  border: "1px solid rgba(255,255,255,.06)",
+  transition: ".3s",
+  whiteSpace: "nowrap",
+}}>
+  <img
+    src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@main/flags/4x3/in.svg"
+    alt="India"
+    style={{ width: 28, height: 21, borderRadius: 4, objectFit: "cover" }}
+  />
+  India
+</Link>
+
+{/* Malta */}
+<Link to="/countries/malta" className="trust-flag" style={{
+  display: "flex",
+  alignItems: "center",
+  gap: "10px",
+  padding: "12px 24px",
+  borderRadius: "50px",
+  fontSize: "1.1rem",
+  fontWeight: 600,
+  color: "var(--text)",
+  background: "rgba(255,255,255,.03)",
+  border: "1px solid rgba(255,255,255,.06)",
+  transition: ".3s",
+  whiteSpace: "nowrap",
+}}>
+  <img
+    src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@main/flags/4x3/mt.svg"
+    alt="Malta"
+    style={{ width: 28, height: 21, borderRadius: 4, objectFit: "cover" }}
+  />
+  Malta
+</Link>
+
+{/* Philippines */}
+<Link to="/countries/philippines" className="trust-flag" style={{
+  display: "flex",
+  alignItems: "center",
+  gap: "10px",
+  padding: "12px 24px",
+  borderRadius: "50px",
+  fontSize: "1.1rem",
+  fontWeight: 600,
+  color: "var(--text)",
+  background: "rgba(255,255,255,.03)",
+  border: "1px solid rgba(255,255,255,.06)",
+  transition: ".3s",
+  whiteSpace: "nowrap",
+}}>
+  <img
+    src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@main/flags/4x3/ph.svg"
+    alt="Philippines"
+    style={{ width: 28, height: 21, borderRadius: 4, objectFit: "cover" }}
+  />
+  Philippines
+</Link>
             </div>
           </div>
         </div>
