@@ -374,7 +374,7 @@ export default function Home() {
               className="trust-label"
               style={{
                 fontSize: "1.3rem",
-                letterSpacing: "6px",
+                letterSpacing: "4px",
                 textTransform: "lowercase",
                 color: "var(--primary)",
                 fontWeight: 700,
