@@ -394,186 +394,6 @@ export default function Home() {
                 justifyContent: "center",
               }}
             >
-              {/* <Link
-                to="/countries/malta"
-                className="trust-flag"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "10px",
-                  padding: "12px 24px",
-                  borderRadius: "50px",
-                  fontSize: "1.1rem",
-                  fontWeight: 600,
-                  color: "var(--text)",
-                  background: "rgba(255,255,255,.03)",
-                  border: "1px solid rgba(255,255,255,.06)",
-                  transition: ".3s",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                <img
-                  src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@main/flags/4x3/mt.svg"
-                  alt="Malta"
-                  style={{
-                    width: 28,
-                    height: 21,
-                    borderRadius: 4,
-                    objectFit: "cover",
-                  }}
-                />{" "}
-                Malta
-              </Link>
-              <Link
-                to="/countries/curacao"
-                className="trust-flag"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "10px",
-                  padding: "12px 24px",
-                  borderRadius: "50px",
-                  fontSize: "1.1rem",
-                  fontWeight: 600,
-                  color: "var(--text)",
-                  background: "rgba(255,255,255,.03)",
-                  border: "1px solid rgba(255,255,255,.06)",
-                  transition: ".3s",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                <img
-                  src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@main/flags/4x3/cw.svg"
-                  alt="Curacao"
-                  style={{
-                    width: 28,
-                    height: 21,
-                    borderRadius: 4,
-                    objectFit: "cover",
-                  }}
-                />{" "}
-                Curacao
-              </Link>
-              <Link
-                to="/countries/uk"
-                className="trust-flag"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "10px",
-                  padding: "12px 24px",
-                  borderRadius: "50px",
-                  fontSize: "1.1rem",
-                  fontWeight: 600,
-                  color: "var(--text)",
-                  background: "rgba(255,255,255,.03)",
-                  border: "1px solid rgba(255,255,255,.06)",
-                  transition: ".3s",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                <img
-                  src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@main/flags/4x3/gb.svg"
-                  alt="UK"
-                  style={{
-                    width: 28,
-                    height: 21,
-                    borderRadius: 4,
-                    objectFit: "cover",
-                  }}
-                />{" "}
-                United Kingdom
-              </Link>
-              <Link
-                to="/countries/india"
-                className="trust-flag"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "10px",
-                  padding: "12px 24px",
-                  borderRadius: "50px",
-                  fontSize: "1.1rem",
-                  fontWeight: 600,
-                  color: "var(--text)",
-                  background: "rgba(255,255,255,.03)",
-                  border: "1px solid rgba(255,255,255,.06)",
-                  transition: ".3s",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                <img
-                  src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@main/flags/4x3/in.svg"
-                  alt="India"
-                  style={{
-                    width: 28,
-                    height: 21,
-                    borderRadius: 4,
-                    objectFit: "cover",
-                  }}
-                />{" "}
-                India
-              </Link>
-              <Link
-                to="/countries/philippines"
-                className="trust-flag"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "10px",
-                  padding: "12px 24px",
-                  borderRadius: "50px",
-                  fontSize: "1.1rem",
-                  fontWeight: 600,
-                  color: "var(--text)",
-                  background: "rgba(255,255,255,.03)",
-                  border: "1px solid rgba(255,255,255,.06)",
-                  transition: ".3s",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                <img
-                  src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@main/flags/4x3/ph.svg"
-                  alt="Philippines"
-                  style={{
-                    width: 28,
-                    height: 21,
-                    borderRadius: 4,
-                    objectFit: "cover",
-                  }}
-                />{" "}
-                Philippines
-              </Link>
-              <Link
-                to="/countries/us"
-                className="trust-flag"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "10px",
-                  padding: "12px 24px",
-                  borderRadius: "50px",
-                  fontSize: "1.1rem",
-                  fontWeight: 600,
-                  color: "var(--text)",
-                  background: "rgba(255,255,255,.03)",
-                  border: "1px solid rgba(255,255,255,.06)",
-                  transition: ".3s",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                <img
-                  src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@main/flags/4x3/us.svg"
-                  alt="US"
-                  style={{
-                    width: 28,
-                    height: 21,
-                    borderRadius: 4,
-                    objectFit: "cover",
-                  }}
-                />{" "}
-                United States
-              </Link> */}
               {/* United States */}
 <Link to="/countries/us" className="trust-flag" style={{
   display: "flex",
@@ -1505,7 +1325,7 @@ export default function Home() {
                     <input type="email" placeholder="Email" required />
                   </div>
                   <div className="form-row">
-                    <select>
+                    <select required>
                       <option value="">Country Code</option>
                       <option value="+91">+91 (IND)</option>
                       <option value="+971">+971 (ARE)</option>
@@ -1515,14 +1335,14 @@ export default function Home() {
                     <input type="tel" placeholder="Phone" required />
                   </div>
                   <div className="form-row">
-                    <select>
+                    <select required>
                       <option value="">Select Budget</option>
                       <option value="<5k">&lt; $5K</option>
                       <option value="5k-15k">$5K – $15K</option>
                       <option value="15k-50k">$15K – $50K</option>
                       <option value="50k+">$50K+</option>
                     </select>
-                    <select>
+                    <select required>
                       <option value="">Select Service</option>
                       <option value="seo">iGaming SEO</option>
                       <option value="meta">Meta Ads</option>
