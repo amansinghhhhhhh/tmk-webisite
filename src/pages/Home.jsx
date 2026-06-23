@@ -1427,7 +1427,19 @@ onSubmit={(e) => {
   type="tel"
   placeholder="Phone"
   value={phone}
-  onChange={(e) => setPhone(e.target.value)}
+  inputMode="numeric"
+  maxLength={countryRules[countryCode]?.length || 15}
+  onChange={(e) => {
+    setPhone(e.target.value.replace(/\D/g, ""));
+  }}
+  onKeyDown={(e) => {
+    if (
+      !/[0-9]/.test(e.key) &&
+      !["Backspace", "Delete", "ArrowLeft", "ArrowRight", "Tab"].includes(e.key)
+    ) {
+      e.preventDefault();
+    }
+  }}
 />
 
 {errors.phone && (
