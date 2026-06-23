@@ -193,7 +193,7 @@ try {
   setSubmitMessage("");
 
   await fetch(
-    import.meta.env.GOOGLE_SHEET,
+    import.meta.env.VITE_GOOGLE_SHEET,
     {
       method: "POST",
       body: JSON.stringify({
