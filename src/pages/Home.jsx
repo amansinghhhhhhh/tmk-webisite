@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   ArrowRight,
   CheckCircle,
@@ -135,6 +135,7 @@ const certImages = [
 ];
 
 export default function Home() {
+  const navigate = useNavigate();
   const [openFaq, setOpenFaq] = useState(null);
   const [countryCode, setCountryCode] = useState("");
   const [phone, setPhone] = useState("");
@@ -143,10 +144,93 @@ export default function Home() {
   const [errors, setErrors] = useState({});
   const [name, setName] = useState("");
 const [email, setEmail] = useState("");
+const [submitMessage, setSubmitMessage] = useState("");
+const [submitStatus, setSubmitStatus] = useState("");
+const [loading, setLoading] = useState(false);
 
 
 const [service, setService] = useState("");
 
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const newErrors = {};
+
+  if (!name.trim()) {
+    newErrors.name = "Name is required";
+  }
+
+  if (!email.trim()) {
+    newErrors.email = "Email is required";
+  } else if (!/\S+@\S+\.\S+/.test(email)) {
+    newErrors.email = "Invalid email address";
+  }
+
+  if (!countryCode) {
+    newErrors.countryCode = "Please select a country";
+  }
+
+  if (!phone.trim()) {
+    newErrors.phone = "Phone number is required";
+  } else if (!validatePhone(countryCode, phone)) {
+    newErrors.phone =
+      `Invalid phone number for ${countryRules[countryCode]?.name}`;
+  }
+
+  if (!budget) {
+    newErrors.budget = "Please select a budget";
+  }
+
+  if (!service) {
+    newErrors.service = "Please select a service";
+  }
+
+  setErrors(newErrors);
+
+  if (Object.keys(newErrors).length > 0) return;
+try {
+  setLoading(true);
+  setSubmitMessage("");
+
+  await fetch(
+    "https://script.google.com/macros/s/AKfycbxCfkZpPHQIRgXnUomQJU6hJ3Ov-N8x4Jc9zGDTDFtcGtZPbyqRCi3FH0rxDcGB_pgr/exec",
+    {
+      method: "POST",
+      body: JSON.stringify({
+        name,
+        email,
+        countryCode,
+        phone,
+        budget,
+        service,
+      }),
+    }
+  );
+
+  setSubmitStatus("success");
+  setSubmitMessage(
+    "Thank you! Your message has been sent successfully."
+  );
+
+  setName("");
+  setEmail("");
+  setCountryCode("");
+  setPhone("");
+  setBudget("");
+  setService("");
+  setErrors({});
+  navigate("/thank-you");
+} catch (error) {
+  console.error(error);
+
+  setSubmitStatus("error");
+  setSubmitMessage(
+    "Something went wrong. Please try again."
+  );
+} finally {
+  setLoading(false);
+}
+};
 
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -1329,57 +1413,11 @@ const [service, setService] = useState("");
               </ul>
               <div className="cta-form-wrap">
                 <form
-                  className="cta-form"
-onSubmit={(e) => {
-  e.preventDefault();
-
-  const newErrors = {};
-
-  if (!name.trim()) {
-    newErrors.name = "Name is required";
-  }
-
-  if (!email.trim()) {
-    newErrors.email = "Email is required";
-  } else if (!/\S+@\S+\.\S+/.test(email)) {
-    newErrors.email = "Invalid email address";
-  }
-
-  if (!countryCode) {
-    newErrors.countryCode = "Please select a country";
-  }
-
-  if (!phone.trim()) {
-    newErrors.phone = "Phone number is required";
-  } else if (!validatePhone(countryCode, phone)) {
-    newErrors.phone =
-      `Invalid phone number for ${countryRules[countryCode]?.name}`;
-  }
-
-  if (!budget) {
-    newErrors.budget = "Please select a budget";
-  }
-
-  if (!service) {
-    newErrors.service = "Please select a service";
-  }
-
-  setErrors(newErrors);
-
-  if (Object.keys(newErrors).length === 0) {
-    alert("Form submitted successfully!");
-
-    setName("");
-    setEmail("");
-    setPhone("");
-    setCountryCode("");
-    setBudget("");
-    setService("");
-    setErrors({});
-  }
-}}
-                >
-                  <div className="form-row">
+  className="cta-form"
+  onSubmit={handleSubmit}
+>
+  
+<div className="form-row">
    <input
   type="text"
   placeholder="Name"
@@ -1489,9 +1527,30 @@ onSubmit={(e) => {
   </span>
 )}
                   </div>
-                  <button type="submit" className="btn btn-primary">
-                    Take The First Step <ArrowRight size={16} />
-                  </button>
+                  <button
+  type="submit"
+  className="btn btn-primary"
+  disabled={loading}
+>
+  {loading ? (
+    "Submitting..."
+  ) : (
+    <>
+      Take The First Step <ArrowRight size={16} />
+    </>
+  )}
+</button>
+{submitMessage && (
+  <div
+    className={
+      submitStatus === "success"
+        ? "submit-success"
+        : "submit-error"
+    }
+  >
+    {submitMessage}
+  </div>
+)}
                 </form>
               </div>
             </div>

@@ -17,6 +17,7 @@ import CountryPage from "./pages/CountryPage";
 import Services from "./pages/Services";
 import ServicePage from "./pages/ServicePage";
 import NotFound from "./pages/NotFound";
+import ThankYou from "./pages/ThankYou";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -50,6 +51,7 @@ export default function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/services/:slug" element={<ServicePage />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/thank-you" element={<ThankYou />} />
       </Routes>
       <Footer />
     </BrowserRouter>

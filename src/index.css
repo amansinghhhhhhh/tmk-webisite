@@ -3848,6 +3848,20 @@ footer::before {
   color: #fff
 }
 
+.submit-success {
+  margin-top: 15px;
+  color: #88C240;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.submit-error {
+  margin-top: 15px;
+  color: #ff4d4f;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 .contact-form-wrap textarea {
   min-height: 120px;
   resize: vertical
