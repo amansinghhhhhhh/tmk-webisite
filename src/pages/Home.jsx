@@ -15,6 +15,10 @@ import {
 // import Swiper from "swiper";
 import Swiper from "swiper/bundle";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { countryRules } from "../utils/countryRules";
+import { budgetOptions } from "../utils/budgetOptions";
+import { validatePhone } from "../utils/phoneValidation";
+import { countries } from "../data/countries";
 import { fetchPosts, mapPost } from "../api/wordpress";
 
 
@@ -132,6 +136,10 @@ const certImages = [
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState(null);
+  const [countryCode, setCountryCode] = useState("");
+  const [phone, setPhone] = useState("");
+  const [budget, setBudget] = useState("");
+  const [selectedCode, setSelectedCode] = useState("");
 
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -1316,32 +1324,56 @@ export default function Home() {
                 <form
                   className="cta-form"
                   onSubmit={(e) => {
-                    e.preventDefault();
-                    alert("Form submitted successfully!");
-                  }}
+  e.preventDefault();
+
+  if (!validatePhone(countryCode, phone)) {
+    alert("Please enter a valid phone number.");
+    return;
+  }
+
+  alert("Form submitted successfully!");
+}}
                 >
                   <div className="form-row">
                     <input type="text" placeholder="Name" required />
                     <input type="email" placeholder="Email" required />
                   </div>
                   <div className="form-row">
-                    <select required>
+                    <select
+  required
+  value={countryCode}
+  onChange={(e) => setCountryCode(e.target.value)}
+>
                       <option value="">Country Code</option>
                       <option value="+91">+91 (IND)</option>
                       <option value="+971">+971 (ARE)</option>
                       <option value="+1">+1 (USA)</option>
                       <option value="+44">+44 (GBR)</option>
                     </select>
-                    <input type="tel" placeholder="Phone" required />
+                    <input
+  type="tel"
+  placeholder="Phone"
+  required
+  value={phone}
+  onChange={(e) => setPhone(e.target.value)}
+/>
                   </div>
                   <div className="form-row">
-                    <select required>
-                      <option value="">Select Budget</option>
-                      <option value="<5k">&lt; $5K</option>
-                      <option value="5k-15k">$5K – $15K</option>
-                      <option value="15k-50k">$15K – $50K</option>
-                      <option value="50k+">$50K+</option>
-                    </select>
+                    <select
+  required
+  value={budget}
+  onChange={(e) => setBudget(e.target.value)}
+>
+  <option value="">Select Budget</option>
+
+  {(budgetOptions[
+    countryRules[countryCode]?.budgetKey
+  ] || []).map((option, index) => (
+    <option key={index} value={option}>
+      {option}
+    </option>
+  ))}
+</select>
                     <select required>
                       <option value="">Select Service</option>
                       <option value="seo">iGaming SEO</option>
