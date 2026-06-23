@@ -193,7 +193,7 @@ try {
   setSubmitMessage("");
 
   await fetch(
-    "https://script.google.com/macros/s/AKfycbxCfkZpPHQIRgXnUomQJU6hJ3Ov-N8x4Jc9zGDTDFtcGtZPbyqRCi3FH0rxDcGB_pgr/exec",
+    import.meta.env.GOOGLE_SHEET,
     {
       method: "POST",
       body: JSON.stringify({
