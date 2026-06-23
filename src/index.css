@@ -3768,6 +3768,13 @@ footer::before {
   color: #fff
 }
 
+.form-error {
+  display: block;
+  color: #ff5b5b;
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
 .contact-form-wrap {
   background: rgba(15, 15, 30, .5);
   border: 1px solid rgba(255, 255, 255, .05);

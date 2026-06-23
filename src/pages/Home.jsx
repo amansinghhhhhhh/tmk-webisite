@@ -140,6 +140,13 @@ export default function Home() {
   const [phone, setPhone] = useState("");
   const [budget, setBudget] = useState("");
   const [selectedCode, setSelectedCode] = useState("");
+  const [errors, setErrors] = useState({});
+  const [name, setName] = useState("");
+const [email, setEmail] = useState("");
+
+
+const [service, setService] = useState("");
+
 
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -1323,69 +1330,152 @@ export default function Home() {
               <div className="cta-form-wrap">
                 <form
                   className="cta-form"
-                  onSubmit={(e) => {
+onSubmit={(e) => {
   e.preventDefault();
 
-  if (!validatePhone(countryCode, phone)) {
-    alert("Please enter a valid phone number.");
-    return;
+  const newErrors = {};
+
+  if (!name.trim()) {
+    newErrors.name = "Name is required";
   }
 
-  alert("Form submitted successfully!");
+  if (!email.trim()) {
+    newErrors.email = "Email is required";
+  } else if (!/\S+@\S+\.\S+/.test(email)) {
+    newErrors.email = "Invalid email address";
+  }
+
+  if (!countryCode) {
+    newErrors.countryCode = "Please select a country";
+  }
+
+  if (!phone.trim()) {
+    newErrors.phone = "Phone number is required";
+  } else if (!validatePhone(countryCode, phone)) {
+    newErrors.phone =
+      `Invalid phone number for ${countryRules[countryCode]?.name}`;
+  }
+
+  if (!budget) {
+    newErrors.budget = "Please select a budget";
+  }
+
+  if (!service) {
+    newErrors.service = "Please select a service";
+  }
+
+  setErrors(newErrors);
+
+  if (Object.keys(newErrors).length === 0) {
+    alert("Form submitted successfully!");
+
+    setName("");
+    setEmail("");
+    setPhone("");
+    setCountryCode("");
+    setBudget("");
+    setService("");
+    setErrors({});
+  }
 }}
                 >
                   <div className="form-row">
-                    <input type="text" placeholder="Name" required />
-                    <input type="email" placeholder="Email" required />
+   <input
+  type="text"
+  placeholder="Name"
+  value={name}
+  onChange={(e) => setName(e.target.value)}
+/>
+
+{errors.name && (
+  <span className="error">{errors.name}</span>
+)}
+<input
+  type="email"
+  placeholder="Email"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+/>
+
+{errors.email && (
+  <span className="error">{errors.email}</span>
+)}
                   </div>
                   <div className="form-row">
-                    <select
+<select
   required
   value={countryCode}
-  onChange={(e) => setCountryCode(e.target.value)}
+  onChange={(e) => {
+    setCountryCode(e.target.value);
+    setBudget("");
+  }}
 >
-                      <option value="">Country Code</option>
-                      <option value="+91">+91 (IND)</option>
-                      <option value="+971">+971 (ARE)</option>
-                      <option value="+1">+1 (USA)</option>
-                      <option value="+44">+44 (GBR)</option>
-                    </select>
-                    <input
+  <option value="">Country Code</option>
+
+  {countries.map((country) => (
+    <option key={country.code} value={country.code}>
+      {country.code} ({country.name})
+    </option>
+  ))}
+</select>
+{errors.countryCode && (
+  <span className="form-error">
+    {errors.countryCode}
+  </span>
+)}
+<input
   type="tel"
   placeholder="Phone"
-  required
   value={phone}
   onChange={(e) => setPhone(e.target.value)}
 />
+
+{errors.phone && (
+  <span className="error">{errors.phone}</span>
+)}
                   </div>
                   <div className="form-row">
-                    <select
+<select
   required
   value={budget}
   onChange={(e) => setBudget(e.target.value)}
 >
   <option value="">Select Budget</option>
 
-  {(budgetOptions[
-    countryRules[countryCode]?.budgetKey
-  ] || []).map((option, index) => (
-    <option key={index} value={option}>
-      {option}
-    </option>
-  ))}
+  {countryCode &&
+    budgetOptions[countryRules[countryCode]?.budgetKey]?.map((option) => (
+      <option key={option} value={option}>
+        {option}
+      </option>
+    ))}
 </select>
-                    <select required>
-                      <option value="">Select Service</option>
-                      <option value="seo">iGaming SEO</option>
-                      <option value="meta">Meta Ads</option>
-                      <option value="telegram">
-                        Telegram &amp; Community Marketing
-                      </option>
-                      <option value="affiliate">Affiliate Marketing</option>
-                      <option value="acquisition">Player Acquisition</option>
-                      <option value="creative">Creative Production</option>
-                      <option value="cro">Conversion Optimization</option>
-                    </select>
+
+{errors.budget && (
+  <span className="form-error">
+    {errors.budget}
+  </span>
+)}
+                    <select
+  required
+  value={service}
+  onChange={(e) => setService(e.target.value)}
+>
+  <option value="">Select Service</option>
+  <option value="seo">iGaming SEO</option>
+  <option value="meta">Meta Ads</option>
+  <option value="telegram">
+    Telegram & Community Marketing
+  </option>
+  <option value="affiliate">Affiliate Marketing</option>
+  <option value="acquisition">Player Acquisition</option>
+  <option value="creative">Creative Production</option>
+  <option value="cro">Conversion Optimization</option>
+</select>
+                    {errors.service && (
+  <span className="form-error">
+    {errors.service}
+  </span>
+)}
                   </div>
                   <button type="submit" className="btn btn-primary">
                     Take The First Step <ArrowRight size={16} />

@@ -1,12 +1,11 @@
-import { countryRules } from "./countryRules";
+import { countryRules } from "../utils/countryRules";
 
-export function validatePhone(countryCode, phone) {
+export const validatePhone = (countryCode, phone) => {
   const rule = countryRules[countryCode];
 
   if (!rule) return false;
 
-  return (
-    phone.length >= rule.min &&
-    phone.length <= rule.max
-  );
-}
+  const cleanedPhone = phone.replace(/\D/g, "");
+
+  return cleanedPhone.length === rule.phoneLength;
+};
