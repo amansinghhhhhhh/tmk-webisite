@@ -1,4 +1,5 @@
 import { ArrowRight, Phone, Mail, MapPin, MessageCircle, Send } from 'lucide-react';
+import LeadForm from "../components/LeadForm";
 
 const FaIcon = ({ type }) => {
   if (type === "facebook") return <svg width={18} height={18} viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>;
@@ -106,46 +107,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="contact-form-wrap">
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  alert('Thank you for your message! We will get back to you shortly.');
-                }}
-              >
-                <div className="form-row">
-                  <input type="text" placeholder="Full Name" required />
-                  <input type="email" placeholder="Email Address" required />
-                </div>
-                <div className="form-row">
-                  <select>
-                    <option value="">Country Code</option>
-                    <option value="+91">+91 (IND)</option>
-                    <option value="+971">+971 (ARE)</option>
-                    <option value="+1">+1 (USA)</option>
-                    <option value="+44">+44 (GBR)</option>
-                  </select>
-                  <input type="tel" placeholder="Phone Number" required />
-                </div>
-                <div className="form-row" style={{ gridTemplateColumns: '1fr' }}>
-                  <select>
-                    <option value="">Select Service</option>
-                    <option value="seo">iGaming SEO</option>
-                    <option value="meta">Meta Ads</option>
-                    <option value="telegram">Telegram &amp; Community Marketing</option>
-                    <option value="affiliate">Affiliate Marketing</option>
-                    <option value="acquisition">Player Acquisition</option>
-                    <option value="creative">Creative Production</option>
-                    <option value="cro">Conversion Optimization</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                <div className="form-row" style={{ gridTemplateColumns: '1fr' }}>
-                  <textarea placeholder="Tell us about your project and goals..." required></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary">
-                  Send Message <ArrowRight size={16} />
-                </button>
-              </form>
+              <LeadForm />
             </div>
           </div>
         </div>

@@ -15,11 +15,12 @@ import {
 // import Swiper from "swiper";
 import Swiper from "swiper/bundle";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import { countryRules } from "../utils/countryRules";
-import { budgetOptions } from "../utils/budgetOptions";
-import { validatePhone } from "../utils/phoneValidation";
-import { countries } from "../data/countries";
+// import { countryRules } from "../utils/countryRules";
+// import { budgetOptions } from "../utils/budgetOptions";
+// import { validatePhone } from "../utils/phoneValidation";
+// import { countries } from "../data/countries";
 import { fetchPosts, mapPost } from "../api/wordpress";
+import LeadForm from "../components/LeadForm";
 
 
 const expertise = [
@@ -137,100 +138,100 @@ const certImages = [
 export default function Home() {
   const navigate = useNavigate();
   const [openFaq, setOpenFaq] = useState(null);
-  const [countryCode, setCountryCode] = useState("");
-  const [phone, setPhone] = useState("");
-  const [budget, setBudget] = useState("");
-  const [selectedCode, setSelectedCode] = useState("");
-  const [errors, setErrors] = useState({});
-  const [name, setName] = useState("");
-const [email, setEmail] = useState("");
-const [submitMessage, setSubmitMessage] = useState("");
-const [submitStatus, setSubmitStatus] = useState("");
-const [loading, setLoading] = useState(false);
+  // const [countryCode, setCountryCode] = useState("");
+  // const [phone, setPhone] = useState("");
+  // const [budget, setBudget] = useState("");
+  // const [selectedCode, setSelectedCode] = useState("");
+  // const [errors, setErrors] = useState({});
+  // const [name, setName] = useState("");
+// const [email, setEmail] = useState("");
+// const [submitMessage, setSubmitMessage] = useState("");
+// const [submitStatus, setSubmitStatus] = useState("");
+// const [loading, setLoading] = useState(false);
 
 
 const [service, setService] = useState("");
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+// const handleSubmit = async (e) => {
+//   e.preventDefault();
 
-  const newErrors = {};
+//   const newErrors = {};
 
-  if (!name.trim()) {
-    newErrors.name = "Name is required";
-  }
+//   if (!name.trim()) {
+//     newErrors.name = "Name is required";
+//   }
 
-  if (!email.trim()) {
-    newErrors.email = "Email is required";
-  } else if (!/\S+@\S+\.\S+/.test(email)) {
-    newErrors.email = "Invalid email address";
-  }
+//   if (!email.trim()) {
+//     newErrors.email = "Email is required";
+//   } else if (!/\S+@\S+\.\S+/.test(email)) {
+//     newErrors.email = "Invalid email address";
+//   }
 
-  if (!countryCode) {
-    newErrors.countryCode = "Please select a country";
-  }
+//   if (!countryCode) {
+//     newErrors.countryCode = "Please select a country";
+//   }
 
-  if (!phone.trim()) {
-    newErrors.phone = "Phone number is required";
-  } else if (!validatePhone(countryCode, phone)) {
-    newErrors.phone =
-      `Invalid phone number for ${countryRules[countryCode]?.name}`;
-  }
+//   if (!phone.trim()) {
+//     newErrors.phone = "Phone number is required";
+//   } else if (!validatePhone(countryCode, phone)) {
+//     newErrors.phone =
+//       `Invalid phone number for ${countryRules[countryCode]?.name}`;
+//   }
 
-  if (!budget) {
-    newErrors.budget = "Please select a budget";
-  }
+//   if (!budget) {
+//     newErrors.budget = "Please select a budget";
+//   }
 
-  if (!service) {
-    newErrors.service = "Please select a service";
-  }
+//   if (!service) {
+//     newErrors.service = "Please select a service";
+//   }
 
-  setErrors(newErrors);
+//   setErrors(newErrors);
 
-  if (Object.keys(newErrors).length > 0) return;
-try {
-  setLoading(true);
-  setSubmitMessage("");
+//   if (Object.keys(newErrors).length > 0) return;
+// try {
+//   setLoading(true);
+//   setSubmitMessage("");
 
-  await fetch(
-    import.meta.env.VITE_GOOGLE_SHEET,
-    {
-      method: "POST",
-      body: JSON.stringify({
-        name,
-        email,
-        countryCode,
-        phone,
-        budget,
-        service,
-      }),
-    }
-  );
+//   await fetch(
+//     import.meta.env.VITE_GOOGLE_SHEET,
+//     {
+//       method: "POST",
+//       body: JSON.stringify({
+//         name,
+//         email,
+//         countryCode,
+//         phone,
+//         budget,
+//         service,
+//       }),
+//     }
+//   );
 
-  setSubmitStatus("success");
-  setSubmitMessage(
-    "Thank you! Your message has been sent successfully."
-  );
+//   setSubmitStatus("success");
+//   setSubmitMessage(
+//     "Thank you! Your message has been sent successfully."
+//   );
 
-  setName("");
-  setEmail("");
-  setCountryCode("");
-  setPhone("");
-  setBudget("");
-  setService("");
-  setErrors({});
-  navigate("/thank-you");
-} catch (error) {
-  console.error(error);
+//   setName("");
+//   setEmail("");
+//   setCountryCode("");
+//   setPhone("");
+//   setBudget("");
+//   setService("");
+//   setErrors({});
+//   navigate("/thank-you");
+// } catch (error) {
+//   console.error(error);
 
-  setSubmitStatus("error");
-  setSubmitMessage(
-    "Something went wrong. Please try again."
-  );
-} finally {
-  setLoading(false);
-}
-};
+//   setSubmitStatus("error");
+//   setSubmitMessage(
+//     "Something went wrong. Please try again."
+//   );
+// } finally {
+//   setLoading(false);
+// }
+// };
 
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -457,16 +458,6 @@ try {
             className="trust-strip"
             style={{
               marginTop: "-50px",
-              // padding: "24px 32px",
-              // borderRadius: "20px",
-              // background: "rgba(15,15,30,.3)",
-              // backdropFilter: "blur(8px)",
-              // WebkitBackdropFilter: "blur(8px)",
-              // border: "1px solid rgba(255,255,255,.03)",
-              // width: "100vw",
-              // marginLeft: "calc(-50vw + 50%)",
-              // position: "relative",
-              // left: 0,
             }}
           >
             <span
@@ -1411,7 +1402,7 @@ try {
                   <CheckCircle size={14} /> Result-Driven Solutions
                 </li>
               </ul>
-              <div className="cta-form-wrap">
+              {/* <div className="cta-form-wrap">
                 <form
   className="cta-form"
   onSubmit={handleSubmit}
@@ -1552,7 +1543,8 @@ try {
   </div>
 )}
                 </form>
-              </div>
+              </div> */}
+              <LeadForm />
             </div>
           </div>
         </div>
