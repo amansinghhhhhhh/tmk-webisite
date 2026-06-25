@@ -112,6 +112,7 @@ export default function PostDetail({ categoryId, backLink, backLabel, listLink, 
     )
   }
 console.log("SEO DATA:", post?.seo);
+console.log("SEO DESCRIPTION:", post?.seo?.description);
   return (
     
      <>
