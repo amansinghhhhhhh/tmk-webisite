@@ -40,6 +40,7 @@ export function mapService(service) {
     slug: service.slug,
     link: service.link,
     acf: service.acf || {},
+    seo: service.yoast_head_json || null,
   };
 }
 
