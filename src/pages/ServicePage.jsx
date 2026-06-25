@@ -13,8 +13,6 @@ export default function ServicePage() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    let isMounted = true // Track mounting state to prevent leaks/race conditions
-    
     setLoading(true)
     setError(null)
     setService(null)
@@ -23,7 +21,6 @@ export default function ServicePage() {
 
     fetchService(slug)
       .then((s) => {
-        if (!isMounted) return
         if (!s) {
           setLoading(false)
           return
@@ -33,61 +30,41 @@ export default function ServicePage() {
 
         const acf = s.acf || {}
         const promises = []
-        if (acf.banner_image) {
-          promises.push(getMediaUrl(acf.banner_image).then(img => {
-            if (isMounted) setBannerImg(img)
-          }))
-        }
-        if (acf.why_choose_us_image) {
-          promises.push(getMediaUrl(acf.why_choose_us_image).then(img => {
-            if (isMounted) setContentImg(img)
-          }))
-        }
+        if (acf.banner_image) promises.push(getMediaUrl(acf.banner_image).then(setBannerImg))
+        if (acf.why_choose_us_image) promises.push(getMediaUrl(acf.why_choose_us_image).then(setContentImg))
         return Promise.all(promises)
       })
-      .then(() => {
-        if (isMounted) setLoading(false)
-      })
+      .then(() => setLoading(false))
       .catch((err) => {
-        if (isMounted) {
-          setError(err.message)
-          setLoading(false)
-        }
+        setError(err.message)
+        setLoading(false)
       })
-
-    return () => {
-      isMounted = false // Clean up on unmount or slug change
-    }
   }, [slug])
 
   if (loading) {
     return (
-      <>
-        {/* Added safe string fallbacks so SEO doesn't receive undefined/null metrics */}
-        <SEO
-          title={service?.seo?.title || "Loading Service..."}
-          description={
-            service?.seo?.description ||
-            service?.seo?.og_description ||
-            "Please wait while we load the service details."
-          }
-          canonical={service?.seo?.canonical || window.location.href}
-          ogTitle={service?.seo?.og_title || "Loading..."}
-          ogDescription={
-            service?.seo?.og_description ||
-            service?.seo?.description ||
-            "Loading..."
-          }
-          ogImage={service?.seo?.og_image?.[0]?.url || ""}
-        />      
-        
-        <section className="page-hero" style={{ minHeight: "60vh" }}>
-          <div className="container">
-            <div className="hero-content" style={{ textAlign: "center" }}>
-              <p style={{ color: "#999", fontSize: 18 }}>Loading...</p>
-            </div>
+<>
+ <SEO
+      title={service?.seo?.title}
+      description={
+        service?.seo?.description ||
+        service?.seo?.og_description
+      }
+      canonical={service?.seo?.canonical}
+      ogTitle={service?.seo?.og_title}
+      ogDescription={
+        service?.seo?.og_description ||
+        service?.seo?.description
+      }
+      ogImage={service?.seo?.og_image?.[0]?.url}
+    />      
+      <section className="page-hero" style={{ minHeight: "60vh" }}>
+        <div className="container">
+          <div className="hero-content" style={{ textAlign: "center" }}>
+            <p style={{ color: "#999", fontSize: 18 }}>Loading...</p>
           </div>
-        </section>
+        </div>
+      </section>
       </>
     )
   }
@@ -106,7 +83,7 @@ export default function ServicePage() {
     )
   }
 
-  const acf = service.acf || {}
+  const acf = service.acf
   const features = acf.we_offer_card || []
   const whyDesc = acf.why_choose_us_description || ""
   const whyPointers = acf.why_choose_us_pointers || ""
@@ -117,15 +94,6 @@ export default function ServicePage() {
 
   return (
     <>
-      <SEO
-        title={service?.seo?.title}
-        description={service?.seo?.description || service?.seo?.og_description}
-        canonical={service?.seo?.canonical}
-        ogTitle={service?.seo?.og_title}
-        ogDescription={service?.seo?.og_description || service?.seo?.description}
-        ogImage={service?.seo?.og_image?.[0]?.url}
-      />
-
       <section className="page-hero">
         <img src={heroBg} alt="" className="hero-bg-img" />
         <div className="container">
