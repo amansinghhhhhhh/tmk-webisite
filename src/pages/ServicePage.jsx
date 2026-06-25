@@ -42,22 +42,7 @@ export default function ServicePage() {
   }, [slug])
 
   if (loading) {
-    return (
-<>
- <SEO
-      title={service?.seo?.title}
-      description={
-        service?.seo?.description ||
-        service?.seo?.og_description
-      }
-      canonical={service?.seo?.canonical}
-      ogTitle={service?.seo?.og_title}
-      ogDescription={
-        service?.seo?.og_description ||
-        service?.seo?.description
-      }
-      ogImage={service?.seo?.og_image?.[0]?.url}
-    />      
+    return (     
       <section className="page-hero" style={{ minHeight: "60vh" }}>
         <div className="container">
           <div className="hero-content" style={{ textAlign: "center" }}>
@@ -65,7 +50,7 @@ export default function ServicePage() {
           </div>
         </div>
       </section>
-      </>
+     
     )
   }
 
@@ -93,7 +78,22 @@ export default function ServicePage() {
   const heroBg = bannerImg || `/internal pages hero image/${slug}.webp`
 
   return (
+    
     <>
+ <SEO
+      title={service?.seo?.title}
+      description={
+        service?.seo?.description ||
+        service?.seo?.og_description
+      }
+      canonical={service?.seo?.canonical}
+      ogTitle={service?.seo?.og_title}
+      ogDescription={
+        service?.seo?.og_description ||
+        service?.seo?.description
+      }
+      ogImage={service?.seo?.og_image?.[0]?.url}
+    /> 
       <section className="page-hero">
         <img src={heroBg} alt="" className="hero-bg-img" />
         <div className="container">
