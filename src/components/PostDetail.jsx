@@ -54,7 +54,7 @@ export default function PostDetail({ categoryId, backLink, backLabel, listLink, 
   const [allPosts, setAllPosts] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-
+  console.log("POST DATA:", post)
   useEffect(() => {
     setLoading(true)
     setError(null)
