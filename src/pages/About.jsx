@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Target, Shield, Lightbulb, Handshake, Globe, BarChart3 } from 'lucide-react';
+import SEO from "../components/SEO";
 
 const values = [
   { icon: <Target size={24} />, title: 'Results First', desc: 'Every campaign is measured against clear KPIs. We don\'t just deliver activity — we deliver outcomes that impact your bottom line.' },
@@ -12,6 +13,14 @@ const values = [
 
 export default function About() {
   return (
+    <>
+    <SEO
+  title="About Us | TMK"
+  description="Learn more about TMK, our expertise in iGaming marketing, SEO, affiliate growth, software solutions, and digital strategies that help brands scale."
+  canonical="https://https://themarketingking.org/about"
+  ogTitle="About Us | TMK"
+  ogDescription="Learn more about TMK, our expertise in iGaming marketing, SEO, affiliate growth, software solutions, and digital strategies."
+/>
     <div>
       <section className="page-hero">
         <img src="/internal pages hero image/TMK-About-Us.webp" alt="" className="hero-bg-img" />
@@ -130,5 +139,6 @@ export default function About() {
         </div>
       </section>
     </div>
+    </>
   );
 }

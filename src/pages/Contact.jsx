@@ -1,5 +1,6 @@
 import { ArrowRight, Phone, Mail, MapPin, MessageCircle, Send } from 'lucide-react';
 import LeadForm from "../components/LeadForm";
+import SEO from "../components/SEO";
 
 const FaIcon = ({ type }) => {
   if (type === "facebook") return <svg width={18} height={18} viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>;
@@ -10,6 +11,15 @@ const FaIcon = ({ type }) => {
 
 export default function Contact() {
   return (
+    <>
+   <SEO
+  title="Contact Us | TMK"
+  description="Get in touch with TMK for iGaming marketing, SEO, affiliate marketing, software solutions, and business growth services."
+  canonical="https://yourdomain.com/contact"
+  ogTitle="Contact Us | TMK"
+  ogDescription="Get in touch with TMK for iGaming marketing, SEO, affiliate marketing, software solutions, and business growth services."
+/>
+    
     <div>
       <section className="page-hero">
         <img src="/internal pages hero image/TMk-CONTACT-US.webp" alt="" className="hero-bg-img" />
@@ -139,5 +149,6 @@ export default function Contact() {
         </div>
       </section>
     </div>
+    </>
   );
 }

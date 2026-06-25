@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { Star, ArrowRight } from "lucide-react"
+import SEO from "../components/SEO";
 
 const stats = [
   { num: "170K+", label: "Players Acquired" },
@@ -38,6 +39,13 @@ const testimonials = [
 export default function OurClient() {
   return (
     <>
+    <SEO
+  title="Our Clients | TMK"
+  description="Discover the brands and businesses that trust TMK for iGaming marketing, SEO, affiliate growth, and digital solutions."
+  canonical="https://yourdomain.com/our-clients"
+  ogTitle="Our Clients | TMK"
+  ogDescription="Discover the brands and businesses that trust TMK for iGaming marketing, SEO, affiliate growth, and digital solutions."
+/>
       <section className="page-hero">
         <img src="/internal pages hero image/Our-Client.webp" alt="" className="hero-bg-img" />
         <div className="container" style={{ marginLeft: 'auto', marginRight: 80 }}>
