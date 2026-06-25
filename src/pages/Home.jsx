@@ -329,8 +329,8 @@ const [service, setService] = useState("");
   return (
      <>
     <SEO
-      title="The Marketing King | iGaming Marketing Agency"
-      description="Scale your iGaming business with SEO, Meta Ads, Affiliate Marketing, Player Acquisition and Conversion Optimization."
+      title="Home - The Marketing King"
+      description="Power Up Your iGaming Business Growth Next Level Marketing for Casino & Sports Search Engine Optimization Meta Ads Google Live Line Ads Google Search Ads Telegram Ton Ads Website Development WhatsApp API Influencer Marketing Turnkey Solution As a trusted iGaming traffic provider in India, we specialize in driving real, high-intent players to your platform. Our optimized traffic solutions ensure better ROI, higher retention, and long-term growth in the competitive"
       canonical="https://themarketingking.org/"
     />
     <div>

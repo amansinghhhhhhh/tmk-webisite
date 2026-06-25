@@ -13,11 +13,11 @@ export default function Contact() {
   return (
     <>
    <SEO
-  title="Contact Us | TMK"
-  description="Get in touch with TMK for iGaming marketing, SEO, affiliate marketing, software solutions, and business growth services."
-  canonical="https://yourdomain.com/contact"
-  ogTitle="Contact Us | TMK"
-  ogDescription="Get in touch with TMK for iGaming marketing, SEO, affiliate marketing, software solutions, and business growth services."
+  title="Contact Us - The Marketing King"
+  description="CONTACT US We’re here to help.. Fill in this form to find out what our products and services will do for you. Select Code +91 (India) +971 (UAE) +1 (USA) +44 (UK) +355 (AL) +376 (AD) +43 (AT) +375 (BY) +32 (BE) +387 (BA) +359 (BG) +385 (HR) +357 (CY) +420 (CZ) +45 (DK) +372"
+  canonical="https://themarketingking.org/contact"
+  ogTitle="Contact Us - The Marketing King"
+  ogDescription="CONTACT US We’re here to help.. Fill in this form to find out what our products and services will do for you. Select Code +91 (India) +971 (UAE) +1 (USA) +44 (UK) +355 (AL) +376 (AD) +43 (AT) +375 (BY) +32 (BE) +387 (BA) +359 (BG) +385 (HR) +357 (CY) +420 (CZ) +45 (DK) +372"
 />
     
     <div>

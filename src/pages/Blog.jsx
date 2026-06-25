@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { ArrowRight } from "lucide-react"
-import { fetchPosts, mapPost } from "../api/wordpress"
+import { fetchPosts, mapPost } from "../api/wordpress";
+import SEO from "../components/SEO";
 
 export default function Blog() {
   const [posts, setPosts] = useState([])
@@ -22,6 +23,13 @@ export default function Blog() {
 
   return (
     <>
+    <SEO
+      title="Blogs - The Marketing King"
+      description="Game Marketing Agency"
+      canonical="https://https://themarketingking.org/blog"
+      ogTitle="Blogs - The Marketing King"
+      ogDescription="Game Marketing Agency"
+    />
       <section className="page-hero">
         <img src="/internal pages hero image/new-TMK-News.webp" alt="" className="hero-bg-img" />
         <div className="container">

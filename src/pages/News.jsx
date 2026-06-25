@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { ArrowRight } from "lucide-react"
+import SEO from "../components/SEO";
 import { fetchPosts, mapPost } from "../api/wordpress"
 
 export default function News() {
@@ -22,6 +23,13 @@ export default function News() {
 
   return (
     <>
+     <SEO
+          title="News - The Marketing King"
+          description="News Together, Let's Craft Remarkable Stories. Act Now and Make it Happen We don't just market, we create experiences that resonate, engage, and drive results. Elevate your brand with us – where every campaign is a success story waiting to unfold."
+          canonical="https://https://themarketingking.org/blog"
+          ogTitle="News - The Marketing King"
+          ogDescription="News Together, Let's Craft Remarkable Stories. Act Now and Make it Happen We don't just market, we create experiences that resonate, engage, and drive results. Elevate your brand with us – where every campaign is a success story waiting to unfold."
+        />
       <section className="page-hero">
         <img src="/internal pages hero image/new-TMK-News.webp" alt="" className="hero-bg-img" />
         <div className="container">

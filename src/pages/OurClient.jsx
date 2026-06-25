@@ -40,11 +40,11 @@ export default function OurClient() {
   return (
     <>
     <SEO
-  title="Our Clients | TMK"
-  description="Discover the brands and businesses that trust TMK for iGaming marketing, SEO, affiliate growth, and digital solutions."
+  title="Our Client - The Marketing King"
+  description="Confidential Partnerships Proven Results Due to the private nature of the iGaming industry, we maintain complete client confidentiality. Our work, performance, and long-term partnerships speak louder than public portfolios. If you’d like to know more, let’s connect live — we’ll be happy to walk you through our work and results. LET'S CONNECT LIVE MEET Contact"
   canonical="https://yourdomain.com/our-clients"
-  ogTitle="Our Clients | TMK"
-  ogDescription="Discover the brands and businesses that trust TMK for iGaming marketing, SEO, affiliate growth, and digital solutions."
+  ogTitle="Our Client - The Marketing King"
+  ogDescription="Confidential Partnerships Proven Results Due to the private nature of the iGaming industry, we maintain complete client confidentiality. Our work, performance, and long-term partnerships speak louder than public portfolios. If you’d like to know more, let’s connect live — we’ll be happy to walk you through our work and results. LET'S CONNECT LIVE MEET Contact"
 />
       <section className="page-hero">
         <img src="/internal pages hero image/Our-Client.webp" alt="" className="hero-bg-img" />
