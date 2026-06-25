@@ -10,6 +10,7 @@ export async function fetchPostBySlug(slug) {
   const res = await fetch(`${API_BASE}/posts?_embed&slug=${slug}`);
   if (!res.ok) throw new Error("Failed to fetch post");
   const data = await res.json();
+  console.log("RAW POST:", data[0]);
   return data[0] || null;
 }
 
