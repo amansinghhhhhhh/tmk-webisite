@@ -115,13 +115,14 @@ export default function PostDetail({ categoryId, backLink, backLabel, listLink, 
   return (
     
      <>
+     console.log(post?.yoast_head_json);
     <SEO
-      title={post.seo?.title}
-  description={post.seo?.description}
-  canonical={post.seo?.canonical}
-  ogTitle={post.seo?.og_title}
-  ogDescription={post.seo?.og_description}
-  ogImage={post.seo?.og_image?.[0]?.url}
+  title={post.yoast_head_json?.title}
+  description={post.yoast_head_json?.description}
+  canonical={post.yoast_head_json?.canonical}
+  ogTitle={post.yoast_head_json?.og_title}
+  ogDescription={post.yoast_head_json?.og_description}
+  ogImage={post.yoast_head_json?.og_image?.[0]?.url}
     />
       <section className="blog-detail-hero">
         <div className="blog-detail-hero-bg" />
