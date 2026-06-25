@@ -4,6 +4,9 @@ export default function SEO({
   title,
   description,
   canonical,
+  ogTitle,
+  ogDescription,
+  ogImage,
 }) {
   return (
     <Helmet>
@@ -21,6 +24,18 @@ export default function SEO({
           rel="canonical"
           href={canonical}
         />
+      )}
+
+      {ogTitle && (
+        <meta property="og:title" content={ogTitle} />
+      )}
+
+      {ogDescription && (
+        <meta property="og:description" content={ogDescription} />
+      )}
+
+      {ogImage && (
+        <meta property="og:image" content={ogImage} />
       )}
     </Helmet>
   );

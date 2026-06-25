@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
 import { ArrowLeft, ArrowRight, Calendar, User, Clock, Copy, Check } from "lucide-react"
 import { fetchPostBySlug, fetchPosts, mapPost } from "../api/wordpress"
+import SEO from "../components/SEO";
 
 function estimateReadTime(html) {
   if (!html) return "1 min read"
@@ -112,7 +113,16 @@ export default function PostDetail({ categoryId, backLink, backLabel, listLink, 
   }
 
   return (
-    <>
+    
+     <>
+    <SEO
+      title={post.seo?.title}
+  description={post.seo?.description}
+  canonical={post.seo?.canonical}
+  ogTitle={post.seo?.og_title}
+  ogDescription={post.seo?.og_description}
+  ogImage={post.seo?.og_image?.[0]?.url}
+    />
       <section className="blog-detail-hero">
         <div className="blog-detail-hero-bg" />
         <div className="blog-detail-hero-overlay" />

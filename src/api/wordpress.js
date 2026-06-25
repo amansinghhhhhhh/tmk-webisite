@@ -59,5 +59,6 @@ export function mapPost(post) {
     image: media?.source_url || "",
     categoryName: category?.name || "",
     categorySlug: category?.slug || "",
+    seo: post.yoast_head_json || null,
   };
 }
