@@ -55,7 +55,7 @@ export default function PostDetail({ categoryId, backLink, backLabel, listLink, 
   const [allPosts, setAllPosts] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-  console.log("POST DATA:", post)
+
   useEffect(() => {
     setLoading(true)
     setError(null)
@@ -111,14 +111,14 @@ export default function PostDetail({ categoryId, backLink, backLabel, listLink, 
       </section>
     )
   }
-console.log("SEO DATA:", post?.seo);
-console.log("SEO DESCRIPTION:", post?.seo?.description);
+// console.log("SEO DATA:", post?.seo);
+// console.log("SEO DESCRIPTION:", post?.seo?.description);
   return (
     
      <>
     <SEO
     title={post.seo?.title}
-  description={post.seo?.description}
+  description={post.seo?.description || post.seo?.og_description}
   canonical={post.seo?.canonical}
   ogTitle={post.seo?.og_title}
   ogDescription={post.seo?.og_description}
