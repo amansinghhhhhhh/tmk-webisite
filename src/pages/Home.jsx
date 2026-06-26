@@ -18,6 +18,7 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { fetchPosts, mapPost } from "../api/wordpress";
 import LeadForm from "../components/LeadForm";
 import SEO from "../components/SEO";
+import FAQSection from "../components/FAQSection";
 
 const expertise = [
   {
@@ -133,14 +134,14 @@ const certImages = [
 
 export default function Home() {
   const navigate = useNavigate();
-  const [openFaq, setOpenFaq] = useState(null);
+  // const [openFaq, setOpenFaq] = useState(null);
 
 
 const [service, setService] = useState("");
 
-  const toggleFaq = (index) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
+  // const toggleFaq = (index) => {
+  //   setOpenFaq(openFaq === index ? null : index);
+  // };
 
   const [blogPosts, setBlogPosts] = useState([]);
   const [blogLoading, setBlogLoading] = useState(true);
@@ -1227,7 +1228,7 @@ const [service, setService] = useState("");
         </div>
       </section>
 
-      <section id="faq">
+      {/* <section id="faq">
         <div className="container">
           <p className="section-label">FAQ</p>
           <h2 className="section-title">
@@ -1278,7 +1279,17 @@ const [service, setService] = useState("");
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <FAQSection
+  label="FAQ"
+  title={
+    <>
+      Frequently Asked <span className="gold">Questions</span>
+    </>
+  }
+  faqs={faqData}
+/>
 
       <section id="cta" className="bg-glow">
         <div className="container">

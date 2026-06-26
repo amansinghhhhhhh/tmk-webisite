@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom"
 import { CheckCircle, ArrowRight } from "lucide-react"
 import SEO from "../components/SEO"
 import { fetchService, getMediaUrl, mapService } from "../api/wordpress"
+import FAQSection from "../components/FAQSection";
 
 export default function ServicePage() {
   const { slug } = useParams()
@@ -11,6 +12,7 @@ export default function ServicePage() {
   const [contentImg, setContentImg] = useState("")
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const faqItems = acf.faq_items || [];
 
   useEffect(() => {
     setLoading(true)
@@ -173,6 +175,12 @@ export default function ServicePage() {
           </div>
         </section>
       )}
+      <FAQSection
+  label={acf.faq_label}
+  title={acf.faq_title}
+  description={acf.faq_description}
+  faqs={faqItems}
+/>
     </>
   )
 }
