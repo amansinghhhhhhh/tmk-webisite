@@ -12,7 +12,6 @@ export default function ServicePage() {
   const [contentImg, setContentImg] = useState("")
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-  const faqItems = acf.faq_items || [];
 
   useEffect(() => {
     setLoading(true)
@@ -76,7 +75,7 @@ export default function ServicePage() {
   const whyPointers = acf.why_choose_us_pointers || ""
   const hasWhySection = whyDesc || whyPointers || contentImg
   const hasElevate = acf.why_choose_tmk_title || acf.why_choose_tmk_description
-
+const faqItems = acf.faq_items || [];
   const heroBg = bannerImg || `/internal pages hero image/${slug}.webp`
 
   return (
@@ -101,7 +100,13 @@ export default function ServicePage() {
         <div className="container">
           <div className="hero-content">
             <h1>{acf.banner_heading || service.title}</h1>
-            <p>{acf.banner_description}</p>
+            {acf.banner_description && (
+  <p
+    dangerouslySetInnerHTML={{
+      __html: acf.banner_description,
+    }}
+  />
+)}
             <Link to="/contact" className="btn btn-primary">Get Started <ArrowRight /></Link>
           </div>
         </div>
@@ -113,8 +118,13 @@ export default function ServicePage() {
             <p className="section-label">{acf.we_offer_label || "What We Offer"}</p>
             <h2 className="section-title">{acf.we_offer_title}</h2>
             {acf.we_offer_description && (
-              <p className="section-desc">{acf.we_offer_description.replace(/<[^>]+>/g, "")}</p>
-            )}
+  <p
+    className="section-desc"
+    dangerouslySetInnerHTML={{
+      __html: acf.we_offer_description,
+    }}
+  />
+)}
             <div className="features-grid stagger">
               {features.map((f, i) => (
                 <div className="feature-card" key={i}>
@@ -137,19 +147,22 @@ export default function ServicePage() {
             )}
             <div className="content-row">
               <div className="text-content">
-                {whyDesc.split("\r\n").filter(Boolean).map((p, i) => (
-                  <p key={i}>{p}</p>
-                ))}
-                {whyPointers && (
-                  <ul dangerouslySetInnerHTML={{
-                    __html: whyPointers
-                      .replace(/<ul>/g, "")
-                      .replace(/<\/ul>/g, "")
-                      .replace(/<li>/g, '<li style="display:flex;align-items:flex-start;gap:8px;margin-bottom:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>')
-                      .replace(/<i\s+class="[^"]*"><\/i>\s*/g, "")
-                      .replace(/<[^>]+>/g, (m) => m.startsWith("<li") ? m : "")
-                  }} />
-                )}
+                {whyDesc && (
+  <div
+    dangerouslySetInnerHTML={{
+      __html: whyDesc,
+    }}
+  />
+)}
+
+ {whyPointers && (
+  <div 
+    className="why-pointers"
+    dangerouslySetInnerHTML={{
+      __html: whyPointers,
+    }}
+  />
+)}
               </div>
               {contentImg && <img src={contentImg} alt="" className="content-image" />}
             </div>
@@ -164,7 +177,12 @@ export default function ServicePage() {
               <div className="elevate-content">
                 {acf.why_choose_tmk_label && <p className="elevate-tag">{acf.why_choose_tmk_label}</p>}
                 <h2 className="elevate-title">{acf.why_choose_tmk_title}</h2>
-                <p className="elevate-desc">{acf.why_choose_tmk_description}</p>
+                <div
+  className="elevate-desc"
+  dangerouslySetInnerHTML={{
+    __html: acf.why_choose_tmk_description,
+  }}
+/>
                 {acf.why_choose_tmk_button ? (
                   <a href={acf.why_choose_tmk_button} target="_blank" rel="noopener noreferrer" className="elevate-btn">Contact Us</a>
                 ) : (

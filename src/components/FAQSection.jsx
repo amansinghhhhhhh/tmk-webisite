@@ -39,9 +39,12 @@ export default function FAQSection({
           </span>
         </div>
 
-        <div className={`faq-a${openFaq === index ? " open" : ""}`}>
-          {answer}
-        </div>
+        <div
+  className={`faq-a${openFaq === index ? " open" : ""}`}
+  dangerouslySetInnerHTML={{
+    __html: answer,
+  }}
+/>
       </div>
     );
   };
@@ -58,10 +61,13 @@ export default function FAQSection({
         )}
 
         {description && (
-          <p className="section-desc">
-            {description}
-          </p>
-        )}
+  <div
+    className="section-desc"
+    dangerouslySetInnerHTML={{
+      __html: description,
+    }}
+  />
+)}
 
         <div className="faq-grid">
           <div className="faq-col">

@@ -820,6 +820,67 @@ section {
   line-height: 1.65
 }
 
+.why-pointers ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.why-pointers li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 14px;
+}
+
+.why-pointers li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.why-pointers ul{
+    list-style:none;
+    padding:0;
+    margin:25px 0;
+}
+
+.why-pointers li{
+    padding: 14px 0 14px 30px !important;
+    display: block !important;
+    align-items: start !important;
+    margin: 0;
+}
+
+.why-pointers li::before{
+    content:"✓";
+    position:absolute;
+    left:0;
+    top:14px;
+    color:var(--primary);
+    font-weight:700;
+}
+
+.why-pointers h2,
+.why-pointers h3{
+    margin:25px 0 18px;
+}
+
+.why-pointers p{
+    margin:18px 0;
+}
+
+.why-pointers strong{
+    color:#fff;
+}
+
+.why-pointers strong,
+.why-pointers b {
+    display: inline;
+    color: #fff;
+}
+
 #stats {
   position: relative;
   overflow: hidden
