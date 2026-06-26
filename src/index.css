@@ -2054,6 +2054,11 @@ section {
   .cert-card img {
     height: 80px
   }
+  .expertise-scroll
+{
+  padding: 0;
+}
+
 }
 
 #media-coverage {
@@ -2827,7 +2832,8 @@ footer::before {
 
 @media(max-width:640px) {
   .nav-links {
-    display: none
+    display: none;
+    align-items: start;
   }
 
   .hamburger {
@@ -2869,7 +2875,7 @@ footer::before {
   }
 
   .container {
-    padding: 0 16px
+    padding: 0 28px;
   }
 
   .stats-grid,
@@ -2885,8 +2891,10 @@ footer::before {
 
   .expertise-scroll .swiper-wrapper {
     flex-wrap: wrap;
-    gap: 12px
+    gap: 12px;
+    transform:translate3d(0px, 0px, 0px) !important;
   }
+
 
   .expertise-scroll .swiper-slide {
     width: 100% !important;
@@ -2947,7 +2955,7 @@ footer::before {
   }
 
   .cta-form {
-    padding: 24px 20px
+    padding: 24px 0px;
   }
 
   .cta-form .form-row {
@@ -3103,7 +3111,7 @@ footer::before {
 
 @media(max-width:400px) {
   .container {
-    padding: 0 12px
+    padding: 0 28px;
   }
 
   .section-title {
@@ -4180,6 +4188,11 @@ footer::before {
   .stats-mini {
     grid-template-columns: repeat(2, 1fr)
   }
+
+  .cta-benefits
+{
+    grid-template-columns: auto;
+}
 }
 
 /* Join Community */

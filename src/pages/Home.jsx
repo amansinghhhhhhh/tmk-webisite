@@ -346,14 +346,11 @@ const [service, setService] = useState("");
             <div className="hero-left" id="heroLeft">
               <div className="hero-tag">iGaming Growth Marketing Agency</div>
               <h1 className="hero-title">
-                <span className="line1">Scale Your</span>{" "}
-                <span className="line2">iGaming Brand Globally</span>
+                <span className="line1">Next Level Marketing for</span>{" "}
+                <span className="line2">Casino & Sports</span>                 
               </h1>
               <p className="hero-desc">
-                We help online casinos, sportsbooks, poker platforms, fantasy
-                sports apps, and crypto gaming brands acquire premium players,
-                boost FTDs, increase retention, and maximize revenue through
-                analytics-driven marketing strategies.
+              Scale your casino, sportsbook, or crypto gaming brand with trusted <strong>iGaming traffic provider</strong>. By deploying data driven SEO and advanced analytics, we turn high intent traffic into loyal, premium players. Boost your FTDs, lower CPA, maximize retention, and secure long term global revenue growth.
               </p>
               <div className="hero-actions">
                 <a href="#cta" className="btn btn-primary">
@@ -1068,9 +1065,9 @@ const [service, setService] = useState("");
                 </div>
               ))}
             </div>
-            <div className="expertise-pagination swiper-pagination"></div>
+            {/* <div className="expertise-pagination swiper-pagination"></div>
             <div className="swiper-button-prev"></div>
-            <div className="swiper-button-next"></div>
+            <div className="swiper-button-next"></div> */}
           </div>
         </div>
       </section>
