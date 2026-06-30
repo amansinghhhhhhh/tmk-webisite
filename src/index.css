@@ -1077,7 +1077,6 @@ section {
     left: calc(50% + 350px);
     z-index: 1
   }
-
   .services-fan li:hover {
     z-index: 20;
     transform: scale(1.18) translateY(-30px);
