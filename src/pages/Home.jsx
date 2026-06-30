@@ -24,81 +24,81 @@ const expertise = [
   {
     num: "01",
     img: "/New folder (2)/business-expert-3d-icon-png-download-4745552.webp",
-    title: "Specialized iGaming Expertise",
-    desc: "Contrary to conventional agencies, we concentrate on gambling and gaming brands, which allows us to design strategies specifically to meet the challenges and opportunities.",
+    title: "The Ultimate Playbook for iGaming Dominance",
+    desc: "We build growth engines for global gaming brands through organic search and paid traffic acquisition.",
   },
   {
     num: "02",
     img: "/New folder (2)/compliance-3d-icon-png-download-8202794.webp",
-    title: "Compliance-Driven Marketing",
-    desc: "We are aware of the requirements for regulatory compliance across multiple markets. We design campaigns that ensure compliance while increasing growth.",
+    title: "Specialized iGaming Expertise",
+    desc: "We specialize in online casino, sportsbook, and gaming brands, delivering focused, non generic marketing strategies.",
   },
   {
     num: "03",
     img: "/New folder (2)/infographic-3d-icon-png-download-13033145.webp",
-    title: "Multi-Channel Growth Systems",
-    desc: "SEO, paid advertisements, the affiliate market, Social Media influencer campaigns, as well as retention strategies, all working under the same framework.",
+    title: "Compliance Driven Marketing",
+    desc: "We unify your acquisition pipeline, eliminating disconnected silos to maximize marketing efficiency and compounding returns.",
   },
   {
     num: "04",
     img: "/New folder (2)/data-driven-3d-icon-png-download-9531917.webp",
-    title: "Data-Driven Decisions",
-    desc: "Each campaign is governed by the performance metrics of analytics, performance and continual improvement to get the most out of results.",
+    title: "Data Driven Decisions",
+    desc: "We eliminate guesswork in player acquisition using behavioral analytics and real-time performance tracking for every campaign.",
   },
   {
     num: "05",
     img: "/New folder (2)/global-location-3d-icon-png-download-14044491.webp",
-    title: "GEO-Specific Strategies",
-    desc: "Experience in targeting major markets such as India, the UK, Malta, Curacao, the Philippines, Europe and the emerging gaming areas around the world.",
+    title: "GEO Specific Strategies",
+    desc: "Global scale needs local intelligence, so we build tailored acquisition funnels for each market’s players and regulations.",
   },
   {
     num: "06",
     img: "/New folder (2)/long-term-investment-3d-icon-png-download-6185083.webp",
-    title: "Long-Term Growth Focus",
-    desc: "We don't just generate traffic. We assist brands in creating solid acquisition strategies that improve the value of each player's life and profits.",
+    title: "Long Term Growth Focus",
+    desc: "We build high-yield acquisition engines, not traffic spikes, delivering sustainable, compounding market share growth.",
   },
 ];
 
 const faqData = [
   {
-    q: "What iGaming marketing services does The Marketing King provide?",
-    a: "We offer a full suite of iGaming marketing solutions including SEO, Meta Ads, Telegram & Community Marketing, Affiliate Marketing, Player Acquisition, Creative Production, and Conversion Optimization tailored specifically for online casinos, sportsbooks, poker platforms, fantasy sports, and crypto gaming brands.",
+    q: "What makes you the Top Digital Marketing Agency in iGaming compared to traditional providers?",
+    a: "Unlike generalist providers, we operate as a highly specialized iGaming Marketing Agency and dedicated Casino Marketing Company. Traditional agencies waste ad spend testing broad strategies; as the Best Digital Marketing Agency in iGaming, 100% of our infrastructure is engineered to clear gambling restrictions, lower your Cost Per Acquisition (CPA), and drive high intent players directly to your platform.",
   },
   {
-    q: "How does TMK help acquire First-Time Depositors (FTDs)?",
-    a: "We use a data-driven approach combining paid media, affiliate partnerships, community marketing, and conversion optimization to target high-intent players across multiple GEOs, maximizing registrations and first-time deposits while minimizing CPA.",
+    q: "What types of igaming software solutions and platforms do you support?",
+    a: "We deliver robust player acquisition services across all major infrastructure setups. Whether you run a fully customized setup or utilize a white label sportsbook, a white label iGaming platform, or comprehensive iGaming white label solutions, our campaigns integrate seamlessly. We optimize marketing pipelines for operators partnering with any leading turnkey solutions provider or sportsbook software architecture to maximize registration to deposit percentages.",
   },
   {
-    q: "Which GEOs and markets does The Marketing King target?",
-    a: "We specialize in targeting major markets such as India, the UK, Malta, Curacao, the Philippines, Europe, and emerging gaming regions worldwide. Our GEO-specific strategies ensure compliance and maximum ROI in each market.",
+    q: "How do your casino seo services build sustainable, organic domain authority?",
+    a: "Our specialized casino seo agency and dedicated sportsbook seo agency build long term traffic pipelines that outrank the competition. We combine high intent online casino seo keyword strategies with a deep understanding of betting search behaviors. Our comprehensive gambling seo agency and betting seo services ensure your domain commands authority in search engines without relying solely on paid ads.",
   },
   {
-    q: "How does TMK ensure compliance with iGaming regulations?",
-    a: "We are well-versed in regulatory requirements across multiple jurisdictions. All campaigns are designed with compliance in mind, adhering to local advertising laws, responsible gambling guidelines, and platform-specific policies.",
+    q: "What is included in your technical seo agency and site audit packages?",
+    a: "Search engine algorithms evaluate gaming platforms rigorously. Our technical seo agency provides comprehensive seo site audit services and deep website seo audit deployments to uncover hidden crawling or indexing blocks. From executing enterprise technical seo for massive platforms to fine tuning localized performance, our technical seo services ensure your platform is built for maximum search engine indexation.",
   },
   {
-    q: "What results can I expect from working with TMK?",
-    a: "Our clients typically see improved player acquisition metrics, higher conversion rates, increased FTDs, better ROAS, and long-term player retention growth. We provide transparent reporting with regular performance analytics to track every metric.",
+    q: "How does your on page seo agency maximize content visibility?",
+    a: "Driving traffic requires extreme relevance. Our on page seo agency delivers premium on page seo services alongside comprehensive seo content optimization to ensure every page aligns perfectly with player intent. By utilizing advanced semantic keywords and data backed structures, our seo optimization services transform standard landing pages into highly visible, high ranking user pipelines.",
   },
   {
-    q: "Does TMK offer both SEO and paid advertising for iGaming?",
-    a: "Yes, we offer comprehensive iGaming SEO services alongside paid advertising campaigns including Meta Ads, Google Ads, and Telegram Ads as part of our multi-channel growth approach for maximum visibility and acquisition.",
+    q: "Can you help our brand scale globally with casino link building services?",
+    a: "Yes. Off page authority is critical to surviving search updates. We provide elite seo outreach services and white hat link building tailored specifically for the gaming sector. Our targeted casino link building services and sportsbook link building deploy high authority backlink networks that signal trust and dominance to search engines, safely escalating your organic rankings.",
   },
   {
-    q: "How does TMK approach conversion optimization for iGaming platforms?",
-    a: "We optimize every stage of the player journey — from landing page design and registration flow improvements to deposit funnel optimization and UX analysis — using A/B testing and data-driven insights to maximize conversions.",
+    q: "How does your affiliate management agency accelerate partner acquisition?",
+    a: "Affiliates drive massive volume. Our specialized affiliate marketing agency offers complete affiliate management services and aggressive affiliate partner recruitment. From launching optimized programs to providing precise affiliate program management, our affiliate management agency handles targeted casino affiliate recruitment and affiliate acquisition services to systematically build a high yielding, continuous referral ecosystem.",
   },
   {
-    q: "Can TMK help scale my sportsbook or casino brand globally?",
-    a: "Absolutely. We design scalable acquisition systems that combine SEO, paid media, affiliate marketing, and retention strategies to help sportsbook and casino brands expand into new markets and grow sustainably across borders.",
+    q: "What strategies do you use for sportsbook and casino player acquisition?",
+    a: "We run multi layered casino lead generation and targeted casino traffic generation to capture users at the exact moment of intent. Our multi channel frameworks handle high velocity sportsbook player acquisition, sportsbook lead generation, and global betting traffic generation. By optimizing every touchpoint, we ensure a lower cost per online casino customer acquisition and steady, scalable sportsbook customer acquisition volume.",
   },
   {
-    q: "What makes The Marketing King different from general digital agencies?",
-    a: "Unlike general agencies, we specialize exclusively in iGaming and gambling brands. Our deep understanding of player behavior, compliance requirements, and industry-specific marketing channels allows us to deliver highly targeted, effective campaigns that general agencies cannot match.",
+    q: "How do your casino ppc agency and programmatic media buying services function?",
+    a: "Navigating strict platform guidelines requires specialized infrastructure. Our ppc agency offers elite ppc management services and whitelisted google ads management services. Supported by our programmatic advertising agency, we use advanced programmatic media buying frameworks to place high impact ads across premium networks. Our casino ppc agency and casino programmatic advertising solutions bypass traditional ad blocks to keep your player acquisition pipelines running continuously.",
   },
   {
-    q: "How do I get started with The Marketing King?",
-    a: "Simply book a free strategy call through our contact form. We'll discuss your brand, goals, target markets, and current challenges. Then our team will design a custom growth strategy tailored specifically to your needs and budget.",
+    q: "Do you create player guides and localized educational content?",
+    a: "Absolutely. Modern player acquisition relies heavily on trust and educational value. We construct comprehensive, high converting content funnels, including the creation of detailed online casino guide features, a strategic casino strategy guide, and an optimized casino bonus guide. This positioning builds long term authority, educates active players, and nurtures traffic from informational search intent straight into high value platform sign ups.",
   },
 ];
 
@@ -355,18 +355,13 @@ export default function Home() {
           <div className="container">
             <div className="hero-grid">
               <div className="hero-left" id="heroLeft">
-                <div className="hero-tag">iGaming Growth Marketing Agency</div>
+                <div className="hero-tag">Scale Your iGaming Brand Globally</div>
                 <h1 className="hero-title">
                   <span className="line1">Next Level Marketing for</span>{" "}
                   <span className="line2">Casino & Sports</span>
                 </h1>
                 <p className="hero-desc">
-                  Scale your casino, sportsbook, or crypto gaming brand with
-                  trusted <strong>iGaming traffic provider</strong>. By
-                  deploying data driven SEO and advanced analytics, we turn high
-                  intent traffic into loyal, premium players. Boost your FTDs,
-                  lower CPA, maximize retention, and secure long term global
-                  revenue growth.
+                  Trusted global iGaming traffic provider helping every casino, sportsbook, or crypto gaming brand acquire high-value players through SEO, PPC, media buying, and affiliate marketing.
                 </p>
                 <div className="hero-actions">
                   <a href="#cta" className="btn btn-primary">
@@ -612,9 +607,7 @@ export default function Home() {
               <span className="gold">Gaming Vertical</span>
             </h2>
             <p className="section-desc">
-              We collaborate with ambitious gaming operators to take over
-              competitive markets, attract qualified players, and profitably
-              grow through performance-driven marketing strategies.
+              We collaborate with gaming operators who are ambitious and want to take over markets that are competitive to attract players who are qualified and profitably grow through the use of performance driven marketing strategies.
             </p>
             <div className="industries-scroll swiper">
               <div className="swiper-wrapper">
@@ -628,8 +621,7 @@ export default function Home() {
                     </span>
                     <h4>Online Casinos</h4>
                     <p>
-                      Deposits, registrations, and long-term player value via
-                      SEO, PPC, affiliate marketing and conversion optimization.
+                    Driving deposits and registrations through online casino SEO, PPC, affiliate marketing, and optimization.
                     </p>
                   </div>
                 </div>
@@ -643,8 +635,7 @@ export default function Home() {
                     </span>
                     <h4>Sportsbooks</h4>
                     <p>
-                      Get sports bettors on board with events-driven campaigns
-                      focused on major leagues and live betting options.
+                    Sportsbook SEO agency delivering event driven campaigns for major leagues, tournaments, and live betting audiences
                     </p>
                   </div>
                 </div>
@@ -658,8 +649,7 @@ export default function Home() {
                     </span>
                     <h4>Fantasy Sports</h4>
                     <p>
-                      Enhance engagement and acquisition through targeted
-                      advertisements and performance-based strategies.
+                      Fantasy Sports growth through targeted ads and performance driven acquisition strategies.
                     </p>
                   </div>
                 </div>
@@ -673,8 +663,7 @@ export default function Home() {
                     </span>
                     <h4>Crypto Casinos</h4>
                     <p>
-                      Build trusting communities and reach crypto-first
-                      audiences using Web3 marketing and influencer programs.
+                      Build trusted communities for Crypto Casinos using Web3 marketing and influencer programs.
                     </p>
                   </div>
                 </div>
@@ -688,8 +677,7 @@ export default function Home() {
                     </span>
                     <h4>Sweepstakes Casinos</h4>
                     <p>
-                      Create quality traffic and increase player retention with
-                      a scalable acquisition system.
+                      Generate continuous player acquisition loops for Sweepstakes & Social with scalable growth systems .
                     </p>
                   </div>
                 </div>
@@ -703,8 +691,7 @@ export default function Home() {
                     </span>
                     <h4>Poker Platforms</h4>
                     <p>
-                      Increase sign-ups and tournament participation with
-                      strategic digital marketing campaigns.
+                      Boost Poker Platforms participation in tournaments via targeted digital marketing strategies.
                     </p>
                   </div>
                 </div>
@@ -718,8 +705,7 @@ export default function Home() {
                     </span>
                     <h4>Skill Gaming</h4>
                     <p>
-                      Engage highly targeted audiences and boost conversions
-                      with focused marketing campaigns.
+                      Drive real money gamer acquisition with hyper targeted campaigns optimizing CPA and sign-ups. 
                     </p>
                   </div>
                 </div>
@@ -730,32 +716,7 @@ export default function Home() {
             </div>
           </div>
 
-          <section>
-            <div className="container">
-              {/* <p className="section-label">Industries We Scale</p> */}
-              <h2 className="section-title">
-                Rule iGaming with{" "}
-                <span className="gold">The Marketing King</span>
-              </h2>
-              <p className="section-desc">
-                At TMK, a leading iGaming Marketing Agency in India, we
-                specialize in player acquisition services for gaming brands
-                worldwide. Our casino SEO services and iGaming SEO services are
-                combined with high performance PPC, Meta Ads, Telegram Ads,
-                affiliate marketing, and influencer campaigns to scale online
-                casinos, sportsbooks, poker rooms, fantasy sports, and crypto
-                gaming platforms across competitive global GEOs. We build
-                data-driven frameworks focused on lowering CPA, increasing
-                sign-ups, and maximizing long term player LTV. With fully
-                managed ad accounts, compliance ready strategies, and high
-                intent traffic generation systems, we help brands achieve
-                predictable growth, stronger visibility, and sustainable
-                dominance in the iGaming industry.
-              </p>
-            </div>
-          </section>
-
-          <section id="stats" className="bg-glow">
+<section id="stats" className="bg-glow">
             <div className="container">
               <p className="section-label">Results That Matter</p>
               <h2 className="section-title">
@@ -784,6 +745,33 @@ export default function Home() {
             </div>
           </section>
 
+
+
+          <section>
+            <div className="container">
+              {/* <p className="section-label">Industries We Scale</p> */}
+              <h2 className="section-title">
+                Rule iGaming with{" "}
+                <span className="gold">The Marketing King</span>
+              </h2>
+              <p className="section-desc">
+                At TMK, a leading iGaming Marketing Agency in India, we
+                specialize in player acquisition services for gaming brands
+                worldwide. Our casino SEO services and iGaming SEO services are
+                combined with high performance PPC, Meta Ads, Telegram Ads,
+                affiliate marketing, and influencer campaigns to scale online
+                casinos, sportsbooks, poker rooms, fantasy sports, and crypto
+                gaming platforms across competitive global GEOs. We build
+                data-driven frameworks focused on lowering CPA, increasing
+                sign-ups, and maximizing long term player LTV. With fully
+                managed ad accounts, compliance ready strategies, and high
+                intent traffic generation systems, we help brands achieve
+                predictable growth, stronger visibility, and sustainable
+                dominance in the iGaming industry.
+              </p>
+            </div>
+          </section>
+
           <section id="services" className="bg-glow">
             <div className="container">
               <p className="section-label">Our Services</p>
@@ -794,11 +782,7 @@ export default function Home() {
               </h2>
 
               <p className="section-desc">
-                As an iGaming Marketing Agency, we provide complete growth
-                solutions to casinos, sportsbooks, poker rooms, fantasy sports
-                operators, and crypto gaming platforms. Our integrated approach
-                helps brands gain visibility, attract high-quality players,
-                increase retention, and maximize ROI in global markets.
+              As an <strong>iGaming marketing agency</strong>, we deliver complete growth solutions for casinos, sportsbooks, poker rooms, fantasy sports, and crypto gaming platforms. Our iGaming marketing agency approach boosts visibility, attracts quality players, improves retention, and maximizes ROI across competitive global markets. 
               </p>
 
               <div className="services-swiper swiper">
@@ -862,11 +846,9 @@ export default function Home() {
                           alt="Affiliate"
                         />
                       </div>
-                      <h2>Affiliate Marketing</h2>
+                      <h2>iGaming Affiliate Network</h2>
                       <p>
-                        Create scalable channels for player acquisition by
-                        forming strategic affiliate partnerships as well as
-                        campaigns based on performance.
+                        Scale player acquisition through affiliate marketing with recruitment, partner management, tracking, commissions, and compliance monitoring.
                       </p>
                     </div>
                   </div>
@@ -1015,10 +997,9 @@ export default function Home() {
                           alt="Social Media"
                         />
                       </div>
-                      <h2>Social Media Management</h2>
+                      <h2>iGaming Social Media</h2>
                       <p>
-                        Strategic social media campaigns across platforms to
-                        build brand presence.
+                        Turn casual scrolling into active player onboarding. We design and execute targeted social media campaigns engineered to scale brand trust and fuel your FTD funnel
                       </p>
                     </div>
                     <picture className="cardImg">
@@ -1039,10 +1020,9 @@ export default function Home() {
                           alt="Google Ads"
                         />
                       </div>
-                      <h2>Google Ads</h2>
+                      <h2>iGaming Google Ads</h2>
                       <p>
-                        Intent-based search and display campaigns for high-value
-                        player acquisition.
+                        Get qualified players to sign up with precisely specific Facebook and Instagram ads that are designed to maximize results and conversions.
                       </p>
                     </div>
                     <picture className="cardImg">
@@ -1060,10 +1040,9 @@ export default function Home() {
                           alt="Meta Ads"
                         />
                       </div>
-                      <h2>Meta Ads</h2>
+                      <h2>iGaming Meta Ads </h2>
                       <p>
-                        Performance-driven paid campaigns optimized for lower
-                        CPA and higher deposits.
+                      Drive player sign ups using Facebook and Instagram ads with targeting, retargeting, and conversion optimization.
                       </p>
                     </div>
                     <picture className="cardImg">
@@ -1102,10 +1081,9 @@ export default function Home() {
                           alt="SEO"
                         />
                       </div>
-                      <h2>SEO Services</h2>
+                      <h2>iGaming SEO Services</h2>
                       <p>
-                        Long-term organic traffic through SEO strategies for
-                        casino & sportsbook.
+                        Improve search visibility with casino SEO, sportsbook SEO, content marketing, technical SEO, and optimization services.
                       </p>
                     </div>
                     <picture className="cardImg">
@@ -1123,10 +1101,9 @@ export default function Home() {
                           alt="Agency Accounts"
                         />
                       </div>
-                      <h2>Meta & Google Agency Accounts</h2>
+                      <h2>Managed iGaming Ad Accounts</h2>
                       <p>
-                        Managed agency accounts with streamlined ad approvals
-                        for iGaming brands.
+                        Protect iGaming campaigns with premium agency accounts, whitelists, fast approvals, and global compliance ready advertising access.
                       </p>
                     </div>
                     <picture className="cardImg">
@@ -1165,10 +1142,9 @@ export default function Home() {
                           alt="Telegram promotion"
                         />
                       </div>
-                      <h2>Telegram Promotion</h2>
+                      <h2>iGaming Telegram Marketing</h2>
                       <p>
-                        Grow your audience with targeted Telegram marketing and
-                        community promotion.
+                        Build gaming communities with Telegram, Discord, Web3 marketing, influencer collaborations, and community management.
                       </p>
                     </div>
                     <picture className="cardImg">
@@ -1494,9 +1470,7 @@ export default function Home() {
                 Results That Speak for <span className="gold">Themselves</span>
               </h2>
               <p className="section-desc">
-                Every marketing investment must directly impact your business
-                growth. Here's how we deliver measurable outcomes across every
-                KPI.
+                In iGaming, success goes beyond clicks. Our campaigns deliver real results—deposits, registrations, engagement, and long term retention across global gaming verticals and GEOs.
               </p>
             </div>
             <div className="metrics-grid stagger">
@@ -1683,11 +1657,9 @@ export default function Home() {
                     <Search size={24} />
                   </div>
                   <span className="step-card-num">Step 01</span>
-                  <h4>Discovery &amp; Market Analysis</h4>
+                  <h4>Audit & Analysis</h4>
                   <p>
-                    We assess your brand, competitors, target audience, and
-                    current marketing performance to identify growth
-                    opportunities.
+                    We strip away the guesswork by thoroughly analyzing your brand positioning, historical traffic data, and competitor vulnerabilities.
                   </p>
                 </div>
               </div>
@@ -1697,10 +1669,9 @@ export default function Home() {
                     <Map size={24} />
                   </div>
                   <span className="step-card-num">Step 02</span>
-                  <h4>Strategy Development</h4>
+                  <h4>Architecture & Strategy</h4>
                   <p>
-                    Our team designs a customized growth strategy aligned to
-                    your specific business goals and market conditions.
+                  We engineer a customized multi channel acquisition blueprint built entirely around maximizing player lifetime value (LTV).
                   </p>
                 </div>
               </div>
@@ -1710,10 +1681,9 @@ export default function Home() {
                     <Rocket size={24} />
                   </div>
                   <span className="step-card-num">Step 03</span>
-                  <h4>Campaign Launch</h4>
+                  <h4>Launch & Target</h4>
                   <p>
-                    SEO, PPC, affiliate, or acquisition strategies are deployed
-                    across selected channels with precision targeting.
+                  We deploy your campaigns across premium traffic channels using razor sharp demographic filtering and compliance approved funnels.
                   </p>
                 </div>
               </div>
@@ -1723,10 +1693,9 @@ export default function Home() {
                     <ChartLine size={24} />
                   </div>
                   <span className="step-card-num">Step 04</span>
-                  <h4>Optimization &amp; Scaling</h4>
+                  <h4>Optimize & Accelerate</h4>
                   <p>
-                    We continuously refine targeting, creatives, funnels, and
-                    metrics to improve ROI and scale winning campaigns.
+                  We continuously run A/B conversion tests and refine target segments to maximize ROI and scale winning campaigns aggressively.
                   </p>
                 </div>
               </div>
@@ -1736,10 +1705,9 @@ export default function Home() {
                     <Globe size={24} />
                   </div>
                   <span className="step-card-num">Step 05</span>
-                  <h4>Reporting &amp; Growth Expansion</h4>
+                  <h4>Report & Expand</h4>
                   <p>
-                    Transparent reporting and strategic scaling open new markets
-                    and opportunities for sustained growth.
+                  We deliver crystal clear performance metrics while systematically expanding your footprint into high yield, emerging gaming markets worldwide.
                   </p>
                 </div>
               </div>
