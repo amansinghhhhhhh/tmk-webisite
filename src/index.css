@@ -32,8 +32,8 @@ html {
 body {
   font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
   /* background: var(--bg); */
-background: #0E150B;
-background: linear-gradient(160deg, rgba(14, 21, 11, 1) 0%, rgba(15, 26, 9, 1) 19%, rgba(13, 22, 10, 1) 55%, rgba(0, 0, 0, 1) 100%);
+  background: #0E150B;
+  background: linear-gradient(160deg, rgba(14, 21, 11, 1) 0%, rgba(15, 26, 9, 1) 19%, rgba(13, 22, 10, 1) 55%, rgba(0, 0, 0, 1) 100%);
   color: #cfcfcf;
   overflow-x: hidden;
   line-height: 1.7
@@ -840,45 +840,45 @@ section {
   font-weight: bold;
 }
 
-.why-pointers ul{
-    list-style:none;
-    padding:0;
-    margin:25px 0;
+.why-pointers ul {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0;
 }
 
-.why-pointers li{
-    padding: 14px 0 14px 30px !important;
-    display: block !important;
-    align-items: start !important;
-    margin: 0;
+.why-pointers li {
+  padding: 14px 0 14px 30px !important;
+  display: block !important;
+  align-items: start !important;
+  margin: 0;
 }
 
-.why-pointers li::before{
-    content:"✓";
-    position:absolute;
-    left:0;
-    top:14px;
-    color:var(--primary);
-    font-weight:700;
+.why-pointers li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  color: var(--primary);
+  font-weight: 700;
 }
 
 .why-pointers h2,
-.why-pointers h3{
-    margin:25px 0 18px;
+.why-pointers h3 {
+  margin: 25px 0 18px;
 }
 
-.why-pointers p{
-    margin:18px 0;
+.why-pointers p {
+  margin: 18px 0;
 }
 
-.why-pointers strong{
-    color:#fff;
+.why-pointers strong {
+  color: #fff;
 }
 
 .why-pointers strong,
 .why-pointers b {
-    display: inline;
-    color: #fff;
+  display: inline;
+  color: #fff;
 }
 
 #stats {
@@ -1069,6 +1069,7 @@ section {
   }
 
   .services-fan li:nth-child(7) {
+
     left: calc(50% - 145px);
     z-index: 7
   }
@@ -1102,6 +1103,7 @@ section {
     left: calc(50% + 335px);
     z-index: 1
   }
+
   .services-fan li:hover {
     z-index: 20;
     transform: scale(1.18) translateY(-30px);
@@ -1286,16 +1288,16 @@ section {
   justify-content: center
 }
 
-.swiper-button-prev svg
-{
+.swiper-button-prev svg {
   width: 25%;
 }
 
 .swiper-button-prev,
-.swiper-button-next{
+.swiper-button-next {
   top: 45% !important;
 }
-.swiper-button-next svg{
+
+.swiper-button-next svg {
   width: 25%;
 }
 
@@ -1804,13 +1806,12 @@ section {
   margin-top: 16px
 }
 
-.what-we-do
-{
+.what-we-do {
   display: grid;
   gap: 10px;
 }
 
-.what-we-do p{
+.what-we-do p {
   font-size: 16px;
 }
 
@@ -2217,10 +2218,10 @@ section {
   .cert-card img {
     height: 80px
   }
-  .expertise-scroll
-{
-  padding: 0;
-}
+
+  .expertise-scroll {
+    padding: 0;
+  }
 
 }
 
@@ -2270,10 +2271,10 @@ section {
 
 #media-coverage .swiper-slide[data-swiper-slide-index="12"] {
   background-color: #212121;
-&:hover
-{
-  background-color: #212121;
-}
+
+  &:hover {
+    background-color: #212121;
+  }
 
 }
 
@@ -2281,10 +2282,9 @@ section {
 #media-coverage .swiper-slide[data-swiper-slide-index="17"] {
   background-color: #000;
 
-  &:hover
-{
-  background-color: #000;
-}
+  &:hover {
+    background-color: #000;
+  }
 }
 
 #media-coverage .swiper-slide:hover {
@@ -3074,7 +3074,7 @@ footer::before {
   .expertise-scroll .swiper-wrapper {
     flex-wrap: wrap;
     gap: 12px;
-    transform:translate3d(0px, 0px, 0px) !important;
+    transform: translate3d(0px, 0px, 0px) !important;
   }
 
 
@@ -3688,14 +3688,14 @@ footer::before {
   .elevate-title {
     font-size: 1.6rem
   }
-  .swiper-pagination.services-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
-  {
+
+  .swiper-pagination.services-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
     padding-top: 20px;
   }
 
   .content-section {
-  padding: 60px 0;
-}
+    padding: 60px 0;
+  }
 
 }
 
@@ -4381,10 +4381,9 @@ footer::before {
     grid-template-columns: repeat(2, 1fr)
   }
 
-  .cta-benefits
-{
+  .cta-benefits {
     grid-template-columns: auto;
-}
+  }
 }
 
 /* Join Community */
