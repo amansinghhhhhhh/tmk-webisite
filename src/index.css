@@ -990,7 +990,8 @@ section {
 
 #services .container {
   position: relative;
-  z-index: 1
+  z-index: 1;
+  overflow: hidden
 }
 
 .services-fan-wrap {
@@ -1013,7 +1014,6 @@ section {
   }
 
   .services-fan {
-    display: block;
     list-style: none;
     padding: 0;
     margin: 60px 0 0;
@@ -1039,42 +1039,67 @@ section {
   }
 
   .services-fan li:nth-child(1) {
-    left: calc(50% - 630px);
-    z-index: 8
+    left: calc(50% - 625px);
+    z-index: 13
   }
 
   .services-fan li:nth-child(2) {
-    left: calc(50% - 490px);
-    z-index: 7
+    left: calc(50% - 545px);
+    z-index: 12
   }
 
   .services-fan li:nth-child(3) {
-    left: calc(50% - 350px);
-    z-index: 6
+    left: calc(50% - 465px);
+    z-index: 11
   }
 
   .services-fan li:nth-child(4) {
-    left: calc(50% - 210px);
-    z-index: 5
+    left: calc(50% - 385px);
+    z-index: 10
   }
 
   .services-fan li:nth-child(5) {
-    left: calc(50% - 70px);
-    z-index: 4
+    left: calc(50% - 305px);
+    z-index: 9
   }
 
   .services-fan li:nth-child(6) {
-    left: calc(50% + 70px);
-    z-index: 3
+    left: calc(50% - 225px);
+    z-index: 8
   }
 
   .services-fan li:nth-child(7) {
-    left: calc(50% + 210px);
-    z-index: 2
+    left: calc(50% - 145px);
+    z-index: 7
   }
 
   .services-fan li:nth-child(8) {
-    left: calc(50% + 350px);
+    left: calc(50% - 65px);
+    z-index: 6
+  }
+
+  .services-fan li:nth-child(9) {
+    left: calc(50% + 15px);
+    z-index: 5
+  }
+
+  .services-fan li:nth-child(10) {
+    left: calc(50% + 95px);
+    z-index: 4
+  }
+
+  .services-fan li:nth-child(11) {
+    left: calc(50% + 175px);
+    z-index: 3
+  }
+
+  .services-fan li:nth-child(12) {
+    left: calc(50% + 255px);
+    z-index: 2
+  }
+
+  .services-fan li:nth-child(13) {
+    left: calc(50% + 335px);
     z-index: 1
   }
   .services-fan li:hover {
@@ -1101,12 +1126,14 @@ section {
   .services-fan .cardImg {
     border-radius: 16px;
     overflow: hidden;
-    display: block
+    display: block;
+    height: 422px
   }
 
   .services-fan .cardImg img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block
   }
 
@@ -1158,7 +1185,8 @@ section {
 }
 
 .services-swiper .swiper-slide {
-  background: var(--surface);
+  background-size: cover;
+  background-position: center;
   border: 1px solid rgba(255, 255, 255, .06);
   border-radius: 16px;
   padding: 32px 20px;
@@ -1167,7 +1195,70 @@ section {
   align-items: center;
   text-align: center;
   transition: .4s;
-  height: auto
+  height: auto;
+  position: relative
+}
+
+.services-swiper .swiper-slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .55);
+  border-radius: 16px;
+  z-index: 0
+}
+
+
+.services-swiper .swiper-slide:nth-child(1) {
+  background-image: url('/service image/1.png')
+}
+
+.services-swiper .swiper-slide:nth-child(2) {
+  background-image: url('/service image/2.png')
+}
+
+.services-swiper .swiper-slide:nth-child(3) {
+  background-image: url('/service image/3.png')
+}
+
+.services-swiper .swiper-slide:nth-child(4) {
+  background-image: url('/service image/4.png')
+}
+
+.services-swiper .swiper-slide:nth-child(5) {
+  background-image: url('/service image/5.png')
+}
+
+.services-swiper .swiper-slide:nth-child(6) {
+  background-image: url('/service image/6.png')
+}
+
+.services-swiper .swiper-slide:nth-child(7) {
+  background-image: url('/service image/7.png')
+}
+
+.services-swiper .swiper-slide:nth-child(8) {
+  background-image: url('/service image/8.png')
+}
+
+.services-swiper .swiper-slide:nth-child(9) {
+  background-image: url('/service image/9.png')
+}
+
+.services-swiper .swiper-slide:nth-child(10) {
+  background-image: url('/service image/10.png')
+}
+
+.services-swiper .swiper-slide:nth-child(11) {
+  background-image: url('/service image/10.png')
+}
+
+.services-swiper .swiper-slide:nth-child(12) {
+  background-image: url('/service image/j.png')
+}
+
+.services-swiper .swiper-slide:nth-child(13) {
+  background-image: url('/service image/Q.png')
 }
 
 .services-swiper .swiper-slide:hover {
@@ -1182,7 +1273,9 @@ section {
   align-items: center;
   gap: 12px;
   width: 100%;
-  pointer-events: none
+  pointer-events: none;
+  position: relative;
+  z-index: 1
 }
 
 .services-swiper .services-slide-inner .s-icon {
