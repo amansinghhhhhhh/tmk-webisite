@@ -699,6 +699,333 @@ const [service, setService] = useState("");
           </div>
         </section>
 
+<section id="services" className="bg-glow">
+  <div className="container">
+    <p className="section-label">Our Services</p>
+
+    <h2 className="section-title">
+      Complete <span className="gold">iGaming Marketing</span> Solutions
+    </h2>
+
+    <p className="section-desc">
+      As an iGaming Marketing Agency, we provide complete growth solutions to
+      casinos, sportsbooks, poker rooms, fantasy sports operators, and crypto
+      gaming platforms. Our integrated approach helps brands gain visibility,
+      attract high-quality players, increase retention, and maximize ROI in
+      global markets.
+    </p>
+
+    <div className="services-swiper swiper">
+      <div className="swiper-wrapper">
+        <div className="swiper-slide services-slide">
+          <div className="services-slide-inner">
+            <div className="s-icon">
+              <img
+                src="service-img/seo-3d-icon-png-download-5528528.webp"
+                alt="SEO"
+              />
+            </div>
+            <h2>iGaming SEO</h2>
+            <p>
+              Enhance your search engine visibility and get highly targeted
+              organic traffic via SEO techniques, content marketing, building
+              authority and strategically optimized keywords.
+            </p>
+          </div>
+        </div>
+
+        <div className="swiper-slide services-slide">
+          <div className="services-slide-inner">
+            <div className="s-icon">
+              <img
+                src="service-img/free-meta-3d-icon-png-download-8250233.webp"
+                alt="Meta Ads"
+              />
+            </div>
+            <h2>Meta Ads</h2>
+            <p>
+              Get qualified players to sign up with precisely specific Facebook
+              and Instagram ads that are designed to maximize results and
+              conversions.
+            </p>
+          </div>
+        </div>
+
+        <div className="swiper-slide services-slide">
+          <div className="services-slide-inner">
+            <div className="s-icon">
+              <img
+                src="service-img/free-telegram-3d-icon-png-download-7516821.webp"
+                alt="Telegram"
+              />
+            </div>
+            <h2>Telegram & Community Marketing</h2>
+            <p>
+              Create active gaming communities that improve trust, engagement,
+              and retention of players.
+            </p>
+          </div>
+        </div>
+
+        <div className="swiper-slide services-slide">
+          <div className="services-slide-inner">
+            <div className="s-icon">
+              <img
+                src="service-img/share-affiliate-marketing-3d-icon-png-download-13747491.webp"
+                alt="Affiliate"
+              />
+            </div>
+            <h2>Affiliate Marketing</h2>
+            <p>
+              Create scalable channels for player acquisition by forming
+              strategic affiliate partnerships as well as campaigns based on
+              performance.
+            </p>
+          </div>
+        </div>
+
+        <div className="swiper-slide services-slide">
+          <div className="services-slide-inner">
+            <div className="s-icon">
+              <img
+                src="service-img/social-media-marketing-3d-icon-png-download-5013080.webp"
+                alt="Player Acquisition"
+              />
+            </div>
+            <h2>Player Acquisition</h2>
+            <p>
+              Get quality users by implementing multi-channel campaigns that aim
+              to boost registrations and deposits while reducing costs for
+              acquisition.
+            </p>
+          </div>
+        </div>
+
+        <div className="swiper-slide services-slide">
+          <div className="services-slide-inner">
+            <div className="s-icon">
+              <img
+                src="service-img/creative-process-3d-icon-png-download-12387423.webp"
+                alt="Creative"
+              />
+            </div>
+            <h2>Creative Production</h2>
+            <p>
+              Creative assets that perform well and are specifically designed
+              for gaming users.
+            </p>
+          </div>
+        </div>
+
+        <div className="swiper-slide services-slide">
+          <div className="services-slide-inner">
+            <div className="s-icon">
+              <img
+                src="service-img/3d-google-ads icon.PNG"
+                alt="Conversion"
+              />
+            </div>
+            <h2>Conversion Optimization</h2>
+            <p>
+              Change website visitors into depositing customers with UX
+              improvement and conversion-focused strategies.
+            </p>
+          </div>
+        </div>
+
+        <div className="swiper-slide services-slide">
+          <div className="services-slide-inner">
+            <div className="s-icon">
+              <img
+                src="service-img/recruitment-agency-3d-icon-png-download-12031451.webp"
+                alt="Agency"
+              />
+            </div>
+            <h2>Meta & Google Agency Accounts</h2>
+            <p>
+              Managed agency accounts with streamlined ad approvals specifically
+              for iGaming brands across major platforms.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="swiper-pagination services-pagination"></div>
+    </div>
+
+    <ul className="services-fan">
+      <li>
+        <div className="pos-rel">
+          <div className="txtBox">
+            <div className="s-icon">
+              <img
+                src="service image/social-media-marketing-3d-icon-png-download-5013080.webp"
+                alt="Social Media"
+              />
+            </div>
+            <h2>Social Media Management</h2>
+            <p>
+              Strategic social media campaigns across platforms to build brand
+              presence.
+            </p>
+          </div>
+          <picture className="cardImg">
+            <img
+              src="service image/1.png"
+              alt="Social Media Management"
+            />
+          </picture>
+        </div>
+      </li>
+
+      <li>
+        <div className="pos-rel">
+          <div className="txtBox">
+            <div className="s-icon">
+              <img
+                src="service image/3d-google-ads icon.PNG"
+                alt="Google Ads"
+              />
+            </div>
+            <h2>Google Ads</h2>
+            <p>
+              Intent-based search and display campaigns for high-value player
+              acquisition.
+            </p>
+          </div>
+          <picture className="cardImg">
+            <img src="service image/2.png" alt="Google Ads" />
+          </picture>
+        </div>
+      </li>
+
+      <li>
+        <div className="pos-rel">
+          <div className="txtBox">
+            <div className="s-icon">
+              <img
+                src="service image/free-meta-3d-icon-png-download-8250233.webp"
+                alt="Meta Ads"
+              />
+            </div>
+            <h2>Meta Ads</h2>
+            <p>
+              Performance-driven paid campaigns optimized for lower CPA and
+              higher deposits.
+            </p>
+          </div>
+          <picture className="cardImg">
+            <img src="service image/3.png" alt="Meta Ads" />
+          </picture>
+        </div>
+      </li>
+
+      <li>
+        <div className="pos-rel">
+          <div className="txtBox">
+            <div className="s-icon">
+              <img
+                src="service image/free-telegram-3d-icon-png-download-7516821.webp"
+                alt="Telegram Ads"
+              />
+            </div>
+            <h2>Telegram Ads</h2>
+            <p>
+              Targeted Telegram acquisition funnels for betting communities.
+            </p>
+          </div>
+          <picture className="cardImg">
+            <img src="service image/4.png" alt="Telegram Ads" />
+          </picture>
+        </div>
+      </li>
+
+      <li>
+        <div className="pos-rel">
+          <div className="txtBox">
+            <div className="s-icon">
+              <img
+                src="service image/seo-3d-icon-png-download-5528528.webp"
+                alt="SEO"
+              />
+            </div>
+            <h2>SEO Services</h2>
+            <p>
+              Long-term organic traffic through SEO strategies for casino &
+              sportsbook.
+            </p>
+          </div>
+          <picture className="cardImg">
+            <img src="service image/5.png" alt="SEO Services" />
+          </picture>
+        </div>
+      </li>
+
+      <li>
+        <div className="pos-rel">
+          <div className="txtBox">
+            <div className="s-icon">
+              <img
+                src="service image/recruitment-agency-3d-icon-png-download-12031451.webp"
+                alt="Agency Accounts"
+              />
+            </div>
+            <h2>Meta & Google Agency Accounts</h2>
+            <p>
+              Managed agency accounts with streamlined ad approvals for iGaming
+              brands.
+            </p>
+          </div>
+          <picture className="cardImg">
+            <img src="service image/6.png" alt="Agency Accounts" />
+          </picture>
+        </div>
+      </li>
+
+      <li>
+        <div className="pos-rel">
+          <div className="txtBox">
+            <div className="s-icon">
+              <img
+                src="service-img/share-affiliate-marketing-3d-icon-png-download-13747491.webp"
+                alt="Affiliate"
+              />
+            </div>
+            <h2>Affiliate Acquisition</h2>
+            <p>
+              Expand your revenue network with quality affiliate onboarding.
+            </p>
+          </div>
+          <picture className="cardImg">
+            <img src="service image/7.png" alt="Affiliate" />
+          </picture>
+        </div>
+      </li>
+
+      <li>
+        <div className="pos-rel">
+          <div className="txtBox">
+            <div className="s-icon">
+              <img
+                src="service-img/creative-process-3d-icon-png-download-12387423.webp"
+                alt="Creative"
+              />
+            </div>
+            <h2>Creative Production</h2>
+            <p>
+              High converting ad creatives designed specifically for iGaming
+              audiences.
+            </p>
+          </div>
+          <picture className="cardImg">
+            <img src="service image/8.png" alt="Creative" />
+          </picture>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
         <section id="live-ads" className="bg-glow">
           <div className="container">
             <p className="section-label">Live Ads We Run For Clients</p>
