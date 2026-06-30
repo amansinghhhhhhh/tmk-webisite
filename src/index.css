@@ -2166,10 +2166,29 @@ section {
   animation-delay: 1s
 }
 
+#media-coverage .swiper-slide[data-swiper-slide-index="12"] {
+  background-color: #212121;
+&:hover
+{
+  background-color: #212121;
+}
+
+}
+
+#media-coverage .swiper-slide[data-swiper-slide-index="16"],
+#media-coverage .swiper-slide[data-swiper-slide-index="17"] {
+  background-color: #000;
+
+  &:hover
+{
+  background-color: #000;
+}
+}
+
 #media-coverage .swiper-slide:hover {
   transform: translateY(-4px);
   border-color: rgba(136, 194, 64, .1);
-  background: rgba(136, 194, 64, .03);
+  background: rgb(255, 255, 255);
   box-shadow: 0 12px 40px rgba(0, 0, 0, .2);
   animation-play-state: paused
 }
