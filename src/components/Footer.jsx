@@ -123,8 +123,8 @@ function Footer() {
             . All rights reserved.
           </p>
           <div className="footer-bottom-links">
-            <Link to="#">Privacy Policy</Link>
-            <Link to="#">Terms &amp; Conditions</Link>
+            <Link to="/Privacy-Policy">Privacy Policy</Link>
+            <Link to="/term-condition">Terms &amp; Conditions</Link>
           </div>
         </div>
       </div>

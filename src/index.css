@@ -1205,7 +1205,7 @@ section {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, .55);
+  /* background: rgba(0, 0, 0, .55); */
   border-radius: 16px;
   z-index: 0
 }
@@ -1312,12 +1312,12 @@ section {
   font-family: var(--heading);
   font-size: 1.1rem;
   font-weight: 800;
-  color: #fff;
+  color: #000;
   margin: 0
 }
 
 .services-swiper .services-slide-inner p {
-  color: #cfcfcf;
+  color: #252525;
   font-size: 15px;
   line-height: 1.6;
   margin: 0;

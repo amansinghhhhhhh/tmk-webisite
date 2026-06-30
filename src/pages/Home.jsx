@@ -355,10 +355,10 @@ export default function Home() {
           <div className="container">
             <div className="hero-grid">
               <div className="hero-left" id="heroLeft">
-                <div className="hero-tag">Scale Your iGaming Brand Globally</div>
+                <div className="hero-tag">iGaming Growth Marketing Agency</div>
                 <h1 className="hero-title">
-                  <span className="line1">Next Level Marketing for</span>{" "}
-                  <span className="line2">Casino & Sports</span>
+                  <span className="line1">Scale Your</span>{" "}
+                  <span className="line2">iGaming Brand Globally</span>
                 </h1>
                 <p className="hero-desc">
                   Trusted global iGaming traffic provider helping every casino, sportsbook, or crypto gaming brand acquire high-value players through SEO, PPC, media buying, and affiliate marketing.

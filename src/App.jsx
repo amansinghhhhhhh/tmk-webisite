@@ -18,6 +18,8 @@ import Services from "./pages/Services";
 import ServicePage from "./pages/ServicePage";
 import NotFound from "./pages/NotFound";
 import ThankYou from "./pages/ThankYou";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermCondition"
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -45,6 +47,8 @@ export default function App() {
           path="/traditional-marketing"
           element={<TraditionalMarketing />}
         />
+
+        <Route path="/term-condition" element={<TermsAndConditions />} />
         <Route path="/join-our-community" element={<JoinCommunity />} />
         <Route path="/countries" element={<Countries />} />
         <Route path="/countries/:slug" element={<CountryPage />} />
@@ -52,6 +56,8 @@ export default function App() {
         <Route path="/services/:slug" element={<ServicePage />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/thank-you" element={<ThankYou />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />}
+  />
       </Routes>
       <Footer />
     </BrowserRouter>
