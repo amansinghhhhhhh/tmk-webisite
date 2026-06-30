@@ -2014,7 +2014,7 @@ section {
 }
 
 .cert-card {
-  background: rgba(15, 15, 30, .35);
+  background: rgb(255, 255, 255);
   border: 1px solid rgba(255, 255, 255, .05);
   border-radius: 20px;
   padding: 36px 24px;
@@ -2145,7 +2145,7 @@ section {
 }
 
 #media-coverage .swiper-slide {
-  background: rgba(255, 255, 255, .03);
+  background: rgb(255, 255, 255);
   border: 1px solid rgba(255, 255, 255, .04);
   border-radius: 14px;
   padding: 28px 20px;
