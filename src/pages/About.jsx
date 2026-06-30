@@ -26,17 +26,20 @@ export default function About() {
         <img src="/internal pages hero image/TMK-About-Us.webp" alt="" className="hero-bg-img" />
         <div className="container">
           <div className="hero-content">
-            <h1>
+            {/* <h1>
               Your Partner in <span className="gold">iGaming Growth</span>
+            </h1> */}
+            <h1>
+              About <span className="gold">Us</span>
             </h1>
-            <p>
+            {/* <p>
               The Marketing King is a specialized iGaming marketing agency dedicated to helping
               casinos, sportsbooks, and gaming platforms acquire players, boost revenue, and
               scale globally.
-            </p>
-            <Link to="/contact" className="btn btn-primary">
+            </p> */}
+            {/* <Link to="/contact" className="btn btn-primary">
               Get in Touch <ArrowRight size={16} />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>
@@ -50,18 +53,12 @@ export default function About() {
           <div className="content-row">
             <div className="text-content">
               <p>
-                The Marketing King is a specialized iGaming marketing agency dedicated to helping
-                online casinos, sportsbooks, and gaming platforms grow their player base and
-                revenue. With years of industry experience, we understand the unique challenges
-                and opportunities in the iGaming space.
+              Founded in 2012, The Marketing King is a leading prominent global marketing agency. We specialize in providing immersive and engaging marketing solutions for the global sports industry, B2B industries, the Banking sector, and all the other industries. Positioned at the crossroads of the sports, media, banking, and betting sectors, The Marketing King offers a comprehensive suite of top-notch solutions to assist sports federations, news media outlets, consumer platforms, and sports betting operators in expanding their operations.
               </p>
               <p>
-                Our team combines deep industry knowledge with cutting-edge marketing strategies
-                to deliver measurable results for our clients. We believe in transparent
-                reporting, data-driven decisions, and building long-term partnerships with every
-                brand we work with.
+              Our clientele extends to over 110 companies and organizations with impressive results. By leveraging our extensive industry connections and expertise, we not only enhance your overall marketing but also uphold the integrity of your organization by positioning it as an authoritative figure amongst your competitors.
               </p>
-              <ul>
+              {/* <ul>
                 <li>
                   <CheckCircle size={14} style={{ color: 'var(--primary)' }} /> 11+ years of
                   iGaming industry experience
@@ -82,7 +79,7 @@ export default function About() {
                   <CheckCircle size={14} style={{ color: 'var(--primary)' }} /> Trusted by
                   leading iGaming brands worldwide
                 </li>
-              </ul>
+              </ul> */}
             </div>
             <img
               src="/stock/about.jpg"
@@ -97,9 +94,9 @@ export default function About() {
         <div className="container">
           <p className="section-label">Our Values</p>
           <h2 className="section-title">
-            What Drives <span className="gold">Us Forward</span>
+            What we <span className="gold">do</span>
           </h2>
-          <div className="values-grid">
+          {/* <div className="values-grid">
             {values.map((v, i) => (
               <div className="value-card" key={i}>
                 <div className="vc-icon">{v.icon}</div>
@@ -107,7 +104,25 @@ export default function About() {
                 <p>{v.desc}</p>
               </div>
             ))}
-          </div>
+          </div> */}
+
+          < div className="what-we-do">
+                <p>
+                  <CheckCircle size={16} style={{ color: 'var(--primary)' }} /> We use data and technology to: Keep betting operators ahead of the curve with the products and services they need to manage their sportsbook
+                </p>
+                <p>
+                  <CheckCircle size={16} style={{ color: 'var(--primary)' }} /> Give media companies the tools to engage more with fans
+                </p>
+                <p>
+                  <CheckCircle size={16} style={{ color: 'var(--primary)' }} /> Give teams, leagues and federations the data they need to thrive
+                </p>
+                <p>
+                  <CheckCircle size={16} style={{ color: 'var(--primary)' }} /> Keep the industry clean by detecting and preventing fraud, doping and match fixing.
+                </p>
+                <p>
+                  <CheckCircle size={16} style={{ color: 'var(--primary)' }} /> And we’re constantly developing, reimagining and improving what we do - so that you’re always ahead of the game.
+                </p>
+              </div>
         </div>
       </section>
 
@@ -117,22 +132,21 @@ export default function About() {
             <div className="elevate-content">
               <p className="elevate-tag">Why Choose TMK</p>
               <h2 className="elevate-title">
-                Partner with The Marketing King for{' '}
-                <span className="gold">Proven iGaming Growth</span>
+                Our{' '}
+                <span className="gold">TMK</span>
               </h2>
               <p className="elevate-desc">
-                With 11+ years of industry experience and 110+ full-time employees across 20
-                countries, we help sports federations, media outlets, and betting operators
-                expand their operations. Join our community and take your brand to the next
-                level.
+                The Marketing King employs more than 110 full-time employees in 20 countries, helping our clients and partners use our data and content to get more engagement and revenue from the sports they love.
               </p>
+<p className="elevate-desc">We’re sports fans ourselves, which means we know how your audiences tick. And because we have the very best people in the industry, we can promise you ideas, an entrepreneurial attitude and unwavering dedication.</p>
+
               <a
                 href="https://api.whatsapp.com/send?phone=447418622761&text=Hello%2C%20I%20Want%20Full%20Information%20About%20TMK."
                 target="_blank"
                 rel="noreferrer"
                 className="elevate-btn"
               >
-                Contact Us
+                Join Our Community
               </a>
             </div>
           </div>

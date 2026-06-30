@@ -669,7 +669,21 @@ const [service, setService] = useState("");
             <div className="swiper-button-next"></div>
           </div>
         </div>
- 
+
+        <section>
+        <div className="container">
+          {/* <p className="section-label">Industries We Scale</p> */}
+          <h2 className="section-title">
+            Rule iGaming with{" "}
+            <span className="gold">The Marketing King</span>
+          </h2>
+          <p className="section-desc">
+          At TMK, a leading iGaming Marketing Agency in India, we specialize in player acquisition services for gaming brands worldwide. Our casino SEO services and iGaming SEO services are combined with high performance PPC, Meta Ads, Telegram Ads, affiliate marketing, and influencer campaigns to scale online casinos, sportsbooks, poker rooms, fantasy sports, and crypto gaming platforms across competitive global GEOs. We build data-driven frameworks focused on lowering CPA, increasing sign-ups, and maximizing long term player LTV. With fully managed ad accounts, compliance ready strategies, and high intent traffic generation systems, we help brands achieve predictable growth, stronger visibility, and sustainable dominance in the iGaming industry.
+          </p>
+        </div>
+        </section>
+
+
         <section id="stats" className="bg-glow">
           <div className="container">
             <p className="section-label">Results That Matter</p>
@@ -987,17 +1001,17 @@ const [service, setService] = useState("");
           <div className="txtBox">
             <div className="s-icon">
               <img
-                src="service-img/share-affiliate-marketing-3d-icon-png-download-13747491.webp"
-                alt="Affiliate"
+                src="service-img/"
+                alt="Whatsapp API"
               />
             </div>
-            <h2>Affiliate Acquisition</h2>
+            <h2>Whatsapp API</h2>
             <p>
-              Expand your revenue network with quality affiliate onboarding.
+            Automate customer engagement with promotions, notifications, and instant support.
             </p>
           </div>
           <picture className="cardImg">
-            <img src="service image/7.png" alt="Affiliate" />
+            <img src="service image/7.png" alt="Whatsapp API" />
           </picture>
         </div>
       </li>
@@ -1007,14 +1021,13 @@ const [service, setService] = useState("");
           <div className="txtBox">
             <div className="s-icon">
               <img
-                src="service-img/creative-process-3d-icon-png-download-12387423.webp"
-                alt="Creative"
+                src="service-img/"
+                alt="Telegram promotion"
               />
             </div>
-            <h2>Creative Production</h2>
+            <h2>Telegram Promotion</h2>
             <p>
-              High converting ad creatives designed specifically for iGaming
-              audiences.
+            Grow your audience with targeted Telegram marketing and community promotion.
             </p>
           </div>
           <picture className="cardImg">
@@ -1022,6 +1035,107 @@ const [service, setService] = useState("");
           </picture>
         </div>
       </li>
+
+       <li>
+        <div className="pos-rel">
+          <div className="txtBox">
+            <div className="s-icon">
+              <img
+                src="service-img/"
+                alt="Influencer Marketing"
+              />
+            </div>
+            <h2>Influencer Marketing</h2>
+            <p>
+            Drive brand awareness and player acquisition through trusted influencers.
+            </p>
+          </div>
+          <picture className="cardImg">
+            <img src="service image/9.png" alt="Influencer Marketing" />
+          </picture>
+        </div>
+      </li>
+
+<li>
+        <div className="pos-rel">
+          <div className="txtBox">
+            <div className="s-icon">
+              <img
+                src="service-img/"
+                alt="Web Development"
+              />
+            </div>
+            <h2>Web Development</h2>
+            <p>
+            Build fast, responsive websites optimized for performance and conversions.
+            </p>
+          </div>
+          <picture className="cardImg">
+            <img src="service image/10.png" alt="Web Development" />
+          </picture>
+        </div>
+      </li>
+
+      <li>
+        <div className="pos-rel">
+          <div className="txtBox">
+            <div className="s-icon">
+              <img
+                src="service-img/"
+                alt="Trending Marketing"
+              />
+            </div>
+            <h2>Trending Marketing</h2>
+            <p>
+            Reach more players with trend-driven campaigns and viral content.
+            </p>
+          </div>
+          <picture className="cardImg">
+            <img src="service image/10.png" alt="Trending Marketing" />
+          </picture>
+        </div>
+      </li>
+
+ <li>
+        <div className="pos-rel">
+          <div className="txtBox">
+            <div className="s-icon">
+              <img
+                src="service-img/"
+                alt="Turnkey Solutions"
+              />
+            </div>
+            <h2>Turnkey Solutions</h2>
+            <p>
+            Complete iGaming solutions from setup to marketing and growth.
+            </p>
+          </div>
+          <picture className="cardImg">
+            <img src="service image/j.png" alt="Turnkey Solutions" />
+          </picture>
+        </div>
+      </li>
+
+<li>
+        <div className="pos-rel">
+          <div className="txtBox">
+            <div className="s-icon">
+              <img
+                src="service-img/"
+                alt="iGaming Software"
+              />
+            </div>
+            <h2>iGaming Software</h2>
+            <p>
+            Complete iGaming solutions from setup to marketing and growth.
+            </p>
+          </div>
+          <picture className="cardImg">
+            <img src="service image/Q.png" alt="iGaming Software" />
+          </picture>
+        </div>
+      </li>
+
     </ul>
   </div>
 </section>
