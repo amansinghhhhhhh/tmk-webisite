@@ -1070,7 +1070,7 @@ section {
 
   .services-fan li:nth-child(7) {
     left: calc(50% + 210px);
-    z-index: 2
+    z-index: 2;
   }
 
   .services-fan li:nth-child(8) {
