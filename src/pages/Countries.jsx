@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { ArrowRight, Globe } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 const countries = [
   { id: "malta", label: "Malta", flag: "mt", desc: "Digital Growth for Malta-Based iGaming Operators" },
@@ -47,6 +47,8 @@ export default function Countries() {
           </div>
         </div>
       </section>
+
+      
 
       <section className="elevate-section">
         <div className="container">

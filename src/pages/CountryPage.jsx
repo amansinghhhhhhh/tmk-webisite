@@ -1,5 +1,53 @@
 import { useParams, Link } from "react-router-dom"
 import { CheckCircle, ArrowRight } from "lucide-react"
+import { useEffect } from "react";
+import Swiper from "swiper/bundle";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
+const industryCards = [
+  {
+    image: "/ICON 3D/casino-3d-icon-png-download-13883873.webp",
+    title: "Online Casinos",
+    description:
+      "Driving deposits and registrations through online casino SEO, PPC, affiliate marketing, and optimization.",
+  },
+  {
+    image: "/ICON 3D/sports-3d-icon-png-download-10887497.webp",
+    title: "Sportsbooks",
+    description:
+      "Sportsbook SEO agency delivering event driven campaigns for major leagues, tournaments, and live betting audiences.",
+  },
+  {
+    image: "/ICON 3D/trophy-3d-icon-png-download-8115379.webp",
+    title: "Fantasy Sports",
+    description:
+      "Fantasy Sports growth through targeted ads and performance driven acquisition strategies.",
+  },
+  {
+    image: "/ICON 3D/bitcoin-3d-icon-png-download-8579726.webp",
+    title: "Crypto Casinos",
+    description:
+      "Build trusted communities for Crypto Casinos using Web3 marketing and influencer programs.",
+  },
+  {
+    image: "/ICON 3D/casino-game-3d-icon-png-download-11333776.webp",
+    title: "Sweepstakes Casinos",
+    description:
+      "Generate continuous player acquisition loops for Sweepstakes & Social with scalable growth systems.",
+  },
+  {
+    image: "/ICON 3D/poker-playing-cards-3d-icon-png-download-11901378.png",
+    title: "Poker Platforms",
+    description:
+      "Boost Poker Platforms participation in tournaments via targeted digital marketing strategies.",
+  },
+  {
+    image: "/ICON 3D/gaming-online-course-3d-icon-png-download-9859833.png",
+    title: "Skill Gaming",
+    description:
+      "Drive real money gamer acquisition with hyper targeted campaigns optimizing CPA and sign-ups.",
+  },
+];
 
 const countryData = {
   malta: {
@@ -15,6 +63,32 @@ const countryData = {
     subText: "From SEO to acquisition campaigns, we create scalable marketing solutions tailored for Malta-based operators looking to grow across regulated European markets while maximizing ROI.",
     elevateTitle: "Expand Your iGaming Presence in",
     elevateGold: "Malta",
+    industries: [
+  {
+    image: "/ICON 3D/casino-3d-icon-png-download-13883873.webp",
+    title: "MGA Licensed Casinos",
+    description:
+      "SEO and player acquisition strategies for Malta Gaming Authority licensed online casinos targeting regulated European markets.",
+  },
+  {
+    image: "/ICON 3D/sports-3d-icon-png-download-10887497.webp",
+    title: "European Sportsbooks",
+    description:
+      "Performance marketing campaigns for Malta-based sportsbooks focused on football, tennis, Formula 1, and other major European sports.",
+  },
+  {
+    image: "/ICON 3D/poker-playing-cards-3d-icon-png-download-11901378.png",
+    title: "Poker Networks",
+    description:
+      "Acquire high-value poker players through SEO, affiliates, and tournament-focused promotional campaigns.",
+  },
+  {
+    image: "/ICON 3D/bitcoin-3d-icon-png-download-8579726.webp",
+    title: "Crypto Gaming",
+    description:
+      "Scale Web3 casinos and crypto sportsbooks with compliance-friendly acquisition and community marketing.",
+  },
+],
   },
   curacao: {
     label: "Curaçao",
@@ -29,6 +103,7 @@ const countryData = {
     subText: "Whether targeting Europe, Asia, Latin America, or emerging markets, our marketing strategies help Curaçao-licensed operators build brand awareness, generate qualified traffic, and increase player retention.",
     elevateTitle: "Expand Your iGaming Presence in",
     elevateGold: "Curacao",
+    industries: industryCards,
   },
   uk: {
     label: "United Kingdom",
@@ -43,6 +118,7 @@ const countryData = {
     subText: "Our team understands UKGC compliance, competitive search landscapes, and player behavior. We create data-driven campaigns that deliver quality traffic, improve conversions, and support sustainable growth while meeting industry regulations.",
     elevateTitle: "Expand Your iGaming Presence in",
     elevateGold: "United Kingdom",
+    industries: industryCards,
   },
   india: {
     label: "India",
@@ -57,6 +133,36 @@ const countryData = {
     subText: "We combine local market expertise, SEO, paid media, and regional content strategies to help gaming brands attract high-quality users and build long-term engagement across India.",
     elevateTitle: "Expand Your iGaming Presence in",
     elevateGold: "India",
+    industries: [
+  {
+    image: "/ICON 3D/sports-3d-icon-png-download-10887497.webp",
+    title: "Cricket Betting Platforms",
+    description:
+      "Player acquisition campaigns focused on IPL, ICC tournaments, and year-round cricket betting audiences.",
+  },
+  {
+    image: "/ICON 3D/trophy-3d-icon-png-download-8115379.webp",
+    title: "Fantasy Sports Apps",
+    description:
+      "Grow fantasy sports platforms with high-converting campaigns during IPL, Pro Kabaddi, and football leagues.",
+  },
+  {
+    image: "/ICON 3D/casino-3d-icon-png-download-13883873.webp",
+    title: "Online Casinos",
+    description:
+      "SEO, Meta Ads, Telegram marketing, and affiliate campaigns designed for India's online casino market.",
+  },
+  {
+    image: "/ICON 3D/gaming-online-course-3d-icon-png-download-9859833.png",
+    title: "Skill Gaming",
+    description: "Acquire real-money gaming users through targeted acquisition campaigns and regional marketing strategies.",
+  },
+  {
+    image: "/ICON 3D/gaming-online-course-3d-icon-png-download-9859833.png",
+    title: "TEST gaming only game",
+    description: "Acquire real-money gaming users through targeted acquisition campaigns and regional marketing strategies.",
+  },
+],
   },
   philippines: {
     label: "Philippines",
@@ -71,6 +177,7 @@ const countryData = {
     subText: "Our campaigns are designed around local player preferences, search behavior, and market trends, helping gaming brands generate more traffic, higher conversions, and stronger customer loyalty.",
     elevateTitle: "Expand Your iGaming Presence in",
     elevateGold: "Philippines",
+    industries: industryCards,
   },
   us: {
     label: "United States",
@@ -85,12 +192,42 @@ const countryData = {
     subText: "Our team develops scalable campaigns tailored to regulated US markets, helping operators attract qualified players, improve conversions, and build a strong digital presence in an increasingly competitive industry.",
     elevateTitle: "Expand Your iGaming Presence in",
     elevateGold: "United States",
+    industries: industryCards,
   },
 }
+
+
 
 export default function CountryPage() {
   const { slug } = useParams()
   const data = countryData[slug]
+
+useEffect(() => {
+  const swiper = new Swiper(".industries-scroll", {
+    modules: [Navigation, Pagination, Autoplay],
+    slidesPerView: 1.2,
+    spaceBetween: 16,
+    loop: true,
+
+    pagination: {
+      el: ".industry-pagination",
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: ".industries-scroll .swiper-button-next",
+      prevEl: ".industries-scroll .swiper-button-prev",
+    },
+
+    breakpoints: {
+      480: { slidesPerView: 2, spaceBetween: 18 },
+      640: { slidesPerView: 3, spaceBetween: 20 },
+      968: { slidesPerView: 4, spaceBetween: 24 },
+    },
+  });
+
+  return () => swiper.destroy(true, true);
+}, []);
 
   if (!data) {
     return (
@@ -138,6 +275,45 @@ export default function CountryPage() {
           </div>
         </div>
       </section>
+
+      <section id="industries" className="bg-glow">
+  <div className="container">
+    <p className="section-label">Industries We Scale</p>
+
+    <h2 className="section-title">
+      Growth Solutions for Every{" "}
+      <span className="gold">Gaming Vertical</span>
+    </h2>
+
+    <p className="section-desc">
+      We collaborate with gaming operators who are ambitious and want to take
+      over markets that are competitive to attract players who are qualified and
+      profitably grow through the use of performance driven marketing strategies.
+    </p>
+
+    <div className="industries-scroll swiper">
+      <div className="swiper-wrapper">
+        {data.industries.map((card, index) => (
+          <div className="swiper-slide" key={index}>
+            <div className="industry-card">
+              <span className="ind-icon">
+                <img src={card.image} alt={card.title} />
+              </span>
+
+              <h4>{card.title}</h4>
+
+              <p>{card.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="industry-pagination swiper-pagination"></div>
+      <div className="swiper-button-prev"></div>
+      <div className="swiper-button-next"></div>
+    </div>
+  </div>
+</section>
 
       <section className="elevate-section">
         <div className="container">
