@@ -133,7 +133,7 @@ export default function About() {
               <p className="elevate-tag">Why Choose TMK</p>
               <h2 className="elevate-title">
                 Our{' '}
-                <span className="gold">TMK</span>
+                <span className="gold">People</span>
               </h2>
               <p className="elevate-desc">
                 The Marketing King employs more than 110 full-time employees in 20 countries, helping our clients and partners use our data and content to get more engagement and revenue from the sports they love.

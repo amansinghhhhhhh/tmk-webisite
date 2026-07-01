@@ -19,6 +19,14 @@ import { fetchPosts, mapPost } from "../api/wordpress";
 import LeadForm from "../components/LeadForm";
 import SEO from "../components/SEO";
 import FAQSection from "../components/FAQSection";
+import Typewriter from "../components/Typewriter";
+
+const heroTypewriterWords = [
+  "Acquire High Value Players",
+  "Boost ROAS & Retention",
+  "Scale Profitable Campaigns",
+  "Increase Player Lifetime Value",
+];
 
 const expertise = [
   {
@@ -360,6 +368,7 @@ export default function Home() {
                   <span className="line1">Scale Your</span>{" "}
                   <span className="line2">iGaming Brand Globally</span>
                 </h1>
+                    <Typewriter words={heroTypewriterWords} />
                 <p className="hero-desc">
                   Trusted global iGaming traffic provider helping every casino, sportsbook, or crypto gaming brand acquire high-value players through SEO, PPC, media buying, and affiliate marketing.
                 </p>
@@ -374,11 +383,7 @@ export default function Home() {
               </div>
             </div>
             <div
-              className="trust-strip"
-              style={{
-                marginTop: "-50px",
-              }}
-            >
+              className="trust-strip">
               <span
                 className="trust-label"
                 style={{
