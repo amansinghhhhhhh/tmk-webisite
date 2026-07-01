@@ -708,18 +708,6 @@ section {
   position: relative
 }
 
-/* #industries::before {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--primary), transparent);
-  opacity: .3;
-  z-index: 1
-} */
-
 #industries .container {
   position: relative;
   z-index: 1
@@ -736,7 +724,8 @@ section {
 }
 
 .industries-scroll .swiper-slide {
-  height: auto
+  height: auto;
+  display: flex;
 }
 
 .industry-pagination {
@@ -2026,7 +2015,8 @@ section {
   text-align: center;
   padding: 0;
   position: relative;
-  transition: .5s
+  transition: .5s;
+  display:flex;
 }
 
 .process-card .step-body {
