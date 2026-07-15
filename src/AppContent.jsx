@@ -30,7 +30,73 @@ function ScrollToTop() {
   return null;
 }
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org/",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://themarketingking.org/" },
+    { "@type": "ListItem", position: 2, name: "Social Media Marketing for IGaming", item: "https://themarketingking.org/social-media-management-for-igaming-businesses/" },
+    { "@type": "ListItem", position: 3, name: "Google Ads for iGaming", item: "https://themarketingking.org/google-ads-for-igaming-businesses/" },
+    { "@type": "ListItem", position: 4, name: "Meta Ads for iGaming", item: "https://themarketingking.org/meta-ads-for-igaming-businesses/" },
+    { "@type": "ListItem", position: 5, name: "Telegram Ads for iGaming", item: "https://themarketingking.org/telegram-ads-for-igaming-businesses/" },
+    { "@type": "ListItem", position: 6, name: "SEO services for iGaming", item: "https://themarketingking.org/seo-services-for-igaming-businesses/" },
+    { "@type": "ListItem", position: 7, name: "Meta & Google Agency Accounts for iGaming", item: "https://themarketingking.org/meta-google-agency-accounts-for-igaming-businesses/" },
+    { "@type": "ListItem", position: 8, name: "WhatsApp API & Bulk Messaging for iGaming", item: "https://themarketingking.org/whatsapp-api-bulk-whatsapp-services-for-igaming-businesses/" },
+    { "@type": "ListItem", position: 9, name: "Telegram Channel Promotion Services IGaming", item: "https://themarketingking.org/telegram-channel-promotion-live-line-api-for-igaming-businesses/" },
+    { "@type": "ListItem", position: 10, name: "Influencer & Celebrity Marketing for iGaming", item: "https://themarketingking.org/influencer-celebrity-marketing-for-igaming-businesses/" },
+    { "@type": "ListItem", position: 11, name: "Website & App Development for iGaming", item: "https://themarketingking.org/website-and-app-development-for-igaming-businesses/" },
+    { "@type": "ListItem", position: 12, name: "Digital Marketing for Trading Platforms", item: "https://themarketingking.org/digital-marketing-for-trading-business/" },
+    { "@type": "ListItem", position: 13, name: "Turnkey Solutions for iGaming", item: "https://themarketingking.org/turnkey-solutions-for-igaming-businesses/" },
+    { "@type": "ListItem", position: 14, name: "iGaming Software Solutions", item: "https://themarketingking.org/igaming-software-solution-providers/" },
+  ],
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "TheMarketingKing",
+  alternateName: "TMK",
+  url: "https://themarketingking.org/",
+  logo: "https://themarketingking.org/tmk-logo-with-Brand-name.png",
+  sameAs: [
+    "https://facebook.com/themarketingkingg",
+    "https://www.instagram.com/tmknews_?igsh=MTlzNGJ3MDEzMmg4Yw==",
+    "https://linkedin.com/company/the-marketing-king",
+  ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org/",
+  "@type": "WebSite",
+  name: "TheMarketingKing",
+  url: "https://themarketingking.org/",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: "{search_term_string}",
+    "query-input": "required name=search_term_string",
+  },
+};
+
 export default function AppContent() {
+  useEffect(() => {
+    const ids = ["breadcrumb-schema", "organization-schema", "website-schema"];
+    const schemas = [breadcrumbSchema, organizationSchema, websiteSchema];
+    schemas.forEach((schema, i) => {
+      if (document.getElementById(ids[i])) return;
+      const script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.id = ids[i];
+      script.textContent = JSON.stringify(schema);
+      document.head.appendChild(script);
+    });
+    return () => {
+      ids.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) el.remove();
+      });
+    };
+  }, []);
+
   return (
     <>
       <ScrollToTop />
