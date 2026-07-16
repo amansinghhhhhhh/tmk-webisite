@@ -112,8 +112,204 @@ function Footer() {
             <Link to="#">
               <MapPin size={14} style={{ marginRight: 10 }} /> Dubai, UAE
             </Link>
+       
           </div>
         </div>
+             <div
+                className="trust-flags-footer"
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  gap: "14px",
+                  justifyContent: "center"
+                }}
+              >
+                {/* United States */}
+                <Link
+                  to="/countries/us"
+                  className="trust-flag"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    padding: "10px 10px",
+                    borderRadius: "50px",
+                    fontSize: "1.1rem",
+                    fontWeight: 600,
+                    color: "var(--text)",
+                    background: "rgb(255, 255, 255)",
+                    border: "1px solid rgba(255,255,255,.06)",
+                    transition: ".3s",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@main/flags/4x3/us.svg"
+                    alt="United States"
+                    style={{
+                      width: 28,
+                      height: 21,
+                      borderRadius: 4,
+                      objectFit: "cover",
+                    }}
+                  />
+                </Link>
+
+                {/* United Kingdom */}
+                <Link
+                  to="/countries/uk"
+                  className="trust-flag"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    padding: "10px 10px",
+                    borderRadius: "50px",
+                    fontSize: "1.1rem",
+                    fontWeight: 600,
+                    color: "var(--text)",
+                    background: "rgb(255, 255, 255)",
+                    border: "1px solid rgba(255,255,255,.06)",
+                    transition: ".3s",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@main/flags/4x3/gb.svg"
+                    alt="United Kingdom"
+                    style={{
+                      width: 28,
+                      height: 21,
+                      borderRadius: 4,
+                      objectFit: "cover",
+                    }}
+                  />
+                </Link>
+
+                {/* Latam */}
+                <Link
+                  to="/countries/latam"
+                  className="trust-flag"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    padding: "10px 10px",
+                    borderRadius: "50px",
+                    fontSize: "1.1rem",
+                    fontWeight: 600,
+                    color: "var(--text)",
+                    background: "rgb(255, 255, 255)",
+                    border: "1px solid rgba(255,255,255,.06)",
+                    transition: ".3s",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  <img
+                    src="/flag/latam.webp"
+                    alt="LATAM"
+                    style={{
+                      width: 28,
+                      height: 21,
+                      borderRadius: 4,
+                      objectFit: "cover",
+                    }}
+                  />
+                </Link>
+
+                {/* India */}
+                <Link
+                  to="/countries/india"
+                  className="trust-flag"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    padding: "10px 10px",
+                    borderRadius: "50px",
+                    fontSize: "1.1rem",
+                    fontWeight: 600,
+                    color: "var(--text)",
+                    background: "rgb(255, 255, 255)",
+                    border: "1px solid rgba(255,255,255,.06)",
+                    transition: ".3s",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@main/flags/4x3/in.svg"
+                    alt="India"
+                    style={{
+                      width: 28,
+                      height: 21,
+                      borderRadius: 4,
+                      objectFit: "cover",
+                    }}
+                  />
+                </Link>
+
+                {/* Malta */}
+                <Link
+                  to="/countries/malta"
+                  className="trust-flag"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    padding: "10px 10px",
+                    borderRadius: "50px",
+                    fontSize: "1.1rem",
+                    fontWeight: 600,
+                    color: "var(--text)",
+                    background: "rgb(255, 255, 255)",
+                    border: "1px solid rgba(255,255,255,.06)",
+                    transition: ".3s",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@main/flags/4x3/mt.svg"
+                    alt="Malta"
+                    style={{
+                      width: 28,
+                      height: 21,
+                      borderRadius: 4,
+                      objectFit: "cover",
+                    }}
+                  />
+                </Link>
+
+                {/* Philippines */}
+                <Link
+                  to="/countries/philippines"
+                  className="trust-flag"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    padding: "10px 10px",
+                    borderRadius: "50px",
+                    fontSize: "1.1rem",
+                    fontWeight: 600,
+                    color: "var(--text)",
+                    background: "rgb(255, 255, 255)",
+                    border: "1px solid rgba(255,255,255,.06)",
+                    transition: ".3s",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/lipis/flag-icons@main/flags/4x3/ph.svg"
+                    alt="Philippines"
+                    style={{
+                      width: 28,
+                      height: 21,
+                      borderRadius: 4,
+                      objectFit: "cover",
+                    }}
+                  />
+                </Link>
+              </div>
         <div className="footer-bottom">
           <p>
             &copy; 2026{" "}

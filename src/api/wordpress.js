@@ -68,7 +68,7 @@ export function mapPost(post) {
   return {
     id: post.id,
     title: post.title.rendered,
-    excerpt: post.excerpt.rendered.replace(/<[^>]+>/g, ""),
+    excerpt: new DOMParser().parseFromString(post.excerpt.rendered, "text/html").body.textContent,
     content: post.content.rendered,
     date: post.date,
     slug: post.slug,
