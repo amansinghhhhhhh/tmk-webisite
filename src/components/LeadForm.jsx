@@ -13,6 +13,8 @@ export default function LeadForm() {
 
   const [countryCode, setCountryCode] = useState("");
   const [phone, setPhone] = useState("");
+  console.log("Whatsapp No.", phone);
+  
   const [budget, setBudget] = useState("");
   const [errors, setErrors] = useState({});
   const [name, setName] = useState("");
@@ -42,9 +44,9 @@ export default function LeadForm() {
     }
 
     if (!phone.trim()) {
-      newErrors.phone = "Phone number is required";
+      newErrors.phone = "Whatsapp number is required";
     } else if (!validatePhone(countryCode, phone)) {
-      newErrors.phone = `Invalid phone number for ${countryRules[countryCode]?.name}`;
+      newErrors.phone = `Invalid whatsapp number for ${countryRules[countryCode]?.name}`;
     }
 
     if (!budget) {
@@ -88,7 +90,7 @@ export default function LeadForm() {
       setService("");
       setErrors({});
 
-      navigate("/thank-you");
+      // navigate("/thank-you");
     } catch (error) {
       console.error(error);
 
@@ -143,7 +145,7 @@ export default function LeadForm() {
           )}
           <input
             type="tel"
-            placeholder="Phone"
+            placeholder="Whatsapp Number"
             value={phone}
             inputMode="numeric"
             maxLength={countryRules[countryCode]?.phoneLength || 15}

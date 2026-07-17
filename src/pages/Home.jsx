@@ -823,140 +823,141 @@ export default function Home() {
               <div className="services-swiper swiper">
                 <div className="swiper-wrapper">
                   <div className="swiper-slide services-slide">
-                    <div className="services-slide-inner">
+                    <Link to="/social-media-management-for-igaming-businesses/" className="services-slide-inner">
                       <div className="s-icon">
                         <img
-                          src="service-img/seo-3d-icon-png-download-5528528.webp"
-                          alt="SEO"
+                          src="service image/social-media-marketing-3d-icon-png-download-5013080.webp"
+                          alt="Social Media"
                         />
                       </div>
-                      <h2>iGaming SEO</h2>
+                      <h2>iGaming Social Media</h2>
                       <p>
-                        Enhance your search engine visibility and get highly
-                        targeted organic traffic via SEO techniques, content
-                        marketing, building authority and strategically
-                        optimized keywords.
+                        Turn casual scrolling into active player onboarding. We
+                        design and execute targeted social media campaigns
+                        engineered to scale brand trust and fuel your FTD funnel
                       </p>
-                    </div>
+                    </Link>
                   </div>
 
                   <div className="swiper-slide services-slide">
-                    <div className="services-slide-inner">
+                    <Link to="/google-ads-for-igaming-businesses/" className="services-slide-inner">
                       <div className="s-icon">
                         <img
-                          src="service-img/free-meta-3d-icon-png-download-8250233.webp"
-                          alt="Meta Ads"
+                          src="service image/3d-google-ads icon.PNG"
+                          alt="Google Ads"
                         />
                       </div>
-                      <h2>Meta Ads</h2>
+                      <h2>iGaming Google Ads</h2>
                       <p>
                         Get qualified players to sign up with precisely specific
                         Facebook and Instagram ads that are designed to maximize
                         results and conversions.
                       </p>
-                    </div>
+                    </Link>
                   </div>
 
                   <div className="swiper-slide services-slide">
-                    <div className="services-slide-inner">
+                    <Link to="/meta-ads-for-igaming-businesses/" className="services-slide-inner">
                       <div className="s-icon">
                         <img
-                          src="service-img/free-telegram-3d-icon-png-download-7516821.webp"
-                          alt="Telegram"
+                          src="service image/free-meta-3d-icon-png-download-8250233.webp"
+                          alt="Meta Ads"
                         />
                       </div>
-                      <h2>Telegram & Community Marketing</h2>
+                      <h2>iGaming Meta Ads </h2>
                       <p>
-                        Create active gaming communities that improve trust,
-                        engagement, and retention of players.
+                        Drive player sign ups using Facebook and Instagram ads
+                        with targeting, retargeting, and conversion
+                        optimization.
                       </p>
-                    </div>
+                    </Link>
                   </div>
 
                   <div className="swiper-slide services-slide">
-                    <div className="services-slide-inner">
+                    <Link to="/telegram-ads-for-igaming-businesses/" className="services-slide-inner">
                       <div className="s-icon">
                         <img
-                          src="service-img/share-affiliate-marketing-3d-icon-png-download-13747491.webp"
-                          alt="Affiliate"
+                          src="service image/free-telegram-3d-icon-png-download-7516821.webp"
+                          alt="Telegram Ads"
                         />
                       </div>
-                      <h2>iGaming Affiliate Network</h2>
+                      <h2>Telegram Ads</h2>
                       <p>
-                        Scale player acquisition through affiliate marketing
-                        with recruitment, partner management, tracking,
-                        commissions, and compliance monitoring.
+                        Targeted Telegram acquisition funnels for betting
+                        communities.
                       </p>
-                    </div>
+                    </Link>
                   </div>
 
                   <div className="swiper-slide services-slide">
-                    <div className="services-slide-inner">
+                    <Link to="/seo-services-for-igaming-businesses/" className="services-slide-inner">
                       <div className="s-icon">
                         <img
-                          src="service-img/social-media-marketing-3d-icon-png-download-5013080.webp"
-                          alt="Player Acquisition"
+                          src="service image/seo-3d-icon-png-download-5528528.webp"
+                          alt="SEO"
                         />
                       </div>
-                      <h2>Player Acquisition</h2>
+                      <h2>iGaming SEO Services</h2>
                       <p>
-                        Get quality users by implementing multi channel
-                        campaigns that aim to boost registrations and deposits
-                        while reducing costs for acquisition.
+                        Improve search visibility with casino SEO, sportsbook
+                        SEO, content marketing, technical SEO, and optimization
+                        services.
                       </p>
-                    </div>
+                    </Link>
                   </div>
 
                   <div className="swiper-slide services-slide">
-                    <div className="services-slide-inner">
+                    <Link to="/meta-google-agency-accounts-for-igaming-businesses/" className="services-slide-inner">
                       <div className="s-icon">
                         <img
-                          src="service-img/creative-process-3d-icon-png-download-12387423.webp"
-                          alt="Creative"
+                          src="service image/recruitment-agency-3d-icon-png-download-12031451.webp"
+                          alt="Agency Accounts"
                         />
                       </div>
-                      <h2>Creative Production</h2>
+                      <h2>Managed iGaming Ad Accounts</h2>
                       <p>
-                        Creative assets that perform well and are specifically
-                        designed for gaming users.
+                        Protect iGaming campaigns with premium agency accounts,
+                        whitelists, fast approvals, and global compliance ready
+                        advertising access.
                       </p>
-                    </div>
+                    </Link>
                   </div>
 
                   <div className="swiper-slide services-slide">
-                    <div className="services-slide-inner">
+                    <Link to="/whatsapp-api-bulk-whatsapp-services-for-igaming-businesses/" className="services-slide-inner">
                       <div className="s-icon">
                         <img
-                          src="service-img/3d-google-ads icon.PNG"
-                          alt="Conversion"
+                          src="service-img/WhatsApp-API.png"
+                          alt="Whatsapp API"
                         />
                       </div>
-                      <h2>Conversion Optimization</h2>
+                      <h2>Whatsapp API</h2>
                       <p>
-                        Change website visitors into depositing customers with
-                        UX improvement and conversion focused strategies.
+                        Automate customer engagement with promotions,
+                        notifications, and instant support.
                       </p>
-                    </div>
+                    </Link>
                   </div>
 
                   <div className="swiper-slide services-slide">
-                    <div className="services-slide-inner">
+                    <Link to="/telegram-channel-promotion-live-line-api-for-igaming-businesses/" className="services-slide-inner">
                       <div className="s-icon">
                         <img
-                          src="service-img/recruitment-agency-3d-icon-png-download-12031451.webp"
-                          alt="Agency"
+                          src="service-img/Telegram-Channel-Promotion.png"
+                          alt="Telegram promotion"
                         />
                       </div>
-                      <h2>Meta & Google Agency Accounts</h2>
+                      <h2>iGaming Telegram Marketing</h2>
                       <p>
-                        Managed agency accounts with streamlined ad approvals
-                        specifically for iGaming brands across major platforms.
+                        Build gaming communities with Telegram, Discord, Web3
+                        marketing, influencer collaborations, and community
+                        management.
                       </p>
-                    </div>
+                    </Link>
                   </div>
 
                   <div className="swiper-slide services-slide">
-                    <div className="services-slide-inner">
+                    <Link to="/influencer-celebrity-marketing-for-igaming-businesses/" className="services-slide-inner">
                       <div className="s-icon">
                         <img
                           src="service-img/Influencer-Marketing.png"
@@ -968,11 +969,11 @@ export default function Home() {
                         Drive brand awareness and player acquisition through
                         trusted influencers.
                       </p>
-                    </div>
+                    </Link>
                   </div>
 
                   <div className="swiper-slide services-slide">
-                    <div className="services-slide-inner">
+                    <Link to="/website-and-app-development-for-igaming-businesses/" className="services-slide-inner">
                       <div className="s-icon">
                         <img
                           src="service-img/Web-Development.png"
@@ -984,11 +985,11 @@ export default function Home() {
                         Build fast, responsive websites optimized for
                         performance and conversions.
                       </p>
-                    </div>
+                    </Link>
                   </div>
 
                   <div className="swiper-slide services-slide">
-                    <div className="services-slide-inner">
+                    <Link to="/digital-marketing-for-trading-business/" className="services-slide-inner">
                       <div className="s-icon">
                         <img
                           src="service-img/Trading-Marketing.png"
@@ -997,14 +998,14 @@ export default function Home() {
                       </div>
                       <h2>Trending Marketing</h2>
                       <p>
-                        Reach more players with trend-driven campaigns and viral
+                        Reach more players with trend driven campaigns and viral
                         content.
                       </p>
-                    </div>
+                    </Link>
                   </div>
 
                   <div className="swiper-slide services-slide">
-                    <div className="services-slide-inner">
+                    <Link to="/turnkey-solutions-for-igaming-businesses/" className="services-slide-inner">
                       <div className="s-icon">
                         <img
                           src="service-img/Turnkey-Solutions.png"
@@ -1016,11 +1017,11 @@ export default function Home() {
                         Complete iGaming solutions from setup to marketing and
                         growth.
                       </p>
-                    </div>
+                    </Link>
                   </div>
 
                   <div className="swiper-slide services-slide">
-                    <div className="services-slide-inner">
+                    <Link to="/igaming-software-solution-providers/" className="services-slide-inner">
                       <div className="s-icon">
                         <img
                           src="service-img/iGaming-Software.png"
@@ -1032,7 +1033,7 @@ export default function Home() {
                         Powering the future of iGaming with secure, scalable,
                         and innovative software solutions.
                       </p>
-                    </div>
+                    </Link>
                   </div>
                 </div>
 
@@ -1041,7 +1042,7 @@ export default function Home() {
 
               <ul className="services-fan">
                 <li>
-                  <div className="pos-rel">
+                  <Link to="/social-media-management-for-igaming-businesses/" className="pos-rel">
                     <div className="txtBox">
                       <div className="s-icon">
                         <img
@@ -1062,11 +1063,11 @@ export default function Home() {
                         alt="Social Media Management"
                       />
                     </picture>
-                  </div>
+                  </Link>
                 </li>
 
                 <li>
-                  <div className="pos-rel">
+                  <Link to="/google-ads-for-igaming-businesses/" className="pos-rel">
                     <div className="txtBox">
                       <div className="s-icon">
                         <img
@@ -1084,11 +1085,11 @@ export default function Home() {
                     <picture className="cardImg">
                       <img src="poker cards/2.webp" alt="Google Ads" />
                     </picture>
-                  </div>
+                  </Link>
                 </li>
 
                 <li>
-                  <div className="pos-rel">
+                  <Link to="/meta-ads-for-igaming-businesses/" className="pos-rel">
                     <div className="txtBox">
                       <div className="s-icon">
                         <img
@@ -1106,11 +1107,11 @@ export default function Home() {
                     <picture className="cardImg">
                       <img src="poker cards/3.webp" alt="Meta Ads" />
                     </picture>
-                  </div>
+                  </Link>
                 </li>
 
                 <li>
-                  <div className="pos-rel">
+                  <Link to="/telegram-ads-for-igaming-businesses/" className="pos-rel">
                     <div className="txtBox">
                       <div className="s-icon">
                         <img
@@ -1127,11 +1128,11 @@ export default function Home() {
                     <picture className="cardImg">
                       <img src="poker cards/4.webp" alt="Telegram Ads" />
                     </picture>
-                  </div>
+                  </Link>
                 </li>
 
                 <li>
-                  <div className="pos-rel">
+                  <Link to="/seo-services-for-igaming-businesses/" className="pos-rel">
                     <div className="txtBox">
                       <div className="s-icon">
                         <img
@@ -1149,11 +1150,11 @@ export default function Home() {
                     <picture className="cardImg">
                       <img src="poker cards/5.webp" alt="SEO Services" />
                     </picture>
-                  </div>
+                  </Link>
                 </li>
 
                 <li>
-                  <div className="pos-rel">
+                  <Link to="/meta-google-agency-accounts-for-igaming-businesses/" className="pos-rel">
                     <div className="txtBox">
                       <div className="s-icon">
                         <img
@@ -1171,11 +1172,11 @@ export default function Home() {
                     <picture className="cardImg">
                       <img src="poker cards/6.webp" alt="Agency Accounts" />
                     </picture>
-                  </div>
+                  </Link>
                 </li>
 
                 <li>
-                  <div className="pos-rel">
+                  <Link to="/whatsapp-api-bulk-whatsapp-services-for-igaming-businesses/" className="pos-rel">
                     <div className="txtBox">
                       <div className="s-icon">
                         <img
@@ -1192,11 +1193,11 @@ export default function Home() {
                     <picture className="cardImg">
                       <img src="poker cards/7.webp" alt="Whatsapp API" />
                     </picture>
-                  </div>
+                  </Link>
                 </li>
 
                 <li>
-                  <div className="pos-rel">
+                  <Link to="/telegram-channel-promotion-live-line-api-for-igaming-businesses/" className="pos-rel">
                     <div className="txtBox">
                       <div className="s-icon">
                         <img
@@ -1214,11 +1215,11 @@ export default function Home() {
                     <picture className="cardImg">
                       <img src="poker cards/8.webp" alt="Creative" />
                     </picture>
-                  </div>
+                  </Link>
                 </li>
 
                 <li>
-                  <div className="pos-rel">
+                  <Link to="/influencer-celebrity-marketing-for-igaming-businesses/" className="pos-rel">
                     <div className="txtBox">
                       <div className="s-icon">
                         <img
@@ -1238,11 +1239,11 @@ export default function Home() {
                         alt="Influencer Marketing"
                       />
                     </picture>
-                  </div>
+                  </Link>
                 </li>
 
                 <li>
-                  <div className="pos-rel">
+                  <Link to="/website-and-app-development-for-igaming-businesses/" className="pos-rel">
                     <div className="txtBox">
                       <div className="s-icon">
                         <img
@@ -1259,11 +1260,11 @@ export default function Home() {
                     <picture className="cardImg">
                       <img src="poker cards/10.webp" alt="Web Development" />
                     </picture>
-                  </div>
+                  </Link>
                 </li>
 
                 <li>
-                  <div className="pos-rel">
+                  <Link to="/digital-marketing-for-trading-business/" className="pos-rel">
                     <div className="txtBox">
                       <div className="s-icon">
                         <img
@@ -1280,11 +1281,11 @@ export default function Home() {
                     <picture className="cardImg">
                       <img src="poker cards/j.webp" alt="Trending Marketing" />
                     </picture>
-                  </div>
+                  </Link>
                 </li>
 
                 <li>
-                  <div className="pos-rel">
+                  <Link to="/turnkey-solutions-for-igaming-businesses/" className="pos-rel">
                     <div className="txtBox">
                       <div className="s-icon">
                         <img
@@ -1301,11 +1302,11 @@ export default function Home() {
                     <picture className="cardImg">
                       <img src="poker cards/q.webp" alt="Turnkey Solutions" />
                     </picture>
-                  </div>
+                  </Link>
                 </li>
 
                 <li>
-                  <div className="pos-rel">
+                  <Link to="/igaming-software-solution-providers/" className="pos-rel">
                     <div className="txtBox">
                       <div className="s-icon">
                         <img
@@ -1322,7 +1323,7 @@ export default function Home() {
                     <picture className="cardImg">
                       <img src="poker cards/k.webp" alt="iGaming Software" />
                     </picture>
-                  </div>
+                  </Link>
                 </li>
               </ul>
             </div>

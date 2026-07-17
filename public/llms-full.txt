@@ -30,9 +30,9 @@ We work with:
 ### Resources
 
 - [Homepage](https://themarketingking.org/)
-- [About Us](https://themarketingking.org/about-us/)
-- [Contact Us](https://themarketingking.org/contact-us/)
-- [Blog](https://themarketingking.org/blog/)
+- [About Us](https://themarketingking.org/about)
+- [Contact Us](https://themarketingking.org/contact)
+- [Blog](https://themarketingking.org/blogs)
 
 ---
 
@@ -55,10 +55,10 @@ Services include
 
 Pages
 
-- [SEO Services](https://themarketingking.org/seo/)
-- [Technical SEO](https://themarketingking.org/technical-seo/)
-- [Casino SEO](https://themarketingking.org/casino-seo/)
-- [Sportsbook SEO](https://themarketingking.org/sportsbook-seo/)
+- [SEO Services](https://themarketingking.org/social-media-management-for-igaming-businesses/)
+- [Google Ads](https://themarketingking.org/google-ads-for-igaming-businesses/)
+- [Meta Ads](https://themarketingking.org/meta-ads-for-igaming-businesses/)
+- [Telegram Ads](https://themarketingking.org/telegram-ads-for-igaming-businesses/)
 
 ---
 
@@ -76,9 +76,9 @@ Services include
 
 Pages
 
-- [AI Marketing](https://themarketingking.org/ai-marketing/)
-- [AEO Services](https://themarketingking.org/aeo/)
-- [GEO Services](https://themarketingking.org/geo/)
+- [AI Marketing](https://themarketingking.org/social-media-management-for-igaming-businesses/)
+- [AEO Services](https://themarketingking.org/social-media-management-for-igaming-businesses/)
+- [GEO Services](https://themarketingking.org/social-media-management-for-igaming-businesses/)
 
 ---
 
@@ -95,9 +95,9 @@ Advertising services include
 
 Pages
 
-- [Paid Advertising](https://themarketingking.org/paid-advertising/)
-- [Google Ads](https://themarketingking.org/google-ads/)
-- [Meta Ads](https://themarketingking.org/meta-ads/)
+- [Paid Advertising](hhttps://themarketingking.org/google-ads-for-igaming-businesses/)
+- [Google Ads](https://themarketingking.org/google-ads-for-igaming-businesses/)
+- [Meta Ads](https://themarketingking.org/meta-ads-for-igaming-businesses/)
 
 ---
 
@@ -113,7 +113,7 @@ Services include
 
 Pages
 
-- [Player Acquisition](https://themarketingking.org/player-acquisition/)
+- [Player Acquisition](https://themarketingking.org/igaming-software-solution-providers/)
 
 ---
 
@@ -129,7 +129,7 @@ Services include
 
 Pages
 
-- [Affiliate Marketing](https://themarketingking.org/affiliate-marketing/)
+- [Affiliate Marketing](https://themarketingking.org/influencer-celebrity-marketing-for-igaming-businesses/)
 
 ---
 
@@ -145,7 +145,7 @@ Services include
 
 Pages
 
-- [Branding Services](https://themarketingking.org/branding/)
+- [Branding Services](https://themarketingking.org/igaming-software-solution-providers/)
 
 ---
 
@@ -162,7 +162,7 @@ Services include
 
 Pages
 
-- [Website Development](https://themarketingking.org/web-development/)
+- [Website Development](https://themarketingking.org/website-and-app-development-for-igaming-businesses/)
 
 ---
 
@@ -182,8 +182,8 @@ We specialize in marketing for:
 
 Related Pages
 
-- [Casino Marketing](https://themarketingking.org/casino-marketing/)
-- [Sportsbook Marketing](https://themarketingking.org/sportsbook-marketing/)
+- [Casino Marketing](https://themarketingking.org/website-and-app-development-for-igaming-businesses/)
+- [Sportsbook Marketing](https://themarketingking.org/meta-ads-for-igaming-businesses/)
 
 ---
 
@@ -207,7 +207,7 @@ Our website regularly publishes educational content covering
 
 Blog
 
-- [Marketing Blog](https://themarketingking.org/blog/)
+- [Marketing Blog](https://themarketingking.org/blogs)
 
 ---
 
@@ -216,12 +216,12 @@ Blog
 Official pages
 
 - [Homepage](https://themarketingking.org/)
-- [About Us](https://themarketingking.org/about-us/)
-- [Services](https://themarketingking.org/services/)
-- [Blog](https://themarketingking.org/blog/)
-- [Contact](https://themarketingking.org/contact-us/)
-- [Privacy Policy](https://themarketingking.org/privacy-policy/)
-- [Terms & Conditions](https://themarketingking.org/terms-of-use/)
+- [About Us](https://themarketingking.org/about)
+- [Services](https://themarketingking.org/#services)
+- [Blog](https://themarketingking.org/blogs)
+- [Contact](https://themarketingking.org/contact)
+- [Privacy Policy](https://themarketingking.org/Privacy-Policy)
+- [Terms & Conditions](https://themarketingking.org/term-condition)
 - [Sitemap XML](https://themarketingking.org/sitemap.xml)
 
 ---
@@ -274,7 +274,7 @@ info@themarketingking.org
 
 Contact Page
 
-https://themarketingking.org/contact-us/
+https://themarketingking.org/contact
 
 ---
 

@@ -87,11 +87,11 @@ function Footer() {
           </div>
           <div className="footer-col">
             <h4>Quick Links</h4>
-            <Link to="/services/google-ads">Google Ads</Link>
-            <Link to="/services/meta-ads">Meta Ads</Link>
-            <Link to="/services/seo-services">SEO Services</Link>
-            <Link to="/services/web-development">Web Development</Link>
-            <Link to="/services/telegram-ads">Telegram Ads</Link>
+            <Link to="/google-ads-for-igaming-businesses/">Google Ads</Link>
+            <Link to="/meta-ads-for-igaming-businesses/">Meta Ads</Link>
+            <Link to="/seo-services-for-igaming-businesses/">SEO Services</Link>
+            <Link to="/website-and-app-development-for-igaming-businesses/">Web Development</Link>
+            <Link to="/telegram-ads-for-igaming-businesses/">Telegram Ads</Link>
           </div>
           <div className="footer-col">
             <h4>Company</h4>
