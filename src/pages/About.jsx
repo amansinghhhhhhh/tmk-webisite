@@ -17,7 +17,7 @@ export default function About() {
     <SEO
   title="About Us - The Marketing King"
   description="About Us About Us Founded in 2012, The Marketing King is a leading prominent global marketing agency. We specialize in providing immersive and engaging marketing solutions for the global sports industry, B2B industries, the Banking sector, and all the other industries. Positioned at the crossroads of the sports, media, banking, and betting sectors, The Marketing"
-  canonical="https://themarketingking.org/about"
+  canonical="https://themarketingking.org/about/"
   ogTitle="About Us - The Marketing King"
   ogDescription="About Us About Us Founded in 2012, The Marketing King is a leading prominent global marketing agency. We specialize in providing immersive and engaging marketing solutions for the global sports industry, B2B industries, the Banking sector, and all the other industries. Positioned at the crossroads of the sports, media, banking, and betting sectors, The Marketing"
 />

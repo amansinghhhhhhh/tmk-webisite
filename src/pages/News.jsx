@@ -16,10 +16,10 @@ export default function News() {
 
   return (
     <>
-     <SEO
-          title="News - The Marketing King"
-          description="News Together, Let's Craft Remarkable Stories. Act Now and Make it Happen We don't just market, we create experiences that resonate, engage, and drive results. Elevate your brand with us – where every campaign is a success story waiting to unfold."
-          canonical="https://themarketingking.org/news"
+       <SEO
+           title="News - The Marketing King"
+           description="News Together, Let's Craft Remarkable Stories. Act Now and Make it Happen We don't just market, we create experiences that resonate, engage, and drive results. Elevate your brand with us – where every campaign is a success story waiting to unfold."
+           canonical="https://themarketingking.org/news/"
           ogTitle="News - The Marketing King"
           ogDescription="News Together, Let's Craft Remarkable Stories. Act Now and Make it Happen We don't just market, we create experiences that resonate, engage, and drive results. Elevate your brand with us – where every campaign is a success story waiting to unfold."
         />
@@ -29,7 +29,7 @@ export default function News() {
           <div className="hero-content">
             <h1>iGaming <span className="gold">News</span></h1>
             <p>Stay up to date with the latest industry news, trends, and updates from the iGaming world.</p>
-            <a href="https://themarketingking.org/blogs/" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Explore Our Blog <ArrowRight /></a>
+            <a href="https://themarketingking.org/news/" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Explore Our News <ArrowRight /></a>
           </div>
         </div>
       </section>
@@ -46,7 +46,7 @@ export default function News() {
           {!loading && !error && (
             <div className="blog-grid stagger">
               {posts.map((post) => (
-                <Link to={`/news/${post.slug}`} className="blog-card" key={post.id}>
+                <Link to={`/news/${post.slug}/`} className="blog-card" key={post.id}>
                   <div className="blog-img">
                     {post.image ? (
                       <img src={post.image} alt={post.title} style={{ width: "100%", height: 200, objectFit: "cover" }} />
@@ -92,7 +92,7 @@ export default function News() {
               <p className="elevate-tag">Why Choose TMK</p>
               <h2 className="elevate-title">Stay Ahead with <span className="gold">iGaming News</span></h2>
               <p className="elevate-desc">Keep your finger on the pulse of the iGaming industry. From regulatory changes to market trends, our news coverage helps you make informed decisions.</p>
-              <Link to="/contact" className="elevate-btn">Contact Us</Link>
+              <Link to="/contact/" className="elevate-btn">Contact Us</Link>
             </div>
           </div>
         </div>

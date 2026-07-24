@@ -427,7 +427,7 @@ export default function Home() {
               >
                 {/* United States */}
                 <Link
-                  to="/countries/us"
+                  to="/countries/us/"
                   className="trust-flag"
                   style={{
                     display: "flex",
@@ -459,7 +459,7 @@ export default function Home() {
 
                 {/* United Kingdom */}
                 <Link
-                  to="/countries/uk"
+                  to="/countries/uk/"
                   className="trust-flag"
                   style={{
                     display: "flex",
@@ -491,7 +491,7 @@ export default function Home() {
 
                 {/* Latam */}
                 <Link
-                  to="/countries/latam"
+                  to="/countries/latam/"
                   className="trust-flag"
                   style={{
                     display: "flex",
@@ -523,7 +523,7 @@ export default function Home() {
 
                 {/* India */}
                 <Link
-                  to="/countries/india"
+                  to="/countries/india/"
                   className="trust-flag"
                   style={{
                     display: "flex",
@@ -555,7 +555,7 @@ export default function Home() {
 
                 {/* Malta */}
                 <Link
-                  to="/countries/malta"
+                  to="/countries/malta/"
                   className="trust-flag"
                   style={{
                     display: "flex",
@@ -587,7 +587,7 @@ export default function Home() {
 
                 {/* Philippines */}
                 <Link
-                  to="/countries/philippines"
+                  to="/countries/philippines/"
                   className="trust-flag"
                   style={{
                     display: "flex",
@@ -1850,7 +1850,7 @@ export default function Home() {
                   ))
                 : blogPosts.slice(0, 3).map((post) => (
                     <Link
-                      to={`/blog/${post.slug}`}
+                      to={`/blog/${post.slug}/`}
                       className="blog-card"
                       key={post.id}
                     >
@@ -1886,7 +1886,7 @@ export default function Home() {
                   ))}
             </div>
             <div style={{ textAlign: "center", marginTop: "32px" }}>
-              <Link to="/blogs" className="btn btn-outline">
+              <Link to="/blogs/" className="btn btn-outline">
                 View All Blogs
               </Link>
             </div>

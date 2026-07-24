@@ -105,7 +105,7 @@ export default function Services() {
             {services.map((s) => {
               const Icon = s.icon
               return (
-                <Link to={`/${s.slug}`} key={s.slug} className="feature-card">
+                <Link to={`/${s.slug}/`} key={s.slug} className="feature-card">
                   <div className="service-card-icon fc-icon"><Icon /></div>
                   <h4>{s.title}</h4>
                   <p>{s.desc}</p>
@@ -113,21 +113,21 @@ export default function Services() {
               )
             })}
           </div>
-        </div>
-      </section>
+           </div>
+         </section>
 
-      <section className="elevate-section">
-        <div className="container">
-          <div className="elevate-inner">
-            <div className="elevate-content">
-              <p className="elevate-tag">Why Choose TMK</p>
-              <h2 className="elevate-title">Ready to Elevate Your <span className="gold">iGaming Brand?</span></h2>
-              <p className="elevate-desc">Partner with The Marketing King and unlock data-driven strategies, expert execution, and measurable growth across every marketing channel.</p>
-              <Link to="/contact" className="elevate-btn">Get Started <ArrowRight /></Link>
-            </div>
-          </div>
-        </div>
-      </section>
+       <section className="elevate-section">
+         <div className="container">
+           <div className="elevate-inner">
+             <div className="elevate-content">
+               <p className="elevate-tag">Why Choose TMK</p>
+               <h2 className="elevate-title">Your Partner for iGaming <span className="gold">Growth</span></h2>
+               <p className="elevate-desc">We&apos;re a specialized iGaming marketing agency dedicated to helping casinos, sportsbooks, and gaming platforms acquire players, boost revenue, and scale globally. Our deep understanding of the iGaming sector drives targeted strategies that deliver measurable results.</p>
+               <Link to="/contact/" className="elevate-btn">Get in Touch <ArrowRight size={16} /></Link>
+             </div>
+           </div>
+         </div>
+       </section>
     </>
   )
 }

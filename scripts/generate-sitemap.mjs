@@ -10,17 +10,17 @@ const WP_API = 'https://cms.themarketingking.org/wp-json/wp/v2';
 
 const STATIC_ROUTES = [
   '',
-  '/about',
-  '/contact',
-  '/blogs',
-  '/news',
-  '/our-clients',
-  '/term-condition',
-  '/join-our-community',
-  '/countries',
-  '/services',
-  '/thank-you',
-  '/privacy-policy',
+  '/about/',
+  '/contact/',
+  '/blogs/',
+  '/news/',
+  '/our-clients/',
+  '/term-condition/',
+  '/join-our-community/',
+  '/countries/',
+  '/services/',
+  '/thank-you/',
+  '/privacy-policy/',
 ];
 
 const SERVICE_SLUGS = [
@@ -88,19 +88,19 @@ function buildRoutes(blogSlugs, newsSlugs) {
   const routes = [...STATIC_ROUTES];
 
   for (const slug of SERVICE_SLUGS) {
-    routes.push(`/${slug}`);
+    routes.push(`/${slug}/`);
   }
 
   for (const slug of getCountrySlugs()) {
-    routes.push(`/countries/${slug}`);
+    routes.push(`/countries/${slug}/`);
   }
 
   for (const slug of blogSlugs) {
-    routes.push(`/blog/${slug}`);
+    routes.push(`/blog/${slug}/`);
   }
 
   for (const slug of newsSlugs) {
-    routes.push(`/news/${slug}`);
+    routes.push(`/news/${slug}/`);
   }
 
   return routes;
@@ -108,7 +108,7 @@ function buildRoutes(blogSlugs, newsSlugs) {
 
 function generateSitemapXml(routes) {
   const urls = routes.map(route => {
-    const url = route === '' ? SITE_URL : `${SITE_URL}${route}`;
+    const url = route === '' ? `${SITE_URL}/` : `${SITE_URL}${route}`;
     return `  <url>
     <loc>${url}</loc>
     <changefreq>weekly</changefreq>

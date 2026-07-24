@@ -20,7 +20,7 @@ export default function Blog() {
     <SEO
       title="Blogs - The Marketing King"
       description="Game Marketing Agency"
-      canonical="https://themarketingking.org/blog"
+      canonical="https://themarketingking.org/blog/"
       ogTitle="Blogs - The Marketing King"
       ogDescription="Game Marketing Agency"
     />
@@ -47,7 +47,7 @@ export default function Blog() {
           {!loading && !error && (
             <div className="blog-grid stagger">
               {posts.map((post) => (
-                <Link to={`/blog/${post.slug}`} className="blog-card" key={post.id}>
+                <Link to={`/blog/${post.slug}/`} className="blog-card" key={post.id}>
                   <div className="blog-img">
                     {post.image ? (
                       <img src={post.image} alt={post.title} style={{ width: "100%", height: 200, objectFit: "cover" }} />
@@ -95,7 +95,7 @@ export default function Blog() {
               <p className="elevate-tag">Why Choose TMK</p>
               <h2 className="elevate-title">Stay Ahead with <span className="gold">iGaming Insights</span></h2>
               <p className="elevate-desc">Explore the latest trends, strategies, and news in the iGaming marketing world. Our blog covers everything from player acquisition to retention strategies, helping you stay informed and competitive.</p>
-              <Link to="/contact" className="elevate-btn">Contact Us</Link>
+              <Link to="/contact/" className="elevate-btn">Contact Us</Link>
             </div>
           </div>
         </div>

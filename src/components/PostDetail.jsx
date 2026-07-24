@@ -109,16 +109,16 @@ export default function PostDetail({ categoryId, backLink, backLabel, listLink, 
           </div>
         </div>
       </section>
-    )
+    );
   }
 
   return (
     
-     <>
+      <>
     <SEO
     title={post.seo?.title}
   description={post.seo?.description || post.seo?.og_description}
-  canonical={`https://themarketingking.org/${routePrefix}/${post.slug}`}
+  canonical={`https://themarketingking.org/${routePrefix}/${post.slug}/`}
   ogTitle={post.seo?.og_title}
   ogDescription={post.seo?.og_description}
   ogImage={post.seo?.og_image?.[0]?.url}
@@ -155,7 +155,7 @@ export default function PostDetail({ categoryId, backLink, backLabel, listLink, 
               <ShareButton title={post.title} />
               <div className="blog-detail-nav">
                 {prevPost ? (
-                  <Link to={`/${routePrefix}/${prevPost.slug}`} className="blog-detail-nav-link prev">
+                  <Link to={`/${routePrefix}/${prevPost.slug}/`} className="blog-detail-nav-link prev">
                     <ArrowLeft size={18} />
                     <div>
                       <span>Previous Article</span>
@@ -164,7 +164,7 @@ export default function PostDetail({ categoryId, backLink, backLabel, listLink, 
                   </Link>
                 ) : <div className="blog-detail-nav-empty" />}
                 {nextPost ? (
-                  <Link to={`/${routePrefix}/${nextPost.slug}`} className="blog-detail-nav-link next">
+                  <Link to={`/${routePrefix}/${nextPost.slug}/`} className="blog-detail-nav-link next">
                     <div>
                       <span>Next Article</span>
                       <p>{nextPost.title}</p>
@@ -176,7 +176,7 @@ export default function PostDetail({ categoryId, backLink, backLabel, listLink, 
               <div className="blog-detail-cta">
                 <h4>Ready to Scale Your iGaming Brand?</h4>
                 <p>The Marketing King helps iGaming brands grow with data-driven marketing strategies. Let's discuss how we can help you achieve your goals.</p>
-                <Link to="/contact" className="btn btn-primary">Contact Us <ArrowRight size={14} /></Link>
+                <Link to="/contact/" className="btn btn-primary">Contact Us <ArrowRight size={14} /></Link>
               </div>
             </article>
             <aside className="blog-detail-sidebar">
@@ -185,7 +185,7 @@ export default function PostDetail({ categoryId, backLink, backLabel, listLink, 
                   <h4>Related Articles</h4>
                   <div className="blog-sidebar-posts">
                     {related.map((p) => (
-                      <Link to={`/${routePrefix}/${p.slug}`} className="blog-sidebar-post" key={p.slug}>
+                      <Link to={`/${routePrefix}/${p.slug}/`} className="blog-sidebar-post" key={p.slug}>
                         {p.image ? (
                           <img src={p.image} alt="" />
                         ) : (
@@ -211,7 +211,7 @@ export default function PostDetail({ categoryId, backLink, backLabel, listLink, 
               <div className="blog-sidebar-widget cta">
                 <h4>Grow Your Brand</h4>
                 <p>Partner with The Marketing King and take your iGaming brand to the next level.</p>
-                <Link to="/contact" className="btn btn-primary" style={{ fontSize: 13, padding: "10px 24px" }}>Get Started</Link>
+                <Link to="/contact/" className="btn btn-primary" style={{ fontSize: 13, padding: "10px 24px" }}>Get Started</Link>
               </div>
             </aside>
           </div>

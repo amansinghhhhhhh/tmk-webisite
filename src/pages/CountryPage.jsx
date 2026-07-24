@@ -15,7 +15,7 @@ seo: {
     description:
       "Support your Malta-based iGaming business with performance marketing, SEO, PPC, affiliate management, and scalable digital growth strategies.",
     canonical:
-      "https://themarketingking.org/countries/malta",
+      "https://themarketingking.org/countries/malta/",
   },
 
     label: "Malta",
@@ -133,7 +133,7 @@ caseStudyLabel: "Results That Speak",
     description:
       "Reach players across Latin America with localized iGaming marketing, multilingual SEO, PPC, affiliate growth, and regional acquisition campaigns.  ",
     canonical:
-      "https://themarketingking.org/countries/latam",
+      "https://themarketingking.org/countries/latam/",
   },
 
     label: "Latam",
@@ -247,7 +247,7 @@ caseStudyLabel: "Results That Speak",
     description:
       "Accelerate your UK iGaming brand with tailored digital marketing, SEO, paid advertising, affiliate management, and player retention strategies.",
     canonical:
-      "https://themarketingking.org/countries/uk",
+      "https://themarketingking.org/countries/uk/",
   },
 
     label: "United Kingdom",
@@ -365,7 +365,7 @@ caseStudyLabel: "Results That Speak",
     description:
       "Expand your iGaming presence in India through strategic SEO, social media marketing, paid campaigns, influencer collaborations, and player growth.",
     canonical:
-      "https://themarketingking.org/countries/india",
+      "https://themarketingking.org/countries/india/",
   },
 
     label: "India",
@@ -528,7 +528,7 @@ caseStudyLabel: "Results That Speak",
   description:
     "Grow your iGaming business in the Philippines with data-driven SEO, PPC, affiliate marketing, influencer campaigns, and high-performance player acquisition strategies.",
   canonical:
-    "https://themarketingking.org/countries/philippines",
+      "https://themarketingking.org/countries/philippines/",
 },
 
     label: "Philippines",
@@ -646,7 +646,7 @@ caseStudyLabel: "Results That Speak",
     description:
       "Scale your iGaming business in the USA with data-driven SEO, PPC, affiliate marketing, influencer campaigns, and high-performance player acquisition solutions.",
     canonical:
-      "https://themarketingking.org/countries/us",
+      "https://themarketingking.org/countries/us/",
   },
 
     label: "United States",
@@ -829,7 +829,7 @@ useEffect(() => {
           <div className="hero-content">
             <h1>Country <span className="gold">Not Found</span></h1>
             <p>The country page you're looking for doesn't exist.</p>
-            <Link to="/countries" className="btn btn-primary">View All Countries</Link>
+            <Link to="/countries/" className="btn btn-primary">View All Countries</Link>
           </div>
         </div>
       </section>
@@ -852,7 +852,7 @@ useEffect(() => {
           <div className="hero-content">
             <h1>{data.heroTitle} <span className="gold">{data.heroGold}</span></h1>
             <p>{data.heroDesc}</p>
-            <Link to="/contact" className="btn btn-primary">Get in Touch <ArrowRight /></Link>
+            <Link to="/contact/" className="btn btn-primary">Get in Touch <ArrowRight /></Link>
           </div>
         </div>
       </section>
@@ -919,7 +919,7 @@ useEffect(() => {
               <p className="elevate-tag">Why Choose TMK</p>
               <h2 className="elevate-title">{data.elevateTitle} <span className="gold">{data.elevateGold}</span></h2>
               <p className="elevate-desc">The Marketing King delivers targeted digital marketing solutions for iGaming operators in {data.label}. From player acquisition to brand building, our strategies are designed to help you dominate the local market and achieve sustainable growth.</p>
-              <Link to="/contact" className="elevate-btn">Contact Us</Link>
+              <Link to="/contact/" className="elevate-btn">Contact Us</Link>
             </div>
           </div>
         </div>

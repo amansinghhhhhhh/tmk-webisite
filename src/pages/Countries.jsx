@@ -29,7 +29,7 @@ export default function Countries() {
           <h2 className="section-title">Explore <span className="gold">Country Markets</span></h2>
           <div className="metrics-grid" style={{ gridTemplateColumns: "repeat(3,1fr)", gap: 24, marginTop: 48 }}>
             {countries.map((c) => (
-              <Link key={c.id} to={`/countries/${c.id}`} className="industry-card" style={{ textDecoration: "none", display: "block" }}>
+              <Link key={c.id} to={`/countries/${c.id}/`} className="industry-card" style={{ textDecoration: "none", display: "block" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 16 }}>
                   <img
                     src={`https://cdn.jsdelivr.net/gh/lipis/flag-icons@main/flags/4x3/${c.flag}.svg`}
@@ -50,14 +50,14 @@ export default function Countries() {
 
       
 
-      <section className="elevate-section">
-        <div className="container">
-          <div className="elevate-inner">
-            <div className="elevate-content">
-              <p className="elevate-tag">Why Choose TMK</p>
-              <h2 className="elevate-title">Expand Your iGaming Presence in <span className="gold">Global Markets</span></h2>
-              <p className="elevate-desc">The Marketing King delivers targeted digital marketing solutions for iGaming operators in global markets. From player acquisition to brand building, our strategies are designed to help you dominate the local market and achieve sustainable growth.</p>
-              <Link to="/contact" className="elevate-btn"><ArrowRight /> Contact Us</Link>
+          <section className="elevate-section">
+            <div className="container">
+              <div className="elevate-inner">
+                <div className="elevate-content">
+                  <p className="elevate-tag">Why Choose TMK</p>
+                  <h2 className="elevate-title">Expand Your iGaming Presence in <span className="gold">Global Markets</span></h2>
+                  <p className="elevate-desc">The Marketing King delivers targeted digital marketing solutions for iGaming operators in global markets. From player acquisition to brand building, our strategies are designed to help you dominate the local market and achieve sustainable growth.</p>
+                  <Link to="/contact/" className="elevate-btn"><ArrowRight /> Contact Us</Link>
             </div>
           </div>
         </div>

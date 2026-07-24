@@ -4,9 +4,9 @@ export default function BlogDetail() {
   return (
     <PostDetail
       categoryId={4}
-      backLink="/blogs"
+      backLink="/blogs/"
       backLabel="Back to Blog"
-      listLink="/blogs"
+      listLink="/blogs/"
       listLabel="View All Blogs"
       routePrefix="blog"
     />

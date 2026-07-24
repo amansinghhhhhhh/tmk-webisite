@@ -87,7 +87,7 @@ export default function ServicePage({ slug: routeSlug }) {
               Service <span className="gold">Not Found</span>
             </h1>
             <p>The service you're looking for doesn't exist.</p>
-            <Link to="/services" className="btn btn-primary">
+            <Link to="/services/" className="btn btn-primary">
               View All Services
             </Link>
           </div>
@@ -130,7 +130,7 @@ export default function ServicePage({ slug: routeSlug }) {
       <SEO
         title={service?.seo?.title}
         description={service?.seo?.description || service?.seo?.og_description}
-        canonical={`https://themarketingking.org/${serviceSlug}`}
+        canonical={`https://themarketingking.org/${serviceSlug}/`}
         ogTitle={service?.seo?.og_title}
         ogDescription={
           service?.seo?.og_description || service?.seo?.description
@@ -164,7 +164,7 @@ export default function ServicePage({ slug: routeSlug }) {
                 }}
               />
             )}
-            <Link to="/contact" className="btn btn-primary">
+            <Link to="/contact/" className="btn btn-primary">
               Get Started <ArrowRight />
             </Link>
           </div>
@@ -274,38 +274,38 @@ export default function ServicePage({ slug: routeSlug }) {
       )}
 
       {hasElevate && (
-        <section className="elevate-section">
-          <div className="container">
-            <div className="elevate-inner">
-              <div className="elevate-content">
-                {acf.why_choose_tmk_label && (
-                  <p className="elevate-tag">{acf.why_choose_tmk_label}</p>
-                )}
-                <h2 className="elevate-title">{acf.why_choose_tmk_title}</h2>
-                <div
-                  className="elevate-desc"
-                  dangerouslySetInnerHTML={{
-                    __html: acf.why_choose_tmk_description,
-                  }}
-                />
-                {acf.why_choose_tmk_button ? (
-                  <a
-                    href={acf.why_choose_tmk_button}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="elevate-btn"
-                  >
-                    Contact Us
-                  </a>
-                ) : (
-                  <Link to="/contact" className="elevate-btn">
-                    Contact Us
-                  </Link>
-                )}
+          <section className="elevate-section">
+            <div className="container">
+              <div className="elevate-inner">
+                <div className="elevate-content">
+                  {acf.why_choose_tmk_label && (
+                    <p className="elevate-tag">{acf.why_choose_tmk_label}</p>
+                  )}
+                  <h2 className="elevate-title">{acf.why_choose_tmk_title}</h2>
+                  <div
+                    className="elevate-desc"
+                    dangerouslySetInnerHTML={{
+                      __html: acf.why_choose_tmk_description,
+                    }}
+                  />
+                  {acf.why_choose_tmk_button ? (
+                    <a
+                      href={acf.why_choose_tmk_button}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="elevate-btn"
+                    >
+                      Contact Us
+                    </a>
+                  ) : (
+                    <Link to="/contact/" className="elevate-btn">
+                      Contact Us
+                    </Link>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
       )}
       <FAQSection
         label={acf.faq_label}

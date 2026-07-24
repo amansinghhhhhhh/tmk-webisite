@@ -12,10 +12,10 @@ const FaIcon = ({ type }) => {
 export default function Contact() {
   return (
     <>
-   <SEO
+    <SEO
   title="Contact Us - The Marketing King"
-  description="CONTACT US We’re here to help.. Fill in this form to find out what our products and services will do for you. Select Code +91 (India) +971 (UAE) +1 (USA) +44 (UK) +355 (AL) +376 (AD) +43 (AT) +375 (BY) +32 (BE) +387 (BA) +359 (BG) +385 (HR) +357 (CY) +420 (CZ) +45 (DK) +372"
-  canonical="https://themarketingking.org/contact"
+  description="CONTACT US We're here to help.. Fill in this form to find out what our products and services will do for you. Select Code +91 (India) +971 (UAE) +1 (USA) +44 (UK) +355 (AL) +376 (AD) +43 (AT) +375 (BY) +32 (BE) +387 (BA) +359 (BG) +385 (HR) +357 (CY) +420 (CZ) +45 (DK) +372"
+  canonical="https://themarketingking.org/contact/"
   ogTitle="Contact Us - The Marketing King"
   ogDescription="CONTACT US We’re here to help.. Fill in this form to find out what our products and services will do for you. Select Code +91 (India) +971 (UAE) +1 (USA) +44 (UK) +355 (AL) +376 (AD) +43 (AT) +375 (BY) +32 (BE) +387 (BA) +359 (BG) +385 (HR) +357 (CY) +420 (CZ) +45 (DK) +372"
 />

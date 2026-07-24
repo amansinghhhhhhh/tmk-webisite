@@ -19,7 +19,7 @@ export default function TraditionalMarketing() {
           <div className="hero-content">
             <h1>Traditional Marketing <span className="gold">for iGaming Brands</span></h1>
             <p>Combine the power of offline marketing with digital strategies. From billboards and print to event sponsorships and TV, we create integrated campaigns that build brand awareness and drive player acquisition.</p>
-            <Link to="/contact" className="btn btn-primary">Get Started <ArrowRight /></Link>
+            <Link to="/contact/" className="btn btn-primary">Get Started <ArrowRight /></Link>
           </div>
         </div>
       </section>
@@ -63,17 +63,17 @@ export default function TraditionalMarketing() {
       </section>
 
       <section className="elevate-section">
-        <div className="container">
-          <div className="elevate-inner">
-            <div className="elevate-content">
-              <p className="elevate-tag">Why Choose TMK</p>
-              <h2 className="elevate-title">Improve Your Brand with <span className="gold">Print & Broadcast Marketing</span></h2>
-              <p className="elevate-desc">Engage your audience through powerful print ads, and traditional marketing strategies with The Marketing King. We craft compelling messages and promotions that drive maximum reach, impact, and brand recognition.</p>
-              <Link to="/contact" className="elevate-btn">Contact Us</Link>
+          <div className="container">
+            <div className="elevate-inner">
+              <div className="elevate-content">
+                <p className="elevate-tag">Why Choose TMK</p>
+                <h2 className="elevate-title">Improve Your Brand with <span className="gold">Print & Broadcast Marketing</span></h2>
+                <p className="elevate-desc">Engage your audience through powerful print ads, and traditional marketing strategies with The Marketing King. We craft compelling messages and promotions that drive maximum reach, impact, and brand recognition.</p>
+                <Link to="/contact/" className="elevate-btn">Contact Us</Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
     </>
   )
 }

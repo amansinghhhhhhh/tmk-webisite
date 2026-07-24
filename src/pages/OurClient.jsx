@@ -41,8 +41,8 @@ export default function OurClient() {
     <>
     <SEO
   title="Our Client - The Marketing King"
-  description="Confidential Partnerships Proven Results Due to the private nature of the iGaming industry, we maintain complete client confidentiality. Our work, performance, and long term partnerships speak louder than public portfolios. If you’d like to know more, let’s connect live — we’ll be happy to walk you through our work and results. LET'S CONNECT LIVE MEET Contact"
-  canonical="https://themarketingking.org/our-clients"
+  description="Confidential Partnerships Proven Results Due to the private nature of the iGaming industry, we maintain complete client confidentiality. Our work, performance, and long term partnerships speak louder than public portfolios. If you'd like to know more, let's connect live — we'll be happy to walk you through our work and results. LET'S CONNECT LIVE MEET Contact"
+  canonical="https://themarketingking.org/our-clients/"
   ogTitle="Our Client - The Marketing King"
   ogDescription="Confidential Partnerships Proven Results Due to the private nature of the iGaming industry, we maintain complete client confidentiality. Our work, performance, and long term partnerships speak louder than public portfolios. If you’d like to know more, let’s connect live — we’ll be happy to walk you through our work and results. LET'S CONNECT LIVE MEET Contact"
 />
@@ -52,7 +52,7 @@ export default function OurClient() {
           <div className="hero-content">
             <h1>Trusted by Leading <span className="gold">iGaming Brands</span></h1>
             <p>We partner with ambitious iGaming operators worldwide from emerging startups to established brands helping them acquire players, boost revenue, and scale across global markets.</p>
-            <Link to="/contact" className="btn btn-primary">Become Our Next Success Story <ArrowRight /></Link>
+            <Link to="/contact/" className="btn btn-primary">Become Our Next Success Story <ArrowRight /></Link>
           </div>
         </div>
       </section>
@@ -98,17 +98,17 @@ export default function OurClient() {
       </section>
 
       <section className="elevate-section">
-        <div className="container">
-          <div className="elevate-inner">
-            <div className="elevate-content">
-              <p className="elevate-tag">Why Choose TMK</p>
-              <h2 className="elevate-title">Trusted by Brands Worldwide <span className="gold">Confidential Partnerships</span></h2>
-              <p className="elevate-desc">Due to the private nature of the iGaming industry, we maintain complete client confidentiality. Our work, performance, and long term partnerships speak louder than public portfolios. If you'd like to know more, let's connect live.</p>
-              <Link to="/contact" className="elevate-btn">Contact Us</Link>
+          <div className="container">
+            <div className="elevate-inner">
+              <div className="elevate-content">
+                <p className="elevate-tag">Why Choose TMK</p>
+                <h2 className="elevate-title">Trusted by Brands Worldwide <span className="gold">Confidential Partnerships</span></h2>
+                <p className="elevate-desc">Due to the private nature of the iGaming industry, we maintain complete client confidentiality. Our work, performance, and long term partnerships speak louder than public portfolios. If you&rsquo;d like to know more, let&rsquo;s connect live.</p>
+                <Link to="/contact/" className="elevate-btn">Contact Us</Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
     </>
   )
 }

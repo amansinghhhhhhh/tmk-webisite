@@ -95,10 +95,10 @@ function Footer() {
           </div>
           <div className="footer-col">
             <h4>Company</h4>
-            <Link to="/about">About Us</Link>
-            <Link to="/blogs">Blogs</Link>
-            <Link to="/contact">Contact Us</Link>
-            <Link to="/join-our-community">Join Our Community</Link>
+            <Link to="/about/">About Us</Link>
+            <Link to="/blogs/">Blogs</Link>
+            <Link to="/contact/">Contact Us</Link>
+            <Link to="/join-our-community/">Join Our Community</Link>
           </div>
           <div className="footer-col">
             <h4>Contact</h4>
@@ -126,7 +126,7 @@ function Footer() {
               >
                 {/* United States */}
                 <Link
-                  to="/countries/us"
+                  to="/countries/us/"
                   className="trust-flag"
                   style={{
                     display: "flex",
@@ -157,7 +157,7 @@ function Footer() {
 
                 {/* United Kingdom */}
                 <Link
-                  to="/countries/uk"
+                  to="/countries/uk/"
                   className="trust-flag"
                   style={{
                     display: "flex",
@@ -188,7 +188,7 @@ function Footer() {
 
                 {/* Latam */}
                 <Link
-                  to="/countries/latam"
+                  to="/countries/latam/"
                   className="trust-flag"
                   style={{
                     display: "flex",
@@ -219,7 +219,7 @@ function Footer() {
 
                 {/* India */}
                 <Link
-                  to="/countries/india"
+                  to="/countries/india/"
                   className="trust-flag"
                   style={{
                     display: "flex",
@@ -250,7 +250,7 @@ function Footer() {
 
                 {/* Malta */}
                 <Link
-                  to="/countries/malta"
+                  to="/countries/malta/"
                   className="trust-flag"
                   style={{
                     display: "flex",
@@ -281,7 +281,7 @@ function Footer() {
 
                 {/* Philippines */}
                 <Link
-                  to="/countries/philippines"
+                  to="/countries/philippines/"
                   className="trust-flag"
                   style={{
                     display: "flex",
@@ -319,8 +319,8 @@ function Footer() {
             . All rights reserved.
           </p>
           <div className="footer-bottom-links">
-            <Link to="/Privacy-Policy">Privacy Policy</Link>
-            <Link to="/term-condition">Terms &amp; Conditions</Link>
+            <Link to="/privacy-policy/">Privacy Policy</Link>
+            <Link to="/term-condition/">Terms &amp; Conditions</Link>
           </div>
         </div>
       </div>

@@ -141,10 +141,10 @@ function Navbar() {
               <FileText size={16} /> Blogs <ChevronDown size={12} />
             </Link>
             <div className="sub-menu">
-              <Link to="/blogs" onClick={closeMobile}>
+              <Link to="/blogs/" onClick={closeMobile}>
                 <FileText size={16} /> Blogs
               </Link>
-              <Link to="/news" onClick={closeMobile}>
+              <Link to="/news/" onClick={closeMobile}>
                 <Newspaper size={16} /> News
               </Link>
             </div>
@@ -154,15 +154,15 @@ function Navbar() {
               <Briefcase size={16} /> Our Work <ChevronDown size={12} />
             </Link>
             <div className="sub-menu">
-              <Link to="/our-clients" onClick={closeMobile}>
+              <Link to="/our-clients/" onClick={closeMobile}>
                 <Users size={16} /> Our Client
               </Link>
             </div>
           </div>
-          <Link to="/about" onClick={closeMobile}>
+          <Link to="/about/" onClick={closeMobile}>
             <Info size={16} /> About Us
           </Link>
-          <Link to="/contact" onClick={closeMobile}>
+          <Link to="/contact/" onClick={closeMobile}>
             <Phone size={16} /> Contact Us
           </Link>
           <a

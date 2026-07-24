@@ -4,9 +4,9 @@ export default function NewsDetail() {
   return (
     <PostDetail
       categoryId={3}
-      backLink="/news"
+      backLink="/news/"
       backLabel="Back to News"
-      listLink="/news"
+      listLink="/news/"
       listLabel="View All News"
       routePrefix="news"
     />
