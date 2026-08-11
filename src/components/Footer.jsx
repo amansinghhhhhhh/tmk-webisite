@@ -68,7 +68,7 @@ function Footer() {
                 <FaIcon type="linkedin" />
               </a>
               <a
-                href="https://wa.me/447418622761"
+                href="https://wa.link/tmkofficial"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="WhatsApp"

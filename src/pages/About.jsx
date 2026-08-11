@@ -141,7 +141,7 @@ export default function About() {
 <p className="elevate-desc">We’re sports fans ourselves, which means we know how your audiences tick. And because we have the very best people in the industry, we can promise you ideas, an entrepreneurial attitude and unwavering dedication.</p>
 
               <a
-                href="https://api.whatsapp.com/send?phone=447418622761&text=Hello%2C%20I%20Want%20Full%20Information%20About%20TMK."
+                href="https://wa.link/tmkofficial"
                 target="_blank"
                 rel="noreferrer"
                 className="elevate-btn"

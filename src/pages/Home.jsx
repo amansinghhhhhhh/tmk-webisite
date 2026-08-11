@@ -774,6 +774,17 @@ export default function Home() {
                   <div className="stat-label">Marketing Campaigns Managed</div>
                 </div>
               </div>
+              <div className="stats-whatsapp-wrap">
+                <a
+                  href="https://wa.link/tmkofficial"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="stats-whatsapp-btn"
+                >
+                  <img src="/sticky icons/whatsApp-icon.webp" alt="WhatsApp" />
+                  Chat on WhatsApp
+                </a>
+              </div>
             </div>
           </section>
 
@@ -1673,6 +1684,18 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="stats-whatsapp-wrap">
+          <a
+            href="https://wa.link/tmkofficial"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="stats-whatsapp-btn"
+          >
+            <img src="/sticky icons/whatsApp-icon.webp" alt="WhatsApp" />
+            Chat on WhatsApp
+          </a>
+        </section>
+
         <section id="about" className="bg-glow">
           <div className="container">
             <p className="section-label">
@@ -1831,6 +1854,18 @@ export default function Home() {
               <div className="swiper-button-next"></div>
             </div>
           </div>
+        </section>
+
+        <section className="stats-whatsapp-wrap">
+          <a
+            href="https://wa.link/tmkofficial"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="stats-whatsapp-btn"
+          >
+            <img src="/sticky icons/whatsApp-icon.webp" alt="WhatsApp" />
+            Chat on WhatsApp
+          </a>
         </section>
 
         <section id="blog" className="bg-glow">

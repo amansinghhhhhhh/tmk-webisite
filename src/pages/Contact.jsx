@@ -85,7 +85,7 @@ export default function Contact() {
                 <div className="ci-text">
                   <h4>WhatsApp</h4>
                   <p>
-                    <a href="https://wa.me/447418622761" target="_blank" rel="noreferrer">
+                    <a href="https://wa.link/tmkofficial" target="_blank" rel="noreferrer">
                       +44 741 862 2761
                     </a>
                   </p>
@@ -137,7 +137,7 @@ export default function Contact() {
                 your needs.
               </p>
               <a
-                href="https://api.whatsapp.com/send?phone=447418622761&text=Hello%2C%20I%20Want%20Full%20Information%20About%20TMK."
+                href="https://wa.link/tmkofficial"
                 target="_blank"
                 rel="noreferrer"
                 className="elevate-btn"
