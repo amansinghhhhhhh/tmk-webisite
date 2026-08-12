@@ -3,7 +3,23 @@ DirectorySlash Off
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # 1. Protect build directory
+  RewriteRule ^\.builds - [F,L]
+
+  # 2. Prevent rewrite loop for index.html
   RewriteRule ^index\.html$ - [L]
+
+  # 3. Force Trailing Slash 301 Redirect for clean routes
+  # (Ignores actual files like .js, .css, .png and directories)
   RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !\.[^/]+$
+  RewriteCond %{REQUEST_URI} !/$
+  RewriteRule ^(.+)$ /$1/ [R=301,L]
+
+  # 4. React SPA Fallback
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
 </IfModule>
