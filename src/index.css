@@ -550,7 +550,7 @@ section {
 .hero-animated-line {
   display: block;
   margin: 15px 0;
-  /* min-height: 48px; */
+  min-height: calc(1.5rem * 1.7 * 2);
 }
 
 .typewriter-text {
@@ -559,12 +559,11 @@ section {
   font-weight: 600;
 }
 
-/* @media (max-width: 450px) {
-  
+@media (min-width: 768px) {
   .hero-animated-line {
-    min-height: calc(2.3rem * 2);
+    min-height: calc(2.2rem * 1.7);
   }
-} */
+}
 
 .cursor {
   display: inline-block;
@@ -833,6 +832,7 @@ section {
 
 .case-studies-slider {
   margin-top: 48px;
+  min-height: 480px;
 }
 
 .case-studies-slider .swiper-slide {
@@ -876,7 +876,8 @@ section {
 .industries-scroll {
   padding: 16px 44px 28px;
   overflow: hidden;
-  position: relative
+  position: relative;
+  min-height: 250px
 }
 
 .industries-scroll .swiper-wrapper {
@@ -1186,7 +1187,8 @@ section {
 .services-swiper {
   display: block;
   margin-top: 48px;
-  padding-bottom: 44px
+  padding-bottom: 44px;
+  min-height: 360px
 }
 
 .services-fan {
@@ -1535,7 +1537,8 @@ section {
 
 .live-ads-swiper {
   margin-top: 48px;
-  padding: 0 44px
+  padding: 0 44px;
+  min-height: 320px
 }
 
 .live-ads-swiper .swiper-slide {
@@ -2011,7 +2014,8 @@ section {
   position: relative;
   z-index: 1;
   margin: 48px auto 0;
-  padding: 16px 44px 28px
+  padding: 16px 44px 28px;
+  min-height: 330px
 }
 
 .expertise-scroll .swiper-wrapper {
@@ -2432,7 +2436,8 @@ section {
   padding: 0 44px 50px;
   margin-top: 48px;
   overflow: hidden;
-  position: relative
+  position: relative;
+  min-height: 150px
 }
 
 #media-coverage .swiper-wrapper {
