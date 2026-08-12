@@ -1,26 +1,39 @@
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Blog from "./pages/Blog";
-import BlogDetail from "./pages/BlogDetail";
-import News from "./pages/News";
-import NewsDetail from "./pages/NewsDetail";
-import OurClient from "./pages/OurClient";
-import JoinCommunity from "./pages/JoinCommunity";
-import Countries from "./pages/Countries";
-import CountryPage from "./pages/CountryPage";
-import Services from "./pages/Services";
-import ServicePage from "./pages/ServicePage";
-import NotFound from "./pages/NotFound";
-import ThankYou from "./pages/ThankYou";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsAndConditions from "./pages/TermCondition";
 import FloatingButtons from "./components/FloatingButtons";
 import BackToTop from "./components/BackToTop";
+
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogDetail = lazy(() => import("./pages/BlogDetail"));
+const News = lazy(() => import("./pages/News"));
+const NewsDetail = lazy(() => import("./pages/NewsDetail"));
+const OurClient = lazy(() => import("./pages/OurClient"));
+const JoinCommunity = lazy(() => import("./pages/JoinCommunity"));
+const Countries = lazy(() => import("./pages/Countries"));
+const CountryPage = lazy(() => import("./pages/CountryPage"));
+const Services = lazy(() => import("./pages/Services"));
+const ServicePage = lazy(() => import("./pages/ServicePage"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const ThankYou = lazy(() => import("./pages/ThankYou"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsAndConditions = lazy(() => import("./pages/TermCondition"));
+
+function PageFallback() {
+  return (
+    <section className="page-hero" style={{ minHeight: "60vh" }}>
+      <div className="container">
+        <div className="hero-content" style={{ textAlign: "center" }}>
+          <p style={{ color: "#999", fontSize: 18 }}>Loading...</p>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -57,7 +70,7 @@ const organizationSchema = {
   name: "TheMarketingKing",
   alternateName: "TMK",
   url: "https://themarketingking.org/",
-  logo: "https://themarketingking.org/tmk-logo-with-Brand-name.png",
+  logo: "https://themarketingking.org/tmk-logo-with-Brand-name.webp",
   sameAs: [
     "https://facebook.com/themarketingkingg",
     "https://www.instagram.com/tmknews_?igsh=MTlzNGJ3MDEzMmg4Yw==",
@@ -101,7 +114,8 @@ export default function AppContent() {
       <>
       <ScrollToTop />
       <Navbar />
-      <Routes>
+      <Suspense fallback={<PageFallback />}>
+        <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about/" element={<About />} />
         <Route path="/contact/" element={<Contact />} />
@@ -178,6 +192,7 @@ export default function AppContent() {
         <Route path="/thank-you/" element={<ThankYou />} />
         <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
       </Routes>
+      </Suspense>
       <FloatingButtons />
       <BackToTop />
       <Footer />

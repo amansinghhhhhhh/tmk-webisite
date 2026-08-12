@@ -14,7 +14,7 @@ export default function TraditionalMarketing() {
   return (
     <>
       <section className="page-hero">
-        <img src="/internal pages hero image/Traditional-Marketing.webp" alt="" className="hero-bg-img" />
+        <img src="/internal pages hero image/Traditional-Marketing.webp" alt="" className="hero-bg-img" width="1920" height="1080" loading="eager" fetchPriority="high" />
         <div className="container">
           <div className="hero-content">
             <h1>Traditional Marketing <span className="gold">for iGaming Brands</span></h1>
@@ -57,7 +57,7 @@ export default function TraditionalMarketing() {
                 <li><CheckCircle size={16} style={{ color: "var(--primary)", flexShrink: 0 }} /> Integrated offline-online campaign strategy</li>
               </ul>
             </div>
-            <img src="/stock/traditional-marketing.jpg" alt="" className="content-image" />
+            <img src="/stock/traditional-marketing.webp" alt="" className="content-image" />
           </div>
         </div>
       </section>

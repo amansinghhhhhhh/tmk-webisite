@@ -87,7 +87,7 @@ export default function Services() {
   return (
     <>
       <section className="page-hero">
-        <img src="/internal pages hero image/Social-Media-Management-Bg.webp" alt="" className="hero-bg-img" />
+        <img src="/internal pages hero image/Social-Media-Management-Bg.webp" alt="" className="hero-bg-img" width="1920" height="1080" loading="eager" fetchPriority="high" />
         <div className="container">
           <div className="hero-content">
             <h1>Our Services <span className="gold">Solutions</span></h1>

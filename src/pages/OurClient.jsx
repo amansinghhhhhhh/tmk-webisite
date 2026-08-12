@@ -47,7 +47,7 @@ export default function OurClient() {
   ogDescription="Confidential Partnerships Proven Results Due to the private nature of the iGaming industry, we maintain complete client confidentiality. Our work, performance, and long term partnerships speak louder than public portfolios. If you’d like to know more, let’s connect live — we’ll be happy to walk you through our work and results. LET'S CONNECT LIVE MEET Contact"
 />
       <section className="page-hero">
-        <img src="/internal pages hero image/Our-Client.webp" alt="" className="hero-bg-img" />
+        <img src="/internal pages hero image/Our-Client.webp" alt="" className="hero-bg-img" width="1920" height="1080" loading="eager" fetchPriority="high" />
         <div className="container" style={{ marginLeft: 'auto', marginRight: 80 }}>
           <div className="hero-content">
             <h1>Trusted by Leading <span className="gold">iGaming Brands</span></h1>

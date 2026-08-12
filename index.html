@@ -9,47 +9,76 @@
       name="google-site-verification"
       content="W1FE4lxXv9Hrf01xg8tRYFdIIOdrOLU0HAz-F9jldW0"
     />
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-GGBZBV71QZ"
-    ></script>
+
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://connect.facebook.net" />
+
+    <!-- Google Analytics 4 - deferred until window load to protect TBT -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag("js", new Date());
-      gtag("config", "G-GGBZBV71QZ");
-    </script>
-    <!-- <title>tmk-react</title> -->
-
-    <!-- Meta Pixel Code -->
-    <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js",
+      window.gtag = gtag;
+      window.addEventListener(
+        "load",
+        function () {
+          var s = document.createElement("script");
+          s.async = true;
+          s.src = "https://www.googletagmanager.com/gtag/js?id=G-GGBZBV71QZ";
+          s.onload = function () {
+            gtag("js", new Date());
+            gtag("config", "G-GGBZBV71QZ");
+          };
+          document.head.appendChild(s);
+        },
+        { once: true },
       );
-      fbq("init", "1017392710883145");
-      fbq("track", "PageView");
+    </script>
+
+    <!-- Meta Pixel Code - consolidated loader, deferred until window load -->
+    <script>
+      (function () {
+        var PIXEL_IDS = [
+          "1017392710883145",
+          "1376166911106653",
+          "2148960105669000",
+          "2958751624457212",
+        ];
+
+        function initPixels() {
+          if (window.fbq) return;
+          var f = window,
+            b = document,
+            e = "script",
+            v = "https://connect.facebook.net/en_US/fbevents.js";
+          var n = (f.fbq = function () {
+            n.callMethod
+              ? n.callMethod.apply(n, arguments)
+              : n.queue.push(arguments);
+          });
+          if (!f._fbq) f._fbq = n;
+          n.push = n;
+          n.loaded = !0;
+          n.version = "2.0";
+          n.queue = [];
+          var t = b.createElement(e);
+          t.async = !0;
+          t.src = v;
+          var s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s);
+          for (var i = 0; i < PIXEL_IDS.length; i++) {
+            f.fbq("init", PIXEL_IDS[i]);
+            f.fbq("track", "PageView", { plugin: "deferred" });
+          }
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener("load", initPixels, { once: true });
+        }
+      })();
     </script>
     <noscript
       ><img
@@ -58,62 +87,27 @@
         style="display: none"
         src="https://www.facebook.com/tr?id=1017392710883145&ev=PageView&noscript=1"
     /></noscript>
-    <!-- End Meta Pixel Code -->
-
-    <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1376166911106653');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1376166911106653&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2148960105669000');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2148960105669000&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2958751624457212');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2958751624457212&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
- 
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1376166911106653&ev=PageView&noscript=1"
+    /></noscript>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=2148960105669000&ev=PageView&noscript=1"
+    /></noscript>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=2958751624457212&ev=PageView&noscript=1"
+    /></noscript>
   </head>
   <body>
     <div id="root"></div>

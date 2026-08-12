@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom"
 import { CheckCircle, ArrowRight } from "lucide-react"
 import { useEffect } from "react";
-import Swiper from "swiper/bundle";
+import Swiper from "swiper";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import SEO from "../components/SEO";
 
@@ -49,7 +49,7 @@ seo: {
       "Major segment driven by football, tennis, basketball, horse racing, esports, and other domestic and international sporting events.",
   },           
     {
-    image: "/ICON 3D/poker-playing-cards-3d-icon-png-download-11901378.png",
+    image: "/ICON 3D/poker-playing-cards-3d-icon-png-download-11901378.webp",
     title: "Poker Platforms",
     description: "Established vertical with cash games, tournaments, and poker communities, but smaller than online casinos.",
   },
@@ -65,7 +65,7 @@ seo: {
       "Niche segment focused mainly on football and other professional sports competitions with limited market size.",
   },
   {
-    image: "/ICON 3D/gaming-online-course-3d-icon-png-download-9859833.png",
+    image: "/ICON 3D/gaming-online-course-3d-icon-png-download-9859833.webp",
     title: "Skill Gaming",
     description: "Small but expanding category featuring skill based cash competitions and tournaments with increasing participation.",
   },
@@ -167,7 +167,7 @@ caseStudyLabel: "Results That Speak",
       "Rapidly expanding segment, with online slots, live dealer games, and mobile casino experiences driving player engagement.",
   },      
     {
-    image: "/ICON 3D/poker-playing-cards-3d-icon-png-download-11901378.png",
+    image: "/ICON 3D/poker-playing-cards-3d-icon-png-download-11901378.webp",
     title: "Poker Platforms",
     description: "Established vertical supported by cash games, tournaments, and regional poker communities, though smaller than casinos and sportsbooks.",
   },
@@ -183,7 +183,7 @@ caseStudyLabel: "Results That Speak",
       "Relatively small but expanding segment, gaining popularity in Brazil, Mexico, and other fantasy sports markets.",
   },
   {
-    image: "/ICON 3D/gaming-online-course-3d-icon-png-download-9859833.png",
+    image: "/ICON 3D/gaming-online-course-3d-icon-png-download-9859833.webp",
     title: "Skill Gaming",
     description: "Emerging category featuring skill based cash competitions and tournaments, with modest adoption compared with mainstream gambling products.",
   },
@@ -281,7 +281,7 @@ caseStudyLabel: "Results That Speak",
       "One of the UK's most popular products, driven by football, horse racing, tennis, cricket, rugby, and major sporting events.",
   },
     {
-    image: "/ICON 3D/poker-playing-cards-3d-icon-png-download-11901378.png",
+    image: "/ICON 3D/poker-playing-cards-3d-icon-png-download-11901378.webp",
     title: "Poker Platforms",
     description: "Smaller than casinos and sportsbooks but supported by loyal players through cash games, tournaments, and online poker networks.",
   },
@@ -292,7 +292,7 @@ caseStudyLabel: "Results That Speak",
       "Smaller than the U.S. market, driven mainly by fantasy football contests and seasonal sports competitions.",
   },
   {
-    image: "/ICON 3D/gaming-online-course-3d-icon-png-download-9859833.png",
+    image: "/ICON 3D/gaming-online-course-3d-icon-png-download-9859833.webp",
     title: "Skill Gaming",
     description: "Niche segment offering skill based cash competitions and tournaments, with limited market share versus mainstream gambling products.",
   },
@@ -387,7 +387,7 @@ caseStudyLabel: "Results That Speak",
     elevateGold: "India",
      industries: [
   {
-    image: "/ICON 3D/gaming-online-course-3d-icon-png-download-9859833.png",
+    image: "/ICON 3D/gaming-online-course-3d-icon-png-download-9859833.webp",
     title: "Skill Gaming",
     description: "Largest real money gaming segment, led by rummy, skill based card games, and other legally permitted formats.",
   },
@@ -410,7 +410,7 @@ caseStudyLabel: "Results That Speak",
       "Growing segment featuring slots, live dealer games, and table games, largely served by offshore operators.",
   },      
     {
-    image: "/ICON 3D/poker-playing-cards-3d-icon-png-download-11901378.png",
+    image: "/ICON 3D/poker-playing-cards-3d-icon-png-download-11901378.webp",
     title: "Poker Platforms",
     description: "Niche but established vertical with cash games and tournaments, while legality varies across Indian states.",
   },
@@ -562,7 +562,7 @@ caseStudyLabel: "Results That Speak",
       "A major segment driven by basketball, boxing, football, esports, and cockfighting related betting where legally permitted.",
   },
     {
-    image: "/ICON 3D/poker-playing-cards-3d-icon-png-download-11901378.png",
+    image: "/ICON 3D/poker-playing-cards-3d-icon-png-download-11901378.webp",
     title: "Poker Platforms",
     description: "An established vertical supported by cash games and tournaments, though considerably smaller than the online casino market.",
   },
@@ -583,7 +583,7 @@ caseStudyLabel: "Results That Speak",
     description: "A niche but growing segment supported by cryptocurrency users, with development influenced by evolving regulatory considerations.",
   },
   {
-    image: "/ICON 3D/gaming-online-course-3d-icon-png-download-9859833.png",
+    image: "/ICON 3D/gaming-online-course-3d-icon-png-download-9859833.webp",
     title: "Skill Gaming",
     description: "A limited but emerging category featuring skill based cash competitions and tournaments with modest player participation.",
   },
@@ -691,7 +691,7 @@ caseStudyLabel: "Results That Speak",
     description: "A fast growing segment, offering casino style games in states where traditional real money online casinos are not legally available.",
   },
   {
-    image: "/ICON 3D/poker-playing-cards-3d-icon-png-download-11901378.png",
+    image: "/ICON 3D/poker-playing-cards-3d-icon-png-download-11901378.webp",
     title: "Poker Platforms",
     description: "A stable but smaller vertical, supported by cash games, tournaments, and shared player pools in regulated U.S. states.",
   },
@@ -701,7 +701,7 @@ caseStudyLabel: "Results That Speak",
     description: "A niche market primarily consisting of offshore operators that accept cryptocurrency, with limited regulation across most U.S. jurisdictions.",
   },
   {
-    image: "/ICON 3D/gaming-online-course-3d-icon-png-download-9859833.png",
+    image: "/ICON 3D/gaming-online-course-3d-icon-png-download-9859833.webp",
     title: "Skill Gaming",
     description: "An emerging category featuring skill based cash competitions and tournaments, with gradual adoption in select regulated markets.",
   },
@@ -847,7 +847,7 @@ useEffect(() => {
     />
 
       <section className="page-hero">
-        <img src={`/internal pages hero image/${data.heroImg}`} alt="" className="hero-bg-img" />
+        <img src={`/internal pages hero image/${data.heroImg}`} alt="" className="hero-bg-img" width="1920" height="1080" loading="eager" fetchPriority="high" />
         <div className="container">
           <div className="hero-content">
             <h1>{data.heroTitle} <span className="gold">{data.heroGold}</span></h1>
@@ -874,7 +874,7 @@ useEffect(() => {
           <div className="swiper-slide" key={index}>
             <div className="industry-card">
               <span className="ind-icon">
-                <img src={card.image} alt={card.title} />
+                <img src={card.image} alt={card.title} width="450" height="450" loading="lazy" />
               </span>
 
               <h4>{card.title}</h4>
@@ -907,7 +907,7 @@ useEffect(() => {
               <h4>{data.subTitle}</h4>
               <p>{data.subText}</p>
             </div>
-            <img src={`/stock/${data.img}`} alt={`${data.label} Market`} className="content-image" />
+            <img src={`/stock/${data.img}`} alt={`${data.label} Market`} className="content-image" width="1920" height="1434" loading="lazy" />
           </div>
         </div>
       </section>
@@ -946,6 +946,9 @@ useEffect(() => {
                 src={study.image}
                 alt={study.tag}
                 className="case-img-image"
+                width="1600"
+                height="1264"
+                loading="lazy"
               />
               <div className="overlay"></div>
             </div>
@@ -977,6 +980,9 @@ useEffect(() => {
                     src={study.image}
                     alt={study.tag}
                     className="case-img-image"
+                    width="1600"
+                    height="1264"
+                    loading="lazy"
                   />
                   <div className="overlay"></div>
                 </div>

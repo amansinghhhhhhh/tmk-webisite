@@ -25,7 +25,7 @@ export default function Blog() {
       ogDescription="Game Marketing Agency"
     />
       <section className="page-hero">
-        <img src="/internal pages hero image/new-TMK-News.webp" alt="" className="hero-bg-img" />
+        <img src="/internal pages hero image/new-TMK-News.webp" alt="" className="hero-bg-img" width="1920" height="1080" loading="eager" fetchPriority="high" />
         <div className="container">
           <div className="hero-content">
             <h1>Our <span className="gold">Blogs</span></h1>

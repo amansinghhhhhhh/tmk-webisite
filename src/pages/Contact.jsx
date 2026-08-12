@@ -22,7 +22,7 @@ export default function Contact() {
     
     <div>
       <section className="page-hero">
-        <img src="/internal pages hero image/TMk-CONTACT-US.webp" alt="" className="hero-bg-img" />
+        <img src="/internal pages hero image/TMk-CONTACT-US.webp" alt="" className="hero-bg-img" width="1920" height="1080" loading="eager" fetchPriority="high" />
         <div className="container">
           <div className="hero-content">
             <h1>

@@ -152,7 +152,7 @@ export default function ServicePage({ slug: routeSlug }) {
         }
       >
         {mobileBannerImg && (
-          <img src={mobileBannerImg} alt="" className="hero-bg-img-mobile" />
+          <img src={mobileBannerImg} alt="" className="hero-bg-img-mobile" width="1920" height="1080" loading="eager" fetchPriority="high" />
         )}
         <div className="container">
           <div className="hero-content">

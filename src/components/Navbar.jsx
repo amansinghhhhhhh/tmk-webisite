@@ -115,7 +115,7 @@ function Navbar() {
     <nav className={scrolled ? "scrolled" : ""}>
       <div className="container">
         <Link to="/" className="logo">
-          <img src="/tmk-logo-with-Brand-name.png" alt="TMK" />
+          <img src="/tmk-logo-with-Brand-name.webp" alt="TMK" />
         </Link>
         <div className={`nav-links${mobileOpen ? " open" : ""}`}>
           <Link to="/" onClick={closeMobile}>

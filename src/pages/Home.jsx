@@ -12,8 +12,7 @@ import {
   ChartLine,
   Globe,
 } from "lucide-react";
-// import Swiper from "swiper";
-import Swiper from "swiper/bundle";
+import Swiper from "swiper";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { fetchPosts, mapPost } from "../api/wordpress";
 import LeadForm from "../components/LeadForm";
@@ -132,12 +131,12 @@ const newsLogos = [
 ];
 
 const certImages = [
-  "/certification/WhatsApp Image 2026-06-17 at 6.48.24 PM.jpeg",
-  "/certification/WhatsApp Image 2026-06-17 at 6.48.24 PM (1).jpeg",
-  "/certification/WhatsApp Image 2026-06-17 at 6.48.24 PM (2).jpeg",
-  "/certification/WhatsApp Image 2026-06-17 at 6.48.24 PM (3).jpeg",
-  "/certification/WhatsApp Image 2026-06-17 at 6.48.24 PM (4).jpeg",
-  "/certification/WhatsApp Image 2026-06-17 at 6.48.24 PM (5).jpeg",
+  "/certification/WhatsApp Image 2026-06-17 at 6.48.24 PM.webp",
+  "/certification/WhatsApp Image 2026-06-17 at 6.48.24 PM (1).webp",
+  "/certification/WhatsApp Image 2026-06-17 at 6.48.24 PM (2).webp",
+  "/certification/WhatsApp Image 2026-06-17 at 6.48.24 PM (3).webp",
+  "/certification/WhatsApp Image 2026-06-17 at 6.48.24 PM (4).webp",
+  "/certification/WhatsApp Image 2026-06-17 at 6.48.24 PM (5).webp",
 ];
 
 export default function Home() {
@@ -370,8 +369,19 @@ export default function Home() {
       />
       <div>
         <section id="hero">
-          <video className="hero-bg-video" autoPlay muted loop playsInline>
-            <source src="/hero section.mp4" type="video/mp4" />
+          <video
+            className="hero-bg-video"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            width="1280"
+            height="634"
+            fetchPriority="high"
+            poster="/hero-poster.webp"
+          >
+            <source src="/hero.mp4" type="video/mp4" />
           </video>
           <div className="hero-overlay"></div>
           <div className="hero-glow-orb g1"></div>
@@ -715,7 +725,7 @@ export default function Home() {
                   <div className="industry-card">
                     <span className="ind-icon">
                       <img
-                        src="/ICON 3D/poker-playing-cards-3d-icon-png-download-11901378.png"
+                        src="/ICON 3D/poker-playing-cards-3d-icon-png-download-11901378.webp"
                         alt=""
                       />
                     </span>
@@ -730,7 +740,7 @@ export default function Home() {
                   <div className="industry-card">
                     <span className="ind-icon">
                       <img
-                        src="/ICON 3D/gaming-online-course-3d-icon-png-download-9859833.png"
+                        src="/ICON 3D/gaming-online-course-3d-icon-png-download-9859833.webp"
                         alt=""
                       />
                     </span>
@@ -781,7 +791,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="stats-whatsapp-btn"
                 >
-                  <img src="/sticky icons/whatsApp-icon.webp" alt="WhatsApp" />
+                  <img src="/sticky icons/whatsApp-icon.webp" alt="WhatsApp" width="100" height="100" loading="lazy" />
                   Chat on WhatsApp
                 </a>
               </div>
@@ -854,7 +864,7 @@ export default function Home() {
                     <Link to="/google-ads-for-igaming-businesses/" className="services-slide-inner">
                       <div className="s-icon">
                         <img
-                          src="service image/3d-google-ads icon.PNG"
+                          src="service image/3d-google-ads icon.webp"
                           alt="Google Ads"
                         />
                       </div>
@@ -938,7 +948,7 @@ export default function Home() {
                     <Link to="/whatsapp-api-bulk-whatsapp-services-for-igaming-businesses/" className="services-slide-inner">
                       <div className="s-icon">
                         <img
-                          src="service-img/WhatsApp-API.png"
+                          src="service-img/WhatsApp-API.webp"
                           alt="Whatsapp API"
                         />
                       </div>
@@ -954,7 +964,7 @@ export default function Home() {
                     <Link to="/telegram-channel-promotion-live-line-api-for-igaming-businesses/" className="services-slide-inner">
                       <div className="s-icon">
                         <img
-                          src="service-img/Telegram-Channel-Promotion.png"
+                          src="service-img/Telegram-Channel-Promotion.webp"
                           alt="Telegram promotion"
                         />
                       </div>
@@ -971,7 +981,7 @@ export default function Home() {
                     <Link to="/influencer-celebrity-marketing-for-igaming-businesses/" className="services-slide-inner">
                       <div className="s-icon">
                         <img
-                          src="service-img/Influencer-Marketing.png"
+                          src="service-img/Influencer-Marketing.webp"
                           alt="Influencer Marketing"
                         />
                       </div>
@@ -987,7 +997,7 @@ export default function Home() {
                     <Link to="/website-and-app-development-for-igaming-businesses/" className="services-slide-inner">
                       <div className="s-icon">
                         <img
-                          src="service-img/Web-Development.png"
+                          src="service-img/Web-Development.webp"
                           alt="Web Development"
                         />
                       </div>
@@ -1003,7 +1013,7 @@ export default function Home() {
                     <Link to="/digital-marketing-for-trading-business/" className="services-slide-inner">
                       <div className="s-icon">
                         <img
-                          src="service-img/Trading-Marketing.png"
+                          src="service-img/Trading-Marketing.webp"
                           alt="Trending Marketing"
                         />
                       </div>
@@ -1019,7 +1029,7 @@ export default function Home() {
                     <Link to="/turnkey-solutions-for-igaming-businesses/" className="services-slide-inner">
                       <div className="s-icon">
                         <img
-                          src="service-img/Turnkey-Solutions.png"
+                          src="service-img/Turnkey-Solutions.webp"
                           alt="Turnkey Solutions"
                         />
                       </div>
@@ -1035,7 +1045,7 @@ export default function Home() {
                     <Link to="/igaming-software-solution-providers/" className="services-slide-inner">
                       <div className="s-icon">
                         <img
-                          src="service-img/iGaming-Software.png"
+                          src="service-img/iGaming-Software.webp"
                           alt="iGaming Software"
                         />
                       </div>
@@ -1082,7 +1092,7 @@ export default function Home() {
                     <div className="txtBox">
                       <div className="s-icon">
                         <img
-                          src="service image/3d-google-ads icon.PNG"
+                          src="service image/3d-google-ads icon.webp"
                           alt="Google Ads"
                         />
                       </div>
@@ -1191,7 +1201,7 @@ export default function Home() {
                     <div className="txtBox">
                       <div className="s-icon">
                         <img
-                          src="service-img/WhatsApp-API.png"
+                          src="service-img/WhatsApp-API.webp"
                           alt="Whatsapp API"
                         />
                       </div>
@@ -1212,7 +1222,7 @@ export default function Home() {
                     <div className="txtBox">
                       <div className="s-icon">
                         <img
-                          src="service-img/Telegram-Channel-Promotion.png"
+                          src="service-img/Telegram-Channel-Promotion.webp"
                           alt="Telegram promotion"
                         />
                       </div>
@@ -1234,7 +1244,7 @@ export default function Home() {
                     <div className="txtBox">
                       <div className="s-icon">
                         <img
-                          src="service-img/Influencer-Marketing.png"
+                          src="service-img/Influencer-Marketing.webp"
                           alt="Influencer Marketing"
                         />
                       </div>
@@ -1258,7 +1268,7 @@ export default function Home() {
                     <div className="txtBox">
                       <div className="s-icon">
                         <img
-                          src="service-img/Web-Development.png"
+                          src="service-img/Web-Development.webp"
                           alt="Web Development"
                         />
                       </div>
@@ -1279,7 +1289,7 @@ export default function Home() {
                     <div className="txtBox">
                       <div className="s-icon">
                         <img
-                          src="service-img/Trading-Marketing.png"
+                          src="service-img/Trading-Marketing.webp"
                           alt="Trending Marketing"
                         />
                       </div>
@@ -1300,7 +1310,7 @@ export default function Home() {
                     <div className="txtBox">
                       <div className="s-icon">
                         <img
-                          src="service-img/Turnkey-Solutions.png"
+                          src="service-img/Turnkey-Solutions.webp"
                           alt="Turnkey Solutions"
                         />
                       </div>
@@ -1321,7 +1331,7 @@ export default function Home() {
                     <div className="txtBox">
                       <div className="s-icon">
                         <img
-                          src="service-img/iGaming-Software.png"
+                          src="service-img/iGaming-Software.webp"
                           alt="iGaming Software"
                         />
                       </div>
@@ -1356,6 +1366,9 @@ export default function Home() {
                 <div className="swiper-wrapper">
                   <div className="swiper-slide">
                     <img
+                      width="1920"
+                      height="1080"
+                      loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-1.webp"
                       alt="Ad 1"
                     />
@@ -1366,6 +1379,9 @@ export default function Home() {
                   </div>
                   <div className="swiper-slide">
                     <img
+                      width="1920"
+                      height="1080"
+                      loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-2.webp"
                       alt="Ad 2"
                     />
@@ -1376,6 +1392,9 @@ export default function Home() {
                   </div>
                   <div className="swiper-slide">
                     <img
+                      width="1920"
+                      height="1080"
+                      loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-3.webp"
                       alt="Ad 3"
                     />
@@ -1386,6 +1405,9 @@ export default function Home() {
                   </div>
                   <div className="swiper-slide">
                     <img
+                      width="1920"
+                      height="1080"
+                      loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-4.webp"
                       alt="Ad 4"
                     />
@@ -1396,6 +1418,9 @@ export default function Home() {
                   </div>
                   <div className="swiper-slide">
                     <img
+                      width="1920"
+                      height="1080"
+                      loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-5.webp"
                       alt="Ad 5"
                     />
@@ -1408,6 +1433,9 @@ export default function Home() {
                   </div>
                   <div className="swiper-slide">
                     <img
+                      width="1920"
+                      height="1080"
+                      loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-6.webp"
                       alt="Ad 6"
                     />
@@ -1418,6 +1446,9 @@ export default function Home() {
                   </div>
                   <div className="swiper-slide">
                     <img
+                      width="1920"
+                      height="1080"
+                      loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-7.webp"
                       alt="Ad 7"
                     />
@@ -1430,6 +1461,9 @@ export default function Home() {
                   </div>
                   <div className="swiper-slide">
                     <img
+                      width="1920"
+                      height="1080"
+                      loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-8.webp"
                       alt="Ad 8"
                     />
@@ -1440,6 +1474,9 @@ export default function Home() {
                   </div>
                   <div className="swiper-slide">
                     <img
+                      width="1920"
+                      height="1080"
+                      loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-9.webp"
                       alt="Ad 9"
                     />
@@ -1450,6 +1487,9 @@ export default function Home() {
                   </div>
                   <div className="swiper-slide">
                     <img
+                      width="1920"
+                      height="1080"
+                      loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-10.webp"
                       alt="Ad 10"
                     />
@@ -1460,6 +1500,9 @@ export default function Home() {
                   </div>
                   <div className="swiper-slide">
                     <img
+                      width="1920"
+                      height="1080"
+                      loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-11.webp"
                       alt="Ad 11"
                     />
@@ -1470,6 +1513,9 @@ export default function Home() {
                   </div>
                   <div className="swiper-slide">
                     <img
+                      width="1920"
+                      height="1080"
+                      loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-12.webp"
                       alt="Ad 12"
                     />
@@ -1691,7 +1737,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="stats-whatsapp-btn"
           >
-            <img src="/sticky icons/whatsApp-icon.webp" alt="WhatsApp" />
+            <img src="/sticky icons/whatsApp-icon.webp" alt="WhatsApp" width="100" height="100" loading="lazy" />
             Chat on WhatsApp
           </a>
         </section>
@@ -1717,7 +1763,13 @@ export default function Home() {
                   <div className="swiper-slide" key={i}>
                     <div className="expertise-card">
                       <div className="ec-icon">
-                        <img src={e.img} alt={e.title} />
+                        <img
+                          width="450"
+                          height="450"
+                          loading="lazy"
+                          src={e.img}
+                          alt={e.title}
+                        />
                       </div>
                       <h4>{e.title}</h4>
                       <p>{e.desc}</p>
@@ -1825,7 +1877,7 @@ export default function Home() {
               {certImages.map((img, i) => (
                 <div className="cert-card" key={i}>
                   <div className="card-shine"></div>
-                  <img src={img} alt="Certification" />
+                  <img src={img} alt="Certification" width="400" height="300" loading="lazy" />
                   <span className="cert-stamp">
                     <CheckCircle size={10} /> Verified
                   </span>
@@ -1845,7 +1897,7 @@ export default function Home() {
               <div className="swiper-wrapper">
                 {newsLogos.map((src, i) => (
                   <div className="swiper-slide" key={i}>
-                    <img src={src} alt={`News ${i + 1}`} />
+                    <img src={src} alt={`News ${i + 1}`} width="400" height="300" loading="lazy" />
                   </div>
                 ))}
               </div>
@@ -1863,7 +1915,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="stats-whatsapp-btn"
           >
-            <img src="/sticky icons/whatsApp-icon.webp" alt="WhatsApp" />
+            <img src="/sticky icons/whatsApp-icon.webp" alt="WhatsApp" width="100" height="100" loading="lazy" />
             Chat on WhatsApp
           </a>
         </section>
@@ -1942,7 +1994,13 @@ export default function Home() {
           <div className="container">
             <div className="cta-inner">
               <div className="cta-image">
-                <img src="/image/10.jpg" alt="iGaming Growth" />
+                <img
+                  width="1920"
+                  height="1401"
+                  loading="lazy"
+                  src="/image/10.webp"
+                  alt="iGaming Growth"
+                />
               </div>
               <div className="cta-right">
                 <p className="section-label">Contact Us</p>

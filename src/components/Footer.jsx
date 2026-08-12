@@ -31,7 +31,7 @@ function Footer() {
           <div className="footer-brand">
             <div className="footer-logo">
               <img
-                src="/tmk-logo-with-Brand-name.png"
+                src="/tmk-logo-with-Brand-name.webp"
                 alt="TMK"
                 style={{ height: 44, marginBottom: 16 }}
               />
