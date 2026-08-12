@@ -15,71 +15,8 @@
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://connect.facebook.net" />
 
-    <!-- Google Analytics 4 - deferred until window load to protect TBT -->
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      window.gtag = gtag;
-      window.addEventListener(
-        "load",
-        function () {
-          var s = document.createElement("script");
-          s.async = true;
-          s.src = "https://www.googletagmanager.com/gtag/js?id=G-GGBZBV71QZ";
-          s.onload = function () {
-            gtag("js", new Date());
-            gtag("config", "G-GGBZBV71QZ");
-          };
-          document.head.appendChild(s);
-        },
-        { once: true },
-      );
-    </script>
-
-    <!-- Meta Pixel Code - consolidated loader, deferred until window load -->
-    <script>
-      (function () {
-        var PIXEL_IDS = [
-          "1017392710883145",
-          "1376166911106653",
-          "2148960105669000",
-          "2958751624457212",
-        ];
-
-        function initPixels() {
-          if (window.fbq) return;
-          var f = window,
-            b = document,
-            e = "script",
-            v = "https://connect.facebook.net/en_US/fbevents.js";
-          var n = (f.fbq = function () {
-            n.callMethod
-              ? n.callMethod.apply(n, arguments)
-              : n.queue.push(arguments);
-          });
-          if (!f._fbq) f._fbq = n;
-          n.push = n;
-          n.loaded = !0;
-          n.version = "2.0";
-          n.queue = [];
-          var t = b.createElement(e);
-          t.async = !0;
-          t.src = v;
-          var s = b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t, s);
-          for (var i = 0; i < PIXEL_IDS.length; i++) {
-            f.fbq("init", PIXEL_IDS[i]);
-            f.fbq("track", "PageView", { plugin: "deferred" });
-          }
-        }
-
-        if (window.addEventListener) {
-          window.addEventListener("load", initPixels, { once: true });
-        }
-      })();
-    </script>
+    <!-- Tracking loads are deferred to after load / first user interaction to protect TBT -->
+    <script defer src="/js/tracking-deferred.js"></script>
     <noscript
       ><img
         height="1"

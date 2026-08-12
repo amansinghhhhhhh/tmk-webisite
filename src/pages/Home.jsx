@@ -146,6 +146,13 @@ export default function Home() {
 
   const [blogPosts, setBlogPosts] = useState([]);
   const [blogLoading, setBlogLoading] = useState(true);
+  const [videoReady, setVideoReady] = useState(false);
+
+  useEffect(() => {
+    const onLoad = () => setVideoReady(true);
+    window.addEventListener("load", onLoad, { once: true });
+    return () => window.removeEventListener("load", onLoad);
+  }, []);
 
   useEffect(() => {
   fetchPosts(4)
@@ -369,20 +376,29 @@ export default function Home() {
       />
       <div>
         <section id="hero">
-          <video
+          <img
             className="hero-bg-video"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
+            src="/hero-poster.webp"
+            alt=""
             width="1280"
             height="634"
             fetchPriority="high"
-            poster="/hero-poster.webp"
-          >
-            <source src="/hero.mp4" type="video/mp4" />
-          </video>
+          />
+          {videoReady && (
+            <video
+              className="hero-bg-video"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="none"
+              width="1280"
+              height="634"
+              poster="/hero-poster.webp"
+            >
+              <source src="/hero.mp4" type="video/mp4" />
+            </video>
+          )}
           <div className="hero-overlay"></div>
           <div className="hero-glow-orb g1"></div>
           <div className="hero-glow-orb g2"></div>

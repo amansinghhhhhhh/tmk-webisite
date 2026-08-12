@@ -547,10 +547,17 @@ section {
   background-clip: text
 }
 
+.hero-animated-line-wrapper {
+  height: calc(1.5rem * 1.7 * 2);
+  margin: 15px 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .hero-animated-line {
   display: block;
-  margin: 15px 0;
-  min-height: calc(1.5rem * 1.7 * 2);
 }
 
 .typewriter-text {
@@ -560,8 +567,8 @@ section {
 }
 
 @media (min-width: 768px) {
-  .hero-animated-line {
-    min-height: calc(2.2rem * 1.7);
+  .hero-animated-line-wrapper {
+    height: calc(2.2rem * 1.7);
   }
 }
 

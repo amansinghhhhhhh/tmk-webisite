@@ -52,9 +52,11 @@ export default function Typewriter({
   }, [words, typingSpeed, deletingSpeed, pauseTime]);
 
   return (
-    <div className="hero-animated-line">
-      <span className="typewriter-text">{text}</span>
-      <span className="cursor"></span>
+    <div className="hero-animated-line-wrapper">
+      <div className="hero-animated-line">
+        <span className="typewriter-text">{text}</span>
+        <span className="cursor"></span>
+      </div>
     </div>
   );
 }
