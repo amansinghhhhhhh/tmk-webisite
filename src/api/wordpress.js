@@ -77,5 +77,6 @@ export function mapPost(post) {
     categoryName: category?.name || "",
     categorySlug: category?.slug || "",
     seo: post.yoast_head_json || null,
+    author: post.blog_author_details || null,
   };
 }

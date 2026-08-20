@@ -21,6 +21,33 @@ function formatDate(dateStr) {
   })
 }
 
+function AuthorCard({ author }) {
+  if (!author) return null
+  const AuthorBody = (
+    <>
+      <div className="blog-author-img">
+        {author.image ? (
+          <img src={author.image} alt={author.title} />
+        ) : (
+          <User size={32} />
+        )}
+        <span className="blog-author-ring" />
+      </div>
+      <div className="blog-author-info">
+        <span className="blog-author-label"><span className="blog-author-dot" /> About the Author</span>
+        <h4>{author.author_name || author.title}</h4>
+        {author.position && <span className="blog-author-position">{author.position}</span>}
+        {author.profile_desc && <p className="blog-author-desc">{author.profile_desc}</p>}
+      </div>
+    </>
+  )
+  return (
+    <div className="blog-author-card">
+      {AuthorBody}
+    </div>
+  )
+}
+
 function ShareButton({ title }) {
   const [copied, setCopied] = useState(false)
   const copyLink = () => {
@@ -152,6 +179,7 @@ export default function PostDetail({ categoryId, backLink, backLabel, listLink, 
                 </div>
               )}
               <div className="blog-detail-content" dangerouslySetInnerHTML={{ __html: post.content }} />
+              <AuthorCard author={post.author} />
               <ShareButton title={post.title} />
               <div className="blog-detail-nav">
                 {prevPost ? (
