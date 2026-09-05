@@ -1,1 +1,0 @@
-import{r as e}from"./react-vendor-B6DOvCGh.js";import{t}from"./PostDetail-7TkkQPcz.js";var n=e();function r(){return(0,n.jsx)(t,{categoryId:4,backLink:`/blogs/`,backLabel:`Back to Blog`,listLink:`/blogs/`,listLabel:`View All Blogs`,routePrefix:`blog`})}export{r as default};
