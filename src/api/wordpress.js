@@ -71,6 +71,7 @@ export function mapPost(post) {
     excerpt: new DOMParser().parseFromString(post.excerpt.rendered, "text/html").body.textContent,
     content: post.content.rendered,
     date: post.date,
+    modified: post.modified,
     slug: post.slug,
     link: post.link,
     image: media?.source_url || "",

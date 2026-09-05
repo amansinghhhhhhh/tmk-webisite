@@ -139,6 +139,29 @@ export default function PostDetail({ categoryId, backLink, backLabel, listLink, 
     );
   }
 
+  const articleSchema = post.seo?.schema || {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt || post.seo?.description || "",
+    image: post.image || "",
+    datePublished: post.date || "",
+    dateModified: post.modified || post.date || "",
+    url: `https://themarketingking.org/${routePrefix}/${post.slug}/`,
+    author: {
+      "@type": "Organization",
+      name: "The Marketing King",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "The Marketing King",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://themarketingking.org/tmk-logo-with-Brand-name.webp",
+      },
+    },
+  };
+
   return (
     
       <>
@@ -149,6 +172,7 @@ export default function PostDetail({ categoryId, backLink, backLabel, listLink, 
   ogTitle={post.seo?.og_title}
   ogDescription={post.seo?.og_description}
   ogImage={post.seo?.og_image?.[0]?.url}
+  schema={articleSchema}
     />
       <section className="blog-detail-hero">
         <div className="blog-detail-hero-bg" />

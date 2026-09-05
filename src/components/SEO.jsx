@@ -13,12 +13,12 @@ export default function SEO({
   useEffect(() => {
     if (!schema) return;
     const existing = document.querySelector(
-      'script[type="application/ld+json"][data-faq-schema]',
+      'script[type="application/ld+json"][data-schema]',
     );
     if (existing) existing.remove();
     const script = document.createElement("script");
     script.type = "application/ld+json";
-    script.dataset.faqSchema = "";
+    script.dataset.schema = "";
     script.textContent = JSON.stringify(schema);
     document.head.appendChild(script);
     return () => {
