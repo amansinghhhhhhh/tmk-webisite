@@ -3903,7 +3903,7 @@ footer::before {
 .stats-whatsapp-btn {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 11px;
   padding: 13px 32px;
   border-radius: 50px;
   background: #25d366;
