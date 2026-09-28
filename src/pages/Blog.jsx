@@ -20,7 +20,7 @@ export default function Blog() {
     <SEO
       title="Blogs - The Marketing King"
       description="Game Marketing Agency"
-      canonical="https://themarketingking.org/blog/"
+      canonical="https://themarketingking.org/blogs/"
       ogTitle="Blogs - The Marketing King"
       ogDescription="Game Marketing Agency"
     />
