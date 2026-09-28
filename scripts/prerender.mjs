@@ -10,6 +10,9 @@
  *
  * Non-fatal by design: WordPress fetch failures warn and keep the built
  * template instead of failing the build.
+ *
+ * NOTE (redeploy trigger): Hostinger skipped the previous build, so this
+ * comment-only change forces a fresh deployment pipeline run. No logic changed.
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
