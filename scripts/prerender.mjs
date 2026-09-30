@@ -13,6 +13,9 @@
  *
  * NOTE (redeploy trigger): Hostinger skipped the previous build, so this
  * comment-only change forces a fresh deployment pipeline run. No logic changed.
+ *
+ * NOTE (redeploy trigger 2): Hostinger Git was reconnected; this comment-only
+ * change re-triggers the automated deployment pipeline. No logic changed.
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
