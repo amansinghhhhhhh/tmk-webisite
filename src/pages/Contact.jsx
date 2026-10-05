@@ -105,7 +105,7 @@ export default function Contact() {
                 </div>
               </div>
               <div className="contact-social">
-                <a href="https://facebook.com/themarketingkingg" target="_blank" rel="noreferrer">
+                <a href="https://www.facebook.com/profile.php?id=61592407032477" target="_blank" rel="noreferrer">
                   <FaIcon type="facebook" />
                 </a>
                 <a href="https://instagram.com/the_marketing_king_" target="_blank" rel="noreferrer">

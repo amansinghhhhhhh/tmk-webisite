@@ -72,7 +72,7 @@ const organizationSchema = {
   url: "https://themarketingking.org/",
   logo: "https://themarketingking.org/tmk-logo-with-Brand-name.webp",
   sameAs: [
-    "https://facebook.com/themarketingkingg",
+    "https://www.facebook.com/profile.php?id=61592407032477",
     "https://www.instagram.com/tmknews_?igsh=MTlzNGJ3MDEzMmg4Yw==",
     "https://linkedin.com/company/the-marketing-king",
   ],

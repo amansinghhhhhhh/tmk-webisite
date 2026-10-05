@@ -44,7 +44,7 @@ function Footer() {
             </p>
             <div className="social-row">
               <a
-                href="https://facebook.com/themarketingkingg"
+                href="https://www.facebook.com/profile.php?id=61592407032477"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Facebook"
