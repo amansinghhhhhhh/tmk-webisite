@@ -61,6 +61,9 @@ const META_MAP = {
     description:
       "TMK is your go to iGaming traffic provider in India. With the practical SEO strategies, our team provides conversations & leads to your igaming platform.",
     canonical: `${SITE_URL}/`,
+    // Exact Home.jsx hero-desc copy so shell/fallback never swaps text.
+    shellText:
+      "Trusted global iGaming traffic provider helping every casino, sportsbook, or crypto gaming brand acquire high value players through SEO, PPC, media buying, and affiliate marketing.",
   },
   "/about/": {
     title: "About Us - The Marketing King",
@@ -212,12 +215,23 @@ function stripTags(str) {
   return decodeEntities((str || "").replace(/<[^>]*>/g, "")).trim();
 }
 
+// Single source of truth for visible shell copy per route. The same parts
+// feed the <title>/description tags, the #root static shell, AND the
+// x-prerender-* metas that the React loading/error fallback reads — so
+// initial paint, fallback, and hydrated app can never swap text.
+function shellParts(routePath, meta, titleOverride) {
+  return {
+    h1: titleOverride || H1_MAP[routePath] || meta.title,
+    text: meta.shellText || meta.description,
+  };
+}
+
 // Static first-paint shell inside #root: H1 + description text.
 // React's createRoot() clears this on mount, so runtime is unaffected —
 // but HTML-only fetches (View Source, Googlebot first paint) see real content.
-function buildBodyShell(routePath, meta, h1Override) {
-  const h1 = escapeHtml(h1Override || H1_MAP[routePath] || meta.title);
-  const text = escapeHtml(meta.description);
+function buildBodyShell(shell) {
+  const h1 = escapeHtml(shell.h1);
+  const text = escapeHtml(shell.text);
   return (
     `<main style="display:block !important;visibility:visible !important;opacity:1 !important;max-width:960px;margin:0 auto;padding:96px 24px 72px;text-align:center;background:#0E150B;color:#ffffff;font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif">` +
     `<p style="color:#88C240;font-size:13px;letter-spacing:4px;text-transform:uppercase;margin:0 0 20px">The Marketing King</p>` +
@@ -227,19 +241,27 @@ function buildBodyShell(routePath, meta, h1Override) {
   );
 }
 
-function injectBody(html, routePath, meta, h1Override) {
+function injectBody(html, shell) {
   return html.replace(
     /([ \t]*)<div id="root"><\/div>/,
-    `$1<div id="root">${buildBodyShell(routePath, meta, h1Override)}</div>`,
+    `$1<div id="root">${buildBodyShell(shell)}</div>`,
   );
 }
 
-function buildMetaTags(meta) {
+// One combined injection per route so head tags and body shell always agree.
+function injectRoute(htmlTemplate, routePath, meta, titleOverride) {
+  const shell = shellParts(routePath, meta, titleOverride);
+  return injectBody(injectMeta(htmlTemplate, meta, shell), shell);
+}
+
+function buildMetaTags(meta, shell) {
   const title = escapeHtml(meta.title);
   const desc = escapeHtml(meta.description);
   const lines = [
     `<title>${title}</title>`,
     `    <meta name="description" content="${desc}" />`,
+    `    <meta name="x-prerender-h1" content="${escapeHtml(shell.h1)}" />`,
+    `    <meta name="x-prerender-text" content="${escapeHtml(shell.text)}" />`,
     `    <link rel="canonical" href="${meta.canonical}" />`,
     `    <meta property="og:title" content="${title}" />`,
     `    <meta property="og:description" content="${desc}" />`,
@@ -253,8 +275,8 @@ function buildMetaTags(meta) {
 // Surgically replace the template's title/description with the per-route
 // block. Everything else (scripts, pixels, verification, preconnects) is
 // preserved byte-for-byte.
-function injectMeta(htmlTemplate, meta) {
-  const metaBlock = buildMetaTags(meta);
+function injectMeta(htmlTemplate, meta, shell) {
+  const metaBlock = buildMetaTags(meta, shell);
   let out = htmlTemplate.replace(
     /<title>[^<]*<\/title>\s*\r?\n\s*<meta name="description" content="[^"]*" \/>/,
     metaBlock,
@@ -364,7 +386,7 @@ async function main() {
   // 1. Static routes (incl. countries + thank-you)
   console.log("[Prerender] Generating static route pages...");
   for (const [routePath, meta] of Object.entries(META_MAP)) {
-    const html = injectBody(injectMeta(htmlTemplate, meta), routePath, meta);
+    const html = injectRoute(htmlTemplate, routePath, meta);
     const outPath = writePage(DIST_DIR, routePath, html);
     count++;
     console.log(`  ${routePath} -> ${relative(process.cwd(), outPath)}`);
@@ -383,7 +405,7 @@ async function main() {
     const outPath = writePage(
       DIST_DIR,
       `/${s.slug}/`,
-      injectBody(injectMeta(htmlTemplate, meta), `/${s.slug}/`, meta, s.title),
+      injectRoute(htmlTemplate, `/${s.slug}/`, meta, s.title),
     );
     count++;
     console.log(`  /${s.slug}/ -> ${relative(process.cwd(), outPath)}`);
@@ -402,7 +424,7 @@ async function main() {
     const outPath = writePage(
       DIST_DIR,
       `/blog/${p.slug}/`,
-      injectBody(injectMeta(htmlTemplate, meta), `/blog/${p.slug}/`, meta, p.title),
+      injectRoute(htmlTemplate, `/blog/${p.slug}/`, meta, p.title),
     );
     count++;
   }
@@ -421,7 +443,7 @@ async function main() {
     const outPath = writePage(
       DIST_DIR,
       `/news/${p.slug}/`,
-      injectBody(injectMeta(htmlTemplate, meta), `/news/${p.slug}/`, meta, p.title),
+      injectRoute(htmlTemplate, `/news/${p.slug}/`, meta, p.title),
     );
     count++;
   }
