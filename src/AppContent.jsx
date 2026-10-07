@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FloatingButtons from "./components/FloatingButtons";
 import BackToTop from "./components/BackToTop";
+import ErrorBoundary, { FallbackShell } from "./components/ErrorBoundary";
 
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -24,15 +25,9 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsAndConditions = lazy(() => import("./pages/TermCondition"));
 
 function PageFallback() {
-  return (
-    <section className="page-hero" style={{ minHeight: "60vh" }}>
-      <div className="container">
-        <div className="hero-content" style={{ textAlign: "center" }}>
-          <p style={{ color: "#999", fontSize: 18 }}>Loading...</p>
-        </div>
-      </div>
-    </section>
-  );
+  // Route-aware fallback (see ErrorBoundary.jsx): while the lazy page chunk
+  // loads, re-display the prerendered title/description instead of blank.
+  return <FallbackShell />;
 }
 
 function ScrollToTop() {
@@ -91,6 +86,7 @@ const websiteSchema = {
 };
 
 export default function AppContent() {
+  const { pathname } = useLocation();
   useEffect(() => {
     const ids = ["breadcrumb-schema", "organization-schema", "website-schema"];
     const schemas = [breadcrumbSchema, organizationSchema, websiteSchema];
@@ -115,6 +111,7 @@ export default function AppContent() {
       <ScrollToTop />
       <Navbar />
       <Suspense fallback={<PageFallback />}>
+        <ErrorBoundary resetKey={pathname}>
         <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about/" element={<About />} />
@@ -192,6 +189,7 @@ export default function AppContent() {
         <Route path="/thank-you/" element={<ThankYou />} />
         <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
       </Routes>
+        </ErrorBoundary>
       </Suspense>
       <FloatingButtons />
       <BackToTop />
