@@ -480,13 +480,21 @@ section {
   align-items: center
 }
 
-/* Hero entrance animation runs only when JS is active; without JS (or if
-   observers never fire) the hero content stays visible instead of stuck
-   at opacity 0. */
+/* Hero/fan entrances run only when JS is active, but always complete: the
+   self-finishing keyframes guarantee visibility even if an
+   IntersectionObserver never fires (e.g. headless renderers). */
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fan-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 html.js .hero-left {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 1s .3s;
+  animation: hero-in .9s .3s both;
 }
 
 html.js .hero-left.visible {
@@ -1233,9 +1241,9 @@ html.js .hero-left.visible {
     z-index: auto
   }
 
-  /* Fan-card reveal runs only when JS is active; without JS cards stay visible. */
+  /* Fan-card reveal runs only when JS is active, but always completes. */
   html.js .services-fan li {
-    opacity: 0;
+    animation: fan-in .5s both;
   }
 
   html.js .services-fan li.visible {

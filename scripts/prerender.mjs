@@ -219,7 +219,7 @@ function buildBodyShell(routePath, meta, h1Override) {
   const h1 = escapeHtml(h1Override || H1_MAP[routePath] || meta.title);
   const text = escapeHtml(meta.description);
   return (
-    `<main style="max-width:960px;margin:0 auto;padding:96px 24px 72px;text-align:center;font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif">` +
+    `<main style="display:block !important;visibility:visible !important;opacity:1 !important;max-width:960px;margin:0 auto;padding:96px 24px 72px;text-align:center;background:#0E150B;color:#ffffff;font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif">` +
     `<p style="color:#88C240;font-size:13px;letter-spacing:4px;text-transform:uppercase;margin:0 0 20px">The Marketing King</p>` +
     `<h1 style="color:#ffffff;font-size:clamp(2rem,5vw,3.25rem);line-height:1.15;margin:0 0 20px">${h1}</h1>` +
     `<p style="color:#cfcfcf;font-size:16px;line-height:1.7;margin:0 auto;max-width:720px">${text}</p>` +
