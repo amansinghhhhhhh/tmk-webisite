@@ -1,95 +1,15 @@
 import { Component } from "react";
 
-// Reads the prerendered per-route static tags. The x-prerender-* metas carry
-// the exact shell H1/text, so loading/error fallbacks render byte-identical
-// copy to the static shell (and the live hero) — zero content swapping.
-export function getPrerenderedMeta() {
-  let title = "";
-  let desc = "";
-  try {
-    if (typeof document !== "undefined") {
-      const h1m = document.querySelector('meta[name="x-prerender-h1"]');
-      const txm = document.querySelector('meta[name="x-prerender-text"]');
-      title =
-        (h1m && h1m.getAttribute("content")) || document.title || "";
-      desc =
-        (txm && txm.getAttribute("content")) ||
-        (() => {
-          const m = document.querySelector('meta[name="description"]');
-          return (m && m.getAttribute("content")) || "";
-        })();
-    }
-  } catch {
-    /* ignore - fall back to generic loader */
-  }
-  return { title, desc };
-}
-
-export function FallbackShell({ showRetry }) {
-  const { title, desc } = getPrerenderedMeta();
+// Invisible, layout-stable placeholder shown while a lazy route chunk loads.
+// Renders no text (no "Loading..." flash, no FOUC) but preserves section
+// height so Navbar/Footer don't jump during route transitions.
+export function FallbackShell() {
   return (
-    <section className="page-hero" style={{ minHeight: "60vh" }}>
-      <div className="container">
-        <div className="hero-content" style={{ textAlign: "center" }}>
-          {title ? (
-            <>
-              <p
-                style={{
-                  color: "#88C240",
-                  fontSize: 13,
-                  letterSpacing: 4,
-                  textTransform: "uppercase",
-                  margin: "0 0 20px",
-                }}
-              >
-                The Marketing King
-              </p>
-              <h1
-                style={{
-                  color: "#ffffff",
-                  fontSize: "clamp(2rem,5vw,3.25rem)",
-                  lineHeight: 1.15,
-                  margin: "0 0 20px",
-                }}
-              >
-                {title}
-              </h1>
-              {desc ? (
-                <p
-                  style={{
-                    color: "#cfcfcf",
-                    fontSize: 16,
-                    lineHeight: 1.7,
-                    maxWidth: 720,
-                    margin: "0 auto",
-                  }}
-                >
-                  {desc}
-                </p>
-              ) : null}
-            </>
-          ) : (
-            <p style={{ color: "#999", fontSize: 18 }}>Loading...</p>
-          )}
-          {showRetry ? (
-            <button
-              type="button"
-              className="btn btn-primary"
-              style={{ marginTop: 28 }}
-              onClick={() => {
-                try {
-                  window.location.reload();
-                } catch {
-                  /* ignore */
-                }
-              }}
-            >
-              Reload page
-            </button>
-          ) : null}
-        </div>
-      </div>
-    </section>
+    <section
+      className="page-hero"
+      style={{ minHeight: "60vh" }}
+      aria-hidden="true"
+    />
   );
 }
 
@@ -123,7 +43,33 @@ export default class ErrorBoundary extends Component {
 
   render() {
     if (this.state.hasError) {
-      return <FallbackShell showRetry />;
+      // Minimal error UI (chunk-load failure / render crash): short message
+      // plus recovery action. Shown only on genuine errors, never on load.
+      return (
+        <section className="page-hero" style={{ minHeight: "60vh" }}>
+          <div className="container">
+            <div className="hero-content" style={{ textAlign: "center" }}>
+              <p style={{ color: "#cfcfcf", fontSize: 18 }}>
+                Something went wrong while loading this page.
+              </p>
+              <button
+                type="button"
+                className="btn btn-primary"
+                style={{ marginTop: 28 }}
+                onClick={() => {
+                  try {
+                    window.location.reload();
+                  } catch {
+                    /* ignore */
+                  }
+                }}
+              >
+                Reload page
+              </button>
+            </div>
+          </div>
+        </section>
+      );
     }
     return this.props.children;
   }

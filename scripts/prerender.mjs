@@ -61,9 +61,6 @@ const META_MAP = {
     description:
       "TMK is your go to iGaming traffic provider in India. With the practical SEO strategies, our team provides conversations & leads to your igaming platform.",
     canonical: `${SITE_URL}/`,
-    // Exact Home.jsx hero-desc copy so shell/fallback never swaps text.
-    shellText:
-      "Trusted global iGaming traffic provider helping every casino, sportsbook, or crypto gaming brand acquire high value players through SEO, PPC, media buying, and affiliate marketing.",
   },
   "/about/": {
     title: "About Us - The Marketing King",
@@ -168,30 +165,6 @@ const META_MAP = {
   },
 };
 
-// ─── Static H1 per route (visible body shell) ────────────────────────
-// Mirrors each page's hero H1. Falls back to meta.title when absent.
-const H1_MAP = {
-  "/": "Scale Your iGaming Brand Globally",
-  "/about/": "About Us",
-  "/contact/": "Let's Grow Your iGaming Brand",
-  "/blogs/": "Our Blogs",
-  "/news/": "iGaming News",
-  "/our-clients/": "Trusted by Leading iGaming Brands",
-  "/services/": "Our Services Solutions",
-  "/countries/": "Global Markets",
-  "/join-our-community/": "Join Fastest Growing iGaming Community",
-  "/privacy-policy/": "Privacy Policy",
-  "/term-condition/": "Terms & Conditions",
-  "/thank-you/": "Thank you for contacting us!",
-  "/countries/malta/": "Digital Growth for Malta Based iGaming Operators",
-  "/countries/latam/": "Global Marketing for Latam Licensed Operators",
-  "/countries/uk/": "Trusted iGaming Marketing for the UK",
-  "/countries/india/": "Accelerate Growth in India's Fastest Growing Gaming Market",
-  "/countries/philippines/":
-    "Performance Marketing for the Philippine Gaming Industry",
-  "/countries/us/": "Marketing Solutions for the Expanding US iGaming Market",
-};
-
 // ─── Helpers ───────────────────────────────────────────────────────
 function escapeHtml(str) {
   return (str || "")
@@ -201,67 +174,12 @@ function escapeHtml(str) {
     .replace(/"/g, "&quot;");
 }
 
-function decodeEntities(str) {
-  return (str || "")
-    .replace(/&#8217;|&#8216;|&#039;/g, "'")
-    .replace(/&#8220;|&#8221;|&quot;/g, '"')
-    .replace(/&#8211;/g, "-")
-    .replace(/&#8212;/g, "—")
-    .replace(/&nbsp;/g, " ")
-    .replace(/&amp;/g, "&");
-}
-
-function stripTags(str) {
-  return decodeEntities((str || "").replace(/<[^>]*>/g, "")).trim();
-}
-
-// Single source of truth for visible shell copy per route. The same parts
-// feed the <title>/description tags, the #root static shell, AND the
-// x-prerender-* metas that the React loading/error fallback reads — so
-// initial paint, fallback, and hydrated app can never swap text.
-function shellParts(routePath, meta, titleOverride) {
-  return {
-    h1: titleOverride || H1_MAP[routePath] || meta.title,
-    text: meta.shellText || meta.description,
-  };
-}
-
-// Static first-paint shell inside #root: H1 + description text.
-// React's createRoot() clears this on mount, so runtime is unaffected —
-// but HTML-only fetches (View Source, Googlebot first paint) see real content.
-function buildBodyShell(shell) {
-  const h1 = escapeHtml(shell.h1);
-  const text = escapeHtml(shell.text);
-  return (
-    `<main style="display:block !important;visibility:visible !important;opacity:1 !important;max-width:960px;margin:0 auto;padding:96px 24px 72px;text-align:center;background:#0E150B;color:#ffffff;font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif">` +
-    `<p style="color:#88C240;font-size:13px;letter-spacing:4px;text-transform:uppercase;margin:0 0 20px">The Marketing King</p>` +
-    `<h1 style="color:#ffffff;font-size:clamp(2rem,5vw,3.25rem);line-height:1.15;margin:0 0 20px">${h1}</h1>` +
-    `<p style="color:#cfcfcf;font-size:16px;line-height:1.7;margin:0 auto;max-width:720px">${text}</p>` +
-    `</main>`
-  );
-}
-
-function injectBody(html, shell) {
-  return html.replace(
-    /([ \t]*)<div id="root"><\/div>/,
-    `$1<div id="root">${buildBodyShell(shell)}</div>`,
-  );
-}
-
-// One combined injection per route so head tags and body shell always agree.
-function injectRoute(htmlTemplate, routePath, meta, titleOverride) {
-  const shell = shellParts(routePath, meta, titleOverride);
-  return injectBody(injectMeta(htmlTemplate, meta, shell), shell);
-}
-
-function buildMetaTags(meta, shell) {
+function buildMetaTags(meta) {
   const title = escapeHtml(meta.title);
   const desc = escapeHtml(meta.description);
   const lines = [
     `<title>${title}</title>`,
     `    <meta name="description" content="${desc}" />`,
-    `    <meta name="x-prerender-h1" content="${escapeHtml(shell.h1)}" />`,
-    `    <meta name="x-prerender-text" content="${escapeHtml(shell.text)}" />`,
     `    <link rel="canonical" href="${meta.canonical}" />`,
     `    <meta property="og:title" content="${title}" />`,
     `    <meta property="og:description" content="${desc}" />`,
@@ -275,8 +193,8 @@ function buildMetaTags(meta, shell) {
 // Surgically replace the template's title/description with the per-route
 // block. Everything else (scripts, pixels, verification, preconnects) is
 // preserved byte-for-byte.
-function injectMeta(htmlTemplate, meta, shell) {
-  const metaBlock = buildMetaTags(meta, shell);
+function injectMeta(htmlTemplate, meta) {
+  const metaBlock = buildMetaTags(meta);
   let out = htmlTemplate.replace(
     /<title>[^<]*<\/title>\s*\r?\n\s*<meta name="description" content="[^"]*" \/>/,
     metaBlock,
@@ -315,18 +233,14 @@ function metaFromYoast(yoast, canonical, ogType) {
 async function fetchServiceSeo() {
   try {
     const res = await fetch(
-      `${WP_API}/service?per_page=100&_fields=slug,title,yoast_head_json`,
+      `${WP_API}/service?per_page=100&_fields=slug,yoast_head_json`,
     );
     if (!res.ok) throw new Error(`API error: ${res.status}`);
     const data = await res.json();
     if (!Array.isArray(data)) return [];
     return data
       .filter((s) => s.slug && SERVICE_SLUGS.includes(s.slug))
-      .map((s) => ({
-        slug: s.slug,
-        title: stripTags(s.title?.rendered),
-        yoast: s.yoast_head_json || null,
-      }));
+      .map((s) => ({ slug: s.slug, yoast: s.yoast_head_json || null }));
   } catch (err) {
     console.warn("[Prerender] Failed to fetch service SEO:", err.message);
     return [];
@@ -340,7 +254,7 @@ async function fetchPostSeo(categoryId, label) {
   let totalPages = 1;
   try {
     const first = await fetch(
-      `${WP_API}/posts?categories=${categoryId}&per_page=${perPage}&page=${page}&_fields=slug,title,yoast_head_json`,
+      `${WP_API}/posts?categories=${categoryId}&per_page=${perPage}&page=${page}&_fields=slug,yoast_head_json`,
     );
     if (!first.ok) throw new Error(`API error: ${first.status}`);
     totalPages = parseInt(first.headers.get("X-WP-TotalPages") || "1", 10);
@@ -349,7 +263,7 @@ async function fetchPostSeo(categoryId, label) {
     console.log(`  ${label} page ${page}/${totalPages} — ${data.length} posts`);
     for (page = 2; page <= totalPages; page++) {
       const r = await fetch(
-        `${WP_API}/posts?categories=${categoryId}&per_page=${perPage}&page=${page}&_fields=slug,title,yoast_head_json`,
+        `${WP_API}/posts?categories=${categoryId}&per_page=${perPage}&page=${page}&_fields=slug,yoast_head_json`,
       );
       if (!r.ok) throw new Error(`API error: ${r.status}`);
       data = await r.json();
@@ -361,11 +275,7 @@ async function fetchPostSeo(categoryId, label) {
   }
   return items
     .filter((p) => p.slug)
-    .map((p) => ({
-      slug: p.slug,
-      title: stripTags(p.title?.rendered),
-      yoast: p.yoast_head_json || null,
-    }));
+    .map((p) => ({ slug: p.slug, yoast: p.yoast_head_json || null }));
 }
 
 // ─── Main ──────────────────────────────────────────────────────────
@@ -386,8 +296,7 @@ async function main() {
   // 1. Static routes (incl. countries + thank-you)
   console.log("[Prerender] Generating static route pages...");
   for (const [routePath, meta] of Object.entries(META_MAP)) {
-    const html = injectRoute(htmlTemplate, routePath, meta);
-    const outPath = writePage(DIST_DIR, routePath, html);
+    const outPath = writePage(DIST_DIR, routePath, injectMeta(htmlTemplate, meta));
     count++;
     console.log(`  ${routePath} -> ${relative(process.cwd(), outPath)}`);
   }
@@ -405,7 +314,7 @@ async function main() {
     const outPath = writePage(
       DIST_DIR,
       `/${s.slug}/`,
-      injectRoute(htmlTemplate, `/${s.slug}/`, meta, s.title),
+      injectMeta(htmlTemplate, meta),
     );
     count++;
     console.log(`  /${s.slug}/ -> ${relative(process.cwd(), outPath)}`);
@@ -424,7 +333,7 @@ async function main() {
     const outPath = writePage(
       DIST_DIR,
       `/blog/${p.slug}/`,
-      injectRoute(htmlTemplate, `/blog/${p.slug}/`, meta, p.title),
+      injectMeta(htmlTemplate, meta),
     );
     count++;
   }
@@ -443,7 +352,7 @@ async function main() {
     const outPath = writePage(
       DIST_DIR,
       `/news/${p.slug}/`,
-      injectRoute(htmlTemplate, `/news/${p.slug}/`, meta, p.title),
+      injectMeta(htmlTemplate, meta),
     );
     count++;
   }

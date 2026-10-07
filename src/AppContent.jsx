@@ -25,8 +25,8 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsAndConditions = lazy(() => import("./pages/TermCondition"));
 
 function PageFallback() {
-  // Route-aware fallback (see ErrorBoundary.jsx): while the lazy page chunk
-  // loads, re-display the prerendered title/description instead of blank.
+  // Invisible placeholder while a lazy route chunk loads: no text flash,
+  // no layout jump. See ErrorBoundary.jsx.
   return <FallbackShell />;
 }
 
