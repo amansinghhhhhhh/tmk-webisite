@@ -31,9 +31,10 @@
     "ffmpeg-static": "^5.3.0",
     "globals": "^17.7.0",
     "sharp": "^0.35.3",
-    "vite": "^8.1.2"
+    "vite": "^8.3.5"
   },
   "overrides": {
-    "source-map-js": "^1.2.2"
+    "source-map-js": "^1.2.2",
+    "vite": "^8.3.5"
   }
 }
