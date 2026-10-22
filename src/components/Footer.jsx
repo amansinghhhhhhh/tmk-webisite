@@ -86,7 +86,7 @@ function Footer() {
             </div>
           </div>
           <div className="footer-col">
-            <h4>Quick Links</h4>
+            <h3>Quick Links</h3>
             <Link to="/google-ads-for-igaming-businesses/">Google Ads</Link>
             <Link to="/meta-ads-for-igaming-businesses/">Meta Ads</Link>
             <Link to="/seo-services-for-igaming-businesses/">SEO Services</Link>
@@ -94,14 +94,14 @@ function Footer() {
             <Link to="/telegram-ads-for-igaming-businesses/">Telegram Ads</Link>
           </div>
           <div className="footer-col">
-            <h4>Company</h4>
+            <h3>Company</h3>
             <Link to="/about/">About Us</Link>
             <Link to="/blogs/">Blogs</Link>
             <Link to="/contact/">Contact Us</Link>
             <Link to="/join-our-community/">Join Our Community</Link>
           </div>
           <div className="footer-col">
-            <h4>Contact</h4>
+            <h3>Contact</h3>
             <a href="tel:+447418622761">
               <Phone size={14} style={{ marginRight: 10 }} /> +44 741 862 2761
             </a>

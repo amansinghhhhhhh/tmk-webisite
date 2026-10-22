@@ -369,8 +369,8 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="The Marketing King | iGaming Traffic Provider in India"
-        description="TMK is your go to iGaming traffic provider in India. With the practical SEO strategies, our team provides conversations & leads to your igaming platform."
+        title="iGaming Marketing Agency for Global Brand Growth | TMK"
+        description="Grow your iGaming business with a results-driven iGaming marketing agency. TMK helps gaming brands increase visibility, attract qualified audiences, and scale globally."
         canonical="https://themarketingking.org/"
         schema={faqSchema}
       />
@@ -407,8 +407,10 @@ export default function Home() {
               <div className="hero-left" id="heroLeft">
                 <div className="hero-tag">iGaming Growth Marketing Agency</div>
                 <h1 className="hero-title">
-                  <span className="line1">Scale Your</span>{" "}
-                  <span className="line2">iGaming Brand Globally</span>
+                  <span className="line1">Scale Your Brand Globally</span>{" "}
+                  <span className="line2">
+                    with a Leading iGaming Marketing Agency
+                  </span>
                 </h1>
                 <Typewriter words={heroTypewriterWords} />
                 <p className="hero-desc">
@@ -670,7 +672,7 @@ export default function Home() {
                         alt=""
                       />
                     </span>
-                    <h4>Online Casinos</h4>
+                    <h3>Online Casinos</h3>
                     <p>
                       Driving deposits and registrations through online casino
                       SEO, PPC, affiliate marketing, and optimization.
@@ -685,7 +687,7 @@ export default function Home() {
                         alt=""
                       />
                     </span>
-                    <h4>Sportsbooks</h4>
+                    <h3>Sportsbooks</h3>
                     <p>
                       Sportsbook SEO agency delivering event driven campaigns
                       for major leagues, tournaments, and live betting audiences
@@ -700,7 +702,7 @@ export default function Home() {
                         alt=""
                       />
                     </span>
-                    <h4>Fantasy Sports</h4>
+                    <h3>Fantasy Sports</h3>
                     <p>
                       Fantasy Sports growth through targeted ads and performance
                       driven acquisition strategies.
@@ -715,7 +717,7 @@ export default function Home() {
                         alt=""
                       />
                     </span>
-                    <h4>Crypto Casinos</h4>
+                    <h3>Crypto Casinos</h3>
                     <p>
                       Build trusted communities for Crypto Casinos using Web3
                       marketing and influencer programs.
@@ -730,7 +732,7 @@ export default function Home() {
                         alt=""
                       />
                     </span>
-                    <h4>Sweepstakes Casinos</h4>
+                    <h3>Sweepstakes Casinos</h3>
                     <p>
                       Generate continuous player acquisition loops for
                       Sweepstakes & Social with scalable growth systems .
@@ -745,7 +747,7 @@ export default function Home() {
                         alt=""
                       />
                     </span>
-                    <h4>Poker Platforms</h4>
+                    <h3>Poker Platforms</h3>
                     <p>
                       Boost Poker Platforms participation in tournaments via
                       targeted digital marketing strategies.
@@ -760,7 +762,7 @@ export default function Home() {
                         alt=""
                       />
                     </span>
-                    <h4>Skill Gaming</h4>
+                    <h3>Skill Gaming</h3>
                     <p>
                       Drive real money gamer acquisition with hyper targeted
                       campaigns optimizing CPA and sign ups.
@@ -1787,7 +1789,7 @@ export default function Home() {
                           alt={e.title}
                         />
                       </div>
-                      <h4>{e.title}</h4>
+                      <h3>{e.title}</h3>
                       <p>{e.desc}</p>
                       <span className="ec-number">{e.num}</span>
                     </div>
@@ -1815,7 +1817,7 @@ export default function Home() {
                     <Search size={24} />
                   </div>
                   <span className="step-card-num">Step 01</span>
-                  <h4>Audit & Analysis</h4>
+                  <h3>Audit & Analysis</h3>
                   <p>
                     We strip away the guesswork by thoroughly analyzing your
                     brand positioning, historical traffic data, and competitor
@@ -1829,7 +1831,7 @@ export default function Home() {
                     <Map size={24} />
                   </div>
                   <span className="step-card-num">Step 02</span>
-                  <h4>Architecture & Strategy</h4>
+                  <h3>Architecture & Strategy</h3>
                   <p>
                     We engineer a customized multi channel acquisition blueprint
                     built entirely around maximizing player lifetime value
@@ -1843,7 +1845,7 @@ export default function Home() {
                     <Rocket size={24} />
                   </div>
                   <span className="step-card-num">Step 03</span>
-                  <h4>Launch & Target</h4>
+                  <h3>Launch & Target</h3>
                   <p>
                     We deploy your campaigns across premium traffic channels
                     using razor sharp demographic filtering and compliance
@@ -1857,7 +1859,7 @@ export default function Home() {
                     <ChartLine size={24} />
                   </div>
                   <span className="step-card-num">Step 04</span>
-                  <h4>Optimize & Accelerate</h4>
+                  <h3>Optimize & Accelerate</h3>
                   <p>
                     We continuously run A/B conversion tests and refine target
                     segments to maximize ROI and scale winning campaigns
@@ -1871,7 +1873,7 @@ export default function Home() {
                     <Globe size={24} />
                   </div>
                   <span className="step-card-num">Step 05</span>
-                  <h4>Report & Expand</h4>
+                  <h3>Report & Expand</h3>
                   <p>
                     We deliver crystal clear performance metrics while
                     systematically expanding your footprint into high yield,

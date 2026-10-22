@@ -57,9 +57,9 @@ const NEWS_CATEGORY_ID = 3;
 // Keys use trailing-slash form to match routes + sitemap.
 const META_MAP = {
   "/": {
-    title: "The Marketing King | iGaming Traffic Provider in India",
+    title: "iGaming Marketing Agency for Global Brand Growth | TMK",
     description:
-      "TMK is your go to iGaming traffic provider in India. With the practical SEO strategies, our team provides conversations & leads to your igaming platform.",
+      "Grow your iGaming business with a results-driven iGaming marketing agency. TMK helps gaming brands increase visibility, attract qualified audiences, and scale globally.",
     canonical: `${SITE_URL}/`,
   },
   "/about/": {
@@ -180,7 +180,7 @@ function buildMetaTags(meta) {
   const lines = [
     `<title>${title}</title>`,
     `    <meta name="description" content="${desc}" />`,
-    `    <link rel="canonical" href="${meta.canonical}" />`,
+    `    <link rel="canonical" href="${meta.canonical}" data-prerender="canonical" />`,
     `    <meta property="og:title" content="${title}" />`,
     `    <meta property="og:description" content="${desc}" />`,
     `    <meta property="og:url" content="${meta.canonical}" />`,

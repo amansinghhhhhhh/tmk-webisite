@@ -11,6 +11,17 @@ export default function SEO({
   schema,
 }) {
   useEffect(() => {
+    // The prerendered HTML ships a static <link rel="canonical" data-prerender>
+    // for the initial route. Once React takes over, react-helmet-async manages
+    // the live canonical — so drop the static one to guarantee the document
+    // never contains two canonical tags.
+    const statics = document.querySelectorAll(
+      'link[rel="canonical"][data-prerender]',
+    );
+    statics.forEach((el) => el.remove());
+  }, [canonical]);
+
+  useEffect(() => {
     if (!schema) return;
     const existing = document.querySelector(
       'script[type="application/ld+json"][data-schema]',

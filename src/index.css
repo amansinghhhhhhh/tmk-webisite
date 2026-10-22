@@ -469,7 +469,9 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  min-height: 70vh;
+  /* Capped so ultra-tall viewports (headless renderers, large monitors)
+     don't stretch the hero into a tall empty band. */
+  min-height: min(70vh, 720px);
   max-width: 860px;
   margin: 0 auto
 }
@@ -1011,13 +1013,14 @@ html.js .hero-left.visible {
   object-fit: contain
 }
 
-.industry-card h4 {
+.industry-card h3 {
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
   transition: color .3s
 }
 
-.industry-card:hover h4 {
+.industry-card:hover h3 {
   color: var(--primary)
 }
 
@@ -2139,14 +2142,14 @@ html.js .hero-left.visible {
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, .5)) brightness(1.1)
 }
 
-.expertise-card h4 {
+.expertise-card h3 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
   transition: color .3s
 }
 
-.expertise-card:hover h4 {
+.expertise-card:hover h3 {
   color: var(--primary)
 }
 
@@ -2296,14 +2299,14 @@ html.js .hero-left.visible {
   display: block
 }
 
-.process-card h4 {
+.process-card h3 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
   transition: color .3s
 }
 
-.process-card:hover h4 {
+.process-card:hover h3 {
   color: var(--primary)
 }
 
@@ -3008,7 +3011,7 @@ footer::before {
   max-width: 380px
 }
 
-.footer-col h4 {
+.footer-col h3 {
   font-size: .7rem;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -3019,7 +3022,7 @@ footer::before {
   display: inline-block
 }
 
-.footer-col h4::after {
+.footer-col h3::after {
   content: '';
   position: absolute;
   bottom: -6px;
@@ -3515,7 +3518,7 @@ footer::before {
     margin-bottom: 12px
   }
 
-  .industry-card h4 {
+  .industry-card h3 {
     font-size: .85rem
   }
 
@@ -3558,7 +3561,7 @@ footer::before {
     height: 36px
   }
 
-  .industry-card h4 {
+  .industry-card h3 {
     font-size: .75rem
   }
 
