@@ -141,9 +141,9 @@ export default function About() {
 <p className="elevate-desc">We’re sports fans ourselves, which means we know how your audiences tick. And because we have the very best people in the industry, we can promise you ideas, an entrepreneurial attitude and unwavering dedication.</p>
 
               <a
-                href="https://wa.link/tmkofficial"
+                href="https://wa.me/447418622761?text=Hello,%20I%20want%20full%20information"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="elevate-btn"
               >
                 Join Our Community

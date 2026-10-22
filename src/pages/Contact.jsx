@@ -85,7 +85,7 @@ export default function Contact() {
                 <div className="ci-text">
                   <h4>WhatsApp</h4>
                   <p>
-                    <a href="https://wa.link/tmkofficial" target="_blank" rel="noreferrer">
+                    <a href="https://wa.me/447418622761?text=Hello,%20I%20want%20full%20information" target="_blank" rel="noopener noreferrer">
                       +44 741 862 2761
                     </a>
                   </p>
@@ -137,9 +137,9 @@ export default function Contact() {
                 your needs.
               </p>
               <a
-                href="https://wa.link/tmkofficial"
+                href="https://wa.me/447418622761?text=Hello,%20I%20want%20full%20information"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="elevate-btn"
               >
                 Contact Us

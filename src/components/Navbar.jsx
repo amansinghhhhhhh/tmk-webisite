@@ -166,7 +166,7 @@ function Navbar() {
             <Phone size={16} /> Contact Us
           </Link>
           <a
-            href="https://wa.link/tmkofficial"
+            href="https://wa.me/447418622761?text=Hello,%20I%20want%20full%20information"
             className="nav-cta"
             onClick={closeMobile}
             target="_blank"

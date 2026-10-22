@@ -802,7 +802,7 @@ export default function Home() {
               </div>
               <div className="stats-whatsapp-wrap">
                 <a
-                  href="https://wa.link/tmkofficial"
+                  href="https://wa.me/447418622761?text=Hello,%20I%20want%20full%20information"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="stats-whatsapp-btn"
@@ -1748,7 +1748,7 @@ export default function Home() {
 
         <section className="stats-whatsapp-wrap">
           <a
-            href="https://wa.link/tmkofficial"
+            href="https://wa.me/447418622761?text=Hello,%20I%20want%20full%20information"
             target="_blank"
             rel="noopener noreferrer"
             className="stats-whatsapp-btn"
@@ -1926,7 +1926,7 @@ export default function Home() {
 
         <section className="stats-whatsapp-wrap">
           <a
-            href="https://wa.link/tmkofficial"
+            href="https://wa.me/447418622761?text=Hello,%20I%20want%20full%20information"
             target="_blank"
             rel="noopener noreferrer"
             className="stats-whatsapp-btn"
