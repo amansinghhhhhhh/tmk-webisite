@@ -25,7 +25,8 @@ export default function Blog() {
       ogDescription="Game Marketing Agency"
     />
       <section className="page-hero">
-        <img src="/internal pages hero image/new-TMK-News.webp" alt="" className="hero-bg-img" width="1920" height="1080" loading="eager" fetchPriority="high" />
+        <img src="/internal pages hero image/new-TMK-News.webp" alt="" className="hero-bg-img" width="1920" height="1080" loading="eager" fetchPriority="high"
+          decoding="async" />
         <div className="container">
           <div className="hero-content">
             <h1>Our <span className="gold">Blogs</span></h1>
@@ -50,7 +51,9 @@ export default function Blog() {
                 <Link to={`/blog/${post.slug}/`} className="blog-card" key={post.id}>
                   <div className="blog-img">
                     {post.image ? (
-                      <img src={post.image} alt={post.title} style={{ width: "100%", height: 200, objectFit: "cover" }} />
+                      <img src={post.image} alt={post.title} style={{ width: "100%", height: 200, objectFit: "cover" }}
+                        loading="lazy"
+                        decoding="async" />
                     ) : (
                       <div style={{ width: "100%", height: 200, background: "#1a1a1a" }} />
                     )}

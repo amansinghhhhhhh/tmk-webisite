@@ -40,7 +40,10 @@ export default function ThankYou() {
           maxWidth: "500px",
           width: "100%",
         }}
-      />
+        loading="lazy"
+        decoding="async"
+        width="600"
+        height="600" />
 
       <div>
         <h2

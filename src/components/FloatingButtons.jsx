@@ -6,7 +6,11 @@ export default function FloatingButtons() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src="/sticky icons/whatsApp-icon.webp" alt="WhatsApp" />
+        <img src="/sticky icons/whatsApp-icon.webp" alt="WhatsApp"
+          loading="lazy"
+          decoding="async"
+          width="100"
+          height="100" />
       </a>
 
               <a
@@ -14,7 +18,11 @@ export default function FloatingButtons() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src="/sticky icons/telegram-icon.webp" alt="Telegram" />
+        <img src="/sticky icons/telegram-icon.webp" alt="Telegram"
+          loading="lazy"
+          decoding="async"
+          width="86"
+          height="86" />
       </a>
     </div>
   );

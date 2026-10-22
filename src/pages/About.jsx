@@ -23,7 +23,8 @@ export default function About() {
 />
     <div>
       <section className="page-hero">
-        <img src="/internal pages hero image/TMK-About-Us.webp" alt="" className="hero-bg-img" width="1920" height="1080" loading="eager" fetchPriority="high" />
+        <img src="/internal pages hero image/TMK-About-Us.webp" alt="" className="hero-bg-img" width="1920" height="1080" loading="eager" fetchPriority="high"
+          decoding="async" />
         <div className="container">
           <div className="hero-content">
             {/* <h1>
@@ -85,7 +86,10 @@ export default function About() {
               src="/stock/about.webp"
               alt="About TMK"
               className="content-image"
-            />
+              loading="lazy"
+              decoding="async"
+              width="800"
+              height="533" />
           </div>
         </div>
       </section>

@@ -14,7 +14,8 @@ export default function Countries() {
   return (
     <>
       <section className="page-hero">
-        <img src="/internal pages hero image/Turnkey-Solutions-for-iGaming-Businesses.webp" alt="" className="hero-bg-img" width="1920" height="1080" loading="eager" fetchPriority="high" />
+        <img src="/internal pages hero image/Turnkey-Solutions-for-iGaming-Businesses.webp" alt="" className="hero-bg-img" width="1920" height="1080" loading="eager" fetchPriority="high"
+          decoding="async" />
         <div className="container">
           <div className="hero-content">
             <h1>Global <span className="gold">Markets</span></h1>
@@ -35,7 +36,8 @@ export default function Countries() {
                     src={`https://cdn.jsdelivr.net/gh/lipis/flag-icons@main/flags/4x3/${c.flag}.svg`}
                     alt={c.label}
                     style={{ width: 48, height: 36, borderRadius: 6, objectFit: "cover" }}
-                  />
+                    loading="eager"
+                    decoding="async" />
                   <h4 style={{ margin: 0 }}>{c.label}</h4>
                 </div>
                 <p style={{ color: "#cfcfcf", fontSize: 15, lineHeight: 1.65 }}>{c.desc}</p>

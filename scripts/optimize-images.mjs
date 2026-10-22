@@ -1,117 +1,173 @@
-import { readdirSync, statSync, writeFileSync, existsSync, mkdirSync } from 'fs';
-import { resolve, dirname, join, extname, basename } from 'path';
-import { fileURLToPath } from 'url';
-import sharp from 'sharp';
+/**
+ * Image optimization codemod.
+ *
+ * For every <img> in src/**\/*.jsx it:
+ *   - adds loading="lazy" (unless the tag already sets loading=) so
+ *     off-screen images don't compete with the LCP element
+ *   - adds decoding="async" so image decoding never blocks the main thread
+ *   - adds width/height (intrinsic size, read with sharp) when missing, so
+ *     the browser can reserve space and avoid cumulative layout shift
+ *
+ * Above-the-fold images must opt out explicitly: keep an existing
+ * loading="eager" + fetchPriority="high" (the codemod never touches those).
+ *
+ * Usage:  node scripts/optimize-images.mjs
+ * Safe to re-run (idempotent).
+ */
+
+import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from "node:fs";
+import { resolve, dirname, join, extname } from "node:path";
+import { fileURLToPath } from "node:url";
+import sharp from "sharp";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const PUBLIC_DIR = resolve(__dirname, '..', 'public');
+const ROOT = resolve(__dirname, "..");
+const SRC = join(ROOT, "src");
+const PUBLIC = join(ROOT, "public");
 
-const IMAGE_EXTS = ['.jpg', '.jpeg', '.png', '.JPG', '.JPEG', '.PNG'];
-// WebP files larger than this will be lossy-re-encoded to trim weight
-const WEBP_REENCODE_THRESHOLD = 80 * 1024;
-const MAX_WIDTH = 1920;
-const JPG_QUALITY = 75;
-const WEBP_QUALITY = 72;
+const IMG_EXT = new Set([".webp", ".png", ".jpg", ".jpeg", ".gif", ".avif", ".svg"]);
 
+// ─── collect public assets ─────────────────────────────────────────
 function walk(dir, out = []) {
-  for (const entry of readdirSync(dir, { withFileTypes: true })) {
-    const full = join(dir, entry.name);
-    if (entry.isDirectory()) walk(full, out);
+  for (const entry of readdirSync(dir)) {
+    const full = join(dir, entry);
+    const st = statSync(full);
+    if (st.isDirectory()) walk(full, out);
     else out.push(full);
   }
   return out;
 }
 
-let originalBytes = 0;
-let newBytes = 0;
-const converted = [];
-const skipped = [];
+const sizeCache = new Map();
 
-for (const file of walk(PUBLIC_DIR)) {
-  const ext = extname(file);
-  const isPhoto = IMAGE_EXTS.includes(ext);
-  const isWebp = ext === '.webp';
-  if (!isPhoto && !isWebp) continue;
-  if (file.endsWith('.new')) continue;
-
-  const inputSize = statSync(file).size;
-  if (isWebp && inputSize < WEBP_REENCODE_THRESHOLD) {
-    skipped.push({ file, reason: `small already (${(inputSize / 1024).toFixed(0)}KB)` });
-    continue;
+async function intrinsicSize(relPath) {
+  if (sizeCache.has(relPath)) return sizeCache.get(relPath);
+  const abs = join(PUBLIC, relPath.replace(/^\//, ""));
+  let result = null;
+  if (existsSync(abs) && IMG_EXT.has(extname(abs).toLowerCase())) {
+    try {
+      const meta = await sharp(abs).metadata();
+      if (meta.width && meta.height) {
+        result = { width: meta.width, height: meta.height };
+      }
+    } catch {
+      /* svg / unsupported -> no dimensions */
+    }
   }
-  if (basename(file).startsWith('hero-poster')) {
-    skipped.push({ file, reason: 'generated poster' });
-    continue;
+  sizeCache.set(relPath, result);
+  return result;
+}
+
+// ─── JSX helpers ───────────────────────────────────────────────────
+function getAttr(tag, name) {
+  const m = tag.match(new RegExp(`\\b${name}\\s*=\\s*("[^"]*"|'[^']*'|\\{[^}]*\\})`));
+  return m ? m[1] : null;
+}
+
+function localPathOf(srcAttr) {
+  if (!srcAttr) return null;
+  if (!srcAttr.startsWith('"') && !srcAttr.startsWith("'")) return null; // dynamic {expr}
+  const raw = srcAttr.slice(1, -1);
+  if (!raw.startsWith("/")) return null; // remote or relative
+  if (raw.startsWith("//")) return null;
+  if (/^https?:/i.test(raw)) return null;
+  return raw;
+}
+
+// Images that must load eagerly (above the fold / LCP candidates).
+// Matched against the raw src attribute value.
+const CRITICAL = [
+  { match: "/hero-poster.webp", priority: true },
+  { match: "/tmk-logo-with-Brand-name.webp", priority: true },
+  { match: "cdn.jsdelivr.net/gh/lipis/flag-icons", priority: false },
+];
+
+function isCritical(srcAttr) {
+  if (!srcAttr) return null;
+  const raw = srcAttr.replace(/^["']|["']$/g, "");
+  for (const c of CRITICAL) {
+    if (raw.includes(c.match)) return c;
   }
+  return null;
+}
 
-  const isWebpInput = isWebp;
-  const output = isWebpInput
-    ? file
-    : file.replace(/\.(jpg|jpeg|png|JPG|JPEG|PNG)$/i, '.webp');
+function insertAttrs(tag, attrs, indent) {
+  // Insert before the closing bracket of the tag, using the tag's own
+  // indentation so the result stays consistent with the surrounding code.
+  const selfClosing = /\/>$/.test(tag);
+  let body = selfClosing ? tag.slice(0, -2) : tag.slice(0, -1);
+  const suffix = selfClosing ? " />" : ">";
+  // Drop the dangling newline/indentation that preceded the closing bracket.
+  body = body.replace(/\s+$/, "");
+  return `${body}\n${indent}  ${attrs.join(`\n${indent}  `)}${suffix}`;
+}
 
-  try {
-    const fs = await import('fs');
-    // Read into memory first so the source file handle is released before we overwrite it (Windows lock)
-    const inputBuffer = fs.readFileSync(file);
-    const meta = await sharp(inputBuffer).metadata();
-    const { width = 0, height = 0 } = meta;
-    const scale = width > MAX_WIDTH ? MAX_WIDTH / width : 1;
-    const w = Math.round(width * scale);
-    const h = Math.round(height * scale);
+async function processFile(file) {
+  const original = readFileSync(file, "utf-8");
+  const matches = [...original.matchAll(/<img\b[\s\S]*?>/g)];
 
-    const wasPng = extname(file).match(/png/i);
-    const quality = isWebpInput ? 70 : wasPng ? JPG_QUALITY : WEBP_QUALITY;
-    // For in-place webp re-encode write to a temp then overwrite the original
-    const tmp = isWebpInput ? `${file}.new` : output;
+  let changed = 0;
+  let out = original;
 
-    await sharp(inputBuffer)
-      .resize(w, h, { withoutEnlargement: true })
-      .webp({ quality, alphaQuality: 90, effort: 4 })
-      .toFile(tmp);
+  for (const m of matches) {
+    const tag = m[0];
+    const srcAttr = getAttr(tag, "src");
+    const critical = isCritical(srcAttr);
 
-    const doneSize = statSync(tmp).size;
-    if (isWebpInput) {
-      let done = false;
-      for (let attempt = 0; attempt < 5 && !done; attempt++) {
-        try {
-          fs.rmSync(file, { force: true });
-          fs.renameSync(tmp, file);
-          done = true;
-        } catch (err) {
-          if (attempt === 4) throw err;
-          await new Promise((r) => setTimeout(r, 300));
-        }
+    const add = [];
+
+    const hasLoading = getAttr(tag, "loading") !== null;
+    const hasDecoding = getAttr(tag, "decoding") !== null;
+    const hasWidth = getAttr(tag, "width") !== null;
+    const hasHeight = getAttr(tag, "height") !== null;
+
+    if (!hasLoading) {
+      add.push(critical ? 'loading="eager"' : 'loading="lazy"');
+    }
+    if (!hasDecoding) add.push('decoding="async"');
+    if (critical && critical.priority && getAttr(tag, "fetchPriority") === null) {
+      add.push('fetchPriority="high"');
+    }
+
+    if (!hasWidth || !hasHeight) {
+      const rel = localPathOf(srcAttr);
+      const size = rel ? await intrinsicSize(rel) : null;
+      if (size) {
+        if (!hasWidth) add.push(`width="${size.width}"`);
+        if (!hasHeight) add.push(`height="${size.height}"`);
       }
     }
 
-    originalBytes += inputSize;
-    newBytes += doneSize;
-    converted.push({
-      file,
-      out: output,
-      from: `${width}x${height}`,
-      to: `${w}x${h}`,
-      before: inputSize,
-      after: doneSize,
-    });
-  } catch (err) {
-    console.warn(`⚠️  Failed: ${file} — ${err.message}`);
+    if (add.length === 0) continue;
+
+    // Indentation of the line the tag starts on.
+    const lineStart = original.lastIndexOf("\n", m.index) + 1;
+    const lineText = original.slice(lineStart, m.index);
+    const indent = lineText.match(/^[ \t]*/)[0];
+
+    const newTag = insertAttrs(tag, add, indent);
+    out = out.replace(tag, newTag);
+    changed++;
   }
+
+  if (changed > 0) {
+    writeFileSync(file, out, "utf-8");
+    console.log(`  ${file.replace(ROOT + "\\", "")} — ${changed} img tag(s) updated`);
+  }
+  return changed;
 }
 
-console.log('\n=== Converted ===');
-for (const c of converted.slice(0, 200)) {
-  const pct = 100 - ((c.after / c.before) * 100).toFixed(1);
-  console.log(
-    `  [${pct.toFixed(1)}% smaller] ${c.file.replace(PUBLIC_DIR + '\\', '')} (${(c.before / 1024).toFixed(0)}KB -> ${(c.after / 1024).toFixed(0)}KB)`,
-  );
+async function main() {
+  console.log("[Optimize Images] Scanning src/**/*.jsx ...");
+  const files = walk(SRC).filter((f) => f.endsWith(".jsx"));
+  let total = 0;
+  for (const f of files) {
+    total += await processFile(f);
+  }
+  console.log(`[Optimize Images] Done — ${total} img tag(s) updated.`);
 }
-if (converted.length > 200) console.log(`  ... and ${converted.length - 200} more`);
-console.log(`\n=== Skipped ${skipped.length} ===`);
-for (const s of skipped) console.log(`  ${basename(s.file)} — ${s.reason}`);
 
-const saved = originalBytes - newBytes;
-console.log(`\n✅ Done: ${converted.length} images optimized`);
-console.log(`   Original:  ${(originalBytes / 1048576).toFixed(2)} MB`);
-console.log(`   New total: ${(newBytes / 1048576).toFixed(2)} MB`);
-console.log(`   Saved:     ${(saved / 1048576).toFixed(2)} MB`);
+main().catch((err) => {
+  console.error("[Optimize Images] Failed:", err);
+  process.exit(1);
+});

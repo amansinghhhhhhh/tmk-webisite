@@ -27,7 +27,9 @@ function AuthorCard({ author }) {
     <>
       <div className="blog-author-img">
         {author.image ? (
-          <img src={author.image} alt={author.title} />
+          <img src={author.image} alt={author.title}
+            loading="lazy"
+            decoding="async" />
         ) : (
           <User size={32} />
         )}
@@ -199,7 +201,9 @@ export default function PostDetail({ categoryId, backLink, backLabel, listLink, 
             <article className="blog-detail-article">
               {post.image && (
                 <div className="blog-detail-article-img">
-                  <img src={post.image} alt={post.title} />
+                  <img src={post.image} alt={post.title}
+                    loading="lazy"
+                    decoding="async" />
                 </div>
               )}
               <div className="blog-detail-content" dangerouslySetInnerHTML={{ __html: post.content }} />
@@ -239,7 +243,9 @@ export default function PostDetail({ categoryId, backLink, backLabel, listLink, 
                     {related.map((p) => (
                       <Link to={`/${routePrefix}/${p.slug}/`} className="blog-sidebar-post" key={p.slug}>
                         {p.image ? (
-                          <img src={p.image} alt="" />
+                          <img src={p.image} alt=""
+                            loading="lazy"
+                            decoding="async" />
                         ) : (
                           <div style={{ width: 60, height: 60, background: "#1a1a1a", borderRadius: 8, flexShrink: 0 }} />
                         )}

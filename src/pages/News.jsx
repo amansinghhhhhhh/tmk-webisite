@@ -24,7 +24,8 @@ export default function News() {
           ogDescription="News Together, Let's Craft Remarkable Stories. Act Now and Make it Happen We don't just market, we create experiences that resonate, engage, and drive results. Elevate your brand with us – where every campaign is a success story waiting to unfold."
         />
       <section className="page-hero">
-        <img src="/internal pages hero image/new-TMK-News.webp" alt="" className="hero-bg-img" width="1920" height="1080" loading="eager" fetchPriority="high" />
+        <img src="/internal pages hero image/new-TMK-News.webp" alt="" className="hero-bg-img" width="1920" height="1080" loading="eager" fetchPriority="high"
+          decoding="async" />
         <div className="container">
           <div className="hero-content">
             <h1>iGaming <span className="gold">News</span></h1>
@@ -49,7 +50,9 @@ export default function News() {
                 <Link to={`/news/${post.slug}/`} className="blog-card" key={post.id}>
                   <div className="blog-img">
                     {post.image ? (
-                      <img src={post.image} alt={post.title} style={{ width: "100%", height: 200, objectFit: "cover" }} />
+                      <img src={post.image} alt={post.title} style={{ width: "100%", height: 200, objectFit: "cover" }}
+                        loading="lazy"
+                        decoding="async" />
                     ) : (
                       <div style={{ width: "100%", height: 200, background: "#1a1a1a" }} />
                     )}

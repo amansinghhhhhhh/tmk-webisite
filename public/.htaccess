@@ -37,3 +37,35 @@ DirectorySlash Off
   ExpiresByType text/javascript "access plus 1 year"
   ExpiresByType text/html "access plus 0 seconds"
 </IfModule>
+
+# --- Cache-Control: immutable for content-hashed build assets ---
+# Vite emits /assets/<name>-<hash>.<ext>, so those files can be cached
+# forever. HTML stays revalidated so new deploys are picked up instantly.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|webp|png|jpe?g|gif|svg|avif|ico|woff2?)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(html|json|xml|txt)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# --- Compression (gzip) ---
+# Cuts text payload (JS/CSS/HTML/SVG/JSON) roughly 60-80% for faster
+# first paint and lower transfer time.
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE text/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml application/xml
+  AddOutputFilterByType DEFLATE application/rss+xml application/atom+xml
+</IfModule>
+
+# --- Compression (brotli, preferred by modern browsers) ---
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css text/xml
+  AddOutputFilterByType BROTLI_COMPRESS application/javascript application/x-javascript
+  AddOutputFilterByType BROTLI_COMPRESS text/javascript application/json
+  AddOutputFilterByType BROTLI_COMPRESS image/svg+xml application/xml
+  AddOutputFilterByType BROTLI_COMPRESS application/rss+xml application/atom+xml
+</IfModule>

@@ -34,7 +34,11 @@ function Footer() {
                 src="/tmk-logo-with-Brand-name.webp"
                 alt="TMK"
                 style={{ height: 44, marginBottom: 16 }}
-              />
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
+                width="1920"
+                height="978" />
             </div>
             <p>
               The Marketing King is your expert partner in iGaming growth. We
@@ -152,7 +156,8 @@ function Footer() {
                       borderRadius: 4,
                       objectFit: "cover",
                     }}
-                  />
+                    loading="eager"
+                    decoding="async" />
                 </Link>
 
                 {/* United Kingdom */}
@@ -183,7 +188,8 @@ function Footer() {
                       borderRadius: 4,
                       objectFit: "cover",
                     }}
-                  />
+                    loading="eager"
+                    decoding="async" />
                 </Link>
 
                 {/* Latam */}
@@ -214,7 +220,10 @@ function Footer() {
                       borderRadius: 4,
                       objectFit: "cover",
                     }}
-                  />
+                    loading="lazy"
+                    decoding="async"
+                    width="300"
+                    height="150" />
                 </Link>
 
                 {/* India */}
@@ -245,7 +254,8 @@ function Footer() {
                       borderRadius: 4,
                       objectFit: "cover",
                     }}
-                  />
+                    loading="eager"
+                    decoding="async" />
                 </Link>
 
                 {/* Malta */}
@@ -276,7 +286,8 @@ function Footer() {
                       borderRadius: 4,
                       objectFit: "cover",
                     }}
-                  />
+                    loading="eager"
+                    decoding="async" />
                 </Link>
 
                 {/* Philippines */}
@@ -307,7 +318,8 @@ function Footer() {
                       borderRadius: 4,
                       objectFit: "cover",
                     }}
-                  />
+                    loading="eager"
+                    decoding="async" />
                 </Link>
               </div>
         <div className="footer-bottom">

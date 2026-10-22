@@ -847,7 +847,8 @@ useEffect(() => {
     />
 
       <section className="page-hero">
-        <img src={`/internal pages hero image/${data.heroImg}`} alt="" className="hero-bg-img" width="1920" height="1080" loading="eager" fetchPriority="high" />
+        <img src={`/internal pages hero image/${data.heroImg}`} alt="" className="hero-bg-img" width="1920" height="1080" loading="eager" fetchPriority="high"
+          decoding="async" />
         <div className="container">
           <div className="hero-content">
             <h1>{data.heroTitle} <span className="gold">{data.heroGold}</span></h1>
@@ -874,7 +875,8 @@ useEffect(() => {
           <div className="swiper-slide" key={index}>
             <div className="industry-card">
               <span className="ind-icon">
-                <img src={card.image} alt={card.title} width="450" height="450" loading="lazy" />
+                <img src={card.image} alt={card.title} width="450" height="450" loading="lazy"
+                  decoding="async" />
               </span>
 
               <h4>{card.title}</h4>
@@ -907,7 +909,8 @@ useEffect(() => {
               <h4>{data.subTitle}</h4>
               <p>{data.subText}</p>
             </div>
-            <img src={`/stock/${data.img}`} alt={`${data.label} Market`} className="content-image" width="1920" height="1434" loading="lazy" />
+            <img src={`/stock/${data.img}`} alt={`${data.label} Market`} className="content-image" width="1920" height="1434" loading="lazy"
+              decoding="async" />
           </div>
         </div>
       </section>
@@ -949,7 +952,7 @@ useEffect(() => {
                 width="1600"
                 height="1264"
                 loading="lazy"
-              />
+                decoding="async" />
               <div className="overlay"></div>
             </div>
 
@@ -983,7 +986,7 @@ useEffect(() => {
                     width="1600"
                     height="1264"
                     loading="lazy"
-                  />
+                    decoding="async" />
                   <div className="overlay"></div>
                 </div>
 

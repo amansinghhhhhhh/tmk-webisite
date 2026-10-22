@@ -383,7 +383,8 @@ export default function Home() {
             width="1280"
             height="634"
             fetchPriority="high"
-          />
+            loading="eager"
+            decoding="async" />
           {videoReady && (
             <video
               className="hero-bg-video"
@@ -481,7 +482,8 @@ export default function Home() {
                       borderRadius: 4,
                       objectFit: "cover",
                     }}
-                  />
+                    loading="eager"
+                    decoding="async" />
                   United States
                 </Link>
 
@@ -513,7 +515,8 @@ export default function Home() {
                       borderRadius: 4,
                       objectFit: "cover",
                     }}
-                  />
+                    loading="eager"
+                    decoding="async" />
                   United Kingdom
                 </Link>
 
@@ -545,7 +548,10 @@ export default function Home() {
                       borderRadius: 4,
                       objectFit: "cover",
                     }}
-                  />
+                    loading="lazy"
+                    decoding="async"
+                    width="300"
+                    height="150" />
                   Latam
                 </Link>
 
@@ -577,7 +583,8 @@ export default function Home() {
                       borderRadius: 4,
                       objectFit: "cover",
                     }}
-                  />
+                    loading="eager"
+                    decoding="async" />
                   India
                 </Link>
 
@@ -609,7 +616,8 @@ export default function Home() {
                       borderRadius: 4,
                       objectFit: "cover",
                     }}
-                  />
+                    loading="eager"
+                    decoding="async" />
                   Malta
                 </Link>
 
@@ -641,7 +649,8 @@ export default function Home() {
                       borderRadius: 4,
                       objectFit: "cover",
                     }}
-                  />
+                    loading="eager"
+                    decoding="async" />
                   Philippines
                 </Link>
               </div>
@@ -670,7 +679,10 @@ export default function Home() {
                       <img
                         src="/ICON 3D/casino-3d-icon-png-download-13883873.webp"
                         alt=""
-                      />
+                        loading="lazy"
+                        decoding="async"
+                        width="300"
+                        height="300" />
                     </span>
                     <h3>Online Casinos</h3>
                     <p>
@@ -685,7 +697,10 @@ export default function Home() {
                       <img
                         src="/ICON 3D/sports-3d-icon-png-download-10887497.webp"
                         alt=""
-                      />
+                        loading="lazy"
+                        decoding="async"
+                        width="300"
+                        height="300" />
                     </span>
                     <h3>Sportsbooks</h3>
                     <p>
@@ -700,7 +715,10 @@ export default function Home() {
                       <img
                         src="/ICON 3D/trophy-3d-icon-png-download-8115379.webp"
                         alt=""
-                      />
+                        loading="lazy"
+                        decoding="async"
+                        width="300"
+                        height="300" />
                     </span>
                     <h3>Fantasy Sports</h3>
                     <p>
@@ -715,7 +733,10 @@ export default function Home() {
                       <img
                         src="/ICON 3D/bitcoin-3d-icon-png-download-8579726.webp"
                         alt=""
-                      />
+                        loading="lazy"
+                        decoding="async"
+                        width="300"
+                        height="300" />
                     </span>
                     <h3>Crypto Casinos</h3>
                     <p>
@@ -730,7 +751,10 @@ export default function Home() {
                       <img
                         src="/ICON 3D/casino-game-3d-icon-png-download-11333776.webp"
                         alt=""
-                      />
+                        loading="lazy"
+                        decoding="async"
+                        width="300"
+                        height="300" />
                     </span>
                     <h3>Sweepstakes Casinos</h3>
                     <p>
@@ -745,7 +769,10 @@ export default function Home() {
                       <img
                         src="/ICON 3D/poker-playing-cards-3d-icon-png-download-11901378.webp"
                         alt=""
-                      />
+                        loading="lazy"
+                        decoding="async"
+                        width="300"
+                        height="300" />
                     </span>
                     <h3>Poker Platforms</h3>
                     <p>
@@ -760,7 +787,10 @@ export default function Home() {
                       <img
                         src="/ICON 3D/gaming-online-course-3d-icon-png-download-9859833.webp"
                         alt=""
-                      />
+                        loading="lazy"
+                        decoding="async"
+                        width="300"
+                        height="300" />
                     </span>
                     <h3>Skill Gaming</h3>
                     <p>
@@ -809,7 +839,8 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="stats-whatsapp-btn"
                 >
-                  <img src="/sticky icons/whatsApp-icon.webp" alt="WhatsApp" width="100" height="100" loading="lazy" />
+                  <img src="/sticky icons/whatsApp-icon.webp" alt="WhatsApp" width="100" height="100" loading="lazy"
+                    decoding="async" />
                   Chat on WhatsApp
                 </a>
               </div>
@@ -867,7 +898,8 @@ export default function Home() {
                         <img
                           src="service image/social-media-marketing-3d-icon-png-download-5013080.webp"
                           alt="Social Media"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>iGaming Social Media</h2>
                       <p>
@@ -884,7 +916,8 @@ export default function Home() {
                         <img
                           src="service image/3d-google-ads icon.webp"
                           alt="Google Ads"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>iGaming Google Ads</h2>
                       <p>
@@ -901,7 +934,8 @@ export default function Home() {
                         <img
                           src="service image/free-meta-3d-icon-png-download-8250233.webp"
                           alt="Meta Ads"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>iGaming Meta Ads </h2>
                       <p>
@@ -918,7 +952,8 @@ export default function Home() {
                         <img
                           src="service image/free-telegram-3d-icon-png-download-7516821.webp"
                           alt="Telegram Ads"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>Telegram Ads</h2>
                       <p>
@@ -934,7 +969,8 @@ export default function Home() {
                         <img
                           src="service image/seo-3d-icon-png-download-5528528.webp"
                           alt="SEO"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>iGaming SEO Services</h2>
                       <p>
@@ -951,7 +987,8 @@ export default function Home() {
                         <img
                           src="service image/recruitment-agency-3d-icon-png-download-12031451.webp"
                           alt="Agency Accounts"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>Managed iGaming Ad Accounts</h2>
                       <p>
@@ -968,7 +1005,8 @@ export default function Home() {
                         <img
                           src="service-img/WhatsApp-API.webp"
                           alt="Whatsapp API"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>Whatsapp API</h2>
                       <p>
@@ -984,7 +1022,8 @@ export default function Home() {
                         <img
                           src="service-img/Telegram-Channel-Promotion.webp"
                           alt="Telegram promotion"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>iGaming Telegram Marketing</h2>
                       <p>
@@ -1001,7 +1040,8 @@ export default function Home() {
                         <img
                           src="service-img/Influencer-Marketing.webp"
                           alt="Influencer Marketing"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>Influencer Marketing</h2>
                       <p>
@@ -1017,7 +1057,8 @@ export default function Home() {
                         <img
                           src="service-img/Web-Development.webp"
                           alt="Web Development"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>Web Development</h2>
                       <p>
@@ -1033,7 +1074,8 @@ export default function Home() {
                         <img
                           src="service-img/Trading-Marketing.webp"
                           alt="Trending Marketing"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>Trending Marketing</h2>
                       <p>
@@ -1049,7 +1091,8 @@ export default function Home() {
                         <img
                           src="service-img/Turnkey-Solutions.webp"
                           alt="Turnkey Solutions"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>Turnkey Solutions</h2>
                       <p>
@@ -1065,7 +1108,8 @@ export default function Home() {
                         <img
                           src="service-img/iGaming-Software.webp"
                           alt="iGaming Software"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>iGaming Software</h2>
                       <p>
@@ -1087,7 +1131,8 @@ export default function Home() {
                         <img
                           src="service image/social-media-marketing-3d-icon-png-download-5013080.webp"
                           alt="Social Media"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>iGaming Social Media</h2>
                       <p>
@@ -1100,7 +1145,8 @@ export default function Home() {
                       <img
                         src="poker cards/1.webp"
                         alt="Social Media Management"
-                      />
+                        loading="lazy"
+                        decoding="async" />
                     </picture>
                   </Link>
                 </li>
@@ -1112,7 +1158,8 @@ export default function Home() {
                         <img
                           src="service image/3d-google-ads icon.webp"
                           alt="Google Ads"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>iGaming Google Ads</h2>
                       <p>
@@ -1122,7 +1169,9 @@ export default function Home() {
                       </p>
                     </div>
                     <picture className="cardImg">
-                      <img src="poker cards/2.webp" alt="Google Ads" />
+                      <img src="poker cards/2.webp" alt="Google Ads"
+                        loading="lazy"
+                        decoding="async" />
                     </picture>
                   </Link>
                 </li>
@@ -1134,7 +1183,8 @@ export default function Home() {
                         <img
                           src="service image/free-meta-3d-icon-png-download-8250233.webp"
                           alt="Meta Ads"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>iGaming Meta Ads </h2>
                       <p>
@@ -1144,7 +1194,9 @@ export default function Home() {
                       </p>
                     </div>
                     <picture className="cardImg">
-                      <img src="poker cards/3.webp" alt="Meta Ads" />
+                      <img src="poker cards/3.webp" alt="Meta Ads"
+                        loading="lazy"
+                        decoding="async" />
                     </picture>
                   </Link>
                 </li>
@@ -1156,7 +1208,8 @@ export default function Home() {
                         <img
                           src="service image/free-telegram-3d-icon-png-download-7516821.webp"
                           alt="Telegram Ads"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>Telegram Ads</h2>
                       <p>
@@ -1165,7 +1218,9 @@ export default function Home() {
                       </p>
                     </div>
                     <picture className="cardImg">
-                      <img src="poker cards/4.webp" alt="Telegram Ads" />
+                      <img src="poker cards/4.webp" alt="Telegram Ads"
+                        loading="lazy"
+                        decoding="async" />
                     </picture>
                   </Link>
                 </li>
@@ -1177,7 +1232,8 @@ export default function Home() {
                         <img
                           src="service image/seo-3d-icon-png-download-5528528.webp"
                           alt="SEO"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>iGaming SEO Services</h2>
                       <p>
@@ -1187,7 +1243,9 @@ export default function Home() {
                       </p>
                     </div>
                     <picture className="cardImg">
-                      <img src="poker cards/5.webp" alt="SEO Services" />
+                      <img src="poker cards/5.webp" alt="SEO Services"
+                        loading="lazy"
+                        decoding="async" />
                     </picture>
                   </Link>
                 </li>
@@ -1199,7 +1257,8 @@ export default function Home() {
                         <img
                           src="service image/recruitment-agency-3d-icon-png-download-12031451.webp"
                           alt="Agency Accounts"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>Managed iGaming Ad Accounts</h2>
                       <p>
@@ -1209,7 +1268,9 @@ export default function Home() {
                       </p>
                     </div>
                     <picture className="cardImg">
-                      <img src="poker cards/6.webp" alt="Agency Accounts" />
+                      <img src="poker cards/6.webp" alt="Agency Accounts"
+                        loading="lazy"
+                        decoding="async" />
                     </picture>
                   </Link>
                 </li>
@@ -1221,7 +1282,8 @@ export default function Home() {
                         <img
                           src="service-img/WhatsApp-API.webp"
                           alt="Whatsapp API"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>Whatsapp API</h2>
                       <p>
@@ -1230,7 +1292,9 @@ export default function Home() {
                       </p>
                     </div>
                     <picture className="cardImg">
-                      <img src="poker cards/7.webp" alt="Whatsapp API" />
+                      <img src="poker cards/7.webp" alt="Whatsapp API"
+                        loading="lazy"
+                        decoding="async" />
                     </picture>
                   </Link>
                 </li>
@@ -1242,7 +1306,8 @@ export default function Home() {
                         <img
                           src="service-img/Telegram-Channel-Promotion.webp"
                           alt="Telegram promotion"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>iGaming Telegram Marketing</h2>
                       <p>
@@ -1252,7 +1317,9 @@ export default function Home() {
                       </p>
                     </div>
                     <picture className="cardImg">
-                      <img src="poker cards/8.webp" alt="Creative" />
+                      <img src="poker cards/8.webp" alt="Creative"
+                        loading="lazy"
+                        decoding="async" />
                     </picture>
                   </Link>
                 </li>
@@ -1264,7 +1331,8 @@ export default function Home() {
                         <img
                           src="service-img/Influencer-Marketing.webp"
                           alt="Influencer Marketing"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>Influencer Marketing</h2>
                       <p>
@@ -1276,7 +1344,8 @@ export default function Home() {
                       <img
                         src="poker cards/9.webp"
                         alt="Influencer Marketing"
-                      />
+                        loading="lazy"
+                        decoding="async" />
                     </picture>
                   </Link>
                 </li>
@@ -1288,7 +1357,8 @@ export default function Home() {
                         <img
                           src="service-img/Web-Development.webp"
                           alt="Web Development"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>Web Development</h2>
                       <p>
@@ -1297,7 +1367,9 @@ export default function Home() {
                       </p>
                     </div>
                     <picture className="cardImg">
-                      <img src="poker cards/10.webp" alt="Web Development" />
+                      <img src="poker cards/10.webp" alt="Web Development"
+                        loading="lazy"
+                        decoding="async" />
                     </picture>
                   </Link>
                 </li>
@@ -1309,7 +1381,8 @@ export default function Home() {
                         <img
                           src="service-img/Trading-Marketing.webp"
                           alt="Trending Marketing"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>Trending Marketing</h2>
                       <p>
@@ -1318,7 +1391,9 @@ export default function Home() {
                       </p>
                     </div>
                     <picture className="cardImg">
-                      <img src="poker cards/j.webp" alt="Trending Marketing" />
+                      <img src="poker cards/j.webp" alt="Trending Marketing"
+                        loading="lazy"
+                        decoding="async" />
                     </picture>
                   </Link>
                 </li>
@@ -1330,7 +1405,8 @@ export default function Home() {
                         <img
                           src="service-img/Turnkey-Solutions.webp"
                           alt="Turnkey Solutions"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>Turnkey Solutions</h2>
                       <p>
@@ -1339,7 +1415,9 @@ export default function Home() {
                       </p>
                     </div>
                     <picture className="cardImg">
-                      <img src="poker cards/q.webp" alt="Turnkey Solutions" />
+                      <img src="poker cards/q.webp" alt="Turnkey Solutions"
+                        loading="lazy"
+                        decoding="async" />
                     </picture>
                   </Link>
                 </li>
@@ -1351,7 +1429,8 @@ export default function Home() {
                         <img
                           src="service-img/iGaming-Software.webp"
                           alt="iGaming Software"
-                        />
+                          loading="lazy"
+                          decoding="async" />
                       </div>
                       <h2>iGaming Software</h2>
                       <p>
@@ -1360,7 +1439,9 @@ export default function Home() {
                       </p>
                     </div>
                     <picture className="cardImg">
-                      <img src="poker cards/k.webp" alt="iGaming Software" />
+                      <img src="poker cards/k.webp" alt="iGaming Software"
+                        loading="lazy"
+                        decoding="async" />
                     </picture>
                   </Link>
                 </li>
@@ -1389,7 +1470,7 @@ export default function Home() {
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-1.webp"
                       alt="Ad 1"
-                    />
+                      decoding="async" />
                     <div className="slide-body">
                       <h3>Ad Campaign 1</h3>
                       <p>Results driven campaign delivering quality traffic.</p>
@@ -1402,7 +1483,7 @@ export default function Home() {
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-2.webp"
                       alt="Ad 2"
-                    />
+                      decoding="async" />
                     <div className="slide-body">
                       <h3>Ad Campaign 2</h3>
                       <p>Targeted strategy maximizing player acquisition.</p>
@@ -1415,7 +1496,7 @@ export default function Home() {
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-3.webp"
                       alt="Ad 3"
-                    />
+                      decoding="async" />
                     <div className="slide-body">
                       <h3>Ad Campaign 3</h3>
                       <p>Performance driven campaign with measurable growth.</p>
@@ -1428,7 +1509,7 @@ export default function Home() {
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-4.webp"
                       alt="Ad 4"
-                    />
+                      decoding="async" />
                     <div className="slide-body">
                       <h3>Ad Campaign 4</h3>
                       <p>Scalable ad solutions for sustained engagement.</p>
@@ -1441,7 +1522,7 @@ export default function Home() {
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-5.webp"
                       alt="Ad 5"
-                    />
+                      decoding="async" />
                     <div className="slide-body">
                       <h3>Ad Campaign 5</h3>
                       <p>
@@ -1456,7 +1537,7 @@ export default function Home() {
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-6.webp"
                       alt="Ad 6"
-                    />
+                      decoding="async" />
                     <div className="slide-body">
                       <h3>Ad Campaign 6</h3>
                       <p>Data backed campaigns driving user acquisition.</p>
@@ -1469,7 +1550,7 @@ export default function Home() {
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-7.webp"
                       alt="Ad 7"
-                    />
+                      decoding="async" />
                     <div className="slide-body">
                       <h3>Ad Campaign 7</h3>
                       <p>
@@ -1484,7 +1565,7 @@ export default function Home() {
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-8.webp"
                       alt="Ad 8"
-                    />
+                      decoding="async" />
                     <div className="slide-body">
                       <h3>Ad Campaign 8</h3>
                       <p>Comprehensive management for maximum exposure.</p>
@@ -1497,7 +1578,7 @@ export default function Home() {
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-9.webp"
                       alt="Ad 9"
-                    />
+                      decoding="async" />
                     <div className="slide-body">
                       <h3>Ad Campaign 9</h3>
                       <p>Tailored campaigns aligned with your growth goals.</p>
@@ -1510,7 +1591,7 @@ export default function Home() {
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-10.webp"
                       alt="Ad 10"
-                    />
+                      decoding="async" />
                     <div className="slide-body">
                       <h3>Ad Campaign 10</h3>
                       <p>End to end solutions from strategy to execution.</p>
@@ -1523,7 +1604,7 @@ export default function Home() {
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-11.webp"
                       alt="Ad 11"
-                    />
+                      decoding="async" />
                     <div className="slide-body">
                       <h3>Ad Campaign 11</h3>
                       <p>High impact ads for competitive iGaming markets.</p>
@@ -1536,7 +1617,7 @@ export default function Home() {
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-12.webp"
                       alt="Ad 12"
-                    />
+                      decoding="async" />
                     <div className="slide-body">
                       <h3>Ad Campaign 12</h3>
                       <p>Proven frameworks that deliver consistent results.</p>
@@ -1755,7 +1836,8 @@ export default function Home() {
             rel="noopener noreferrer"
             className="stats-whatsapp-btn"
           >
-            <img src="/sticky icons/whatsApp-icon.webp" alt="WhatsApp" width="100" height="100" loading="lazy" />
+            <img src="/sticky icons/whatsApp-icon.webp" alt="WhatsApp" width="100" height="100" loading="lazy"
+              decoding="async" />
             Chat on WhatsApp
           </a>
         </section>
@@ -1787,7 +1869,7 @@ export default function Home() {
                           loading="lazy"
                           src={e.img}
                           alt={e.title}
-                        />
+                          decoding="async" />
                       </div>
                       <h3>{e.title}</h3>
                       <p>{e.desc}</p>
@@ -1895,7 +1977,8 @@ export default function Home() {
               {certImages.map((img, i) => (
                 <div className="cert-card" key={i}>
                   <div className="card-shine"></div>
-                  <img src={img} alt="Certification" width="400" height="300" loading="lazy" />
+                  <img src={img} alt="Certification" width="400" height="300" loading="lazy"
+                    decoding="async" />
                   <span className="cert-stamp">
                     <CheckCircle size={10} /> Verified
                   </span>
@@ -1915,7 +1998,8 @@ export default function Home() {
               <div className="swiper-wrapper">
                 {newsLogos.map((src, i) => (
                   <div className="swiper-slide" key={i}>
-                    <img src={src} alt={`News ${i + 1}`} width="400" height="300" loading="lazy" />
+                    <img src={src} alt={`News ${i + 1}`} width="400" height="300" loading="lazy"
+                      decoding="async" />
                   </div>
                 ))}
               </div>
@@ -1933,7 +2017,8 @@ export default function Home() {
             rel="noopener noreferrer"
             className="stats-whatsapp-btn"
           >
-            <img src="/sticky icons/whatsApp-icon.webp" alt="WhatsApp" width="100" height="100" loading="lazy" />
+            <img src="/sticky icons/whatsApp-icon.webp" alt="WhatsApp" width="100" height="100" loading="lazy"
+              decoding="async" />
             Chat on WhatsApp
           </a>
         </section>
@@ -1969,7 +2054,8 @@ export default function Home() {
                               height: 200,
                               objectFit: "cover",
                             }}
-                          />
+                            loading="lazy"
+                            decoding="async" />
                         ) : (
                           <div
                             style={{
@@ -2018,7 +2104,7 @@ export default function Home() {
                   loading="lazy"
                   src="/image/10.webp"
                   alt="iGaming Growth"
-                />
+                  decoding="async" />
               </div>
               <div className="cta-right">
                 <p className="section-label">Contact Us</p>
