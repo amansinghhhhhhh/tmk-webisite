@@ -1,8 +1,6 @@
 import { useParams, Link } from "react-router-dom"
 import { CheckCircle, ArrowRight } from "lucide-react"
 import { useEffect } from "react";
-import Swiper from "swiper";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import SEO from "../components/SEO";
 
 
@@ -768,58 +766,101 @@ export default function CountryPage() {
 useEffect(() => {
   if (!data || data.caseStudies.length <= 2) return;
 
-  const swiper = new Swiper(".case-studies-slider", {
-    modules: [Navigation, Pagination],
-    slidesPerView: 1,
-    spaceBetween: 24,
-    pagination: {
-      el: ".case-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".case-next",
-      prevEl: ".case-prev",
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-      1200: {
-        slidesPerView: 2,
-      },
-    },
-  });
+  // Swiper is fetched on demand so its chunk never blocks first render.
+  let swiper = null;
+  let cancelled = false;
 
-  return () => swiper.destroy(true, true);
+  (async () => {
+    let Swiper;
+    let Navigation;
+    let Pagination;
+    try {
+      const mod = await import("swiper/modules");
+      Navigation = mod.Navigation;
+      Pagination = mod.Pagination;
+      ({ default: Swiper } = await import("swiper"));
+    } catch (e) {
+      return;
+    }
+    if (cancelled) return;
+    swiper = new Swiper(".case-studies-slider", {
+      modules: [Navigation, Pagination],
+      slidesPerView: 1,
+      spaceBetween: 24,
+      pagination: {
+        el: ".case-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".case-next",
+        prevEl: ".case-prev",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1200: {
+          slidesPerView: 2,
+        },
+      },
+    });
+  })();
+
+  return () => {
+    cancelled = true;
+    if (swiper) swiper.destroy(true, true);
+  };
 }, [data]);
 
 
 
 useEffect(() => {
-  const swiper = new Swiper(".industries-scroll", {
-    modules: [Navigation, Pagination, Autoplay],
-    slidesPerView: 1.2,
-    spaceBetween: 16,
-    loop: true,
+  let swiper = null;
+  let cancelled = false;
 
-    pagination: {
-      el: ".industry-pagination",
-      clickable: true,
-    },
+  (async () => {
+    let Swiper;
+    let Navigation;
+    let Pagination;
+    let Autoplay;
+    try {
+      const mod = await import("swiper/modules");
+      Navigation = mod.Navigation;
+      Pagination = mod.Pagination;
+      Autoplay = mod.Autoplay;
+      ({ default: Swiper } = await import("swiper"));
+    } catch (e) {
+      return;
+    }
+    if (cancelled) return;
+    swiper = new Swiper(".industries-scroll", {
+      modules: [Navigation, Pagination, Autoplay],
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+      loop: true,
 
-    navigation: {
-      nextEl: ".industries-scroll .swiper-button-next",
-      prevEl: ".industries-scroll .swiper-button-prev",
-    },
+      pagination: {
+        el: ".industry-pagination",
+        clickable: true,
+      },
 
-    breakpoints: {
-      480: { slidesPerView: 2, spaceBetween: 18 },
-      640: { slidesPerView: 3, spaceBetween: 20 },
-      968: { slidesPerView: 4, spaceBetween: 24 },
-    },
-  });
+      navigation: {
+        nextEl: ".industries-scroll .swiper-button-next",
+        prevEl: ".industries-scroll .swiper-button-prev",
+      },
 
-  return () => swiper.destroy(true, true);
+      breakpoints: {
+        480: { slidesPerView: 2, spaceBetween: 18 },
+        640: { slidesPerView: 3, spaceBetween: 20 },
+        968: { slidesPerView: 4, spaceBetween: 24 },
+      },
+    });
+  })();
+
+  return () => {
+    cancelled = true;
+    if (swiper) swiper.destroy(true, true);
+  };
 }, []);
 
   if (!data) {

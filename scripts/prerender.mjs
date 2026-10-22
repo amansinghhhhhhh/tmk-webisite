@@ -1,4 +1,8 @@
 /**
+});
+  process.exit(1);
+});
+/**
  * Build-time prerendering script (TMK).
  * Runs AFTER `vite build` to generate per-route static HTML files with
  * pre-baked <title>, <meta name="description">, canonical URL, and OG tags.
@@ -21,7 +25,7 @@
  * change to trigger the automated deployment pipeline. No logic changed.
  */
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from "node:fs";
 import { resolve, dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -165,6 +169,73 @@ const META_MAP = {
   },
 };
 
+// ─── Route chunk preloading ─────────────────────────────────────────
+// The route component is a lazy-loaded chunk. Without a modulepreload the
+// browser only discovers it after the entry bundle has executed, which adds
+// a full network round-trip before anything can be painted (hurts LCP).
+// Each prerendered page preloads its own chunk instead.
+const STATIC_ROUTES = new Set([
+  "/",
+  "/about/",
+  "/contact/",
+  "/blogs/",
+  "/news/",
+  "/our-clients/",
+  "/services/",
+  "/countries/",
+  "/join-our-community/",
+  "/privacy-policy/",
+  "/term-condition/",
+  "/thank-you/",
+]);
+
+const ROUTE_CHUNKS = [
+  { test: (r) => r === "/", chunk: "Home" },
+  { test: (r) => r === "/about/", chunk: "About" },
+  { test: (r) => r === "/contact/", chunk: "Contact" },
+  { test: (r) => r === "/blogs/", chunk: "Blog" },
+  { test: (r) => /^\/blog\/.+\/$/.test(r), chunk: "BlogDetail" },
+  { test: (r) => r === "/news/", chunk: "News" },
+  { test: (r) => /^\/news\/.+\/$/.test(r), chunk: "NewsDetail" },
+  { test: (r) => r === "/our-clients/", chunk: "OurClient" },
+  { test: (r) => r === "/services/", chunk: "Services" },
+  { test: (r) => r === "/countries/", chunk: "Countries" },
+  { test: (r) => /^\/countries\/.+\/$/.test(r), chunk: "CountryPage" },
+  { test: (r) => r === "/join-our-community/", chunk: "JoinCommunity" },
+  { test: (r) => r === "/privacy-policy/", chunk: "PrivacyPolicy" },
+  { test: (r) => r === "/term-condition/", chunk: "TermCondition" },
+  { test: (r) => r === "/thank-you/", chunk: "ThankYou" },
+  // Everything else that is a single segment is a service page.
+  {
+    test: (r) => /^\/[a-z0-9-]+\/$/.test(r) && !STATIC_ROUTES.has(r),
+    chunk: "ServicePage",
+  },
+];
+
+const ASSETS_DIR = join(DIST_DIR, "assets");
+let assetCache = null;
+
+function findChunkFile(chunkName) {
+  if (!assetCache) {
+    assetCache = existsSync(ASSETS_DIR) ? readdirSync(ASSETS_DIR) : [];
+  }
+  const re = new RegExp(`^${chunkName}-[A-Za-z0-9_-]+\\.js$`);
+  const file = assetCache.find((f) => re.test(f));
+  return file ? `/assets/${file}` : null;
+}
+
+function routeChunkPreloads(routePath) {
+  const tags = [];
+  for (const entry of ROUTE_CHUNKS) {
+    if (!entry.test(routePath)) continue;
+    const href = findChunkFile(entry.chunk);
+    if (href) {
+      tags.push(`    <link rel="modulepreload" crossorigin href="${href}" />`);
+    }
+  }
+  return tags;
+}
+
 // ─── Helpers ───────────────────────────────────────────────────────
 function escapeHtml(str) {
   return (str || "")
@@ -206,6 +277,24 @@ function injectMeta(htmlTemplate, meta) {
     );
   }
   return out;
+}
+
+// Build one prerendered page: per-route meta + a modulepreload for the
+// route's own lazy chunk (removes a network round-trip before paint).
+function buildPage(htmlTemplate, routePath, meta) {
+  let html = injectMeta(htmlTemplate, meta);
+  const preloads = routeChunkPreloads(routePath);
+  if (preloads.length) {
+    html = html.replace(
+      "</head>",
+      `${preloads.join("\n")}\n  </head>`,
+    );
+  }
+  // NOTE: prerendering the hero into #root was tested (A/B) and made LCP
+  // WORSE, because React re-creates the hero on mount which registers a new
+  // (later) LCP candidate, and the high-priority poster image competes with
+  // the CSS/JS for bandwidth. Kept out for now.
+  return html;
 }
 
 // Write a prerendered page: dist/<route>/index.html
@@ -296,7 +385,11 @@ async function main() {
   // 1. Static routes (incl. countries + thank-you)
   console.log("[Prerender] Generating static route pages...");
   for (const [routePath, meta] of Object.entries(META_MAP)) {
-    const outPath = writePage(DIST_DIR, routePath, injectMeta(htmlTemplate, meta));
+    const outPath = writePage(
+      DIST_DIR,
+      routePath,
+      buildPage(htmlTemplate, routePath, meta),
+    );
     count++;
     console.log(`  ${routePath} -> ${relative(process.cwd(), outPath)}`);
   }
@@ -314,7 +407,7 @@ async function main() {
     const outPath = writePage(
       DIST_DIR,
       `/${s.slug}/`,
-      injectMeta(htmlTemplate, meta),
+      buildPage(htmlTemplate, `/${s.slug}/`, meta),
     );
     count++;
     console.log(`  /${s.slug}/ -> ${relative(process.cwd(), outPath)}`);
@@ -333,7 +426,7 @@ async function main() {
     const outPath = writePage(
       DIST_DIR,
       `/blog/${p.slug}/`,
-      injectMeta(htmlTemplate, meta),
+      buildPage(htmlTemplate, `/blog/${p.slug}/`, meta),
     );
     count++;
   }
@@ -352,7 +445,7 @@ async function main() {
     const outPath = writePage(
       DIST_DIR,
       `/news/${p.slug}/`,
-      injectMeta(htmlTemplate, meta),
+      buildPage(htmlTemplate, `/news/${p.slug}/`, meta),
     );
     count++;
   }

@@ -26,7 +26,23 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden
+  overflow-x: hidden;
+  /* Always reserve the scrollbar gutter. Without this, the page starts
+     empty (SPA) and the scrollbar only appears once React mounts, which
+     narrows the viewport and shifts every centred element sideways
+     (a large CLS source on <div id="root"> and the hero). */
+  scrollbar-gutter: stable
+}
+
+/* Reserve a full viewport before React mounts so the scrollbar (and the
+   page height) never changes after hydration.
+   display:flow-root creates a block formatting context so the top margin of
+   .page-hero (72px, clears the fixed nav) can NOT collapse out of #root.
+   Without it #root is pushed down 72px and jumps back up when the real
+   hero replaces the Suspense fallback — a full-page layout shift (CLS 1.0). */
+#root {
+  display: flow-root;
+  min-height: 100vh
 }
 
 body {
@@ -485,20 +501,18 @@ section {
 /* Hero/fan entrances run only when JS is active, but always complete: the
    self-finishing keyframes guarantee visibility even if an
    IntersectionObserver never fires (e.g. headless renderers). */
-@keyframes hero-in {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 @keyframes fan-in {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-html.js .hero-left {
-  animation: hero-in .9s .3s both;
-}
-
+/* The hero has NO entrance animation on purpose:
+   1) the hero is prerendered into the static HTML, and React re-creates it on
+      mount - an entrance animation would replay and blink the hero out and
+      back in (a visible FOUC);
+   2) an opacity:0 start would make the hero text ineligible for LCP until
+      the animation finished, adding ~1.2s to the largest contentful paint.
+   The hero therefore renders fully visible, identically, in both states. */
 html.js .hero-left.visible {
   opacity: 1;
   transform: translateY(0)
@@ -564,7 +578,15 @@ html.js .hero-left.visible {
 }
 
 .hero-animated-line-wrapper {
+  /* Reserve the exact bounding box (height + min-height) so the typing
+     animation can never resize the box and shift the hero copy below it.
+     flex-shrink:0 stops the flex column from collapsing the box.
+     width:100% keeps the box a fixed width while the text types - a
+     shrink-to-fit box would grow on every keystroke and shift sideways. */
+  width: 100%;
   height: calc(1.5rem * 1.7 * 2);
+  min-height: calc(1.5rem * 1.7 * 2);
+  flex-shrink: 0;
   margin: 15px 0;
   overflow: hidden;
   display: flex;
@@ -574,6 +596,11 @@ html.js .hero-left.visible {
 
 .hero-animated-line {
   display: block;
+  width: 100%;
+  text-align: center;
+  /* One full line is reserved even while the typewriter text is empty. */
+  min-height: 1.7em;
+  line-height: 1.7
 }
 
 .typewriter-text {
@@ -585,6 +612,7 @@ html.js .hero-left.visible {
 @media (min-width: 768px) {
   .hero-animated-line-wrapper {
     height: calc(2.2rem * 1.7);
+    min-height: calc(2.2rem * 1.7);
   }
 }
 

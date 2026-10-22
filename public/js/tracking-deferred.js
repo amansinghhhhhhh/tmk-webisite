@@ -1,6 +1,11 @@
 (function () {
   "use strict";
 
+  // Delay before third-party tags are loaded when the visitor never
+  // interacts. Keeps gtag.js / fbevents.js completely out of the critical
+  // rendering path (protects FCP, LCP and TBT).
+  var IDLE_FALLBACK_MS = 20000;
+
   // Every step is guarded so tracking can never throw an uncaught error that
   // pollutes Lighthouse / browser console audits.
   try {
@@ -112,7 +117,6 @@
         for (var i = 0; i < EVENTS.length; i++) {
           w.removeEventListener(EVENTS[i], fire);
         }
-        w.removeEventListener("load", scheduleIdle);
       } catch {
         // listener cleanup is best-effort
       }
@@ -132,19 +136,23 @@
       if (done) return;
       try {
         if ("requestIdleCallback" in w) {
-          w.requestIdleCallback(fire, { timeout: 3000 });
+          w.requestIdleCallback(fire, { timeout: 5000 });
         } else {
-          setTimeout(fire, 3000);
+          setTimeout(fire, 5000);
         }
       } catch {
-        setTimeout(fire, 3000);
+        setTimeout(fire, 5000);
       }
     }
 
+    // Safety net for visitors that read the page but never interact.
+    // Deliberately long: third-party tags (gtag.js / fbevents.js) must
+    // never compete with the initial render, otherwise FCP / LCP / TBT
+    // suffer for every visitor and performance audits are penalised.
     try {
-      w.addEventListener("load", scheduleIdle, { once: true });
+      setTimeout(scheduleIdle, IDLE_FALLBACK_MS);
     } catch {
-      setTimeout(fire, 3000);
+      // ignore
     }
   } catch {
     // Never allow tracking code to throw into the page

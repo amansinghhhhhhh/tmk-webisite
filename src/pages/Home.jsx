@@ -12,8 +12,6 @@ import {
   ChartLine,
   Globe,
 } from "lucide-react";
-import Swiper from "swiper";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { fetchPosts, mapPost } from "../api/wordpress";
 import LeadForm from "../components/LeadForm";
 import SEO from "../components/SEO";
@@ -167,8 +165,33 @@ export default function Home() {
 }, []);
 
   useEffect(() => {
-    try {
-      new Swiper(".industries-scroll", {
+    // Swiper is fetched on demand: the chunk downloads in parallel but never
+    // blocks the first render of the hero (which is what LCP measures).
+    let cancelled = false;
+
+    const initSwipers = async () => {
+      let Swiper;
+      let Autoplay;
+      let Navigation;
+      let Pagination;
+      try {
+        const mod = await import("swiper/modules");
+        Autoplay = mod.Autoplay;
+        Navigation = mod.Navigation;
+        Pagination = mod.Pagination;
+        ({ default: Swiper } = await import("swiper"));
+      } catch (e) {
+        return;
+      }
+      if (cancelled) return;
+      const instances = [];
+      const make = (sel, opts) => {
+        const s = new Swiper(sel, opts);
+        instances.push(s);
+        return s;
+      };
+      try {
+      make(".industries-scroll", {
         modules: [Autoplay, Navigation, Pagination],
         slidesPerView: 1.2,
         spaceBetween: 16,
@@ -188,7 +211,7 @@ export default function Home() {
       /* empty */
     }
     try {
-      new Swiper(".services-swiper", {
+      make(".services-swiper", {
         slidesPerView: 1.2,
         spaceBetween: 16,
         loop: false,
@@ -204,7 +227,7 @@ export default function Home() {
       /* empty */
     }
     try {
-      new Swiper(".live-ads-swiper", {
+      make(".live-ads-swiper", {
         slidesPerView: 2,
         spaceBetween: 20,
         loop: true,
@@ -228,7 +251,7 @@ export default function Home() {
       /* empty */
     }
     try {
-      new Swiper(".mediaSwiper", {
+      make(".mediaSwiper", {
         slidesPerView: 6,
         spaceBetween: 16,
         loop: true,
@@ -254,13 +277,12 @@ export default function Home() {
       /* empty */
     }
 
-    if (typeof window !== "undefined") {
       if (!document.querySelector(".expertise-scroll.swiper-initialized")) {
         try {
           const es = document.querySelector(".expertise-scroll");
           if (es) {
             es.classList.add("swiper-initialized");
-            new Swiper(".expertise-scroll", {
+            make(".expertise-scroll", {
               slidesPerView: 2.5,
               spaceBetween: 20,
               loop: true,
@@ -293,7 +315,18 @@ export default function Home() {
           /* empty */
         }
       }
+    };
 
+    // Run the swiper setup when the browser is idle so the chunk download
+    // and the carousel initialisation never compete with the first render
+    // (keeps TBT low). The timeout guarantees it still happens quickly.
+    if (typeof window !== "undefined" && typeof window.requestIdleCallback === "function") {
+      window.requestIdleCallback(initSwipers, { timeout: 2000 });
+    } else {
+      setTimeout(initSwipers, 200);
+    }
+
+    if (typeof window !== "undefined") {
       const pageObserver = new IntersectionObserver(
         (entries) => {
           for (const e of entries) {
@@ -348,7 +381,9 @@ export default function Home() {
       }
     }
 
-    return () => {};
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
 
@@ -1465,10 +1500,12 @@ export default function Home() {
                 <div className="swiper-wrapper">
                   <div className="swiper-slide">
                     <img
-                      width="1920"
-                      height="1080"
+                      width="1200"
+                      height="675"
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-1.webp"
+                      srcSet="/live-ads/Best-iGaming-Marketing-Agency-in-India-1-600.webp 600w, /live-ads/Best-iGaming-Marketing-Agency-in-India-1.webp 1200w"
+                      sizes="(max-width: 768px) 100vw, 580px"
                       alt="Ad 1"
                       decoding="async" />
                     <div className="slide-body">
@@ -1478,10 +1515,12 @@ export default function Home() {
                   </div>
                   <div className="swiper-slide">
                     <img
-                      width="1920"
-                      height="1080"
+                      width="1200"
+                      height="675"
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-2.webp"
+                      srcSet="/live-ads/Best-iGaming-Marketing-Agency-in-India-2-600.webp 600w, /live-ads/Best-iGaming-Marketing-Agency-in-India-2.webp 1200w"
+                      sizes="(max-width: 768px) 100vw, 580px"
                       alt="Ad 2"
                       decoding="async" />
                     <div className="slide-body">
@@ -1491,10 +1530,12 @@ export default function Home() {
                   </div>
                   <div className="swiper-slide">
                     <img
-                      width="1920"
-                      height="1080"
+                      width="1200"
+                      height="675"
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-3.webp"
+                      srcSet="/live-ads/Best-iGaming-Marketing-Agency-in-India-3-600.webp 600w, /live-ads/Best-iGaming-Marketing-Agency-in-India-3.webp 1200w"
+                      sizes="(max-width: 768px) 100vw, 580px"
                       alt="Ad 3"
                       decoding="async" />
                     <div className="slide-body">
@@ -1504,10 +1545,12 @@ export default function Home() {
                   </div>
                   <div className="swiper-slide">
                     <img
-                      width="1920"
-                      height="1080"
+                      width="1200"
+                      height="675"
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-4.webp"
+                      srcSet="/live-ads/Best-iGaming-Marketing-Agency-in-India-4-600.webp 600w, /live-ads/Best-iGaming-Marketing-Agency-in-India-4.webp 1200w"
+                      sizes="(max-width: 768px) 100vw, 580px"
                       alt="Ad 4"
                       decoding="async" />
                     <div className="slide-body">
@@ -1517,10 +1560,12 @@ export default function Home() {
                   </div>
                   <div className="swiper-slide">
                     <img
-                      width="1920"
-                      height="1080"
+                      width="1200"
+                      height="675"
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-5.webp"
+                      srcSet="/live-ads/Best-iGaming-Marketing-Agency-in-India-5-600.webp 600w, /live-ads/Best-iGaming-Marketing-Agency-in-India-5.webp 1200w"
+                      sizes="(max-width: 768px) 100vw, 580px"
                       alt="Ad 5"
                       decoding="async" />
                     <div className="slide-body">
@@ -1532,10 +1577,12 @@ export default function Home() {
                   </div>
                   <div className="swiper-slide">
                     <img
-                      width="1920"
-                      height="1080"
+                      width="1200"
+                      height="675"
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-6.webp"
+                      srcSet="/live-ads/Best-iGaming-Marketing-Agency-in-India-6-600.webp 600w, /live-ads/Best-iGaming-Marketing-Agency-in-India-6.webp 1200w"
+                      sizes="(max-width: 768px) 100vw, 580px"
                       alt="Ad 6"
                       decoding="async" />
                     <div className="slide-body">
@@ -1545,10 +1592,12 @@ export default function Home() {
                   </div>
                   <div className="swiper-slide">
                     <img
-                      width="1920"
-                      height="1080"
+                      width="1200"
+                      height="675"
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-7.webp"
+                      srcSet="/live-ads/Best-iGaming-Marketing-Agency-in-India-7-600.webp 600w, /live-ads/Best-iGaming-Marketing-Agency-in-India-7.webp 1200w"
+                      sizes="(max-width: 768px) 100vw, 580px"
                       alt="Ad 7"
                       decoding="async" />
                     <div className="slide-body">
@@ -1560,10 +1609,12 @@ export default function Home() {
                   </div>
                   <div className="swiper-slide">
                     <img
-                      width="1920"
-                      height="1080"
+                      width="1200"
+                      height="675"
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-8.webp"
+                      srcSet="/live-ads/Best-iGaming-Marketing-Agency-in-India-8-600.webp 600w, /live-ads/Best-iGaming-Marketing-Agency-in-India-8.webp 1200w"
+                      sizes="(max-width: 768px) 100vw, 580px"
                       alt="Ad 8"
                       decoding="async" />
                     <div className="slide-body">
@@ -1573,10 +1624,12 @@ export default function Home() {
                   </div>
                   <div className="swiper-slide">
                     <img
-                      width="1920"
-                      height="1080"
+                      width="1200"
+                      height="675"
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-9.webp"
+                      srcSet="/live-ads/Best-iGaming-Marketing-Agency-in-India-9-600.webp 600w, /live-ads/Best-iGaming-Marketing-Agency-in-India-9.webp 1200w"
+                      sizes="(max-width: 768px) 100vw, 580px"
                       alt="Ad 9"
                       decoding="async" />
                     <div className="slide-body">
@@ -1586,10 +1639,12 @@ export default function Home() {
                   </div>
                   <div className="swiper-slide">
                     <img
-                      width="1920"
-                      height="1080"
+                      width="1200"
+                      height="675"
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-10.webp"
+                      srcSet="/live-ads/Best-iGaming-Marketing-Agency-in-India-10-600.webp 600w, /live-ads/Best-iGaming-Marketing-Agency-in-India-10.webp 1200w"
+                      sizes="(max-width: 768px) 100vw, 580px"
                       alt="Ad 10"
                       decoding="async" />
                     <div className="slide-body">
@@ -1599,10 +1654,12 @@ export default function Home() {
                   </div>
                   <div className="swiper-slide">
                     <img
-                      width="1920"
-                      height="1080"
+                      width="1200"
+                      height="675"
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-11.webp"
+                      srcSet="/live-ads/Best-iGaming-Marketing-Agency-in-India-11-600.webp 600w, /live-ads/Best-iGaming-Marketing-Agency-in-India-11.webp 1200w"
+                      sizes="(max-width: 768px) 100vw, 580px"
                       alt="Ad 11"
                       decoding="async" />
                     <div className="slide-body">
@@ -1612,10 +1669,12 @@ export default function Home() {
                   </div>
                   <div className="swiper-slide">
                     <img
-                      width="1920"
-                      height="1080"
+                      width="1200"
+                      height="675"
                       loading="lazy"
                       src="/live-ads/Best-iGaming-Marketing-Agency-in-India-12.webp"
+                      srcSet="/live-ads/Best-iGaming-Marketing-Agency-in-India-12-600.webp 600w, /live-ads/Best-iGaming-Marketing-Agency-in-India-12.webp 1200w"
+                      sizes="(max-width: 768px) 100vw, 580px"
                       alt="Ad 12"
                       decoding="async" />
                     <div className="slide-body">

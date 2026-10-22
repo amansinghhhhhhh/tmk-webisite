@@ -189,11 +189,15 @@ export default function AppContent() {
         <Route path="/thank-you/" element={<ThankYou />} />
         <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
       </Routes>
+        {/* The footer lives inside the Suspense boundary on purpose: when it
+            rendered outside, it appeared directly under the short loading
+            placeholder and was then pushed down by the real page content,
+            which counted as a large layout shift (CLS). */}
+        <Footer />
         </ErrorBoundary>
       </Suspense>
       <FloatingButtons />
       <BackToTop />
-      <Footer />
     </>
   );
 }
