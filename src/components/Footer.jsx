@@ -33,10 +33,15 @@ function Footer() {
               <img
                 src="/tmk-logo-with-Brand-name.webp"
                 alt="TMK"
-                style={{ height: 44, marginBottom: 16 }}
-                loading="eager"
+                style={{
+                  height: 44,
+                  width: "auto",
+                  maxWidth: "100%",
+                  objectFit: "contain",
+                  marginBottom: 16,
+                }}
+                loading="lazy"
                 decoding="async"
-                fetchPriority="high"
                 width="1920"
                 height="978" />
             </div>

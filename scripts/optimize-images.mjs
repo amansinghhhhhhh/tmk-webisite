@@ -76,19 +76,43 @@ function localPathOf(srcAttr) {
 
 // Images that must load eagerly (above the fold / LCP candidates).
 // Matched against the raw src attribute value.
+// `excludeAfter` skips the rule when the tag appears after that marker in
+// the file (e.g. the same logo reused in the below-the-fold footer).
 const CRITICAL = [
   { match: "/hero-poster.webp", priority: true },
-  { match: "/tmk-logo-with-Brand-name.webp", priority: true },
+  {
+    match: "/tmk-logo-with-Brand-name.webp",
+    priority: true,
+    excludeAfter: "footer-logo",
+  },
   { match: "cdn.jsdelivr.net/gh/lipis/flag-icons", priority: false },
 ];
 
-function isCritical(srcAttr) {
+function isCritical(srcAttr, source, index) {
   if (!srcAttr) return null;
   const raw = srcAttr.replace(/^["']|["']$/g, "");
   for (const c of CRITICAL) {
-    if (raw.includes(c.match)) return c;
+    if (!raw.includes(c.match)) continue;
+    if (c.excludeAfter) {
+      const marker = source.lastIndexOf(c.excludeAfter, index);
+      if (marker !== -1) return null; // below-the-fold reuse
+    }
+    return c;
   }
   return null;
+}
+
+// True when the src matches a critical entry but the tag is a below-the-fold
+// reuse of that asset (so it must be demoted to lazy).
+function matchesCritical(srcAttr, source, index) {
+  if (!srcAttr) return false;
+  const raw = srcAttr.replace(/^["']|["']$/g, "");
+  return CRITICAL.some(
+    (c) =>
+      raw.includes(c.match) &&
+      c.excludeAfter &&
+      source.lastIndexOf(c.excludeAfter, index) !== -1,
+  );
 }
 
 function insertAttrs(tag, attrs, indent) {
@@ -112,8 +136,12 @@ async function processFile(file) {
   for (const m of matches) {
     const tag = m[0];
     const srcAttr = getAttr(tag, "src");
-    const critical = isCritical(srcAttr);
+    const critical = isCritical(srcAttr, original, m.index);
+    // Same asset as a critical image but below the fold (e.g. the logo
+    // reused in the footer) -> must not stay eager / high priority.
+    const demoted = !critical && matchesCritical(srcAttr, original, m.index);
 
+    let tagOut = tag;
     const add = [];
 
     const hasLoading = getAttr(tag, "loading") !== null;
@@ -121,9 +149,17 @@ async function processFile(file) {
     const hasWidth = getAttr(tag, "width") !== null;
     const hasHeight = getAttr(tag, "height") !== null;
 
-    if (!hasLoading) {
+    if (demoted) {
+      if (/loading="eager"/.test(tagOut)) {
+        tagOut = tagOut.replace(/loading="eager"/, 'loading="lazy"');
+      }
+      if (/fetchPriority="high"/.test(tagOut)) {
+        tagOut = tagOut.replace(/\s*\n?\s*fetchPriority="high"/, "");
+      }
+    } else if (!hasLoading) {
       add.push(critical ? 'loading="eager"' : 'loading="lazy"');
     }
+
     if (!hasDecoding) add.push('decoding="async"');
     if (critical && critical.priority && getAttr(tag, "fetchPriority") === null) {
       add.push('fetchPriority="high"');
@@ -138,14 +174,16 @@ async function processFile(file) {
       }
     }
 
-    if (add.length === 0) continue;
+    if (add.length === 0 && tagOut === tag) continue;
 
     // Indentation of the line the tag starts on.
     const lineStart = original.lastIndexOf("\n", m.index) + 1;
     const lineText = original.slice(lineStart, m.index);
     const indent = lineText.match(/^[ \t]*/)[0];
 
-    const newTag = insertAttrs(tag, add, indent);
+    const newTag = add.length
+      ? insertAttrs(tagOut, add, indent)
+      : tagOut;
     out = out.replace(tag, newTag);
     changed++;
   }

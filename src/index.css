@@ -3000,6 +3000,12 @@ footer::before {
 
 .footer-brand .footer-logo img {
   height: 44px;
+  /* Keep the native aspect ratio: the width/height attributes on <img> act
+     as a presentational hint (width:1920px), which would stretch the logo.
+     width:auto + object-fit:contain keeps it undistorted. */
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
   margin-bottom: 16px;
   filter: drop-shadow(0 0 20px rgba(136, 194, 64, .15))
 }
