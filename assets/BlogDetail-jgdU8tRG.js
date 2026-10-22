@@ -1,0 +1,1 @@
+import{r as e}from"./react-vendor-DQRzhwhR.js";import{t}from"./PostDetail-b-4fkkZD.js";var n=e();function r(){return(0,n.jsx)(t,{categoryId:4,backLink:`/blogs/`,backLabel:`Back to Blog`,listLink:`/blogs/`,listLabel:`View All Blogs`,routePrefix:`blog`})}export{r as default};
