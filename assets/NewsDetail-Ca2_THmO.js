@@ -1,0 +1,1 @@
+import{r as e}from"./react-vendor-DQRzhwhR.js";import{t}from"./PostDetail-b-4fkkZD.js";var n=e();function r(){return(0,n.jsx)(t,{categoryId:3,backLink:`/news/`,backLabel:`Back to News`,listLink:`/news/`,listLabel:`View All News`,routePrefix:`news`})}export{r as default};

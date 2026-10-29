@@ -1,0 +1,110 @@
+DirectorySlash Off
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. Protect build directory
+  RewriteRule ^\.builds - [F,L]
+
+  # 2. Soft-404 301 redirects (GSC audit, see scripts/soft-404-audit.txt)
+  #    These MUST run before the trailing-slash rule (#3) and the SPA
+  #    fallback (#4) so every legacy URL resolves in a single hop.
+  #    Targets are written as paths so scheme/host (www / non-www) of the
+  #    original request are preserved.
+
+  # 2a. Legacy service paths -> their canonical service page (with/without
+  #     trailing slash). /services/ itself is a real page and is untouched.
+  RewriteRule ^services/seo-services/?$ /seo-services-for-igaming-businesses/ [R=301,L,NC]
+  RewriteRule ^services/telegram-ads/?$ /telegram-ads-for-igaming-businesses/ [R=301,L,NC]
+  RewriteRule ^services/google-ads/?$ /google-ads-for-igaming-businesses/ [R=301,L,NC]
+
+  # 2b. Dead URL under /blogs/ (real posts are served from /blog/<slug>/).
+  RewriteRule ^blogs/your-ultimate-playbook-for-sportsbook-platform-seo-and-marketing/?$ /blogs/ [R=301,L,NC]
+
+  # 2c. Retired WordPress category: every /uncategorized/... URL (spam/deleted
+  #     posts, slugs contain "$", uppercase and non-ASCII characters) redirects
+  #     to the homepage. Prefix match keeps this one rule for ~190 audit rows.
+  RewriteRule ^uncategorized(/|$) / [R=301,L,NC]
+
+  # 2d. Old blog slugs that no longer exist in WordPress. Deliberately NOT a
+  #     catch-all on /blog/: every live post (including the ones GSC flagged
+  #     but which we verified healthy) must stay reachable.
+  RewriteRule ^blog/(adult-chat-roulet|ai-transforms-the-igaming-industry-the-future-of-online-gaming)/?$ / [R=301,L,NC]
+
+  # 2e. /embed/ variant of a post (the post itself stays live).
+  RewriteRule ^blog/how-can-you-search-for-influencers-to-improve-your-marketing-campaigns/embed/?$ / [R=301,L,NC]
+
+  # 2f. Retired WordPress date archives (YYYY/MM/ and YYYY/MM/DD/).
+  RewriteRule ^[0-9]{4}/[0-9]{2}(/[0-9]{2})?/?$ / [R=301,L]
+
+  # 2g. Retired legacy pages (the real pages live at /countries/us/,
+  #     /term-condition/, /our-clients/ and /about/).
+  RewriteRule ^(us|terms-of-use|our-client|about-us)/?$ / [R=301,L,NC]
+
+  # 2h. Leftover WordPress core asset URLs (the SPA served them as HTML
+  #     soft-404s). Nothing in the build references /wp-includes/ any more.
+  RewriteRule ^wp-includes/ / [R=301,L,NC]
+
+  # 3. Prevent rewrite loop for index.html
+  RewriteRule ^index\.html$ - [L]
+
+  # 4. Force Trailing Slash 301 Redirect for clean routes
+  # (Ignores actual files like .js, .css, .png and directories)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !\.[^/]+$
+  RewriteCond %{REQUEST_URI} !/$
+  RewriteRule ^(.+)$ /$1/ [R=301,L]
+
+  # 5. React SPA Fallback
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# --- Browser Caching / Expires Headers ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType application/x-javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# --- Cache-Control: immutable for content-hashed build assets ---
+# Vite emits /assets/<name>-<hash>.<ext>, so those files can be cached
+# forever. HTML stays revalidated so new deploys are picked up instantly.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|webp|png|jpe?g|gif|svg|avif|ico|woff2?)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(html|json|xml|txt)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# --- Compression (gzip) ---
+# Cuts text payload (JS/CSS/HTML/SVG/JSON) roughly 60-80% for faster
+# first paint and lower transfer time.
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE text/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml application/xml
+  AddOutputFilterByType DEFLATE application/rss+xml application/atom+xml
+</IfModule>
+
+# --- Compression (brotli, preferred by modern browsers) ---
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css text/xml
+  AddOutputFilterByType BROTLI_COMPRESS application/javascript application/x-javascript
+  AddOutputFilterByType BROTLI_COMPRESS text/javascript application/json
+  AddOutputFilterByType BROTLI_COMPRESS image/svg+xml application/xml
+  AddOutputFilterByType BROTLI_COMPRESS application/rss+xml application/atom+xml
+</IfModule>
