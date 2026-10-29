@@ -167,6 +167,18 @@ const META_MAP = {
       "Scale your iGaming business in the USA with data-driven SEO, PPC, affiliate marketing, influencer campaigns, and high-performance player acquisition solutions.",
     canonical: `${SITE_URL}/countries/us/`,
   },
+  // This service has no WordPress entry (the service CPT returns 13 slugs and
+  // this is not one of them), so the dynamic Yoast pass below never writes a
+  // page for it. Without a static entry the URL fell through to dist/index.html
+  // and Googlebot saw the HOMEPAGE title/description on it -> GSC Soft 404.
+  // Entry is written unconditionally by the static pass; if the WP post is
+  // ever created, the Yoast pass overwrites this with real Yoast meta.
+  "/traditional-marketing-for-igaming-businesses/": {
+    title: "Traditional Marketing for iGaming Businesses | The Marketing King",
+    description:
+      "Explore traditional marketing for iGaming businesses. TMK plans print, outdoor, event, and offline media campaigns that build brand trust and reach players worldwide.",
+    canonical: `${SITE_URL}/traditional-marketing-for-igaming-businesses/`,
+  },
 };
 
 // ─── Route chunk preloading ─────────────────────────────────────────

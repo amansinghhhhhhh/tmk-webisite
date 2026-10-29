@@ -1,0 +1,431 @@
+=== SHEET: Excluded by ‘noindex’ tag (xl/worksheets/sheet1.xml) ===
+Excluded by ‘noindex’ tag |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Sr No  | URL | Last crawled Date | Action | Status |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+1 | http://teonox.com/ | 46263 | Remove No Index | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+2 | https://teonox.com/ | 46263 | Remove No Index | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+3 | https://teonox.com/blog/best-no-deposit-casinos-in-australia-casino-classic/ | 46263 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+4 | https://teonox.com/program/business-digital-marketing-ai | 46263 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+5 | https://teonox.com/programs/performance-marketing | 46263 | Remove No Index | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+6 | https://teonox.com/program/performance-marketing | 46263 | Remove No Index | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+7 | https://teonox.com/program/seo-specialization | 46263 | Remove No Index | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 | https://teonox.com/contact/ | 46262 | Remove No Index | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 | https://teonox.com/blog/review-online-casinos/ | 46261 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+10 | https://www.teonox.com/ | 46261 | Remove No Index | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+11 | https://teonox.com/blog/best-no-deposit-casino-real-money/ | 46261 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+12 | https://teonox.com/admissions | 46261 | Remove No Index | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+13 | https://teonox.com/program/specialization-in-performance-marketing-2 | 46260 | Remove No Index | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+14 | https://teonox.com/program/specialization-in-search-engine-optimization | 46260 | Remove No Index | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+15 | https://teonox.com/program/specialization-in-social-media-marketing | 46260 | Remove No Index | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+16 | https://teonox.com/program/specialization-in-search-engine-optimization-2 | 46260 | Remove No Index | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+17 | https://teonox.com/program/business-digital-marketing-with-ai | 46260 | Remove No Index | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+18 | https://teonox.com/blog/best-odds-for-blackjack-new-zealand/ | 46259 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+19 | https://teonox.com/blog/slot-free-bonus-no-deposit-new-zealand/ | 46259 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+20 | https://teonox.com/blog/best-bingo-website-for-winning-new-zealand/ | 46258 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+21 | https://teonox.com/blog/casino-free-credits/ | 46258 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+22 | https://teonox.com/blog/going-to-a-casino-for-the-first-time-new-zealand/ | 46258 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+23 | https://teonox.com/blog/top-online-casino-sites-that-accept-direct-banking/ | 46258 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+24 | https://teonox.com/blog/how-to-win-slot-machines-canada/ | 46257 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+25 | https://teonox.com/best-franchise-seo-audits-in-india/ | 46257 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+26 | http://www.teonox.com/ | 46256 | Remove No Index | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+27 | https://teonox.com/blog/best-casinos-in-the-uk-not-in-las-vegas/ | 46255 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+28 | https://teonox.com/best-wordpress-website-design-in-india/ | 46255 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+29 | https://teonox.com/blog/best-thunderkick-online-casino-sites/ | 46255 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+30 | https://teonox.com/blog/top-gambling-sites-online/ | 46255 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+31 | https://teonox.com/blog/casino-in-canada-18-and-up/ | 46255 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+32 | https://teonox.com/blog/pay-by-mobile-online-slots-new-zealand/ | 46255 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+33 | https://teonox.com/?s=%7Bsearch_term_string%7D | 46254 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+34 | https://teonox.com/privacy-policy | 46254 | Remove No Index | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+35 | https://teonox.com/terms-and-conditions | 46254 | Remove No Index | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+36 | https://teonox.com/why-teonox | 46254 | Remove No Index | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+37 | https://teonox.com/hire | 46253 | Remove No Index | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+38 | https://teonox.com/about | 46253 | Remove No Index | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+39 | https://teonox.com/contact | 46253 | Remove No Index | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+40 | https://teonox.com/blog/the-rise-of-full-stack-marketers-why-versatility-wins-2 | 46252 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+41 | https://teonox.com/about/ | 46250 | Remove No Index | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+42 | https://teonox.com/blog/category/marketing/ | 45973 | Remove No Index | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+=== SHEET: Duplicate without user-selected (xl/worksheets/sheet2.xml) ===
+Duplicate without user-selected canonical |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Sr No  | URL | Last crawled Date | Action | Status |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+1 | https://teonox.com/blog/casino-online-ranking-uk/ | 46245 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+2 | https://teonox.com/blog/best-australia-casino-app/ | 46245 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+3 | https://teonox.com/blog/casino-uk-fast-withdrawal/ | 46245 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+4 | https://teonox.com/blog/best-casino-online-offers/ | 46243 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+5 | https://teonox.com/blog/best-australia-bingo-online/ | 46243 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+6 | https://teonox.com/blog/best-real-money-casinos-in-australia/ | 46238 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+7 | https://teonox.com/blog/best-new-uk-casino/ | 46237 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 | https://teonox.com/blog/best-online-mobile-slots/ | 46233 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 | https://teonox.com/blog/top-google-pay-casinos/ | 46232 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+10 | https://teonox.com/blog/casino-australia-top-10/ | 46231 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+11 | https://teonox.com/blog/how-many-cards-to-play-go-fish/ | 46230 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+12 | https://teonox.com/blog/best-slot-machines-in-australia/ | 46230 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+13 | https://teonox.com/blog/best-independent-online-casinos-uk/ | 46230 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+14 | https://teonox.com/blog/best-online-casino-to-win/ | 46229 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+15 | https://teonox.com/blog/best-low-volatility-slots/ | 46227 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+16 | https://teonox.com/blog/highest-reward-online-gambling-games/ | 46223 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+17 | https://teonox.com/blog/highest-paying-slots-australia/ | 46223 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+18 | https://teonox.com/blog/best-online-casino-neteller/ | 46222 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+19 | https://teonox.com/blog/real-money-online-casinos/ | 46222 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+20 | https://teonox.com/blog/candy-monsta-game-review-rtp-and-strategy/ | 46222 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+21 | https://teonox.com/blog/top-casino-promo-code-no-deposit-bonus-codes/ | 46222 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+22 | https://teonox.com/blog/best-casinos-to-play-online-australia/ | 46222 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+23 | https://teonox.com/?p=24308 | 46222 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+24 | https://teonox.com/blog/slot-tropical-wilds-by-microgaming-demo-free-play/ | 46221 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+25 | https://teonox.com/blog/live-roulette-slot-review/ | 46221 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+26 | https://teonox.com/?p=18770 | 46217 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+27 | https://teonox.com/?p=23448 | 46217 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+28 | https://teonox.com/blog/bet365-roulette-help-uk/ | 46212 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+29 | https://teonox.com/blog/novomatic-new-zealand-casino/ | 46212 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+30 | https://teonox.com/blog/best-gambling-online-games/ | 46209 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+31 | https://teonox.com/blog/wms-games-australia/ | 46205 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+32 | https://teonox.com/blog/casino-top-ten/ | 46199 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+33 | https://teonox.com/blog/reviews-online-casinos/ | 46199 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+34 | https://teonox.com/blog/best-real-money-casino-apps-for-iphone/ | 46198 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+35 | https://teonox.com/blog/best-payout-casino-united-kingdom/ | 46198 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+36 | https://teonox.com/blog/best-casino-games-android/ | 46198 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+37 | https://teonox.com/blog/best-bingo-sites-to-win-on-australia/ | 46198 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+38 | https://teonox.com/blog/bigger-bass-bonanza-slot-with-best-rtp/ | 46198 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+39 | https://teonox.com/blog/top-internet-casino-australia/ | 46198 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+40 | https://teonox.com/blog/compare-and-find-the-best-uk-casino-sites/ | 46196 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+41 | https://teonox.com/blog/online-casinos-with-keno-uk/ | 46194 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+42 | https://teonox.com/blog/best-realtime-gaming-online-slot-sites/ | 46194 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+43 | https://teonox.com/blog/canada-no-deposit-bonus-codes/ | 46193 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+44 | https://teonox.com/blog/pub-kings-slot-with-best-rtp/ | 46193 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+45 | https://teonox.com/blog/madness-game-review-rtp-and-strategy/ | 46193 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+46 | https://teonox.com/blog/best-australia-real-money-slots/ | 46193 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+47 | https://teonox.com/blog/best-casinos-in-the-uk/ | 46193 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+48 | https://teonox.com/blog/5-star-casinos-in-uk/ | 46193 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+49 | https://teonox.com/blog/top-casinos-in-canada-for-real-money/ | 46193 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+50 | https://teonox.com/blog/the-best-casino-uk-no-deposit-bonus/ | 46193 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+51 | https://teonox.com/blog/best-blackjack-apps/ | 46193 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+52 | https://teonox.com/blog/what-is-the-best-online-casino-site-uk/ | 46193 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+53 | https://teonox.com/blog/best-casinos-that-accept-diners-club-deposits/ | 46193 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+54 | https://teonox.com/blog/top-online-casinos-that-accept-bank-transfer/ | 46193 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+55 | https://teonox.com/blog/online-casino-ratings-uk/ | 46193 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+56 | https://teonox.com/blog/best-slot-machines-web-site-online/ | 46193 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+57 | https://teonox.com/blog/top-casino-bonus-uk/ | 46192 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+58 | https://teonox.com/blog/vegas-red-casino-review-and-free-chips-bonus/ | 46192 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+59 | https://teonox.com/blog/slots-you-can-pay-by-phone-bill/ | 46192 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+60 | https://teonox.com/blog/when-to-double-down-in-blackjack/ | 46192 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+61 | https://teonox.com/blog/play-world-casino-bonus-codes-2025/ | 46192 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+62 | https://teonox.com/blog/no-deposit-bonus-bitcoin-casino-uk/ | 46192 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+63 | https://teonox.com/blog/casino-games-and-slots-new-zealand/ | 46192 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+64 | https://teonox.com/blog/dragons-element-game-review-rtp-and-strategy/ | 46192 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+65 | https://teonox.com/blog/top-paying-online-casino-united-kingdom/ | 46192 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+66 | https://teonox.com/blog/slot-buffalo-blitz-2-by-playtech-demo-free-play/ | 46192 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+67 | https://teonox.com/blog/best-bingo-sites-ireland-reviews-ireland/ | 46192 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+68 | https://teonox.com/blog/top-online-casinos-that-accept-mastercard-deposits/ | 46192 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+69 | https://teonox.com/blog/best-real-money-slot-apps-new-zealand/ | 46192 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+70 | https://teonox.com/blog/best-deposit-bonuses-at-online-casinos-uk/ | 46192 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+71 | https://teonox.com/blog/top-online-casino-sites-that-accept-neosurf/ | 46192 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+72 | https://teonox.com/blog/buffalo-king-megaways-game-review-rtp-and-strategy/ | 46192 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+73 | https://teonox.com/blog/google-play-store-real-money-gambling-apps/ | 46192 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+74 | https://teonox.com/blog/albufeira-casino-review-and-free-chips-bonus/ | 46192 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+75 | https://teonox.com/blog/online-casinos-real-money-hold-n-spin-australia/ | 46192 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+76 | https://teonox.com/blog/elvis-frog-in-vegas-slot-with-best-rtp/ | 46192 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+77 | https://teonox.com/blog/starburst-game-review-rtp-and-strategy/ | 46191 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+78 | https://teonox.com/blog/spin-station-casino-review-and-free-chips-bonus/ | 46191 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+79 | https://teonox.com/blog/reels-of-joy-casino-review-and-free-chips-bonus/ | 46191 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+80 | https://teonox.com/blog/online-slots-the-best/ | 46191 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+81 | https://teonox.com/blog/bingo-sites-5-pound-deposit-canada/ | 46191 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+82 | https://teonox.com/blog/online-casino-softwares/ | 46191 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+83 | https://teonox.com/blog/best-casino-game-to-play-to-win-money/ | 46191 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+84 | https://teonox.com/blog/slots-provider/ | 46191 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+85 | https://teonox.com/blog/macau-casino-100-free-spins-bonus-2025/ | 46191 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+86 | https://teonox.com/blog/need-for-spin-casino-bonus-codes-2025/ | 46191 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+87 | https://teonox.com/blog/top-casinos-that-accept-mastercard-deposits/ | 46191 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+88 | https://teonox.com/blog/bad-wiessee-casino-login-app-sign-up/ | 46191 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+89 | https://teonox.com/blog/best-uk-gambling-app/ | 46191 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+90 | https://teonox.com/blog/slot-simulator-australia/ | 46191 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+91 | https://teonox.com/blog/slot-machines-laws-in-united-kingdom/ | 46191 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+92 | https://teonox.com/blog/online-casino-games-with-free-money-ireland/ | 46191 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+93 | https://teonox.com/blog/free-five-pound-no-deposit-slots/ | 46191 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+94 | https://teonox.com/blog/resorts-casino-review-and-free-chips-bonus/ | 46190 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+95 | https://teonox.com/blog/best-play-n-go-casino-uk/ | 46190 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+96 | https://teonox.com/blog/real-money-payout-online-gambling-establishments/ | 46190 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+97 | https://teonox.com/blog/crash-games-gambling/ | 46190 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+98 | https://teonox.com/blog/newest-casino-uk/ | 46190 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+99 | https://teonox.com/blog/top-casino-sites-that-accept-credit-card-deposits/ | 46190 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+100 | https://teonox.com/blog/uk-gambling-ranking/ | 46190 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+101 | https://teonox.com/blog/best-strategy-on-roulette-australia/ | 46190 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+102 | https://teonox.com/blog/gin-rummy-online-for-real-money/ | 46190 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+103 | https://teonox.com/blog/best-10-casino/ | 46190 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+104 | https://teonox.com/blog/best-bingo-online-sites-australia/ | 46190 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+105 | https://teonox.com/blog/best-games-to-win-money-at-casino/ | 46190 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+106 | https://teonox.com/blog/evolution-gaming-double-ball-roulette-australia/ | 46189 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+107 | https://teonox.com/blog/sun-of-egypt-3-slot-with-best-rtp/ | 46189 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+108 | https://teonox.com/blog/slots-no-deposit-keep-what-you-win/ | 46189 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+109 | https://teonox.com/blog/slot-fluffy-favourites-by-eyecon-demo-free-play/ | 46189 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+110 | https://teonox.com/blog/online-casinos-best/ | 46189 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+111 | https://teonox.com/blog/vivatbet-casino-review-and-free-chips-bonus/ | 46189 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+112 | https://teonox.com/blog/free-casinos-slots/ | 46189 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+113 | https://teonox.com/blog/royal-vegas-casino-bonus-codes-2025/ | 46189 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+114 | https://teonox.com/blog/videoslots-casino-review/ | 46189 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+115 | https://teonox.com/blog/21-best-casino-site-promo-code-progressive/ | 46188 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+116 | https://teonox.com/blog/best-bingo-payout-sites-australia/ | 46188 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+117 | https://teonox.com/blog/best-slots-offers-uk/ | 46188 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+118 | https://teonox.com/blog/best-uk-casino-review/ | 46188 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+119 | https://teonox.com/blog/thunderkick-games-australia/ | 46188 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+120 | https://teonox.com/blog/phone-casino-review/ | 46187 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+121 | https://teonox.com/blog/what-is-the-best-bingo-site-australia/ | 46187 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+122 | https://teonox.com/blog/casino-slots-in-florida-uk/ | 46187 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+123 | https://teonox.com/blog/most-popular-casinos-in-the-united-kingdom/ | 46187 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+124 | https://teonox.com/blog/win-casino-review-and-free-chips-bonus/ | 46187 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+125 | https://teonox.com/blog/casino-apps-that-pay-real-money-with-no-deposit/ | 46187 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+126 | https://teonox.com/blog/best-real-online-blackjack/ | 46186 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+127 | https://teonox.com/blog/best-united-kingdom-real-money-casino/ | 46186 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+128 | https://teonox.com/blog/britainbet-casino-review-and-free-chips-bonus/ | 46186 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+129 | https://teonox.com/blog/list-of-casino-sites/ | 46186 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+130 | https://teonox.com/blog/best-canada-casinos/ | 46186 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+131 | https://teonox.com/blog/uk-biggest-casino/ | 46186 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+132 | https://teonox.com/blog/best-casinos-to-play-online-uk/ | 46186 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+133 | https://teonox.com/blog/kleid-casino-review-and-free-chips-bonus/ | 46186 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+134 | https://teonox.com/blog/the-best-online-gambling-sites-uk/ | 46186 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+135 | https://teonox.com/blog/australia-gambling-apps/ | 46186 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+136 | https://teonox.com/blog/best-uk-mobile-casino-bonus/ | 46186 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+137 | https://teonox.com/blog/turbovegas-casino-review-and-free-chips-bonus/ | 46186 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+138 | https://teonox.com/blog/best-slots-for-real-money-canada/ | 46185 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+139 | https://teonox.com/blog/best-felt-gaming-online-casinos/ | 46185 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+140 | https://teonox.com/blog/best-spinomenal-casinos/ | 46185 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+141 | https://teonox.com/blog/top-casino-sites-online/ | 46185 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+142 | https://teonox.com/blog/best-ipad-casinos-in-uk/ | 46185 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+143 | https://teonox.com/blog/latest-new-casinos-ireland-best-deposit-bonus/ | 46185 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+144 | https://teonox.com/blog/best-new-united-kingdom-online-casinos/ | 46185 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+145 | https://teonox.com/blog/best-sign-up-casino-offers/ | 46108 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+146 | https://teonox.com/blog/top-ten-casino-in-canada/ | 46099 | Removal | Done |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+=== SHEET: Soft 404 (xl/worksheets/sheet3.xml) ===
+Soft 404 |  |  |  | 
+Sr No  | URL | Last crawled Date | Action | Status
+1 | https://themarketingking.org/blog/adult-chat-roulet/ | 46319 | Redirect to home page | 
+2 | https://themarketingking.org/us/ | 46319 | Redirect to home page | 
+3 | https://themarketingking.org/traditional-marketing-for-igaming-businesses/ | 46318 | Redirect to home page | 
+4 | https://themarketingking.org/services/seo-services/ | 46317 | redirect to (https://themarketingking.org/seo-services-for-igaming-businesses/) | 
+5 | https://themarketingking.org/uncategorized/coin-casino-get-free-spins-now-AU/ | 46316 | Redirect to home page | 
+6 | https://themarketingking.org/uncategorized/betfocus-casino-free-chip-$50-no-deposit/ | 46316 | Redirect to home page | 
+7 | https://themarketingking.org/uncategorized/goldex-casino-135-free-spins-today-Australia/ | 46312 | Redirect to home page | 
+8 | https://themarketingking.org/uncategorized/sambaslots-casino-150-free-spins-no-deposit-Australia/ | 46298 | Redirect to home page | 
+9 | https://themarketingking.org/services/seo-services | 46298 | redirect to (https://themarketingking.org/seo-services-for-igaming-businesses/) | 
+10 | https://themarketingking.org/uncategorized/seven-casino-65-free-spins-bonus-code-Australia/ | 46295 | Redirect to home page | 
+11 | https://themarketingking.org/uncategorized/midasbet-casino-no-wagering-requirements-keep-winnings/ | 46294 | Redirect to home page | 
+12 | https://themarketingking.org/blog/effective-casino-marketing-strategies-that-actually-work/ | 46294 | Redirect to home page | 
+13 | https://themarketingking.org/blog/how-does-tmk-execute-digital-marketing-for-trading-business/ | 46293 | request indexing | done
+14 | https://themarketingking.org/uncategorized/betgalaxy-casino-no-deposit-bonus-instant-withdrawal/ | 46286 | Redirect to home page | 
+15 | https://themarketingking.org/uncategorized/bearbet-casino-real-money-no-deposit-Australia/ | 46281 | Redirect to home page | 
+16 | https://themarketingking.org/uncategorized/22aus-casino-150-free-spins-no-deposit-Australia/ | 46281 | Redirect to home page | 
+17 | https://themarketingking.org/uncategorized/spin-palace-casino-cashback-on-first-deposit-AU/ | 46280 | Redirect to home page | 
+18 | https://themarketingking.org/uncategorized/mafia-casino-120-free-spins-no-deposit-2026-Australia/ | 46280 | Redirect to home page | 
+19 | https://themarketingking.org/uncategorized/tabtouch-casino-no-deposit-bonus-win-real-money-Australia/ | 46277 | Redirect to home page | 
+20 | https://themarketingking.org/uncategorized/bestau77-casino-free-money-no-deposit-on-sign-up-Australia/ | 46276 | Redirect to home page | 
+21 | https://themarketingking.org/uncategorized/s888-casino-VIP-free-spins-no-deposit-Australia/ | 46276 | Redirect to home page | 
+22 | https://themarketingking.org/uncategorized/betfoxx-casino-240-free-spins-claim-now-AU/ | 46275 | Redirect to home page | 
+23 | https://themarketingking.org/uncategorized/slotsgem-casino-230-free-spins-no-deposit-today-Australia/ | 46275 | Redirect to home page | 
+24 | https://themarketingking.org/uncategorized/123bet-casino-75-free-spins-no-deposit-for-new-players/ | 46275 | Redirect to home page | 
+25 | https://themarketingking.org/uncategorized/bet575-casino-70-free-spins-instantly-AU/ | 46275 | Redirect to home page | 
+26 | https://themarketingking.org/uncategorized/jackpoty-casino-exclusive-no-deposit-bonus-code-2026/ | 46274 | Redirect to home page | 
+27 | https://themarketingking.org/uncategorized/titanbet-casino-60-free-spins-no-deposit-today/ | 46273 | Redirect to home page | 
+28 | https://themarketingking.org/uncategorized/betr-casino-grab-your-bonus-now-2026/ | 46273 | Redirect to home page | 
+29 | https://themarketingking.org/uncategorized/fastslots-casino-220-free-spins-welcome-bonus/ | 46272 | Redirect to home page | 
+30 | https://themarketingking.org/uncategorized/zumibet-casino-wager-free-spins-today/ | 46272 | Redirect to home page | 
+31 | https://themarketingking.org/uncategorized/dowbet-casino-welcome-bonus-on-registration-AU/ | 46272 | Redirect to home page | 
+32 | https://themarketingking.org/uncategorized/harbour33-casino-welcome-bonus-on-registration-AU/ | 46272 | Redirect to home page | 
+33 | https://themarketingking.org/uncategorized/next2go-casino-125-free-spins-bonus-code-no-deposit/ | 46271 | Redirect to home page | 
+34 | https://themarketingking.org/uncategorized/aussie-play-casino-no-deposit-bonus-for-new-players-AU/ | 46271 | Redirect to home page | 
+35 | https://themarketingking.org/uncategorized/betbetbet-casino-no-wager-free-spins-Australia/ | 46270 | Redirect to home page | 
+36 | https://themarketingking.org/uncategorized/vicbet-casino-no-deposit-bonus-keep-what-you-win-AU/ | 46270 | Redirect to home page | 
+37 | https://themarketingking.org/uncategorized/tg-casino-240-free-spins-claim-now-AU/ | 46270 | Redirect to home page | 
+38 | https://themarketingking.org/uncategorized/oldgill-casino-no-deposit-bonus-instant-payout-AU/ | 46270 | Redirect to home page | 
+39 | https://themarketingking.org/uncategorized/crownplay-casino-VIP-promo-code-AU/ | 46270 | Redirect to home page | 
+40 | https://themarketingking.org/uncategorized/bcgame-casino-instant-bonus-no-deposit-today/ | 46270 | Redirect to home page | 
+41 | https://themarketingking.org/uncategorized/neospin-casino-no-deposit-bonus-instant-withdrawal/ | 46270 | Redirect to home page | 
+42 | https://themarketingking.org/uncategorized/havabet-casino-145-free-spins-on-sign-up-AU/ | 46270 | Redirect to home page | 
+43 | https://themarketingking.org/uncategorized/baggybet-casino-latest-bonus-code-2026/ | 46270 | Redirect to home page | 
+44 | https://themarketingking.org/uncategorized/spin-oasis-casino-55-free-spins-no-deposit-bonus-AU/ | 46270 | Redirect to home page | 
+45 | https://themarketingking.org/uncategorized/wild-tokyo-casino-85-free-spins-exclusive-AU/ | 46270 | Redirect to home page | 
+46 | https://themarketingking.org/uncategorized/golden-crown-casino-90-free-spins-no-deposit-bonus-2026/ | 46270 | Redirect to home page | 
+47 | https://themarketingking.org/uncategorized/golden-star-casino-exclusive-offer-today/ | 46269 | Redirect to home page | 
+48 | https://themarketingking.org/uncategorized/colossalbet-casino-working-bonus-code-Australia/ | 46268 | Redirect to home page | 
+49 | https://themarketingking.org/uncategorized/slots-palace-casino-limited-time-offer-2026/ | 46268 | Redirect to home page | 
+50 | https://themarketingking.org/uncategorized/gransino-casino-VIP-promo-code-AU/ | 46267 | Redirect to home page | 
+51 | https://themarketingking.org/uncategorized/fortunica-casino-wager-free-spins-today/ | 46267 | Redirect to home page | 
+52 | https://themarketingking.org/uncategorized/allyspin-casino-hurry-claim-today-Australia/ | 46267 | Redirect to home page | 
+53 | https://themarketingking.org/uncategorized/bet-alpha-casino-150-free-spins-no-deposit-Australia/ | 46266 | Redirect to home page | 
+54 | https://themarketingking.org/uncategorized/getsetbet-casino-250-free-spins-no-deposit-Australia/ | 46265 | Redirect to home page | 
+55 | https://themarketingking.org/uncategorized/pointsbet-casino-free-money-no-deposit-on-sign-up-Australia/ | 46265 | Redirect to home page | 
+56 | https://themarketingking.org/uncategorized/lightningbet-casino-240-free-spins-claim-now-AU/ | 46265 | Redirect to home page | 
+57 | https://themarketingking.org/uncategorized/megapari-casino-wager-free-spins-today/ | 46264 | Redirect to home page | 
+58 | https://themarketingking.org/uncategorized/dazard-casino-100-free-spins-no-wager-Australia/ | 46264 | Redirect to home page | 
+59 | https://themarketingking.org/uncategorized/ozwin-casino-no-deposit-bonus-instant-withdrawal/ | 46264 | Redirect to home page | 
+60 | https://themarketingking.org/uncategorized/stake-casino-working-bonus-code-Australia/ | 46264 | Redirect to home page | 
+61 | https://themarketingking.org/services/telegram-ads | 46264 | redirect to (https://themarketingking.org/telegram-ads-for-igaming-businesses/) | 
+62 | https://themarketingking.org/uncategorized/bs22-casino-110-free-spins-instant-no-deposit/ | 46264 | Redirect to home page | 
+63 | https://themarketingking.org/2025/09/01/ | 46263 | Redirect to home page | 
+64 | https://themarketingking.org/uncategorized/jeetcity-casino-cashback-on-first-deposit-AU/ | 46263 | Redirect to home page | 
+65 | https://themarketingking.org/uncategorized/winx96-casino-no-wagering-requirements-keep-winnings/ | 46263 | Redirect to home page | 
+66 | https://themarketingking.org/wp-includes/js/wp-emoji-release.min.js?ver=7.0 | 46263 | Redirect to home page | 
+67 | https://themarketingking.org/google-ads-for-igaming-businesses | 46262 | indexing request | done
+68 | https://themarketingking.org/blog/how-can-you-search-for-influencers-to-improve-your-marketing-campaigns/embed/ | 46262 | Redirect to home page | 
+69 | https://themarketingking.org/services/google-ads | 46262 | redirect to (https://themarketingking.org/google-ads-for-igaming-businesses/) | 
+70 | https://themarketingking.org/uncategorized/hellspin-casino-200-free-spins-on-first-deposit-Australia/ | 46261 | Redirect to home page | 
+71 | https://themarketingking.org/uncategorized/okebet-casino-no-registration-no-deposit-AU/ | 46261 | Redirect to home page | 
+72 | https://themarketingking.org/uncategorized/fiestabet-casino-first-deposit-bonus-200-free-spins-AU/ | 46261 | Redirect to home page | 
+73 | https://themarketingking.org/uncategorized/yesbet-casino-claim-free-spins-now-Australia/ | 46261 | Redirect to home page | 
+74 | https://themarketingking.org/uncategorized/king88-casino-exclusive-VIP-bonus-AU/ | 46261 | Redirect to home page | 
+75 | https://themarketingking.org/uncategorized/wilderbet-casino-no-deposit-bonus-code-AU/ | 46260 | Redirect to home page | 
+76 | https://themarketingking.org/uncategorized/betbuzz-casino-instant-bonus-no-deposit-today/ | 46260 | Redirect to home page | 
+77 | https://themarketingking.org/uncategorized/tradie-bet-casino-140-free-spins-exclusive-no-deposit/ | 46260 | Redirect to home page | 
+78 | https://themarketingking.org/uncategorized/tsars-casino-first-deposit-bonus-200-free-spins-AU/ | 46260 | Redirect to home page | 
+79 | https://themarketingking.org/uncategorized/junglebet-casino-no-deposit-bonus-for-new-players-AU/ | 46260 | Redirect to home page | 
+80 | https://themarketingking.org/uncategorized/puntgenie-casino-50-free-spins-no-deposit-Australia/ | 46260 | Redirect to home page | 
+81 | https://themarketingking.org/uncategorized/kingmaker-casino-55-free-spins-no-deposit-bonus-AU/ | 46260 | Redirect to home page | 
+82 | https://themarketingking.org/uncategorized/heapsowins-casino-75-free-spins-no-deposit-for-new-players/ | 46260 | Redirect to home page | 
+83 | https://themarketingking.org/terms-of-use/ | 46260 | Redirect to home page | 
+84 | https://themarketingking.org/uncategorized/spinbetter-casino-welcome-bonus-up-to-$1000/ | 46259 | Redirect to home page | 
+85 | https://themarketingking.org/uncategorized/sportaza-casino-welcome-bonus-no-deposit-Australia/ | 46259 | Redirect to home page | 
+86 | https://themarketingking.org/uncategorized/playup-casino-230-free-spins-no-deposit-today-Australia/ | 46259 | Redirect to home page | 
+87 | https://themarketingking.org/uncategorized/jimmy-bet-casino-95-free-spins-on-registration-Australia/ | 46259 | Redirect to home page | 
+88 | https://themarketingking.org/uncategorized/betibet-casino-120-free-spins-no-deposit-2026-Australia/ | 46259 | Redirect to home page | 
+89 | https://themarketingking.org/uncategorized/stelario-casino-135-free-spins-today-Australia/ | 46259 | Redirect to home page | 
+90 | https://themarketingking.org/uncategorized/96spin-casino-daily-cashback-2026/ | 46259 | Redirect to home page | 
+91 | https://themarketingking.org/uncategorized/picnicbet-casino-75-free-spins-no-deposit-bonus-code-AU/ | 46258 | Redirect to home page | 
+92 | https://themarketingking.org/uncategorized/casinonic-casino-105-free-spins-claim-now-Australia/ | 46258 | Redirect to home page | 
+93 | https://themarketingking.org/uncategorized/spinoloco-casino-no-wager-bonus-on-first-deposit-Australia/ | 46258 | Redirect to home page | 
+94 | https://themarketingking.org/uncategorized/national-casino-130-free-spins-for-new-players-AU/ | 46258 | Redirect to home page | 
+95 | https://themarketingking.org/uncategorized/lunubet-casino-150-free-spins-no-deposit-Australia/ | 46258 | Redirect to home page | 
+96 | https://themarketingking.org/uncategorized/just-casino-$1-deposit-get-100-free-spins-Australia/ | 46257 | Redirect to home page | 
+97 | https://themarketingking.org/uncategorized/super96-casino-170-free-spins-no-deposit-bonus-AU/ | 46257 | Redirect to home page | 
+98 | https://themarketingking.org/uncategorized/velobet-casino-100-free-spins-no-wager-Australia/ | 46257 | Redirect to home page | 
+99 | https://themarketingking.org/uncategorized/betgold-casino-no-deposit-bonus-real-money-Australia/ | 46257 | Redirect to home page | 
+100 | https://themarketingking.org/uncategorized/rainbet-casino-130-free-spins-for-new-players-AU/ | 46257 | Redirect to home page | 
+101 | https://themarketingking.org/uncategorized/cryptorino-casino-welcome-bonus-no-deposit-Australia/ | 46257 | Redirect to home page | 
+102 | https://themarketingking.org/blog/ai-transforms-the-igaming-industry-the-future-of-online-gaming/ | 46257 | Redirect to home page | 
+103 | https://themarketingking.org/uncategorized/yes77-casino-welcome-bonus-no-deposit-Australia/ | 46257 | Redirect to home page | 
+104 | https://themarketingking.org/uncategorized/pokiesfox-casino-60-free-spins-no-deposit-today/ | 46257 | Redirect to home page | 
+105 | https://themarketingking.org/uncategorized/wonaco-casino-180-free-spins-instantly-Australia/ | 46256 | Redirect to home page | 
+106 | https://themarketingking.org/uncategorized/abigcandy-casino-150-free-spins-no-wager-2026/ | 46256 | Redirect to home page | 
+107 | https://themarketingking.org/uncategorized/fairgo-casino-limited-time-offer-2026/ | 46256 | Redirect to home page | 
+108 | https://themarketingking.org/uncategorized/crowngold-casino-115-free-spins-welcome-offer-AU/ | 46256 | Redirect to home page | 
+109 | https://themarketingking.org/uncategorized/betpanda-casino-no-deposit-bonus-win-real-money-Australia/ | 46255 | Redirect to home page | 
+110 | https://themarketingking.org/uncategorized/96-casino-no-deposit-bonus-real-money-Australia/ | 46255 | Redirect to home page | 
+111 | https://themarketingking.org/uncategorized/oksport-casino-deposit-$5-get-150-free-spins/ | 46255 | Redirect to home page | 
+112 | https://themarketingking.org/uncategorized/jet4bet-casino-instant-play-no-registration-bonus-Australia/ | 46255 | Redirect to home page | 
+113 | https://themarketingking.org/uncategorized/grsbet-casino-200-free-spins-on-first-deposit-Australia/ | 46254 | Redirect to home page | 
+114 | https://themarketingking.org/uncategorized/surge-casino-grab-your-bonus-now-2026/ | 46254 | Redirect to home page | 
+115 | https://themarketingking.org/uncategorized/fortune-play-casino-no-deposit-bonus-code-AU/ | 46254 | Redirect to home page | 
+116 | https://themarketingking.org/uncategorized/bigbet-casino-210-free-spins-for-new-players-AU/ | 46253 | Redirect to home page | 
+117 | https://themarketingking.org/uncategorized/volcanobet-casino-190-free-spins-exclusive-code/ | 46253 | Redirect to home page | 
+118 | https://themarketingking.org/uncategorized/pp99-casino-wager-free-spins-today/ | 46253 | Redirect to home page | 
+119 | https://themarketingking.org/uncategorized/zoome-casino-welcome-bonus-100-free-spins/ | 46253 | Redirect to home page | 
+120 | https://themarketingking.org/uncategorized/roo-casino-no-wager-no-deposit-bonus-AU/ | 46253 | Redirect to home page | 
+121 | https://themarketingking.org/uncategorized/iclub365-casino-special-bonus-for-new-players-Australia/ | 46253 | Redirect to home page | 
+122 | https://themarketingking.org/uncategorized/stellar-spins-casino-210-free-spins-for-new-players-AU/ | 46253 | Redirect to home page | 
+123 | https://themarketingking.org/uncategorized/winto-casino-first-deposit-bonus-200-free-spins-AU/ | 46253 | Redirect to home page | 
+124 | https://themarketingking.org/uncategorized/alpha-bet-casino-55-free-spins-no-deposit-bonus-AU/ | 46252 | Redirect to home page | 
+125 | https://themarketingking.org/uncategorized/bwin-casino-75-free-spins-no-deposit-for-new-players/ | 46251 | Redirect to home page | 
+126 | https://themarketingking.org/uncategorized/rockyspin-casino-exclusive-offer-today/ | 46251 | Redirect to home page | 
+127 | https://themarketingking.org/uncategorized/ig9-casino-no-wager-no-deposit-bonus-AU/ | 46250 | Redirect to home page | 
+128 | https://themarketingking.org/blogs/your-ultimate-playbook-for-sportsbook-platform-seo-and-marketing/ | 46250 | Redirect to (https://themarketingking.org/blogs/) | 
+129 | https://themarketingking.org/uncategorized/casinochan-casino-cashback-bonus-no-deposit-Australia/ | 46246 | Redirect to home page | 
+130 | https://themarketingking.org/uncategorized/spinrollz-casino-180-free-spins-instantly-Australia/ | 46245 | Redirect to home page | 
+131 | https://themarketingking.org/uncategorized/cleobetra-casino-240-free-spins-claim-now-AU/ | 46243 | Redirect to home page | 
+132 | https://themarketingking.org/uncategorized/a3win-casino-grab-your-bonus-now-2026/ | 46243 | Redirect to home page | 
+133 | https://themarketingking.org/uncategorized/ipay9-casino-exclusive-offer-today/ | 46243 | Redirect to home page | 
+134 | https://themarketingking.org/blog/choose-the-best-digital-marketing-company-for-online-casino-advertising | 46242 | Redirect to home page | 
+135 | https://themarketingking.org/uncategorized/pandabet-casino-no-deposit-bonus-code-AU/ | 46242 | Redirect to home page | 
+136 | https://themarketingking.org/uncategorized/slotmonster-casino-240-free-spins-claim-now-AU/ | 46242 | Redirect to home page | 
+137 | https://themarketingking.org/uncategorized/rx-casino-200-free-spins-no-deposit-Australia/ | 46242 | Redirect to home page | 
+138 | https://themarketingking.org/uncategorized/n1bet-casino-250-free-spins-no-deposit-Australia/ | 46242 | Redirect to home page | 
+139 | https://themarketingking.org/uncategorized/letsbet-casino-no-deposit-welcome-bonus-2026/ | 46242 | Redirect to home page | 
+140 | https://themarketingking.org/uncategorized/gucci9-casino-no-wager-free-spins-Australia/ | 46241 | Redirect to home page | 
+141 | https://themarketingking.org/uncategorized/wikiluck-casino-free-chip-$50-no-deposit/ | 46241 | Redirect to home page | 
+142 | https://themarketingking.org/uncategorized/sugar96-casino-115-free-spins-welcome-offer-AU/ | 46241 | Redirect to home page | 
+143 | https://themarketingking.org/uncategorized/zotabet-casino-150-free-spins-no-deposit-2026/ | 46240 | Redirect to home page | 
+144 | https://themarketingking.org/uncategorized/jackpot-city-casino-no-deposit-bonus-for-new-players-AU/ | 46240 | Redirect to home page | 
+145 | https://themarketingking.org/uncategorized/topsport-casino-110-free-spins-instant-no-deposit/ | 46240 | Redirect to home page | 
+146 | https://themarketingking.org/uncategorized/mrbean9-casino-200-free-spins-on-first-deposit-Australia/ | 46240 | Redirect to home page | 
+147 | https://themarketingking.org/uncategorized/puntcity-casino-real-money-no-deposit-Australia/ | 46240 | Redirect to home page | 
+148 | https://themarketingking.org/uncategorized/ignition-casino-150-free-spins-no-deposit-2026/ | 46240 | Redirect to home page | 
+149 | https://themarketingking.org/uncategorized/betdeluxe-casino-VIP-promo-code-AU/ | 46240 | Redirect to home page | 
+150 | https://themarketingking.org/uncategorized/unibet-casino-125-free-spins-bonus-code-no-deposit/ | 46240 | Redirect to home page | 
+151 | https://themarketingking.org/uncategorized/playamo-casino-100-free-spins-no-wager-Australia/ | 46240 | Redirect to home page | 
+152 | https://themarketingking.org/uncategorized/crossbet-casino-free-chip-$10-no-deposit-Australia/ | 46240 | Redirect to home page | 
+153 | https://themarketingking.org/uncategorized/bitstarz-casino-130-free-spins-for-new-players-AU/ | 46240 | Redirect to home page | 
+154 | https://themarketingking.org/uncategorized/bizzo-casino-welcome-bonus-100-free-spins/ | 46240 | Redirect to home page | 
+155 | https://themarketingking.org/uncategorized/мd88-casino-free-chip-$20-no-deposit-AU/ | 46240 | Redirect to home page | 
+156 | https://themarketingking.org/uncategorized/vinbet-casino-250-free-spins-no-deposit-Australia/ | 46240 | Redirect to home page | 
+157 | https://themarketingking.org/uncategorized/betreal-casino-no-deposit-welcome-bonus-2026/ | 46240 | Redirect to home page | 
+158 | https://themarketingking.org/uncategorized/playfina-casino-70-free-spins-instantly-AU/ | 46240 | Redirect to home page | 
+159 | https://themarketingking.org/uncategorized/lucky-wins-casino-95-free-spins-on-registration-Australia/ | 46239 | Redirect to home page | 
+160 | https://themarketingking.org/uncategorized/betsafe-casino-150-free-spins-no-deposit-2026/ | 46239 | Redirect to home page | 
+161 | https://themarketingking.org/uncategorized/wizbet-casino-welcome-bonus-first-deposit-2026-Australia/ | 46239 | Redirect to home page | 
+162 | https://themarketingking.org/uncategorized/chromabet-casino-no-wager-no-deposit-bonus-AU/ | 46239 | Redirect to home page | 
+163 | https://themarketingking.org/uncategorized/bass-win-casino-65-free-spins-bonus-code-Australia/ | 46239 | Redirect to home page | 
+164 | https://themarketingking.org/uncategorized/mb9-casino-150-free-spins-no-deposit-2026/ | 46239 | Redirect to home page | 
+165 | https://themarketingking.org/uncategorized/goldenbet888-casino-100-free-spins-no-deposit-AU/ | 46239 | Redirect to home page | 
+166 | https://themarketingking.org/uncategorized/crypto-games-casino-no-deposit-bonus-instant-payout-AU/ | 46239 | Redirect to home page | 
+167 | https://themarketingking.org/uncategorized/megadice-casino-exclusive-offer-today/ | 46239 | Redirect to home page | 
+168 | https://themarketingking.org/uncategorized/wild-tornado-casino-welcome-bonus-first-deposit-2026-Australia/ | 46238 | Redirect to home page | 
+169 | https://themarketingking.org/uncategorized/lucky-block-casino-145-free-spins-on-sign-up-AU/ | 46238 | Redirect to home page | 
+170 | https://themarketingking.org/uncategorized/chasebet-casino-100-free-spins-no-wager-AU/ | 46238 | Redirect to home page | 
+171 | https://themarketingking.org/uncategorized/playwest-casino-135-free-spins-today-Australia/ | 46238 | Redirect to home page | 
+172 | https://themarketingking.org/uncategorized/macau365-casino-no-deposit-bonus-instant-payout-AU/ | 46238 | Redirect to home page | 
+173 | https://themarketingking.org/blog/igaming-google-ads-in-canada-tmk-growth-guide | 46238 | Redirect to home page | 
+174 | https://themarketingking.org/uncategorized/roobet-casino-$1-deposit-get-100-free-spins-Australia/ | 46237 | Redirect to home page | 
+175 | https://themarketingking.org/uncategorized/betkings-casino-240-free-spins-claim-now-AU/ | 46237 | Redirect to home page | 
+176 | https://themarketingking.org/uncategorized/lucky-ones-casino-hurry-claim-today-Australia/ | 46237 | Redirect to home page | 
+177 | https://themarketingking.org/uncategorized/micky13-casino-limited-time-offer-2026/ | 46237 | Redirect to home page | 
+178 | https://themarketingking.org/uncategorized/rocket-play-casino-no-registration-no-deposit-AU/ | 46236 | Redirect to home page | 
+179 | https://themarketingking.org/uncategorized/bet-right-casino-cashback-on-first-deposit-AU/ | 46235 | Redirect to home page | 
+180 | https://themarketingking.org/blog/crypto-casino-marketing-services-smart-growth-strategy | 46235 | Redirect to home page | 
+181 | https://themarketingking.org/uncategorized/swiper-casino-promo-code-on-first-deposit-Australia/ | 46235 | Redirect to home page | 
+182 | https://themarketingking.org/uncategorized/bet365-casino-weekly-cashback-bonus-AU/ | 46234 | Redirect to home page | 
+183 | https://themarketingking.org/2026/06/09/ | 46234 | Redirect to home page | 
+184 | https://themarketingking.org/uncategorized/dd8-casino-50-free-spins-no-wager-Australia/ | 46233 | Redirect to home page | 
+185 | https://themarketingking.org/uncategorized/hugo-casino-secret-promo-code-no-deposit-AU/ | 46232 | Redirect to home page | 
+186 | https://themarketingking.org/uncategorized/au21-casino-welcome-bonus-100-free-spins/ | 46232 | Redirect to home page | 
+187 | https://themarketingking.org/2026/05/06/ | 46232 | Redirect to home page | 
+188 | https://themarketingking.org/uncategorized/ii89-casino-welcome-bonus-100-free-spins/ | 46232 | Redirect to home page | 
+189 | https://themarketingking.org/uncategorized/lucky-start-casino-130-free-spins-for-new-players-AU/ | 46232 | Redirect to home page | 
+190 | https://themarketingking.org/uncategorized/instant-casino-no-wager-bonus-on-first-deposit-Australia/ | 46231 | Redirect to home page | 
+191 | https://themarketingking.org/uncategorized/gday77-casino-125-free-spins-bonus-code-no-deposit/ | 46231 | Redirect to home page | 
+192 | https://themarketingking.org/2025/02/17/ | 46231 | Redirect to home page | 
+193 | https://themarketingking.org/uncategorized/betm-casino-no-deposit-bonus-real-money-Australia/ | 46230 | Redirect to home page | 
+194 | https://themarketingking.org/uncategorized/boombet-casino-no-deposit-bonus-keep-what-you-win-AU/ | 46230 | Redirect to home page | 
+195 | https://themarketingking.org/uncategorized/spinanga-casino-150-free-spins-no-deposit-2026/ | 46229 | Redirect to home page | 
+196 | https://themarketingking.org/2026/05/30/ | 46229 | Redirect to home page | 
+197 | https://themarketingking.org/uncategorized/letslucky-casino-no-wager-welcome-bonus-AU/ | 46229 | Redirect to home page | 
+198 | https://themarketingking.org/our-client/ | 46228 | Redirect to home page | 
+199 | https://themarketingking.org/uncategorized/vave-casino-cashback-on-first-deposit-AU/ | 46228 | Redirect to home page | 
+200 | https://themarketingking.org/2026/05/26/ | 46228 | Redirect to home page | 
+201 | https://themarketingking.org/2025/02/04/ | 46228 | Redirect to home page | 
+202 | https://themarketingking.org/2025/10/06/ | 46228 | Redirect to home page | 
+203 | https://themarketingking.org/2025/09/03/ | 46228 | Redirect to home page | 
+204 | https://themarketingking.org/uncategorized/bonusbet-casino-95-free-spins-on-registration-Australia/ | 46227 | Redirect to home page | 
+205 | https://themarketingking.org/uncategorized/uptown-pokies-casino-welcome-package-with-free-spins-AU/ | 46224 | Redirect to home page | 
+206 | https://themarketingking.org/uncategorized/best-marketing-agency-in-igaming-the-tmk-performance-acquisition-framework/ | 46224 | Redirect to home page | 
+207 | https://themarketingking.org/2025/10/15/ | 46223 | Redirect to home page | 
+208 | https://themarketingking.org/2025/07/01/ | 46223 | Redirect to home page | 
+209 | https://themarketingking.org/2025/02/24/ | 46221 | Redirect to home page | 
+210 | https://themarketingking.org/uncategorized/tab-casino-no-registration-instant-play-2026/ | 46220 | Redirect to home page | 
+211 | https://themarketingking.org/2025/05/12/ | 46220 | Redirect to home page | 
+212 | https://themarketingking.org/uncategorized/topbet9-casino-real-money-no-deposit-Australia/ | 46220 | Redirect to home page | 
+213 | https://themarketingking.org/uncategorized/vegasnow-casino-welcome-package-with-free-spins-AU/ | 46218 | Redirect to home page | 
+214 | https://themarketingking.org/uncategorized/wildrobin-casino-exclusive-VIP-bonus-AU/ | 46217 | Redirect to home page | 
+215 | https://themarketingking.org/about-us/ | 46213 | Redirect to home page | 
+216 | https://themarketingking.org/2026/05/28/ | 46213 | Redirect to home page | 
+217 | https://themarketingking.org/uncategorized/luckyvibe-casino-welcome-bonus-on-registration-AU/ | 46213 | Redirect to home page | 
+218 | https://themarketingking.org/2026/04/10/ | 46213 | Redirect to home page | 
+219 | https://themarketingking.org/uncategorized/mystake-casino-no-deposit-bonus-real-money-Australia/ | 46212 | Redirect to home page | 
+220 | https://themarketingking.org/2026/06/11/ | 46212 | Redirect to home page | 
+221 | https://themarketingking.org/uncategorized/betchamps-casino-real-money-no-deposit-Australia/ | 46212 | Redirect to home page | 
+222 | https://themarketingking.org/uncategorized/terrybet-casino-no-wagering-requirements-keep-winnings/ | 46210 | Redirect to home page | 
+223 | https://themarketingking.org/uncategorized/swift-bet-casino-welcome-bonus-up-to-$1000/ | 46210 | Redirect to home page | 
+224 | https://themarketingking.org/uncategorized/mightybet-casino-55-free-spins-no-deposit-bonus-AU/ | 46210 | Redirect to home page | 
+225 | https://themarketingking.org/uncategorized/rec99-casino-$1-deposit-get-100-free-spins-Australia/ | 46209 | Redirect to home page | 
+226 | https://themarketingking.org/uncategorized/joe-fortune-casino-VIP-free-spins-no-deposit-Australia/ | 46204 | Redirect to home page | 
+227 | https://themarketingking.org/uncategorized/just-casino-$1-deposit-get-100-free-spins-Australia/ | 46196 | Redirect to home page | 
+228 | https://themarketingking.org/uncategorized/boostbet-casino-80-free-spins-sign-up-bonus-Australia/ | 46195 | Redirect to home page | 
+229 | https://themarketingking.org/uncategorized/21red-casino-90-free-spins-no-deposit-bonus-2026/ | 46195 | Redirect to home page | 
+230 | https://themarketingking.org/uncategorized/rolling-slots-casino-exclusive-no-deposit-bonus-code-2026/ | 46193 | Redirect to home page | 
+231 | https://themarketingking.org/uncategorized/realz-casino-65-free-spins-bonus-code-Australia/ | 46193 | Redirect to home page | 
+232 | https://themarketingking.org/uncategorized/newlucky-casino-wager-free-spins-today/ | 46190 | Redirect to home page | 
+233 | https://themarketingking.org/uncategorized/ocean96-casino-VIP-promo-code-AU/ | 46190 | Redirect to home page | 
+234 | https://themarketingking.org/uncategorized/wildjoker-casino-160-free-spins-bonus-2026/ | 46190 | Redirect to home page | 

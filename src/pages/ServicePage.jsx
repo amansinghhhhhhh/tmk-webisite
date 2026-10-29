@@ -5,6 +5,35 @@ import SEO from "../components/SEO";
 import { fetchService, getMediaUrl, mapService } from "../api/wordpress";
 import FAQSection from "../components/FAQSection";
 
+// Static content for /traditional-marketing-for-igaming-businesses/.
+// That slug has no WordPress post (the service CPT does not contain it), so
+// fetchService() always resolves to null and the page used to render
+// "Service Not Found" with HTTP 200 — a textbook GSC Soft 404. These cards
+// give the route real content; the copy is static until the CMS post exists,
+// at which point the normal WP-driven render takes over automatically.
+const TRADITIONAL_SERVICES = [
+  {
+    title: "Print & Press Advertising",
+    desc: "Placements in mainstream and industry publications that put your brand in front of readers and decision-makers.",
+  },
+  {
+    title: "Outdoor & Billboards (OOH)",
+    desc: "High-visibility outdoor campaigns in key markets that build recognition among players on the move.",
+  },
+  {
+    title: "Events & Sponsorships",
+    desc: "Trade shows, conferences, and sponsorship activations that connect your brand with partners and affiliates.",
+  },
+  {
+    title: "Industry Publications",
+    desc: "Advertorials and featured stories in iGaming magazines and journals your audience already reads and trusts.",
+  },
+  {
+    title: "Broadcast, Radio & Direct Mail",
+    desc: "Classic reach channels planned, bought, and reported alongside your digital campaigns.",
+  },
+];
+
 export default function ServicePage({ slug: routeSlug }) {
   const { slug } = useParams();
   const serviceSlug = routeSlug || slug;
@@ -79,6 +108,100 @@ export default function ServicePage({ slug: routeSlug }) {
   }
 
   if (error || !service) {
+    // Slug-specific static page (see TRADITIONAL_SERVICES): keeps this route
+    // a real 200 page with real content instead of a "Service Not Found"
+    // soft 404. Prerendered <title>/<meta> for it lives in
+    // scripts/prerender.mjs (META_MAP) so HTML-only crawlers get it too.
+    if (serviceSlug === "traditional-marketing-for-igaming-businesses") {
+      return (
+        <>
+          <SEO
+            title="Traditional Marketing for iGaming Businesses | The Marketing King"
+            description="Explore traditional marketing for iGaming businesses. TMK plans print, outdoor, event, and offline media campaigns that build brand trust and reach players worldwide."
+            canonical="https://themarketingking.org/traditional-marketing-for-igaming-businesses/"
+          />
+          <section
+            className="page-hero service-page-hero"
+            style={
+              !isMobile
+                ? {
+                    backgroundImage:
+                      "url(/internal pages hero image/Traditional-Marketing.webp)",
+                    backgroundPosition: "70% 0%",
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                  }
+                : {}
+            }
+          >
+            <div className="container">
+              <div className="hero-content">
+                <h1>
+                  Traditional Marketing for{" "}
+                  <span className="gold">iGaming Businesses</span>
+                </h1>
+                <p>
+                  Reach players, partners, and investors beyond digital
+                  channels. The Marketing King plans and buys traditional media
+                  for iGaming brands — print, outdoor, sponsorships, and live
+                  events — so your brand shows up where your audience already
+                  pays attention.
+                </p>
+                <Link to="/contact/" className="btn btn-primary">
+                  Get Started <ArrowRight />
+                </Link>
+              </div>
+            </div>
+          </section>
+          <section className="content-section">
+            <div className="container">
+              <p className="section-label">What We Offer</p>
+              <h2 className="section-title">
+                Traditional marketing services for{" "}
+                <span className="gold">iGaming brands</span>
+              </h2>
+              <p className="section-desc">
+                Traditional channels build the credibility that makes every
+                performance campaign work harder. TMK handles strategy,
+                creative, buying, and reporting across:
+              </p>
+              <div className="features-grid stagger">
+                {TRADITIONAL_SERVICES.map((f, i) => (
+                  <div className="feature-card" key={i}>
+                    <div className="fc-icon">
+                      <CheckCircle />
+                    </div>
+                    <h4>{f.title}</h4>
+                    <p>{f.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+          <section className="content-section alt">
+            <div className="container">
+              <p className="section-label">Why TMK</p>
+              <h2 className="section-title">
+                One team for <span className="gold">online and offline growth</span>
+              </h2>
+              <p className="section-desc">
+                Your media plan should not live in silos. We align traditional
+                placements with your SEO, PPC, affiliate, and influencer
+                channels — one strategy, one reporting view, one accountable
+                partner — so offline spend reinforces the player acquisition
+                goals you are already measured on.
+              </p>
+              <div style={{ marginTop: 32 }}>
+                <Link to="/contact/" className="btn btn-primary">
+                  Book a Strategy Call <ArrowRight />
+                </Link>
+              </div>
+            </div>
+          </section>
+        </>
+      );
+    }
+
     return (
       <section className="page-hero" style={{ minHeight: "40vh" }}>
         <div className="container">
