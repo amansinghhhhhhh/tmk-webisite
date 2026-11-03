@@ -18,6 +18,7 @@ DirectorySlash Off
   RewriteRule ^services/seo-services/?$ /seo-services-for-igaming-businesses/ [R=301,L,NC]
   RewriteRule ^services/telegram-ads/?$ /telegram-ads-for-igaming-businesses/ [R=301,L,NC]
   RewriteRule ^services/google-ads/?$ /google-ads-for-igaming-businesses/ [R=301,L,NC]
+  RewriteRule ^services/meta-ads/?$ /meta-ads-for-igaming-businesses/ [R=301,L,NC]
 
   # 2b. Dead URL under /blogs/ (real posts are served from /blog/<slug>/).
   RewriteRule ^blogs/your-ultimate-playbook-for-sportsbook-platform-seo-and-marketing/?$ /blogs/ [R=301,L,NC]
@@ -45,6 +46,51 @@ DirectorySlash Off
   # 2h. Leftover WordPress core asset URLs (the SPA served them as HTML
   #     soft-404s). Nothing in the build references /wp-includes/ any more.
   RewriteRule ^wp-includes/ / [R=301,L,NC]
+
+  # 2i. Targeted feed redirects -> canonical post URLs (Redirection sheet).
+  #     WordPress serves feeds at /<post-slug>/feed/; the canonical content
+  #     URL is the bare /<post-slug>/ path. Single-hop 301 so feed readers
+  #     land on the real post instead of a soft-404.
+  RewriteRule ^blog/igaming-what-is-it-a-comprehensive-guide/feed/?$ /blog/igaming-what-is-it-a-comprehensive-guide/ [R=301,L,NC]
+  RewriteRule ^news/yggdrasil-and-betarabia-partner-to-bring-slot-games-to-lebanon/feed/?$ /news/yggdrasil-and-betarabia-partner-to-bring-slot-games-to-lebanon/ [R=301,L,NC]
+  RewriteRule ^blog/the-gambling-regulatory-authority-of-ireland-signs-mou-with-gibraltar/feed/?$ /blog/the-gambling-regulatory-authority-of-ireland-signs-mou-with-gibraltar/ [R=301,L,NC]
+  RewriteRule ^blog/discover-the-best-digital-marketing-company-for-igaming/feed/?$ /blog/discover-the-best-digital-marketing-company-for-igaming/ [R=301,L,NC]
+  RewriteRule ^blog/how-telegram-promotion-services-help-attract-more-players-in-the-igaming-industry/feed/?$ / [R=301,L,NC]
+  RewriteRule ^blog/what-is-cricket-api-a-complete-guide-in-simple-words/feed/?$ / [R=301,L,NC]
+
+  # 2j. WP system / utility / plugin paths -> home (Redirection sheet).
+  RewriteRule ^contact-us/feed/?$ / [R=301,L,NC]
+  RewriteRule ^wp-json/wpchat/v1/?$ / [R=301,L,NC]
+  RewriteRule ^wp-admin/admin-ajax\.php / [R=301,L,NC]
+  RewriteRule ^wp-admin/admin\.php / [R=301,L,NC]
+  RewriteRule ^wp-content/plugins/litespeed-cache/guest\.vary\.php / [R=301,L,NC]
+  RewriteRule ^wp-content/themes/themarketingking / [R=301,L,NC]
+  RewriteRule ^wp-content/uploads / [R=301,L,NC]
+  RewriteRule ^wp-content/ / [R=301,L,NC]
+  RewriteRule ^wp-.*\.php / [R=301,L,NC]
+
+  # 2k. Retired / legacy pages -> home (Redirection sheet).
+  RewriteRule ^error-page/?$ / [R=301,L,NC]
+  RewriteRule ^lander/?$ / [R=301,L,NC]
+  RewriteRule ^contact-us/?$ / [R=301,L,NC]
+  RewriteRule ^development-services-for-igaming-businesses/?$ / [R=301,L,NC]
+
+  # 2l. Retired / spam / adult blog slugs -> home (Redirection sheet).
+  RewriteRule ^blog/ai-generated-latex-porn/?$ / [R=301,L,NC]
+  RewriteRule ^blog/ai-girlfriend-chat-uncensored/?$ / [R=301,L,NC]
+  RewriteRule ^blog/sexy-nude-fantasy-men-ai-photos/?$ / [R=301,L,NC]
+  RewriteRule ^blog/live-sex-chat-no-signup/?$ / [R=301,L,NC]
+  RewriteRule ^blog/chai-vs-character-ai/?$ / [R=301,L,NC]
+  RewriteRule ^blog/ai-sexy-models/?$ / [R=301,L,NC]
+  RewriteRule ^blog/henny-bottle-anime-ai/?$ / [R=301,L,NC]
+  RewriteRule ^blog/dirty-talk-ai-chat-bot/?$ / [R=301,L,NC]
+  RewriteRule ^blog/ai-deepfake-porn-maker/?$ / [R=301,L,NC]
+  RewriteRule ^blog/replika-ai-inventor/?$ / [R=301,L,NC]
+  RewriteRule ^blog/best-porn-sites-ai-upscale/?$ / [R=301,L,NC]
+  RewriteRule ^blog/characters-speaking-using-ai-models/?$ / [R=301,L,NC]
+  RewriteRule ^blog/can-ai-revolutionize-the-igaming-segment-in-the-next-decade/?$ / [R=301,L,NC]
+  RewriteRule ^blog/igaming-advertising-services-a-complete-guide-with-tmk/?$ / [R=301,L,NC]
+  RewriteRule ^blog/social-media-management-for-igaming-businesses-building-trust-traffic-with-tmk/?$ / [R=301,L,NC]
 
   # 3. Prevent rewrite loop for index.html
   RewriteRule ^index\.html$ - [L]

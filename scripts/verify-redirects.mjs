@@ -42,7 +42,7 @@ const KEEP_PATHS = new Set([
   "/blog/crypto-casino-marketing-services-smart-growth-strategy",
 ]);
 
-/** Mirror of public/.htaccess rules 2a-2h (per-dir context: no leading slash). */
+/** Mirror of public/.htaccess rules 2a-2l (per-dir context: no leading slash). */
 const RULES = [
   {
     fragment: "^services/seo-services/?$",
@@ -58,6 +58,11 @@ const RULES = [
     fragment: "^services/google-ads/?$",
     re: /^services\/google-ads\/?$/i,
     target: "/google-ads-for-igaming-businesses/",
+  },
+  {
+    fragment: "^services/meta-ads/?$",
+    re: /^services\/meta-ads\/?$/i,
+    target: "/meta-ads-for-igaming-businesses/",
   },
   {
     fragment: "your-ultimate-playbook-for-sportsbook-platform-seo-and-marketing/?$",
@@ -92,6 +97,180 @@ const RULES = [
   {
     fragment: "^wp-includes/",
     re: /^wp-includes\//i,
+    target: "/",
+  },
+  // 2i. Targeted feed redirects -> canonical post URLs (Redirection sheet).
+  {
+    fragment: "^blog/igaming-what-is-it-a-comprehensive-guide/feed/?$",
+    re: /^blog\/igaming-what-is-it-a-comprehensive-guide\/feed\/?$/i,
+    target: "/blog/igaming-what-is-it-a-comprehensive-guide/",
+  },
+  {
+    fragment: "^news/yggdrasil-and-betarabia-partner-to-bring-slot-games-to-lebanon/feed/?$",
+    re: /^news\/yggdrasil-and-betarabia-partner-to-bring-slot-games-to-lebanon\/feed\/?$/i,
+    target: "/news/yggdrasil-and-betarabia-partner-to-bring-slot-games-to-lebanon/",
+  },
+  {
+    fragment: "^blog/the-gambling-regulatory-authority-of-ireland-signs-mou-with-gibraltar/feed/?$",
+    re: /^blog\/the-gambling-regulatory-authority-of-ireland-signs-mou-with-gibraltar\/feed\/?$/i,
+    target: "/blog/the-gambling-regulatory-authority-of-ireland-signs-mou-with-gibraltar/",
+  },
+  {
+    fragment: "^blog/discover-the-best-digital-marketing-company-for-igaming/feed/?$",
+    re: /^blog\/discover-the-best-digital-marketing-company-for-igaming\/feed\/?$/i,
+    target: "/blog/discover-the-best-digital-marketing-company-for-igaming/",
+  },
+  {
+    fragment: "^blog/how-telegram-promotion-services-help-attract-more-players-in-the-igaming-industry/feed/?$",
+    re: /^blog\/how-telegram-promotion-services-help-attract-more-players-in-the-igaming-industry\/feed\/?$/i,
+    target: "/",
+  },
+  {
+    fragment: "^blog/what-is-cricket-api-a-complete-guide-in-simple-words/feed/?$",
+    re: /^blog\/what-is-cricket-api-a-complete-guide-in-simple-words\/feed\/?$/i,
+    target: "/",
+  },
+  // 2j. WP system / utility / plugin paths -> home (Redirection sheet).
+  {
+    fragment: "^contact-us/feed/?$",
+    re: /^contact-us\/feed\/?$/i,
+    target: "/",
+  },
+  {
+    fragment: "^wp-json/wpchat/v1/?$",
+    re: /^wp-json\/wpchat\/v1\/?$/i,
+    target: "/",
+  },
+  {
+    fragment: "^wp-admin/admin-ajax\\.php",
+    re: /^wp-admin\/admin-ajax\.php/i,
+    target: "/",
+  },
+  {
+    fragment: "^wp-admin/admin\\.php",
+    re: /^wp-admin\/admin\.php/i,
+    target: "/",
+  },
+  {
+    fragment: "^wp-content/plugins/litespeed-cache/guest\\.vary\\.php",
+    re: /^wp-content\/plugins\/litespeed-cache\/guest\.vary\.php/i,
+    target: "/",
+  },
+  {
+    fragment: "^wp-content/themes/themarketingking",
+    re: /^wp-content\/themes\/themarketingking/i,
+    target: "/",
+  },
+  {
+    fragment: "^wp-content/uploads",
+    re: /^wp-content\/uploads/i,
+    target: "/",
+  },
+  {
+    fragment: "^wp-content/",
+    re: /^wp-content\//i,
+    target: "/",
+  },
+  {
+    fragment: "^wp-.*\\.php",
+    re: /^wp-.*\.php/i,
+    target: "/",
+  },
+  // 2k. Retired / legacy pages -> home (Redirection sheet).
+  {
+    fragment: "^error-page/?$",
+    re: /^error-page\/?$/i,
+    target: "/",
+  },
+  {
+    fragment: "^lander/?$",
+    re: /^lander\/?$/i,
+    target: "/",
+  },
+  {
+    fragment: "^contact-us/?$",
+    re: /^contact-us\/?$/i,
+    target: "/",
+  },
+  {
+    fragment: "^development-services-for-igaming-businesses/?$",
+    re: /^development-services-for-igaming-businesses\/?$/i,
+    target: "/",
+  },
+  // 2l. Retired / spam / adult blog slugs -> home (Redirection sheet).
+  {
+    fragment: "^blog/ai-generated-latex-porn/?$",
+    re: /^blog\/ai-generated-latex-porn\/?$/i,
+    target: "/",
+  },
+  {
+    fragment: "^blog/ai-girlfriend-chat-uncensored/?$",
+    re: /^blog\/ai-girlfriend-chat-uncensored\/?$/i,
+    target: "/",
+  },
+  {
+    fragment: "^blog/sexy-nude-fantasy-men-ai-photos/?$",
+    re: /^blog\/sexy-nude-fantasy-men-ai-photos\/?$/i,
+    target: "/",
+  },
+  {
+    fragment: "^blog/live-sex-chat-no-signup/?$",
+    re: /^blog\/live-sex-chat-no-signup\/?$/i,
+    target: "/",
+  },
+  {
+    fragment: "^blog/chai-vs-character-ai/?$",
+    re: /^blog\/chai-vs-character-ai\/?$/i,
+    target: "/",
+  },
+  {
+    fragment: "^blog/ai-sexy-models/?$",
+    re: /^blog\/ai-sexy-models\/?$/i,
+    target: "/",
+  },
+  {
+    fragment: "^blog/henny-bottle-anime-ai/?$",
+    re: /^blog\/henny-bottle-anime-ai\/?$/i,
+    target: "/",
+  },
+  {
+    fragment: "^blog/dirty-talk-ai-chat-bot/?$",
+    re: /^blog\/dirty-talk-ai-chat-bot\/?$/i,
+    target: "/",
+  },
+  {
+    fragment: "^blog/ai-deepfake-porn-maker/?$",
+    re: /^blog\/ai-deepfake-porn-maker\/?$/i,
+    target: "/",
+  },
+  {
+    fragment: "^blog/replika-ai-inventor/?$",
+    re: /^blog\/replika-ai-inventor\/?$/i,
+    target: "/",
+  },
+  {
+    fragment: "^blog/best-porn-sites-ai-upscale/?$",
+    re: /^blog\/best-porn-sites-ai-upscale\/?$/i,
+    target: "/",
+  },
+  {
+    fragment: "^blog/characters-speaking-using-ai-models/?$",
+    re: /^blog\/characters-speaking-using-ai-models\/?$/i,
+    target: "/",
+  },
+  {
+    fragment: "^blog/can-ai-revolutionize-the-igaming-segment-in-the-next-decade/?$",
+    re: /^blog\/can-ai-revolutionize-the-igaming-segment-in-the-next-decade\/?$/i,
+    target: "/",
+  },
+  {
+    fragment: "^blog/igaming-advertising-services-a-complete-guide-with-tmk/?$",
+    re: /^blog\/igaming-advertising-services-a-complete-guide-with-tmk\/?$/i,
+    target: "/",
+  },
+  {
+    fragment: "^blog/social-media-management-for-igaming-businesses-building-trust-traffic-with-tmk/?$",
+    re: /^blog\/social-media-management-for-igaming-businesses-building-trust-traffic-with-tmk\/?$/i,
     target: "/",
   },
 ];
