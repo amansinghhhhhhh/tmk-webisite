@@ -273,6 +273,12 @@ const RULES = [
     re: /^blog\/social-media-management-for-igaming-businesses-building-trust-traffic-with-tmk\/?$/i,
     target: "/",
   },
+  // 2m. Semicolon paths -> home (trailing-slash rule mangled ";" into "/;/").
+  {
+    fragment: "^;/?$",
+    re: /^;\/?$/i,
+    target: "/",
+  },
 ];
 
 /** Server path for a URL (leading slash kept, query/hash dropped). */
