@@ -1,0 +1,160 @@
+DirectorySlash Off
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. Protect build directory
+  RewriteRule ^\.builds - [F,L]
+
+  # 2. Soft-404 301 redirects (GSC audit, see scripts/soft-404-audit.txt)
+  #    These MUST run before the trailing-slash rule (#3) and the SPA
+  #    fallback (#4) so every legacy URL resolves in a single hop.
+  #    Targets are written as paths so scheme/host (www / non-www) of the
+  #    original request are preserved.
+
+  # 2a. Legacy service paths -> their canonical service page (with/without
+  #     trailing slash). /services/ itself is a real page and is untouched.
+  RewriteRule ^services/seo-services/?$ /seo-services-for-igaming-businesses/ [R=301,L,NC]
+  RewriteRule ^services/telegram-ads/?$ /telegram-ads-for-igaming-businesses/ [R=301,L,NC]
+  RewriteRule ^services/google-ads/?$ /google-ads-for-igaming-businesses/ [R=301,L,NC]
+  RewriteRule ^services/meta-ads/?$ /meta-ads-for-igaming-businesses/ [R=301,QSD,L,NC]
+
+  # 2b. Dead URL under /blogs/ (real posts are served from /blog/<slug>/).
+  RewriteRule ^blogs/your-ultimate-playbook-for-sportsbook-platform-seo-and-marketing/?$ /blogs/ [R=301,L,NC]
+
+  # 2c. Retired WordPress category: every /uncategorized/... URL (spam/deleted
+  #     posts, slugs contain "$", uppercase and non-ASCII characters) redirects
+  #     to the homepage. Prefix match keeps this one rule for ~190 audit rows.
+  RewriteRule ^uncategorized(/|$) / [R=301,L,NC]
+
+  # 2d. Old blog slugs that no longer exist in WordPress. Deliberately NOT a
+  #     catch-all on /blog/: every live post (including the ones GSC flagged
+  #     but which we verified healthy) must stay reachable.
+  RewriteRule ^blog/(adult-chat-roulet|ai-transforms-the-igaming-industry-the-future-of-online-gaming)/?$ / [R=301,L,NC]
+
+  # 2e. /embed/ variant of a post (the post itself stays live).
+  RewriteRule ^blog/how-can-you-search-for-influencers-to-improve-your-marketing-campaigns/embed/?$ / [R=301,L,NC]
+
+  # 2f. Retired WordPress date archives (YYYY/MM/ and YYYY/MM/DD/).
+  RewriteRule ^[0-9]{4}/[0-9]{2}(/[0-9]{2})?/?$ / [R=301,L]
+
+  # 2g. Retired legacy pages (the real pages live at /countries/us/,
+  #     /term-condition/, /our-clients/ and /about/).
+  RewriteRule ^(us|terms-of-use|our-client|about-us)/?$ / [R=301,L,NC]
+
+  # 2h. Leftover WordPress core asset URLs (the SPA served them as HTML
+  #     soft-404s). Nothing in the build references /wp-includes/ any more.
+  RewriteRule ^wp-includes/ / [R=301,L,NC]
+
+  # 2i. Targeted feed redirects -> canonical post URLs (Redirection sheet).
+  #     WordPress serves feeds at /<post-slug>/feed/; the canonical content
+  #     URL is the bare /<post-slug>/ path. Single-hop 301 so feed readers
+  #     land on the real post instead of a soft-404.
+  RewriteRule ^blog/igaming-what-is-it-a-comprehensive-guide/feed/?$ /blog/igaming-what-is-it-a-comprehensive-guide/ [R=301,QSD,L,NC]
+  RewriteRule ^news/yggdrasil-and-betarabia-partner-to-bring-slot-games-to-lebanon/feed/?$ /news/yggdrasil-and-betarabia-partner-to-bring-slot-games-to-lebanon/ [R=301,QSD,L,NC]
+  RewriteRule ^blog/the-gambling-regulatory-authority-of-ireland-signs-mou-with-gibraltar/feed/?$ /blog/the-gambling-regulatory-authority-of-ireland-signs-mou-with-gibraltar/ [R=301,QSD,L,NC]
+  RewriteRule ^blog/discover-the-best-digital-marketing-company-for-igaming/feed/?$ /blog/discover-the-best-digital-marketing-company-for-igaming/ [R=301,QSD,L,NC]
+  RewriteRule ^blog/how-telegram-promotion-services-help-attract-more-players-in-the-igaming-industry/feed/?$ / [R=301,QSD,L,NC]
+  RewriteRule ^blog/what-is-cricket-api-a-complete-guide-in-simple-words/feed/?$ / [R=301,QSD,L,NC]
+
+  # 2j. WP system / utility / plugin paths -> home (Redirection sheet).
+  RewriteRule ^contact-us/feed/?$ / [R=301,QSD,L,NC]
+  RewriteRule ^wp-json/wpchat/v1/?$ / [R=301,QSD,L,NC]
+  RewriteRule ^wp-admin/admin-ajax\.php / [R=301,QSD,L,NC]
+  RewriteRule ^wp-admin/admin\.php / [R=301,QSD,L,NC]
+  RewriteRule ^wp-content/plugins/litespeed-cache/guest\.vary\.php / [R=301,QSD,L,NC]
+  RewriteRule ^wp-content/themes/themarketingking / [R=301,QSD,L,NC]
+  RewriteRule ^wp-content/uploads / [R=301,QSD,L,NC]
+  RewriteRule ^wp-content/ / [R=301,QSD,L,NC]
+  RewriteRule ^wp-.*\.php / [R=301,QSD,L,NC]
+
+  # 2k. Retired / legacy pages -> home (Redirection sheet).
+  RewriteRule ^error-page/?$ / [R=301,QSD,L,NC]
+  RewriteRule ^lander/?$ / [R=301,QSD,L,NC]
+  RewriteRule ^contact-us/?$ / [R=301,QSD,L,NC]
+  RewriteRule ^development-services-for-igaming-businesses/?$ / [R=301,QSD,L,NC]
+
+  # 2l. Retired / spam / adult blog slugs -> home (Redirection sheet).
+  RewriteRule ^blog/ai-generated-latex-porn/?$ / [R=301,QSD,L,NC]
+  RewriteRule ^blog/ai-girlfriend-chat-uncensored/?$ / [R=301,QSD,L,NC]
+  RewriteRule ^blog/sexy-nude-fantasy-men-ai-photos/?$ / [R=301,QSD,L,NC]
+  RewriteRule ^blog/live-sex-chat-no-signup/?$ / [R=301,QSD,L,NC]
+  RewriteRule ^blog/chai-vs-character-ai/?$ / [R=301,QSD,L,NC]
+  RewriteRule ^blog/ai-sexy-models/?$ / [R=301,QSD,L,NC]
+  RewriteRule ^blog/henny-bottle-anime-ai/?$ / [R=301,QSD,L,NC]
+  RewriteRule ^blog/dirty-talk-ai-chat-bot/?$ / [R=301,QSD,L,NC]
+  RewriteRule ^blog/ai-deepfake-porn-maker/?$ / [R=301,QSD,L,NC]
+  RewriteRule ^blog/replika-ai-inventor/?$ / [R=301,QSD,L,NC]
+  RewriteRule ^blog/best-porn-sites-ai-upscale/?$ / [R=301,QSD,L,NC]
+  RewriteRule ^blog/characters-speaking-using-ai-models/?$ / [R=301,QSD,L,NC]
+  RewriteRule ^blog/can-ai-revolutionize-the-igaming-segment-in-the-next-decade/?$ / [R=301,QSD,L,NC]
+  RewriteRule ^blog/igaming-advertising-services-a-complete-guide-with-tmk/?$ / [R=301,QSD,L,NC]
+  RewriteRule ^blog/social-media-management-for-igaming-businesses-building-trust-traffic-with-tmk/?$ / [R=301,QSD,L,NC]
+
+  # 2m. Semicolon paths -> home (trailing-slash rule mangled ";" into "/;/").
+  #     Both ";" and ";/" must 301 to the homepage cleanly.
+  RewriteRule ^;/?$ / [R=301,QSD,L,NC]
+
+  # 3. Prevent rewrite loop for index.html
+  RewriteRule ^index\.html$ - [L]
+
+  # 4. Force Trailing Slash 301 Redirect for clean routes
+  # (Ignores actual files like .js, .css, .png and directories)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !\.[^/]+$
+  RewriteCond %{REQUEST_URI} !/$
+  RewriteRule ^(.+)$ /$1/ [R=301,L]
+
+  # 5. React SPA Fallback
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# --- Browser Caching / Expires Headers ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType application/x-javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# --- Cache-Control: immutable for content-hashed build assets ---
+# Vite emits /assets/<name>-<hash>.<ext>, so those files can be cached
+# forever. HTML stays revalidated so new deploys are picked up instantly.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|webp|png|jpe?g|gif|svg|avif|ico|woff2?)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(html|json|xml|txt)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# --- Compression (gzip) ---
+# Cuts text payload (JS/CSS/HTML/SVG/JSON) roughly 60-80% for faster
+# first paint and lower transfer time.
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE text/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml application/xml
+  AddOutputFilterByType DEFLATE application/rss+xml application/atom+xml
+</IfModule>
+
+# --- Compression (brotli, preferred by modern browsers) ---
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css text/xml
+  AddOutputFilterByType BROTLI_COMPRESS application/javascript application/x-javascript
+  AddOutputFilterByType BROTLI_COMPRESS text/javascript application/json
+  AddOutputFilterByType BROTLI_COMPRESS image/svg+xml application/xml
+  AddOutputFilterByType BROTLI_COMPRESS application/rss+xml application/atom+xml
+</IfModule>
