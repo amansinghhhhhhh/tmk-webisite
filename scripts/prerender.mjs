@@ -63,7 +63,7 @@ const META_MAP = {
   "/": {
     title: "iGaming Marketing Agency for Global Brand Growth | TMK",
     description:
-      "Grow your iGaming business with a results-driven iGaming marketing agency. TMK helps gaming brands increase visibility, attract qualified audiences, and scale globally.",
+      "Grow your iGaming business with TMK, a leading iGaming marketing agency offering SEO, advertising campaigns and player acquisition strategies worldwide.",
     canonical: `${SITE_URL}/`,
   },
   "/about/": {

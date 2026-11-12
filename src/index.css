@@ -1414,7 +1414,7 @@ html.js .hero-left.visible {
     filter: drop-shadow(0 6px 12px rgba(0, 0, 0, .4))
   }
 
-  .services-fan .txtBox h2 {
+  .services-fan .txtBox h3 {
     font-size: 1.15rem;
     font-weight: 800;
     color: #000;
@@ -1555,7 +1555,7 @@ html.js .hero-left.visible {
   filter: drop-shadow(0 6px 12px rgba(0, 0, 0, .4))
 }
 
-.services-swiper .services-slide-inner h2 {
+.services-swiper .services-slide-inner h3 {
   font-family: var(--heading);
   font-size: 1.1rem;
   font-weight: 800;
