@@ -19,6 +19,8 @@ jobs:
 
       - run: npm install
       - run: npm run build
+        env:
+          VITE_GOOGLE_SHEET: ${{ secrets.VITE_GOOGLE_SHEET }}
 
       - name: Deploy to deploy branch
         uses: peaceiris/actions-gh-pages@v4

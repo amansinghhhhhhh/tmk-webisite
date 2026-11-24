@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 import { countryRules } from "../utils/countryRules";
 import { budgetOptions } from "../utils/budgetOptions";
@@ -8,13 +7,15 @@ import { countries } from "../data/countries";
 
 import { ArrowRight } from "lucide-react";
 
-export default function LeadForm() {
-  const navigate = useNavigate();
+const DEFAULT_GOOGLE_SHEET_URL =
+  "https://script.google.com/macros/s/AKfycbxCfkZpPHQIRgXnUomQJU6hJ3Ov-N8x4Jc9zGDTDFtcGtZPbyqRCi3FH0rxDcGB_pgr/exec";
+const REQUEST_TIMEOUT_MS = 15000;
 
+class SubmissionError extends Error {}
+
+export default function LeadForm() {
   const [countryCode, setCountryCode] = useState("");
   const [phone, setPhone] = useState("");
-  console.log("Whatsapp No.", phone);
-  
   const [budget, setBudget] = useState("");
   const [errors, setErrors] = useState({});
   const [name, setName] = useState("");
@@ -61,12 +62,35 @@ export default function LeadForm() {
 
     if (Object.keys(newErrors).length > 0) return;
 
-    try {
-      setLoading(true);
-      setSubmitMessage("");
+    setLoading(true);
+    setSubmitMessage("");
 
-      await fetch(import.meta.env.VITE_GOOGLE_SHEET, {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+
+    try {
+      const endpoint = (
+        import.meta.env.VITE_GOOGLE_SHEET || DEFAULT_GOOGLE_SHEET_URL
+      ).trim();
+
+      let parsedUrl;
+      try {
+        parsedUrl = new URL(endpoint);
+      } catch {
+        throw new SubmissionError(
+          "The contact form is not configured correctly. Please try again later."
+        );
+      }
+      if (parsedUrl.protocol !== "https:") {
+        throw new SubmissionError(
+          "The contact form is not configured correctly. Please try again later."
+        );
+      }
+
+      const response = await fetch(endpoint, {
         method: "POST",
+        redirect: "follow",
+        headers: { "Content-Type": "text/plain;charset=UTF-8" },
         body: JSON.stringify({
           name,
           email,
@@ -75,12 +99,28 @@ export default function LeadForm() {
           budget,
           service,
         }),
+        signal: controller.signal,
       });
 
+      if (!response.ok) {
+        throw new Error(`Submission failed (${response.status})`);
+      }
+
+      let result;
+      try {
+        result = JSON.parse(await response.text());
+      } catch {
+        throw new Error("The server returned an unexpected response.");
+      }
+
+      if (!result || (result.status !== "success" && result.success !== true)) {
+        throw new SubmissionError(
+          result?.message || "Your message could not be saved. Please try again."
+        );
+      }
+
       setSubmitStatus("success");
-      setSubmitMessage(
-        "Thank you! Your message has been sent successfully."
-      );
+      setSubmitMessage("Thank you! Your message has been sent successfully.");
 
       setName("");
       setEmail("");
@@ -89,18 +129,20 @@ export default function LeadForm() {
       setBudget("");
       setService("");
       setErrors({});
-
-      // navigate("/thank-you");
     } catch (error) {
-      console.error(error);
-
       setSubmitStatus("error");
-      setSubmitMessage("Something went wrong. Please try again.");
+      setSubmitMessage(
+        error instanceof SubmissionError
+          ? error.message
+          : controller.signal.aborted
+            ? "The request timed out. Please try again."
+            : "Something went wrong. Please try again."
+      );
     } finally {
+      clearTimeout(timeoutId);
       setLoading(false);
     }
   };
-
 
   return (
     <div className="cta-form-wrap">
