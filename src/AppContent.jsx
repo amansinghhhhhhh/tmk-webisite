@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import FloatingButtons from "./components/FloatingButtons";
 import BackToTop from "./components/BackToTop";
 import ErrorBoundary, { FallbackShell } from "./components/ErrorBoundary";
+import { HOME_HERO_SHELL_HTML } from "./data/homeHero";
 
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -24,9 +25,15 @@ const ThankYou = lazy(() => import("./pages/ThankYou"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsAndConditions = lazy(() => import("./pages/TermCondition"));
 
-function PageFallback() {
-  // Invisible placeholder while a lazy route chunk loads: no text flash,
-  // no layout jump. See ErrorBoundary.jsx.
+function PageFallback({ pathname }) {
+  // The homepage has a crawler-visible static shell in dist/index.html.
+  // Show that exact same shell while the lazy Home chunk loads so React's
+  // first commit never collapses it to the generic 60vh placeholder (which
+  // would flicker and shift layout). Every other route keeps the invisible
+  // FallbackShell. React clears #root, so there is never a duplicate H1.
+  if (pathname === "/") {
+    return <div dangerouslySetInnerHTML={{ __html: HOME_HERO_SHELL_HTML }} />;
+  }
   return <FallbackShell />;
 }
 
@@ -110,7 +117,7 @@ export default function AppContent() {
       <>
       <ScrollToTop />
       <Navbar />
-      <Suspense fallback={<PageFallback />}>
+      <Suspense fallback={<PageFallback pathname={pathname} />}>
         <ErrorBoundary resetKey={pathname}>
         <Routes>
         <Route path="/" element={<Home />} />

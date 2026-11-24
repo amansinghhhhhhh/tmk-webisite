@@ -17,13 +17,15 @@ import LeadForm from "../components/LeadForm";
 import SEO from "../components/SEO";
 import FAQSection from "../components/FAQSection";
 import Typewriter from "../components/Typewriter";
-
-const heroTypewriterWords = [
-  "Acquire High Value Players",
-  "Boost ROAS & Retention",
-  "Scale Profitable Campaigns",
-  "Increase Player LTV",
-];
+import {
+  HERO_TAG,
+  HERO_LINE_1,
+  HERO_LINE_2,
+  HERO_TYPEWRITER_WORDS,
+  HERO_DESCRIPTION,
+  HERO_CTA_PRIMARY,
+  HERO_CTA_SECONDARY,
+} from "../data/homeHero";
 
 const expertise = [
   {
@@ -441,25 +443,19 @@ export default function Home() {
           <div className="container">
             <div className="hero-grid">
               <div className="hero-left" id="heroLeft">
-                <div className="hero-tag">iGaming Growth Marketing Agency</div>
+                <div className="hero-tag">{HERO_TAG}</div>
                 <h1 className="hero-title">
-                  <span className="line1">Scale Your Brand Globally</span>{" "}
-                  <span className="line2">
-                    with a Leading iGaming Marketing Agency
-                  </span>
+                  <span className="line1">{HERO_LINE_1}</span>{" "}
+                  <span className="line2">{HERO_LINE_2}</span>
                 </h1>
-                <Typewriter words={heroTypewriterWords} />
-                <p className="hero-desc">
-                  Trusted global iGaming traffic provider helping every casino,
-                  sportsbook, or crypto gaming brand acquire high value players
-                  through SEO, PPC, media buying, and affiliate marketing.
-                </p>
+                <Typewriter words={HERO_TYPEWRITER_WORDS} />
+                <p className="hero-desc">{HERO_DESCRIPTION}</p>
                 <div className="hero-actions">
                   <a href="#cta" className="btn btn-primary">
-                    Book a Strategy Call <ArrowRight size={16} />
+                    {HERO_CTA_PRIMARY} <ArrowRight size={16} />
                   </a>
                   <a href="#live-ads" className="btn btn-outline">
-                    View Case Studies
+                    {HERO_CTA_SECONDARY}
                   </a>
                 </div>
               </div>

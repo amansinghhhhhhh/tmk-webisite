@@ -28,6 +28,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from "node:fs";
 import { resolve, dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
+import { HOME_HERO_SHELL_HTML } from "../src/data/homeHero.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST_DIR = resolve(__dirname, "..", "dist");
@@ -302,10 +303,17 @@ function buildPage(htmlTemplate, routePath, meta) {
       `${preloads.join("\n")}\n  </head>`,
     );
   }
-  // NOTE: prerendering the hero into #root was tested (A/B) and made LCP
-  // WORSE, because React re-creates the hero on mount which registers a new
-  // (later) LCP candidate, and the high-priority poster image competes with
-  // the CSS/JS for bandwidth. Kept out for now.
+  // Crawler-visible first paint for the homepage ONLY. The shell reuses the
+  // exact Home.jsx classes/copy/reserved heights, and AppContent's Suspense
+  // fallback renders the identical markup while the lazy chunk loads, so
+  // React's first commit neither swaps text nor collapses the layout.
+  // createRoot() clears #root on mount, so there is never a duplicate H1.
+  if (routePath === "/") {
+    html = html.replace(
+      /<div id="root"><\/div>/,
+      `<div id="root">${HOME_HERO_SHELL_HTML}</div>`,
+    );
+  }
   return html;
 }
 
